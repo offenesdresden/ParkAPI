@@ -4,14 +4,14 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 
-dataURL = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
+base_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 
 def _get_html():
     headers = {
         "User-Agent": "ParkAPI v0.1 - Info: https://github.com/kiliankoe/ParkAPI"
     }
 
-    r = requests.get(dataURL, headers=headers)
+    r = requests.get(base_url, headers=headers)
     return r.text
 
 def _parse_html():
