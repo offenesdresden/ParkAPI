@@ -67,7 +67,13 @@ def _parse_html():
 
 def get_data():
     return _parse_html()
-    # return {"foo": "bar"}
+
+def get_lot_details(lot_id):
+    params = {
+        "id": lot_id
+    }
+    r = requests.get(base_url + detail_url, params=params)
+    return r.text
 
 def get_status_by_image(image_name):
     mapping = {
