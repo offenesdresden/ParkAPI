@@ -2,6 +2,7 @@ __author__ = 'kilian'
 
 import requests
 from bs4 import BeautifulSoup
+import datetime
 
 dataURL = "http://www.dresden.de/freie-parkplaetze/"
 
@@ -15,7 +16,14 @@ def _get_html():
 
 def _parse_html():
     soup = BeautifulSoup(_get_html())
-    data = []
+    data = {
+        "lots": []
+    }
+
+    # Letzte Aktualisierung auslesen, ich liebe html parsing m(
+    date_last_changed = soup.find("ul", {"class": "links"}).findNext("p").text.strip()
+    date_last_changed = datetime.datetime.strptime(date_last_changed, "%d.%m.%Y %H.%M Uhr")
+    data["last_changed"] = date_last_changed
 
     # Die einzelnen Stadteile sind in einzelne tables gegliedert
     section_tables = soup.find_all("tbody")
@@ -28,6 +36,8 @@ def _parse_html():
             raw_lot_data = row.find_all("td")
 
             name = raw_lot_data[0].find("a").text
+
+            id = raw_lot_data[0].find("a")["href"][-4:]
 
             state = get_status_by_image(raw_lot_data[0].find("img")["src"])
 
@@ -45,9 +55,10 @@ def _parse_html():
                 free = 0
             free = int(free)
 
-            data.append({
+            data["lots"].append({
                 "name": name,
                 "coords": coords,
+                "id": id,
                 "state": state,
                 "free": free,
                 "count": count
