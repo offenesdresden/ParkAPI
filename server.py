@@ -1,8 +1,27 @@
 from flask import Flask, jsonify
+from time import time
+from os import getloadavg
 from cities import Ingolstadt, Dresden
 app = Flask(__name__)
 
-@app.route("/<city>/")
+@app.route("/cities")
+def get_city_list():
+    return jsonify({
+        "supported_cities": [
+            "Dresden",
+            "Ingolstadt"
+        ]
+    })
+
+@app.route("/status")
+def get_api_status():
+    return jsonify({
+        "status": "online",
+        "servertime": time(),
+        "load": getloadavg()
+    })
+
+@app.route("/<city>")
 def get_lots(city):
     if city == "Ingolstadt":
         return jsonify(Ingolstadt.get_data())
