@@ -2,6 +2,7 @@ __author__ = 'kilian'
 
 import requests
 from bs4 import BeautifulSoup
+import datetime
 
 dataURL = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 
@@ -18,7 +19,7 @@ def _parse_html():
 
     # get time last updated
     data = {
-        "last_updated": soup.p.string,
+        "last_updated": datetime.datetime.strptime(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)"),
         "lots": []
     }
 
