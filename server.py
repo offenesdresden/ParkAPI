@@ -1,7 +1,8 @@
 from flask import Flask, jsonify
-from time import time
+from datetime import datetime
 from os import getloadavg
 from cities import Ingolstadt, Dresden
+
 app = Flask(__name__)
 
 @app.route("/cities")
@@ -17,7 +18,7 @@ def get_city_list():
 def get_api_status():
     return jsonify({
         "status": "online",
-        "servertime": time(),
+        "servertime": datetime.now(),
         "load": getloadavg()
     })
 
