@@ -25,6 +25,7 @@ def _parse_html():
     date_last_changed = soup.find("ul", {"class": "links"}).findNext("p").text.strip()
     date_last_changed = datetime.datetime.strptime(date_last_changed, "%d.%m.%Y %H.%M Uhr")
     data["last_changed"] = date_last_changed
+    data["time_updated"] = datetime.datetime.now()
 
     # Die einzelnen Stadteile sind in einzelne tables gegliedert
     section_tables = soup.find_all("tbody")

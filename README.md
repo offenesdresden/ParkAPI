@@ -6,6 +6,30 @@ Currently it's just a tiny python flask powered server and definitely nowhere ne
 
 The idea here is to also include some more fun features like automatic time-based scraping and caching those results for quicker responses and reduced load on the servers providing data or providing forecast data right alongside.
 
-Let's see where this goes :)
+### Schema
 
-![baby goats in pyjamas](http://i.imgur.com/uL2ft4V.gif)
+The current schema for the output looks something like this:
+
+```js
+{
+  "last_changed": "Mon, 15 Jun 2015 12:31:00 GMT",
+  "time_updated": "Mon, 15 Jun 2015 12:31:25 GMT",
+  "lots": [
+    {
+      "coords": {
+        "lat": 51.05031,
+        "lon": 13.73754
+      },
+      "count": 400,
+      "free": 235,
+      "id": "TG16",
+      "name": "Altmarkt",
+      "state": "many"
+    },
+    [...]
+}
+```
+
+Besides `name` and `free` all other attributes for a single lot are optional and might not exist for each city.
+
+The top level params for when the data was last changed on the server and when it was pulled by the scraper should always be there.

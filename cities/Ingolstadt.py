@@ -20,6 +20,7 @@ def _parse_html():
     # get time last updated
     data = {
         "last_updated": datetime.datetime.strptime(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)"),
+        "time_updated": datetime.datetime.now(),
         "lots": []
     }
 
