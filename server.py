@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 from datetime import datetime
 from os import getloadavg
-from cities import Ingolstadt, Dresden
+from cities import Ingolstadt, Dresden, Luebeck
 
 app = Flask(__name__)
 
@@ -10,7 +10,8 @@ def get_city_list():
     return jsonify({
         "supported_cities": [
             "Dresden",
-            "Ingolstadt"
+            "Ingolstadt",
+            "Luebeck"
         ]
     })
 
@@ -28,6 +29,8 @@ def get_lots(city):
         return jsonify(Ingolstadt.get_data())
     elif city == "Dresden":
         return jsonify(Dresden.get_data())
+    elif city == "Luebeck":
+        return jsonify(Luebeck.get_data())
 
 @app.route("/<city>/<lot_id>")
 def get_lot_details(city, lot_id):
