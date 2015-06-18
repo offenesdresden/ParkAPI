@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, json
+from flask import Flask, jsonify, json, abort
 from datetime import datetime, timedelta
 from os import getloadavg
 import scraper
@@ -47,6 +47,10 @@ def get_lots(city):
 # def get_lot_details(city, lot_id):
 #     if city == "Dresden":
 #         return Dresden.get_lot_details(lot_id)
+
+@app.route("/coffee")
+def make_coffee():
+    abort(418)
 
 if __name__ == "__main__":
     if os.getenv("env") == "development":
