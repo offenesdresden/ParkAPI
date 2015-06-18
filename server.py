@@ -35,7 +35,7 @@ def get_lots(city):
         last_json = file.read()
         last_json = json.loads(last_json)
         last_downloaded = datetime.strptime(last_json["last_downloaded"], "%Y-%m-%d %H:%M:%S")
-        if datetime.now() - last_downloaded <= timedelta(minutes=5):
+        if datetime.now() - last_downloaded <= timedelta(minutes=10):
             print("Using cached data, oh yeah!")
             return jsonify(last_json)
         else:
