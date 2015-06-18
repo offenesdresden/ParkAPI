@@ -1,5 +1,5 @@
-from flask import Flask, jsonify
-from datetime import datetime
+from flask import Flask, jsonify, json
+from datetime import datetime, timedelta
 from os import getloadavg
 import scraper
 import os
@@ -30,7 +30,18 @@ def get_api_status():
 
 @app.route("/<city>")
 def get_lots(city):
-    return jsonify(scraper.live(city))
+    try:
+        file = open("./cache/" + city + ".json", "r")
+        last_json = file.read()
+        last_json = json.loads(last_json)
+        last_downloaded = datetime.strptime(last_json["last_downloaded"], "%Y-%m-%d %H:%M:%S")
+        if datetime.now() - last_downloaded <= timedelta(minutes=5):
+            print("Using cached data, oh yeah!")
+            return jsonify(last_json)
+        else:
+            return jsonify(scraper.live(city))
+    except FileNotFoundError:
+        return jsonify(scraper.live(city))
 
 # @app.route("/<city>/<lot_id>")
 # def get_lot_details(city, lot_id):

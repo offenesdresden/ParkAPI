@@ -5,6 +5,7 @@ import datetime
 
 data_url = "http://www.dresden.de/freie-parkplaetze"
 city_name = "Dresden"
+file_name = "Dresden"
 detail_url = "/parken/detail"
 
 def parse_html(html):
@@ -16,7 +17,7 @@ def parse_html(html):
     # Letzte Aktualisierung auslesen, ich liebe html parsing m(
     date_last_changed = soup.find("ul", {"class": "links"}).findNext("p").text.strip()
     date_last_changed = datetime.datetime.strptime(date_last_changed, "%d.%m.%Y %H.%M Uhr")
-    data["last_changed"] = date_last_changed
+    data["last_changed"] = str(date_last_changed)
 
     # Die einzelnen Stadteile sind in einzelne tables gegliedert
     section_tables = soup.find_all("tbody")

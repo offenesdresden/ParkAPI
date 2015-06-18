@@ -5,13 +5,14 @@ import datetime
 
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 city_name = "Ingolstadt"
+file_name = "Ingolstadt"
 
 def parse_html(html):
     soup = BeautifulSoup(html)
 
     # get time last updated
     data = {
-        "last_updated": datetime.datetime.strptime(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)"),
+        "last_updated": str(datetime.datetime.strptime(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)")),
         "lots": []
     }
 
