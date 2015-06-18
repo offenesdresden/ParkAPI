@@ -31,7 +31,7 @@ def pipeline(city):
 def save_data_to_disk(data, city):
     """Save a data dictionary in ./cache as a json file"""
     if not os.path.exists("./cache"):
-                os.mkdir("./cache")
+        os.mkdir("./cache")
 
     file = open("./cache/" + city + ".json", "w")
     file.write(json.dumps(data))
