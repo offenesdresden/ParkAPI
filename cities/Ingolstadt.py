@@ -1,26 +1,17 @@
 __author__ = 'kilian'
 
-import requests
 from bs4 import BeautifulSoup
 import datetime
 
-base_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
+data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
+city_name = "Ingolstadt"
 
-def _get_html():
-    headers = {
-        "User-Agent": "ParkAPI v0.1 - Info: https://github.com/kiliankoe/ParkAPI"
-    }
-
-    r = requests.get(base_url, headers=headers)
-    return r.text
-
-def _parse_html():
-    soup = BeautifulSoup(_get_html())
+def parse_html(html):
+    soup = BeautifulSoup(html)
 
     # get time last updated
     data = {
         "last_updated": datetime.datetime.strptime(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)"),
-        "time_updated": datetime.datetime.now(),
         "lots": []
     }
 
@@ -36,6 +27,3 @@ def _parse_html():
         })
 
     return data
-
-def get_data():
-    return _parse_html()

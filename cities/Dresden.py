@@ -1,22 +1,14 @@
 __author__ = 'kilian'
 
-import requests
 from bs4 import BeautifulSoup
 import datetime
 
-base_url = "http://www.dresden.de/freie-parkplaetze"
+data_url = "http://www.dresden.de/freie-parkplaetze"
+city_name = "Dresden"
 detail_url = "/parken/detail"
 
-def _get_html():
-    headers = {
-        "User-Agent": "ParkAPI v0.1 - Info: https://github.com/kiliankoe/ParkAPI"
-    }
-
-    r = requests.get(base_url, headers=headers)
-    return r.text
-
-def _parse_html():
-    soup = BeautifulSoup(_get_html())
+def parse_html(html):
+    soup = BeautifulSoup(html)
     data = {
         "lots": []
     }
@@ -25,7 +17,6 @@ def _parse_html():
     date_last_changed = soup.find("ul", {"class": "links"}).findNext("p").text.strip()
     date_last_changed = datetime.datetime.strptime(date_last_changed, "%d.%m.%Y %H.%M Uhr")
     data["last_changed"] = date_last_changed
-    data["time_updated"] = datetime.datetime.now()
 
     # Die einzelnen Stadteile sind in einzelne tables gegliedert
     section_tables = soup.find_all("tbody")
@@ -67,15 +58,12 @@ def _parse_html():
             })
     return data
 
-def get_data():
-    return _parse_html()
-
-def get_lot_details(lot_id):
-    params = {
-        "id": lot_id
-    }
-    r = requests.get(base_url + detail_url, params=params)
-    return r.text
+# def get_lot_details(lot_id):
+#     params = {
+#         "id": lot_id
+#     }
+#     r = requests.get(data_url + detail_url, params=params)
+#     return r.text
 
 def get_status_by_image(image_name):
     mapping = {
