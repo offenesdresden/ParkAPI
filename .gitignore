@@ -3,3 +3,4 @@ venv
 cities/__pycache__
 config.ini
 __pycache__
+cache
