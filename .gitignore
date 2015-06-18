@@ -1,3 +1,4 @@
 .idea
 venv
 cities/__pycache__
+config.ini

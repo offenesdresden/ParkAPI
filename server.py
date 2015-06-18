@@ -2,8 +2,13 @@ from flask import Flask, jsonify
 from datetime import datetime
 from os import getloadavg
 import scraper
+import os
+import configparser
 
 app = Flask(__name__)
+
+config = configparser.ConfigParser()
+config.read("config.ini")
 
 @app.route("/cities")
 def get_city_list():
@@ -33,4 +38,7 @@ def get_lots(city):
 #         return Dresden.get_lot_details(lot_id)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    if os.getenv("env") == "development":
+        app.run(debug=True)
+    else:
+        app.run(host=config["Server"]["host"], port=int(config["Server"]["port"]))
