@@ -20,12 +20,12 @@ if os.getenv("env") is not "development":
 supported_cities = []
 
 
-@app.route("/cities")
-def get_city_list():
-    return jsonify({
-        "supported_cities": supported_cities
-    })
-
+@app.route("/")
+def get_meta():
+	return jsonify({
+		"mail":"",
+		"cities": supported_cities
+		})
 
 @app.route("/status")
 def get_api_status():
