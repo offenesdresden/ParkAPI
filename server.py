@@ -7,8 +7,15 @@ import configparser
 
 app = Flask(__name__)
 
-config = configparser.ConfigParser()
-config.read("config.ini")
+if os.getenv("env") is not "development":
+    try:
+        config = configparser.ConfigParser()
+        config.read("config.ini")
+        server_host = config["Server"]["host"]
+        server_port = int(config["Server"]["port"])
+    except (KeyError, ValueError):
+        server_host = "localhost"
+        server_port = 5000
 
 supported_cities = [
     "Dresden",
@@ -67,4 +74,4 @@ if __name__ == "__main__":
     if os.getenv("env") == "development":
         app.run(debug=True)
     else:
-        app.run(host=config["Server"]["host"], port=int(config["Server"]["port"]))
+        app.run(host=server_host, port=server_port)
