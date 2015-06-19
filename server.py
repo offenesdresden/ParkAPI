@@ -17,11 +17,7 @@ if os.getenv("env") is not "development":
         server_host = "localhost"
         server_port = 5000
 
-supported_cities = [
-    "Dresden",
-    "Ingolstadt",
-    "Luebeck"
-]
+supported_cities = []
 
 
 @app.route("/cities")
@@ -70,8 +66,20 @@ def make_coffee():
     abort(418)
 
 
+def gather_supported_cities():
+    """
+    Iterate over files in ./cities to add them to list of available cities.
+    This list is used to stop requests trying to access files and output them which are not cities.
+    """
+    for file in os.listdir(os.curdir + "/cities"):
+        if file.endswith(".py") and "__Init__" not in file.title() and "Sample_City" not in file.title():
+            supported_cities.append(file[:-3])
+
+
 if __name__ == "__main__":
     if os.getenv("env") == "development":
+        gather_supported_cities()
         app.run(debug=True)
     else:
+        gather_supported_cities()
         app.run(host=server_host, port=server_port)
