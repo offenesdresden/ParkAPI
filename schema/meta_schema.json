@@ -1,0 +1,20 @@
+{
+	"$schema":"http://jkliemann.de/parkendd/media/meta_schema.json",
+	"title":"ParkenDD JSon API",
+	"description":"JSon meta information required by ParkenDD app",
+	"type":"Object",
+	"properties":{
+		"mail":{
+			"description":"Mail address of the server admin",
+			"type":"string"
+		},
+		"cities":{
+			"description":"list of available cities",
+			"type":"array",
+			"items":{
+				"description":"displayed city name",
+				"type":"string"
+			}
+		}
+	}
+}

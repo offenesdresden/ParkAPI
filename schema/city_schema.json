@@ -1,0 +1,55 @@
+{
+	"$schema":"http://jkliemann.de/parkendd/media/city_schema.json",
+	"title":"ParkenDD JSon API",
+	"description":"JSon required by ParkenDD app to show parking lots",
+	"type":"array",
+	"items":{
+		"type":"object",
+		"properties":{
+			"name":{
+				"description":"Name of parking lot category",
+				"type":"string"
+			},
+			"lots":{
+				"description":"Parking lots in this category",
+				"type":"array",
+				"items":{
+					"type":"object",
+					"properties":{
+						"name":{
+							"description":"Name of parking lot",
+							"type":"string"
+						},
+						"count":{
+							"description":"Count of available parking lots",
+							"type":"integer"
+						},
+						"free":{
+							"description":"Count of free parking lots",
+							"type":"integer"
+						},
+						"state":{
+							"description":"State of the parking lot",
+							"type":"string",
+							"enum":["nodata","closed","many","few","full"]
+						},
+						"lat":{
+							"description":"latitude of the parking lot",
+							"type":"string"
+						},
+						"lon":{
+							"description":"longitude of the parking lot",
+							"type":"string"
+						},
+						"forecast":{
+							"description":"shows if forecast is available for this spot",
+							"type":"boolean"
+						}
+					},
+					"required":["name", "count", "state", "forecast"]
+				}
+			}
+		},
+			"required":["name", "lots"]
+	}
+}
