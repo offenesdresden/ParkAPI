@@ -10,17 +10,17 @@ app = Flask(__name__)
 config = configparser.ConfigParser()
 config.read("config.ini")
 
-supported_cities = {
-    "supported_cities": [
+supported_cities = [
         "Dresden",
         "Ingolstadt",
         "Luebeck"
     ]
-}
 
 @app.route("/cities")
 def get_city_list():
-    return jsonify(supported_cities)
+    return jsonify({
+        "supported_cities": supported_cities
+    })
 
 @app.route("/status")
 def get_api_status():
