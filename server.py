@@ -10,15 +10,17 @@ app = Flask(__name__)
 config = configparser.ConfigParser()
 config.read("config.ini")
 
+supported_cities = {
+    "supported_cities": [
+        "Dresden",
+        "Ingolstadt",
+        "Luebeck"
+    ]
+}
+
 @app.route("/cities")
 def get_city_list():
-    return jsonify({
-        "supported_cities": [
-            "Dresden",
-            "Ingolstadt",
-            "Luebeck"
-        ]
-    })
+    return jsonify(supported_cities)
 
 @app.route("/status")
 def get_api_status():
@@ -30,6 +32,10 @@ def get_api_status():
 
 @app.route("/<city>")
 def get_lots(city):
+    if city not in supported_cities:
+        return jsonify({
+            "error": "Sorry, '" + city + "' isn't supported at the current time."
+        })
     try:
         file = open("./cache/" + city + ".json", "r")
         last_json = file.read()
