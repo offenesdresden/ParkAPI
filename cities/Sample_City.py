@@ -9,6 +9,7 @@ city_name = "Sample City"
 # Name of this file (without '.py'), sorry for needing this, but it makes things easier
 file_name = "Sample_City"
 
+
 def parse_html(html):
     soup = BeautifulSoup(html)
 

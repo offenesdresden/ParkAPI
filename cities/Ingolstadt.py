@@ -7,6 +7,7 @@ data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 city_name = "Ingolstadt"
 file_name = "Ingolstadt"
 
+
 def parse_html(html):
     soup = BeautifulSoup(html)
 

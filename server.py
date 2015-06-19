@@ -11,16 +11,18 @@ config = configparser.ConfigParser()
 config.read("config.ini")
 
 supported_cities = [
-        "Dresden",
-        "Ingolstadt",
-        "Luebeck"
-    ]
+    "Dresden",
+    "Ingolstadt",
+    "Luebeck"
+]
+
 
 @app.route("/cities")
 def get_city_list():
     return jsonify({
         "supported_cities": supported_cities
     })
+
 
 @app.route("/status")
 def get_api_status():
@@ -29,6 +31,7 @@ def get_api_status():
         "servertime": datetime.now(),
         "load": getloadavg()
     })
+
 
 @app.route("/<city>")
 def get_lots(city):
@@ -49,6 +52,7 @@ def get_lots(city):
     except FileNotFoundError:
         return jsonify(scraper.live(city))
 
+
 # @app.route("/<city>/<lot_id>")
 # def get_lot_details(city, lot_id):
 #     if city == "Dresden":
@@ -57,6 +61,7 @@ def get_lots(city):
 @app.route("/coffee")
 def make_coffee():
     abort(418)
+
 
 if __name__ == "__main__":
     if os.getenv("env") == "development":

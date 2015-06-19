@@ -8,6 +8,7 @@ city_name = "Dresden"
 file_name = "Dresden"
 detail_url = "/parken/detail"
 
+
 def parse_html(html):
     soup = BeautifulSoup(html)
     data = {
@@ -59,6 +60,7 @@ def parse_html(html):
             })
     return data
 
+
 # def get_lot_details(lot_id):
 #     params = {
 #         "id": lot_id
@@ -77,6 +79,7 @@ def get_status_by_image(image_name):
     if image_name not in mapping.keys():
         return "nodata"
     return mapping[image_name]
+
 
 def get_geodata_for_lot(lot_name):
     mapping = {
