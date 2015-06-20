@@ -10,7 +10,7 @@ import json
 def get_html(city):
     """Download html data for a given city"""
     headers = {
-        "User-Agent": "ParkAPI v0.1 - Info: https://github.com/kiliankoe/ParkAPI"
+        "User-Agent": "ParkAPI v0.1 - Info: https://github.com/offenesdresden/ParkAPI"
     }
     return requests.get(city.data_url, headers=headers).text
 
