@@ -1,5 +1,3 @@
-__author__ = 'kilian'
-
 from bs4 import BeautifulSoup
 import datetime
 

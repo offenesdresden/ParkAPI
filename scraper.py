@@ -1,5 +1,3 @@
-__author__ = 'kilian'
-
 import importlib
 import requests
 from datetime import datetime
