@@ -1,0 +1,174 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hauptbahnhof"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.437298655509947,
+          48.74315480852817
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hauptbahnhof Ost"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.439857482910156,
+          48.744905834783395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hallenbad"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.42030954360962,
+          48.760856819513116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Festplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.423431634902954,
+          48.7706936821076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klinikum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.374958753585815,
+          48.771443213043426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nordbahnhof"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.431505084037779,
+          48.77336648651627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Südl. Ringstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.437261104583738,
+          48.75859357346676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Congressgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.433302164077759,
+          48.76454144880872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Münster"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.419150829315186,
+          48.764354041367575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Reduit Tilly"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.433484554290771,
+          48.759930315491225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Schloss"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.43128514289856,
+          48.76627758638221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Theater-Ost"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.430437564849852,
+          48.76376352655507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Theater-West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.427175998687744,
+          48.76281232342508
+        ]
+      }
+    }
+  ]
+}

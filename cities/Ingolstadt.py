@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import datetime
+import json
 
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 city_name = "Ingolstadt"
@@ -28,7 +29,8 @@ def parse_html(html):
             "name": lot_name,
             "free": int(elements[1].text),
             "count": get_total_number(lot_name),
-            "type": get_type(lot_name)
+            "type": get_type(lot_name),
+            "coords": get_geodata_for_lot(lot_name)
         })
 
     return data
@@ -74,6 +76,21 @@ def get_type(lot_name):
         return "unbekannt"
     else:
         return mapping[lot_name]
+
+
+def get_geodata_for_lot(lot_name):
+    geofile = open("./cities/Ingolstadt.geojson")
+    geodata = geofile.read()
+    geofile.close()
+    geodata = json.loads(geodata)
+
+    for feature in geodata["features"]:
+        if feature["properties"]["name"] == lot_name:
+            return {
+                "lon": feature["geometry"]["coordinates"][0],
+                "lat": feature["geometry"]["coordinates"][1]
+            }
+    return []
 
 
 if __name__ == "__main__":
