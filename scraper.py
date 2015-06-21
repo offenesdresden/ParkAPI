@@ -5,7 +5,7 @@ import os
 import json
 import configparser
 
-def get_html(server_mail, city):
+def get_html(city, server_mail=""):
     """Download html data for a given city"""
     headers = {
         "User-Agent": "ParkAPI v0.1 - Info: https://github.com/offenesdresden/ParkAPI",
@@ -46,7 +46,8 @@ def live(city_name):
     """Scrape data for a given city pulling all data now"""
     try:
         city = importlib.import_module("cities." + city_name)
-        return pipeline(city, "")
+        html = get_html(city)
+        return pipeline(city, html)
     except ImportError:
         # Couldn't find module for city
         return {"error": "Sorry, '" + city_name + "' isn't supported at the current time."}
@@ -66,7 +67,7 @@ def main():
         if file.endswith(".py") and "__Init__" not in file.title() and "Sample_City" not in file.title():
             city = importlib.import_module("cities." + file.title()[:-3])
 
-            html = get_html(server_mail, city)
+            html = get_html(city, server_mail=server_mail)
             data = pipeline(city, html)
 
             save_data_to_disk(data, file.title()[:-3])
