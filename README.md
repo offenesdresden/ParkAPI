@@ -10,7 +10,7 @@ The idea here is to also include some more fun features like automatic time-base
 
 For every city listed in `/cities` or that's returned when you GET `/cities` on the server you can GET `server.tld/city_name` to receive a JSON response following the schema below.
 
-You can use the server running at [parkendd.higgsboson.tk](http://parkendd.higgsboson.tk) for testing. It should usually be running at the most current version of this repo.
+You can use the server running at [park-api.higgsboson.tk](https://park-api.higgsboson.tk) for testing. It should usually be running at the most current version of this repo.
 
 ### Schema
 
