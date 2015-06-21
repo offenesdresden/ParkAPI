@@ -87,17 +87,19 @@ def gather_supported_cities():
 
 if __name__ == "__main__":
     log_handler = RotatingFileHandler("server.log", maxBytes=10000, backupCount=1)
+    log_handler.setFormatter(logging.Formatter(
+        "%(asctime)s %(levelname)s: %(message)s "
+    ))
+
+    gather_supported_cities()
 
     if os.getenv("env") == "development":
         app.logger.addHandler(log_handler)
 
-        gather_supported_cities()
         app.run(debug=True)
     else:
         app.logger.setLevel(logging.INFO)
         log_handler.setLevel(logging.INFO)
         app.logger.addHandler(log_handler)
-
-        gather_supported_cities()
 
         app.run(host=server_host, port=server_port)
