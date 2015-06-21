@@ -12,8 +12,9 @@ def parse_html(html):
     soup = BeautifulSoup(html)
 
     # get time last updated
+    last_updated = datetime.datetime.strptime(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)")
     data = {
-        "last_updated": str(datetime.datetime.strptime(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)")),
+        "last_updated": last_updated.utcnow().replace(microsecond=0).isoformat(),
         "lots": []
     }
 

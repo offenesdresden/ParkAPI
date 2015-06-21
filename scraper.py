@@ -21,7 +21,7 @@ def parse_html(city, html):
 
 def add_metadata(data):
     """Adds metadata to a scraped output dict"""
-    data["last_downloaded"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    data["last_downloaded"] = datetime.utcnow().replace(microsecond=0).isoformat()
     return data
 
 

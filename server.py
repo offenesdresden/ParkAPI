@@ -36,7 +36,7 @@ def get_meta():
 def get_api_status():
     return jsonify({
         "status": "online",
-        "servertime": datetime.now(),
+        "server_time": datetime.utcnow().replace(microsecond=0).isoformat(),
         "load": getloadavg()
     })
 
@@ -55,8 +55,8 @@ def get_lots(city):
         file = open("./cache/" + city + ".json", "r")
         last_json = file.read()
         last_json = json.loads(last_json)
-        last_downloaded = datetime.strptime(last_json["last_downloaded"], "%Y-%m-%d %H:%M:%S")
-        if datetime.now() - last_downloaded <= timedelta(minutes=10):
+        last_downloaded = datetime.strptime(last_json["last_downloaded"], "%Y-%m-%dT%H:%M:%S")
+        if datetime.utcnow() - last_downloaded <= timedelta(minutes=10):
             app.logger.debug("Using cached data")
             return jsonify(last_json)
         else:
