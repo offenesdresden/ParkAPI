@@ -13,9 +13,11 @@ if os.getenv("env") is not "development":
         config.read("config.ini")
         server_host = config["Server"]["host"]
         server_port = int(config["Server"]["port"])
+        server_mail = config["Server"]["mail"]
     except (KeyError, ValueError):
         server_host = "localhost"
         server_port = 5000
+        server_mail = ""
 
 supported_cities = []
 
@@ -23,7 +25,7 @@ supported_cities = []
 @app.route("/")
 def get_meta():
     return jsonify({
-        "mail": "",
+        "mail": server_mail,
         "cities": supported_cities
     })
 
