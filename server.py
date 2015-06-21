@@ -89,12 +89,12 @@ if __name__ == "__main__":
     log_handler = RotatingFileHandler("server.log", maxBytes=10000, backupCount=1)
 
     if os.getenv("env") == "development":
-        log_handler.setLevel(logging.DEBUG)
         app.logger.addHandler(log_handler)
 
         gather_supported_cities()
         app.run(debug=True)
     else:
+        app.logger.setLevel(logging.INFO)
         log_handler.setLevel(logging.INFO)
         app.logger.addHandler(log_handler)
 
