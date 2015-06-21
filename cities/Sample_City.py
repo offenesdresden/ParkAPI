@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import json
 
 # The URL for the page where the parking lots are listed
 data_url = "http://example.com"
@@ -15,3 +16,25 @@ def parse_html(html):
 
     # Do everything necessary to scrape the contents of the html
     # into a dictionary of the format specified by the schema.
+
+
+def get_geodata_for_lot(lot_name):
+    geofile = open("./cities/" + file_name + ".geojson")
+    geodata = geofile.read()
+    geofile.close()
+    geodata = json.loads(geodata)
+
+    for feature in geodata["features"]:
+        if feature["properties"]["name"] == lot_name:
+            return {
+                "lon": feature["geometry"]["coordinates"][0],
+                "lat": feature["geometry"]["coordinates"][1]
+            }
+    return []
+
+
+if __name__ == "__main__":
+    file = open("../tests/sample_city.html")
+    html_data = file.read()
+    file.close()
+    parse_html(html_data)
