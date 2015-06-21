@@ -1,9 +1,11 @@
-from flask import Flask, jsonify, json, abort
+from flask import Flask, jsonify, json, abort, request
 from datetime import datetime, timedelta
 from os import getloadavg
 import scraper
 import os
 import configparser
+import logging
+from logging.handlers import RotatingFileHandler
 
 app = Flask(__name__)
 
@@ -41,7 +43,11 @@ def get_api_status():
 
 @app.route("/<city>")
 def get_lots(city):
+
+    app.logger.info("GET /" + city + " - " + request.headers.get("User-Agent"))
+
     if city not in supported_cities:
+        app.logger.info("Unsupported city: " + city)
         return jsonify({
             "error": "Sorry, '" + city + "' isn't supported at the current time."
         })
@@ -51,7 +57,7 @@ def get_lots(city):
         last_json = json.loads(last_json)
         last_downloaded = datetime.strptime(last_json["last_downloaded"], "%Y-%m-%d %H:%M:%S")
         if datetime.now() - last_downloaded <= timedelta(minutes=10):
-            print("Using cached data, oh yeah!")
+            app.logger.debug("Using cached data")
             return jsonify(last_json)
         else:
             return jsonify(scraper.live(city))
@@ -80,9 +86,18 @@ def gather_supported_cities():
 
 
 if __name__ == "__main__":
+    log_handler = RotatingFileHandler("server.log", maxBytes=10000, backupCount=1)
+
     if os.getenv("env") == "development":
+        log_handler.setLevel(logging.DEBUG)
+        app.logger.addHandler(log_handler)
+
         gather_supported_cities()
         app.run(debug=True)
     else:
+        log_handler.setLevel(logging.INFO)
+        app.logger.addHandler(log_handler)
+
         gather_supported_cities()
+
         app.run(host=server_host, port=server_port)
