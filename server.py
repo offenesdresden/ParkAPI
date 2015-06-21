@@ -22,10 +22,11 @@ supported_cities = []
 
 @app.route("/")
 def get_meta():
-	return jsonify({
-		"mail":"",
-		"cities": supported_cities
-		})
+    return jsonify({
+        "mail": "",
+        "cities": supported_cities
+    })
+
 
 @app.route("/status")
 def get_api_status():
