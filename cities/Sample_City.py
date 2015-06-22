@@ -1,5 +1,7 @@
 from bs4 import BeautifulSoup
 import json
+import datetime
+import pytz
 
 # The URL for the page where the parking lots are listed
 data_url = "http://example.com"
