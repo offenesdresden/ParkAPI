@@ -33,8 +33,15 @@ def parse_html(xml_data):
 def parse_summary(summary):
     """Parse a string from the format 'open /   41' into both its params"""
     summary = summary.split("/")
+
     summary[0] = summary[0].strip()
-    summary[1] = int(summary[1])
+    if "?" in summary[0]:
+        summary[0] = "unknown"
+
+    if "?" in summary[1].strip():
+        summary[1] = 0
+    else:
+        summary[1] = int(summary[1])
     return summary
 
 
