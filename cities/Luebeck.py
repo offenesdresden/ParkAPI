@@ -6,6 +6,13 @@ data_url = "http://kwlpls.adiwidjaja.info"
 city_name = "Lübeck"
 file_name = "Luebeck"
 
+process_state_map = {
+        "": "open",
+        "Geöffnet": "open",
+        "Vorübergehend geschlossen.": "closed",
+        "Vorübergehend geschlossen": "closed",
+        "Geschlossen": "closed"
+}
 
 def parse_html(html):
     soup = BeautifulSoup(html)
@@ -47,7 +54,7 @@ def parse_html(html):
                     "count": 0,
                     "free": 0,
                     "region": region_header,
-                    "state": process_state(raw_lot_data[1].text)
+                    "state": process_state_map.get(raw_lot_data[1].text, "")
                 })
 
             elif len(raw_lot_data) == 4:
@@ -58,24 +65,10 @@ def parse_html(html):
                     "count": int(raw_lot_data[1].text),
                     "free": int(raw_lot_data[2].text),
                     "region": region_header,
-                    "state": process_state("")
+                    "state": "open"
                 })
 
     return data
-
-
-def process_state(state):
-    mapping = {
-        "": "open",
-        "Geöffnet": "open",
-        "Vorübergehend geschlossen.": "closed",
-        "Vorübergehend geschlossen": "closed",
-        "Geschlossen": "closed"
-    }
-    if state not in mapping.keys():
-        return ""
-    return mapping[state]
-
 
 def process_name(name):
     lot_type = name[:2]
@@ -94,7 +87,4 @@ def process_name(name):
 
 
 if __name__ == "__main__":
-    file = open("../tests/luebeck.html")
-    html_data = file.read()
-    file.close()
-    parse_html(html_data)
+    parse_html(open("../tests/luebeck.html"))

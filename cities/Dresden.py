@@ -1,13 +1,22 @@
 from bs4 import BeautifulSoup
 import datetime
-import json
 import pytz
+from geodata import GeoData
 
 data_url = "http://www.dresden.de/freie-parkplaetze"
 city_name = "Dresden"
 file_name = "Dresden"
 detail_url = "/parken/detail"
 
+status_image_map = {
+        "/img/parken/p_gruen.gif": "many",
+        "/img/parken/p_gelb.gif": "few",
+        "/img/parken/p_rot.gif": "full",
+        "/img/parken/p_geschlossen.gif": "closed",
+        "/img/parken/p_blau.gif": "nodata"
+}
+
+geodata = GeoData(city_name)
 
 def parse_html(html):
     soup = BeautifulSoup(html)
@@ -39,9 +48,9 @@ def parse_html(html):
 
             id = raw_lot_data[0].find("a")["href"][-4:]
 
-            state = get_status_by_image(raw_lot_data[0].find("img")["src"])
+            state = status_image_map.get(raw_lot_data[0].find("img")["src"], "nodata")
 
-            coords = get_geodata_for_lot(name)
+            coords = geodata.coords(name)
 
             count = raw_lot_data[1].text
             count = count.strip()
@@ -73,36 +82,5 @@ def parse_html(html):
 #     r = requests.get(data_url + detail_url, params=params)
 #     return r.text
 
-def get_status_by_image(image_name):
-    mapping = {
-        "/img/parken/p_gruen.gif": "many",
-        "/img/parken/p_gelb.gif": "few",
-        "/img/parken/p_rot.gif": "full",
-        "/img/parken/p_geschlossen.gif": "closed",
-        "/img/parken/p_blau.gif": "nodata"
-    }
-    if image_name not in mapping.keys():
-        return "nodata"
-    return mapping[image_name]
-
-
-def get_geodata_for_lot(lot_name):
-    geofile = open("./cities/Dresden.geojson")
-    geodata = geofile.read()
-    geofile.close()
-    geodata = json.loads(geodata)
-
-    for feature in geodata["features"]:
-        if feature["properties"]["name"] == lot_name:
-            return {
-                "lon": feature["geometry"]["coordinates"][0],
-                "lat": feature["geometry"]["coordinates"][1]
-            }
-    return []
-
-
 if __name__ == "__main__":
-    file = open("../tests/dresden.html")
-    html_data = file.read()
-    file.close()
-    print(parse_html(html_data))
+    print(parse_html(open("../tests/dresden.html")))
