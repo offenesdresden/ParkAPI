@@ -1,14 +1,14 @@
 import feedparser
-import requests
 
 data_url = "http://www.pls-zh.ch/plsFeed/rss"
 
 city_name = "Zürich"
 file_name = "Zuerich"
 
+# Falls das hier jemals einer von den Menschen hinter OpenDataZürich lesen sollte: Ihr seid so toll <3
 
-def parse_html(data):
-    feed = feedparser.parse(data)
+def parse_html(xml_data):
+    feed = feedparser.parse(xml_data)
 
     data = {
         "lots": [],
@@ -17,14 +17,14 @@ def parse_html(data):
 
     for entry in feed["entries"]:
         summary = parse_summary(entry["summary"])
-        state = summary[0]
-        free = summary[1]
+        title = parse_title(entry["title"])
 
         data["lots"].append({
-            "name": entry["title"],
+            "name": title[0],
+            "address": title[1],
             "id": entry["id"].split("=")[1],
-            "free": free,
-            "state": state
+            "state": summary[0],
+            "free": summary[1]
         })
 
     return data
@@ -38,6 +38,14 @@ def parse_summary(summary):
     return summary
 
 
+def parse_title(title):
+    """Parse a string from the format 'Parkgarage am Central / Seilergraben' into both its params"""
+    title = title.split(" / ")
+    return title
+
+
 if __name__ == "__main__":
-    r = requests.get(data_url)
-    parse_html(r.text)
+    file = open("../tests/zuerich.xml")
+    file_data = file.read()
+    file.close()
+    parse_html(file_data)
