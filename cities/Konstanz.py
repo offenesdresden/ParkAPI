@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import datetime
 import pytz
-from geodata import GeoData
+from helpers.geodata import GeoData
 
 # The URL for the page where the parking lots are listed
 data_url = "http://www.konstanz.de/tourismus/01759/01765/"
