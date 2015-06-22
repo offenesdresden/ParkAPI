@@ -9,7 +9,7 @@ file_name = "Luebeck"
 def parse_html(html):
     soup = BeautifulSoup(html)
     data = {
-        "lots": {}
+        "lots": []
     }
 
     # get time last updated
@@ -17,23 +17,29 @@ def parse_html(html):
     data["last_updated"] = last_updated.utcnow().replace(microsecond=0).isoformat()
 
     rows = soup.find_all("tr")
-    rows = rows[1:]  #
+    rows = rows[1:]
+    i = -1  # index for current region
     for row in rows:
         if len(row.find_all("th")) > 0:
             # This is a header row, save it for later
             region_header = row.find("th", {"class": "head1"}).text
-            data["lots"][region_header] = []
+            # data["lots"][region_header] = []
+            data["lots"].append({
+                "name": region_header,
+                "lots": []
+            })
+            i += 1
         else:
             if row.find("td").text == "Gesamt":
                 continue
             # This is a parking lot row
             raw_lot_data = row.find_all("td")
             if len(raw_lot_data) == 2:
-                data["lots"][region_header].append({
+                data["lots"][i]["lots"].append({
                     "name": raw_lot_data[0].text
                 })
             elif len(raw_lot_data) == 4:
-                data["lots"][region_header].append({
+                data["lots"][i]["lots"].append({
                     "name": raw_lot_data[0].text,
                     "count": int(raw_lot_data[1].text),
                     "free": int(raw_lot_data[2].text)
