@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import datetime
 import pytz
-from helpers.geodata import GeoData
+from geodata import GeoData
 
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 city_name = "Ingolstadt"
@@ -73,6 +73,3 @@ def parse_html(html):
         })
 
     return data
-
-if __name__ == "__main__":
-    print(parse_html(open("../tests/ingolstadt.html")))

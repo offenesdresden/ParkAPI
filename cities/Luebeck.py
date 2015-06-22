@@ -84,7 +84,3 @@ def process_name(name):
         lot_type = ""
 
     return lot_type, lot_name
-
-
-if __name__ == "__main__":
-    parse_html(open("../tests/luebeck.html"))
