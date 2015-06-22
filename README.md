@@ -1,5 +1,7 @@
 ## ParkAPI
 
+[![Build Status](https://travis-ci.org/offenesdresden/ParkAPI.svg?branch=master)](https://travis-ci.org/offenesdresden/ParkAPI)
+
 ParkAPI is a small project trying to consolidate pages where cities publish the amount of empty spaces on their public parking lots (albeit as HTML) into a simple to use JSON API. It's trying to become the new backend for ParkenDD ([iOS](https://github.com/kiliankoe/ParkenDD) & [Android](https://github.com/jklmnn/ParkenDD)).
 
 Currently it's just a tiny python flask powered server and **definitely nowhere near ready for actual usage**. 
@@ -42,7 +44,7 @@ The top level params for when the data was last changed on the server and when i
 
 ### Installation
 
-To get this running locally you'll need Python 3.3 or higher and pip installed. First install the dependencies (1) and then duplicate (2) and fill in the config file if you wish to run on a custom host and port. 
+To get this running locally you'll need Python 3.x and pip installed. First install the dependencies (1) and then duplicate (2) and fill in the config file if you wish to run on a custom host and port. 
 
 If you specify an environment variable `env` to `development` (3) the server runs in debug mode on localhost and port 5000 per default without needing the config file.
 
