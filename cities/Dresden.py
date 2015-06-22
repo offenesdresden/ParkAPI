@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import datetime
 import json
+import pytz
 
 data_url = "http://www.dresden.de/freie-parkplaetze"
 city_name = "Dresden"
@@ -17,7 +18,12 @@ def parse_html(html):
     # Letzte Aktualisierung auslesen, ich liebe html parsing m(
     last_updated = soup.find("ul", {"class": "links"}).findNext("p").text.strip()
     last_updated = datetime.datetime.strptime(last_updated, "%d.%m.%Y %H.%M Uhr")
-    data["last_updated"] =  datetime.datetime.utcfromtimestamp(last_updated.timestamp()).replace(microsecond=0).isoformat()
+    local_timezone = pytz.timezone("Europe/Berlin")
+
+    last_updated = local_timezone.localize(last_updated, is_dst=None)
+    last_updated = last_updated.astimezone(pytz.utc).replace(tzinfo=None)
+
+    data["last_updated"] =  last_updated.replace(microsecond=0).isoformat()
 
     # Die einzelnen Stadteile sind in einzelne tables gegliedert
     section_tables = soup.find_all("tbody")
