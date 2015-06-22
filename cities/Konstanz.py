@@ -16,7 +16,7 @@ file_name = "Konstanz"
 def parse_html(html):
     soup = BeautifulSoup(html)
 
-    #last update time (UTC)
+    # last update time (UTC)
     update_time = soup.select('p > strong')[-1].text
     last_updated = datetime.datetime.strptime(update_time, "Stand: %d.%m.%Y - %H:%M:%S")
     local_timezone = pytz.timezone("Europe/Berlin")
@@ -26,13 +26,13 @@ def parse_html(html):
 
     data = {
         "last_updated": last_updated.replace(microsecond=0).isoformat(),
-        "lots": [] 
+        "lots": []
     }
 
-    #get all tables with lots
-    raw_lot_list = soup.find_all("div", {"class" : "listing"})
+    # get all tables with lots
+    raw_lot_list = soup.find_all("div", {"class": "listing"})
 
-    #get all lots
+    # get all lots
     for lot_list in raw_lot_list:
         raw_lots = lot_list.select('tr + tr')
 
@@ -40,12 +40,14 @@ def parse_html(html):
             lot_name = lot.select('a')[0].text
             lot_free = lot.select('td + td')[0].text
             data["lots"].append({
-            "name": lot_name,
-            "free": int(lot_free),
-            "count": get_total_number(lot_name)
-        })
+                "name": lot_name,
+                "free": int(lot_free),
+                "count": get_total_number(lot_name),
+                "coords": get_geodata_for_lot(lot_name)
+            })
 
     return data
+
 
 def get_total_number(lot_name):
     mapping = {
@@ -64,6 +66,22 @@ def get_total_number(lot_name):
         return 0
     else:
         return mapping[lot_name]
+
+
+def get_geodata_for_lot(lot_name):
+    geofile = open("./cities/" + file_name + ".geojson")
+    geodata = geofile.read()
+    geofile.close()
+    geodata = json.loads(geodata)
+
+    for feature in geodata["features"]:
+        if feature["properties"]["name"] == lot_name:
+            return {
+                "lon": feature["geometry"]["coordinates"][0],
+                "lat": feature["geometry"]["coordinates"][1]
+            }
+    return []
+
 
 if __name__ == "__main__":
     file = open("../tests/Konstanz.htm")

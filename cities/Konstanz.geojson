@@ -1,0 +1,135 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marktstätte"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.176427125930786,
+          47.659538040284566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Altstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.172049760818481,
+          47.663019166809015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lago"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.176606833934784,
+          47.657483940292856
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Augustiner / Karstadt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.173318445682526,
+          47.65950913530439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fischmarkt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.176258146762848,
+          47.66129940731421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Döbele"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.16858971118927,
+          47.65779106680178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Am Seerhein"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.164448380470276,
+          47.67286153200742
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Byk Gulden Str."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.140249490737915,
+          47.68337197354464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Benediktiner"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.178049862384796,
+          47.66877236211362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seerheincenter"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.183433055877686,
+          47.67272065604162
+        ]
+      }
+    }
+  ]
+}
