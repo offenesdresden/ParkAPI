@@ -86,7 +86,7 @@ def gather_supported_cities():
 
 
 if __name__ == "__main__":
-    log_handler = RotatingFileHandler("server.log", maxBytes=10000, backupCount=1)
+    log_handler = RotatingFileHandler("server.log", maxBytes=1000000, backupCount=1)
     log_handler.setFormatter(logging.Formatter(
         "%(asctime)s %(levelname)s: %(message)s "
     ))
