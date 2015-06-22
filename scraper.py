@@ -4,6 +4,8 @@ from datetime import datetime
 import os
 import json
 import configparser
+from bs4 import BeautifulSoup
+
 
 def get_html(city, server_mail=""):
     """Download html data for a given city"""
@@ -11,7 +13,17 @@ def get_html(city, server_mail=""):
         "User-Agent": "ParkAPI v0.1 - Info: https://github.com/offenesdresden/ParkAPI",
         "From": server_mail
     }
-    return requests.get(city.data_url, headers=headers).text
+    r = requests.get(city.data_url, headers=headers)
+
+    # Requests fails to correctly check the encoding for every site,
+    # we're going to have to get that manually (in some cases). This sucks.
+    soup = BeautifulSoup(r.text)
+    meta_content = soup.find("meta", {"http-equiv": "content-type"})
+    if meta_content is not None:
+        encoding = meta_content["content"].split("=")[-1]
+        r.encoding = encoding
+
+    return r.text
 
 
 def parse_html(city, html):
