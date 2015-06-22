@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import datetime
 import pytz
-from geodata import GeoData
+from helpers.geodata import GeoData
 
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 city_name = "Ingolstadt"

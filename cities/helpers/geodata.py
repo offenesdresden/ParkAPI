@@ -5,7 +5,7 @@ cities_path = os.path.dirname(os.path.realpath(__file__))
 class GeoData:
     def __init__(self, city):
         lots = {}
-        json_path = os.path.join(cities_path, city + ".geojson")
+        json_path = os.path.join(cities_path, "..", city + ".geojson")
         geodata = json.load(open(json_path))
         for feature in geodata["features"]:
             lots[feature["properties"]["name"]] = {
