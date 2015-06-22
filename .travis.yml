@@ -1,0 +1,8 @@
+sudo: false
+language: python
+python:
+  - "3.2"
+  - "3.3"
+  - "3.4"
+install: pip install -r requirements.txt
+script: cd cities && find . -type f \( -name '*.py' ! -name 'Sample_City.py' \) -print0 | xargs -0 -n1 python
