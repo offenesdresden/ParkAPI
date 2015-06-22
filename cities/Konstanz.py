@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import json
 import datetime
+import pytz
 
 # The URL for the page where the parking lots are listed
 data_url = "http://www.konstanz.de/tourismus/01759/01765/"
@@ -18,10 +19,13 @@ def parse_html(html):
     #last update time (UTC)
     update_time = soup.select('p > strong')[-1].text
     last_updated = datetime.datetime.strptime(update_time, "Stand: %d.%m.%Y - %H:%M:%S")
-    test = datetime.datetime.utcfromtimestamp(last_updated.timestamp())
-    
+    local_timezone = pytz.timezone("Europe/Berlin")
+
+    last_updated = local_timezone.localize(last_updated, is_dst=None)
+    last_updated = last_updated.astimezone(pytz.utc).replace(tzinfo=None)
+
     data = {
-        "last_updated": datetime.datetime.utcfromtimestamp(last_updated.timestamp()).replace(microsecond=0).isoformat(),
+        "last_updated": last_updated.replace(microsecond=0).isoformat(),
         "lots": [] 
     }
 
