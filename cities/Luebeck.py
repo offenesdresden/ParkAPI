@@ -87,7 +87,4 @@ def process_name(name):
 
 
 if __name__ == "__main__":
-    file = open("../tests/luebeck.html")
-    html_data = file.read()
-    file.close()
-    parse_html(html_data)
+    parse_html(open("../tests/luebeck.html"))

@@ -63,7 +63,4 @@ def parse_html(html):
     return data
 
 if __name__ == "__main__":
-    file = open("../tests/konstanz.html")
-    html_data = file.read()
-    file.close()
-    parse_html(html_data)
+    parse_html(open("../tests/konstanz.html"))
