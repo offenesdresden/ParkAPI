@@ -25,33 +25,72 @@ def parse_html(html):
 
     rows = soup.find_all("tr")
     rows = rows[1:]
-    i = -1  # index for current region
+    region_header = ""
+
     for row in rows:
         if len(row.find_all("th")) > 0:
             # This is a header row, save it for later
             region_header = row.find("th", {"class": "head1"}).text
-            # data["lots"][region_header] = []
-            data["lots"].append({
-                "name": region_header,
-                "lots": []
-            })
-            i += 1
+
         else:
             if row.find("td").text == "Gesamt":
                 continue
+
             # This is a parking lot row
             raw_lot_data = row.find_all("td")
+
             if len(raw_lot_data) == 2:
-                data["lots"][i]["lots"].append({
-                    "name": raw_lot_data[0].text
+                type_and_name = process_name(raw_lot_data[0].text)
+                data["lots"].append({
+                    "name": type_and_name[1],
+                    "type": type_and_name[0],
+                    "count": 0,
+                    "free": 0,
+                    "region": region_header,
+                    "state": process_state(raw_lot_data[1].text)
                 })
+
             elif len(raw_lot_data) == 4:
-                data["lots"][i]["lots"].append({
-                    "name": raw_lot_data[0].text,
+                type_and_name = process_name(raw_lot_data[0].text)
+                data["lots"].append({
+                    "name": type_and_name[1],
+                    "type": type_and_name[0],
                     "count": int(raw_lot_data[1].text),
-                    "free": int(raw_lot_data[2].text)
+                    "free": int(raw_lot_data[2].text),
+                    "region": region_header,
+                    "state": process_state("")
                 })
+
     return data
+
+
+def process_state(state):
+    mapping = {
+        "": "open",
+        "Geöffnet": "open",
+        "Vorübergehend geschlossen.": "closed",
+        "Vorübergehend geschlossen": "closed",
+        "Geschlossen": "closed"
+    }
+    if state not in mapping.keys():
+        return ""
+    return mapping[state]
+
+
+def process_name(name):
+    lot_type = name[:2]
+    lot_name = name[3:]
+
+    type_mapping = {
+        "PP": "Parkplatz",
+        "PH": "Parkhaus",
+    }
+    if lot_type in type_mapping.keys():
+        lot_type = type_mapping[lot_type]
+    else:
+        lot_type = ""
+
+    return lot_type, lot_name
 
 
 if __name__ == "__main__":
