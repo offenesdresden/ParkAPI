@@ -12,6 +12,18 @@ city_name = "Konstanz"
 # Name of this file (without '.py'), sorry for needing this, but it makes things easier
 file_name = "Konstanz"
 
+total_number_map = {
+    "Marktstätte": 268,
+    "Altstadt": 359,
+    "Lago": 930,
+    "Augustiner / Karstadt": 284,
+    "Fischmarkt": 158,
+    "Döbele": 335,
+    "Am Seerheim": 500,
+    "Byk Gulden Str.": 100,
+    "Benediktiner": 118,
+    "Seerheincenter": 280
+}
 
 def parse_html(html):
     soup = BeautifulSoup(html)
@@ -42,31 +54,11 @@ def parse_html(html):
             data["lots"].append({
                 "name": lot_name,
                 "free": int(lot_free),
-                "count": get_total_number(lot_name),
                 "coords": get_geodata_for_lot(lot_name)
+                "count": total_number_map.get(lot_name, 0),
             })
 
     return data
-
-
-def get_total_number(lot_name):
-    mapping = {
-        "Marktstätte": 268,
-        "Altstadt": 359,
-        "Lago": 930,
-        "Augustiner / Karstadt": 284,
-        "Fischmarkt": 158,
-        "Döbele": 335,
-        "Am Seerheim": 500,
-        "Byk Gulden Str.": 100,
-        "Benediktiner": 118,
-        "Seerheincenter": 280
-    }
-    if lot_name not in mapping.keys():
-        return 0
-    else:
-        return mapping[lot_name]
-
 
 def get_geodata_for_lot(lot_name):
     geofile = open("./cities/" + file_name + ".geojson")
