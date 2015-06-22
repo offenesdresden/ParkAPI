@@ -27,6 +27,7 @@ def parse_html(xml_data):
             "free": summary[1]
         })
 
+    print(data)
     return data
 
 
@@ -38,10 +39,10 @@ def parse_summary(summary):
     if "?" in summary[0]:
         summary[0] = "unknown"
 
-    if "?" in summary[1].strip():
-        summary[1] = 0
-    else:
+    try:
         summary[1] = int(summary[1])
+    except ValueError:
+        summary[1] = 0
     return summary
 
 
