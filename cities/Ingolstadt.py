@@ -19,9 +19,8 @@ def parse_html(html):
     last_updated = local_timezone.localize(last_updated, is_dst=None)
     last_updated = last_updated.astimezone(pytz.utc).replace(tzinfo=None)
 
-
     data = {
-        "last_updated":  last_updated.replace(microsecond=0).isoformat(),
+        "last_updated": last_updated.replace(microsecond=0).isoformat(),
         "lots": []
     }
 

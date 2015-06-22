@@ -23,7 +23,7 @@ def parse_html(html):
     last_updated = local_timezone.localize(last_updated, is_dst=None)
     last_updated = last_updated.astimezone(pytz.utc).replace(tzinfo=None)
 
-    data["last_updated"] =  last_updated.replace(microsecond=0).isoformat()
+    data["last_updated"] = last_updated.replace(microsecond=0).isoformat()
 
     # Die einzelnen Stadteile sind in einzelne tables gegliedert
     section_tables = soup.find_all("tbody")
@@ -99,6 +99,7 @@ def get_geodata_for_lot(lot_name):
                 "lat": feature["geometry"]["coordinates"][1]
             }
     return []
+
 
 if __name__ == "__main__":
     file = open("../tests/dresden.html")

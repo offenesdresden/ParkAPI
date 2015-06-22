@@ -43,7 +43,6 @@ def get_api_status():
 
 @app.route("/<city>")
 def get_lots(city):
-
     app.logger.info("GET /" + city + " - " + request.headers.get("User-Agent"))
 
     if city not in supported_cities:
@@ -72,7 +71,9 @@ def get_lots(city):
 
 @app.route("/coffee")
 def make_coffee():
-    abort(418)
+    return "<h1>I'm a teapot</h1>" \
+           "<p>This server is a teapot, not a coffee machine.</p><br>" \
+           "<img src=\"http://i.imgur.com/xVpIC9N.gif\" alt=\"British porn\" title=\"British porn\">", 418
 
 
 def gather_supported_cities():
