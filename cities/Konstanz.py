@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
-import json
 import datetime
 import pytz
+from geodata import GeoData
 
 # The URL for the page where the parking lots are listed
 data_url = "http://www.konstanz.de/tourismus/01759/01765/"
@@ -24,6 +24,8 @@ total_number_map = {
     "Benediktiner": 118,
     "Seerheincenter": 280
 }
+
+geodata = GeoData(city_name)
 
 def parse_html(html):
     soup = BeautifulSoup(html)
@@ -54,26 +56,11 @@ def parse_html(html):
             data["lots"].append({
                 "name": lot_name,
                 "free": int(lot_free),
-                "coords": get_geodata_for_lot(lot_name)
                 "count": total_number_map.get(lot_name, 0),
+                "coords": geodata.coords(lot_name)
             })
 
     return data
-
-def get_geodata_for_lot(lot_name):
-    geofile = open("./cities/" + file_name + ".geojson")
-    geodata = geofile.read()
-    geofile.close()
-    geodata = json.loads(geodata)
-
-    for feature in geodata["features"]:
-        if feature["properties"]["name"] == lot_name:
-            return {
-                "lon": feature["geometry"]["coordinates"][0],
-                "lat": feature["geometry"]["coordinates"][1]
-            }
-    return []
-
 
 if __name__ == "__main__":
     file = open("../tests/konstanz.html")

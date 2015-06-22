@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import datetime
-import json
 import pytz
+from geodata import GeoData
 
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 city_name = "Ingolstadt"
@@ -37,6 +37,8 @@ total_number_map = {
         "Congressgarage": 213
 }
 
+geodata = GeoData(city_name)
+
 # Additional information for single lots: http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/
 
 def parse_html(html):
@@ -65,27 +67,12 @@ def parse_html(html):
         data["lots"].append({
             "name": lot_name,
             "free": int(elements[1].text),
-            "coords": get_geodata_for_lot(lot_name)
             "count": total_number_map.get(lot_name, 0),
             "type": type_map.get(lot_name, "unbekannt"),
+            "coords": geodata.coords(lot_name)
         })
 
     return data
-
-def get_geodata_for_lot(lot_name):
-    geofile = open("./cities/Ingolstadt.geojson")
-    geodata = geofile.read()
-    geofile.close()
-    geodata = json.loads(geodata)
-
-    for feature in geodata["features"]:
-        if feature["properties"]["name"] == lot_name:
-            return {
-                "lon": feature["geometry"]["coordinates"][0],
-                "lat": feature["geometry"]["coordinates"][1]
-            }
-    return []
-
 
 if __name__ == "__main__":
     file = open("../tests/ingolstadt.html")
