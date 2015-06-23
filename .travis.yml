@@ -4,5 +4,8 @@ python:
   - "3.3"
   - "3.4"
   - "nightly"
+matrix:
+  allow_failures:
+    - python: "nightly"
 cache: pip
-script: cd cities && find . -type f \( -name '*.py' ! -name 'Sample_City.py' \) -print0 | xargs -0 -n1 python
+script: python -m unittest discover tests

@@ -27,7 +27,6 @@ def parse_html(xml_data):
             "free": summary[1]
         })
 
-    print(data)
     return data
 
 
@@ -50,10 +49,3 @@ def parse_title(title):
     """Parse a string from the format 'Parkgarage am Central / Seilergraben' into both its params"""
     title = title.split(" / ")
     return title
-
-
-if __name__ == "__main__":
-    file = open("../tests/zuerich.xml")
-    file_data = file.read()
-    file.close()
-    parse_html(file_data)

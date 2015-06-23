@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import datetime
 import pytz
-from helpers.geodata import GeoData
+from geodata import GeoData
 
 data_url = "http://www.dresden.de/freie-parkplaetze"
 city_name = "Dresden"
@@ -81,6 +81,3 @@ def parse_html(html):
 #     }
 #     r = requests.get(data_url + detail_url, params=params)
 #     return r.text
-
-if __name__ == "__main__":
-    print(parse_html(open("../tests/dresden.html")))
