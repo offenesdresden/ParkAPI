@@ -42,6 +42,19 @@ We're still working on specifying which parameters will always be included.
 
 The top level params for when the data was last changed on the server and when it was pulled by the scraper should always be there.
 
+### Adding support for a new city
+
+Have a look at `cities/Sample_City.py` as a place to get started and the other city scrapers for reference. The basic idea is to include all code specific to gathering data for a city in its file.
+
+If you have the necessary geodata it'd be great if you could create a geojson file as well. It's name is the same as the city and in the same directory, just with `.geojson` at the end.
+[geojson.io](http://geojson.io) is definitely a recommended ressource as well!
+
+When you're done include it in the tests and see if it all works out.
+
+Awesome! Thanks for helping out!
+
+*Note*: Please don't include umlauts or other special characters in the name of the city file(s). The correct city name is specified inside the `city.py` file, but the filename should be ascii-compatible.
+
 ### Installation
 
 To get this running locally you'll need Python 3.x and pip installed. First install the dependencies (1) and then duplicate (2) and fill in the config file if you wish to run on a custom host and port. 
