@@ -52,10 +52,15 @@ def parse_html(html):
 
         for lot in raw_lots:
             lot_name = lot.select('a')[0].text
-            lot_free = lot.select('td + td')[0].text
+
+            try:
+                lot_free = int(lot.select('td + td')[0].text)
+            except ValueError:
+                lot_free = 0
+
             data["lots"].append({
                 "name": lot_name,
-                "free": int(lot_free),
+                "free": lot_free,
                 "count": total_number_map.get(lot_name, 0),
                 "coords": geodata.coords(lot_name)
             })
