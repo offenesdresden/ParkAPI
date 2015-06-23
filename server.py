@@ -36,11 +36,7 @@ if os.getenv("env") != "development":
     # cleaning temporary variables
     del raw_server_conf, used_port, config
 else:
-    SERVER_CONF = structs.ServerConf(
-        host=api_conf.DEFAULT_SERVER.host,
-        port=api_conf.DEFAULT_SERVER.port,
-        mail=api_conf.DEFAULT_SERVER.mail
-    )
+    SERVER_CONF = api_conf.DEFAULT_SERVER
 
 
 @app.route("/")

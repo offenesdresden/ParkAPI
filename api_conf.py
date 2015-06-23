@@ -11,4 +11,4 @@ DEFAULT_SERVER = structs.ServerConf(
     mail=''
 )
 
-del join, dirname
+del join, dirname, structs
