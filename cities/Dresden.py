@@ -49,13 +49,13 @@ def parse_html(html):
 
             count = raw_lot_data[1].text
             count = count.strip()
-            if count is "":
+            if count == "":
                 count = 0
             count = int(count)
 
             free = raw_lot_data[2].text
             free = free.strip()
-            if free is "":
+            if free == "":
                 free = 0
             free = int(free)
 

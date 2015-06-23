@@ -9,7 +9,7 @@ from logging.handlers import RotatingFileHandler
 
 app = Flask(__name__)
 
-if os.getenv("env") is not "development":
+if not (os.getenv("env") == "development"):
     try:
         config = configparser.ConfigParser()
         config.read("config.ini")
