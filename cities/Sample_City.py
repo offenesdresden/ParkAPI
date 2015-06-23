@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
-import json
 import datetime
 import pytz
+from geodata import GeoData
 
 # The URL for the page where the parking lots are listed
 data_url = "http://example.com"
@@ -12,6 +12,8 @@ city_name = "Sample City"
 # Name of this file (without '.py'), sorry for needing this, but it makes things easier
 file_name = "Sample_City"
 
+# Uncomment the following line if there's geodata in the format of Sample_City.geodata in this directory
+# geodata = GeoData(city_name)
 
 def parse_html(html):
     soup = BeautifulSoup(html)
@@ -19,24 +21,15 @@ def parse_html(html):
     # Do everything necessary to scrape the contents of the html
     # into a dictionary of the format specified by the schema.
 
+    data = {
+        "last_updated": "",
+        "lots": []
+    }
 
-def get_geodata_for_lot(lot_name):
-    geofile = open("./cities/" + file_name + ".geojson")
-    geodata = geofile.read()
-    geofile.close()
-    geodata = json.loads(geodata)
+    print(data)
+    return data
 
-    for feature in geodata["features"]:
-        if feature["properties"]["name"] == lot_name:
-            return {
-                "lon": feature["geometry"]["coordinates"][0],
-                "lat": feature["geometry"]["coordinates"][1]
-            }
-    return []
-
-
+# the following is for testing this out, just delete it all when done
 if __name__ == "__main__":
-    file = open("../tests/sample_city.html")
-    html_data = file.read()
-    file.close()
-    parse_html(html_data)
+    with open("../tests/sample_city.html") as f:
+        parse_html(f.read())
