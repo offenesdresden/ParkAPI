@@ -7,7 +7,7 @@ import configparser
 import logging
 from logging.handlers import RotatingFileHandler
 import util
-import types
+import structs
 from security import file_is_allowed
 import api_conf
 
@@ -31,7 +31,7 @@ if os.getenv("env") != "development":
     except ValueError:
         used_port = api_conf.DEFAULT_SERVER.port
 
-    SERVER_CONF = types.ServerConf(
+    SERVER_CONF = structs.ServerConf(
         host = raw_server_conf.get('host', api_conf.DEFAULT_SERVER.host),
         port = used_port,
         mail = raw_server_conf.get('mail', api_conf.DEFAULT_SERVER.mail)
