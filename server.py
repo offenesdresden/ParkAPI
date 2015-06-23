@@ -11,13 +11,9 @@ import structs
 from security import file_is_allowed
 import api_conf
 
-
 app = Flask(__name__)
 
-
 SUPPORTED_CITIES = []
-
-
 
 if os.getenv("env") != "development":
 
@@ -32,9 +28,9 @@ if os.getenv("env") != "development":
         used_port = api_conf.DEFAULT_SERVER.port
 
     SERVER_CONF = structs.ServerConf(
-        host = raw_server_conf.get('host', api_conf.DEFAULT_SERVER.host),
-        port = used_port,
-        mail = raw_server_conf.get('mail', api_conf.DEFAULT_SERVER.mail)
+        host=raw_server_conf.get('host', api_conf.DEFAULT_SERVER.host),
+        port=used_port,
+        mail=raw_server_conf.get('mail', api_conf.DEFAULT_SERVER.mail)
     )
 
     # cleaning temporary variables
@@ -74,8 +70,8 @@ def get_lots(city):
     if city not in SUPPORTED_CITIES:
         app.logger.info("Unsupported city: " + city)
         return jsonify({
-                "error": "Sorry, '" + city + "' isn't supported at the current time."
-            }), 404
+            "error": "Sorry, '" + city + "' isn't supported at the current time."
+        }), 404
     try:
         with open("./cache/" + city + ".json", "r") as file:
             last_json = json.load(file)
@@ -106,8 +102,8 @@ def gather_supported_cities():
         file[:-3]
 
         for file in
-            filter(file_is_allowed, os.listdir(os.curdir + "/cities"))
-    ]
+        filter(file_is_allowed, os.listdir(os.curdir + "/cities"))
+        ]
 
 
 if __name__ == "__main__":
