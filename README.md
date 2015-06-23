@@ -10,7 +10,7 @@ The idea here is to also include some more fun features like automatic time-base
 
 ### Usage
 
-For every city listed in `/cities` or that's returned when you GET `/cities` on the server you can GET `server.tld/city_name` to receive a JSON response following the schema below.
+For every city listed in `/cities` or that's returned when you GET `/` on the server you can GET `server.tld/city_name` to receive a JSON response following the schema below.
 
 You can use the server running at [park-api.higgsboson.tk](https://park-api.higgsboson.tk) for testing. It should usually be running at the most current version of this repo.
 
@@ -20,8 +20,8 @@ The current (not final!) schema for the output looks something like this:
 
 ```js
 {
-  "last_changed": "Mon, 15 Jun 2015 12:31:00 GMT",
-  "last_downloaded": "Mon, 15 Jun 2015 12:31:25 GMT",
+  "last_updated": "2015-06-15T12:31:00",
+  "last_downloaded": "2015-06-15T12:31:25",
   "lots": [
     {
       "coords": {
@@ -38,7 +38,7 @@ The current (not final!) schema for the output looks something like this:
 }
 ```
 
-Besides `name` all other attributes for a single lot are optional and might not exist for each city.
+We're still working on specifying which parameters will always be included.
 
 The top level params for when the data was last changed on the server and when it was pulled by the scraper should always be there.
 
