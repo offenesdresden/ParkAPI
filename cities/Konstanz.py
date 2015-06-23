@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
-import datetime
-import pytz
+from util import convert_date
 from geodata import GeoData
 
 data_url = "http://www.konstanz.de/tourismus/01759/01765/"
@@ -28,14 +27,9 @@ def parse_html(html):
 
     # last update time (UTC)
     update_time = soup.select('p > strong')[-1].text
-    last_updated = datetime.datetime.strptime(update_time, "Stand: %d.%m.%Y - %H:%M:%S")
-    local_timezone = pytz.timezone("Europe/Berlin")
-
-    last_updated = local_timezone.localize(last_updated, is_dst=None)
-    last_updated = last_updated.astimezone(pytz.utc).replace(tzinfo=None)
 
     data = {
-        "last_updated": last_updated.replace(microsecond=0).isoformat(),
+        "last_updated": convert_date(update_time, "Stand: %d.%m.%Y - %H:%M:%S"),
         "lots": []
     }
 

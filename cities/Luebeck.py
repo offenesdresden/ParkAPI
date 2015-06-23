@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
-import datetime
-import pytz
+from util import convert_date
 
 data_url = "http://kwlpls.adiwidjaja.info"
 city_name = "Lübeck"
@@ -17,19 +16,11 @@ process_state_map = {
 
 def parse_html(html):
     soup = BeautifulSoup(html)
+
     data = {
+        "last_updated": convert_date(soup.find("tr").find("strong").text, "Stand: %d.%m.%Y, %H:%M Uhr"),
         "lots": []
     }
-
-    # get time last updated
-    last_updated = datetime.datetime.strptime(soup.find("tr").find("strong").text, "Stand: %d.%m.%Y, %H:%M Uhr")
-
-    local_timezone = pytz.timezone("Europe/Berlin")
-
-    last_updated = local_timezone.localize(last_updated, is_dst=None)
-    last_updated = last_updated.astimezone(pytz.utc).replace(tzinfo=None)
-
-    data["last_updated"] = last_updated.replace(microsecond=0).isoformat()
 
     rows = soup.find_all("tr")
     rows = rows[1:]

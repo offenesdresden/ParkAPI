@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
-import datetime
-import pytz
+from util import convert_date
 from geodata import GeoData
 
 # The URL for the page where the parking lots are listed
@@ -22,14 +21,13 @@ def parse_html(html):
     # into a dictionary of the format specified by the schema.
 
     data = {
-        "last_updated": "",
+        "last_updated": convert_date("date_string", "date_format"),
         "lots": []
     }
 
-    print(data)
     return data
 
 # the following is for testing this out, just delete it all when done
 if __name__ == "__main__":
-    with open("../tests/sample_city.html") as f:
+    with open("../tests/fixtures/" + file_name.lower() + ".html") as f:
         parse_html(f.read())

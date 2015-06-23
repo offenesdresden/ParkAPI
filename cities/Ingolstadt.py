@@ -1,11 +1,12 @@
 from bs4 import BeautifulSoup
-import datetime
-import pytz
 from geodata import GeoData
+from util import convert_date
 
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 city_name = "Ingolstadt"
 file_name = "Ingolstadt"
+
+# Additional information for single lots: http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/
 
 type_map = {
     "Theater-West": "Tiefgarage",
@@ -39,20 +40,11 @@ total_number_map = {
 
 geodata = GeoData(city_name)
 
-# Additional information for single lots: http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/
-
 def parse_html(html):
     soup = BeautifulSoup(html)
 
-    # get time last updated
-    last_updated = datetime.datetime.strptime(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)")
-    local_timezone = pytz.timezone("Europe/Berlin")
-
-    last_updated = local_timezone.localize(last_updated, is_dst=None)
-    last_updated = last_updated.astimezone(pytz.utc).replace(tzinfo=None)
-
     data = {
-        "last_updated": last_updated.replace(microsecond=0).isoformat(),
+        "last_updated": convert_date(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)"),
         "lots": []
     }
 
