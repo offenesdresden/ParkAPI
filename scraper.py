@@ -5,12 +5,18 @@ import os
 import json
 import configparser
 from bs4 import BeautifulSoup
+import util
+from security import file_is_allowed
+import api_conf
+
+
+USER_AGENT = "ParkAPI v{} - Info: {}".format(api_conf.VERSION, api_conf.SOURCE_REPOSITORY)
 
 
 def get_html(city, server_mail=""):
     """Download html data for a given city"""
     headers = {
-        "User-Agent": "ParkAPI v0.1 - Info: https://github.com/offenesdresden/ParkAPI",
+        "User-Agent": USER_AGENT,
         "From": server_mail
     }
     r = requests.get(city.data_url, headers=headers)
@@ -33,7 +39,7 @@ def parse_html(city, html):
 
 def add_metadata(data):
     """Adds metadata to a scraped output dict"""
-    data["last_downloaded"] = datetime.utcnow().replace(microsecond=0).isoformat()
+    data["last_downloaded"] = util.utc_now()
     return data
 
 
@@ -46,12 +52,11 @@ def pipeline(city, html):
 
 def save_data_to_disk(data, city):
     """Save a data dictionary in ./cache as a json file"""
-    if not os.path.exists("./cache"):
-        os.mkdir("./cache")
+    if not os.path.exists(api_conf.CACHE_DIRECTORY):
+        os.mkdir(api_conf.CACHE_DIRECTORY)
 
-    file = open("./cache/" + city + ".json", "w")
-    file.write(json.dumps(data))
-    file.close()
+    with open(os.path.join(api_conf.CACHE_DIRECTORY, city + ".json"), "w") as file:
+        json.dump(data, fp=file)
 
 
 def live(city_name):
@@ -62,11 +67,11 @@ def live(city_name):
         return pipeline(city, html)
     except ImportError:
         # Couldn't find module for city
-        return {"error": "Sorry, '" + city_name + "' isn't supported at the current time."}
+        return {"error": "Sorry, '{}' isn't supported at the current time.".format(city_name)}
 
 
 def main():
-    """Iterate over all cities in ./cities and scrape and save their data"""
+    """Iterate over all cities in ./cities, scrape and save their data"""
 
     try:
         config = configparser.ConfigParser()
@@ -75,14 +80,13 @@ def main():
     except (KeyError, ValueError):
         server_mail = ""
 
-    for file in os.listdir(os.curdir + "/cities"):
-        if file.endswith(".py") and "__Init__" not in file.title() and "Sample_City" not in file.title():
-            city = importlib.import_module("cities." + file.title()[:-3])
+    for file in filter(file_is_allowed, os.listdir(os.curdir + "/cities")):
+        city = importlib.import_module("cities." + file.title()[:-3])
 
-            html = get_html(city, server_mail=server_mail)
-            data = pipeline(city, html)
+        html = get_html(city, server_mail=server_mail)
+        data = pipeline(city, html)
 
-            save_data_to_disk(data, file.title()[:-3])
+        save_data_to_disk(data, file.title()[:-3])
 
 
 if __name__ == "__main__":

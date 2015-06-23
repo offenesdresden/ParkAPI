@@ -6,20 +6,15 @@ import os
 import configparser
 import logging
 from logging.handlers import RotatingFileHandler
-from collections import namedtuple
+import util
+import types
+from security import file_is_allowed
+import api_conf
 
 
 app = Flask(__name__)
 
 
-ServerConf = namedtuple('ServerConf', ['port', 'host', 'mail'])
-
-
-DEFAULTS = ServerConf(
-    port = 5000,
-    host = 'localhost',
-    mail = ''
-)
 SUPPORTED_CITIES = []
 
 
@@ -32,14 +27,14 @@ if os.getenv("env") != "development":
     raw_server_conf = config.get('server', {})
 
     try:
-        used_port = int(raw_server_conf.get('port', DEFAULTS.port))
+        used_port = int(raw_server_conf.get('port', api_conf.DEFAULT_SERVER.port))
     except ValueError:
-        used_port = DEFAULTS.port
+        used_port = api_conf.DEFAULT_SERVER.port
 
-    SERVER_CONF = ServerConf(
-        host = raw_server_conf.get('host', DEFAULTS.host),
+    SERVER_CONF = types.ServerConf(
+        host = raw_server_conf.get('host', api_conf.DEFAULT_SERVER.host),
         port = used_port,
-        mail = raw_server_conf.get('mail', DEFAULTS.mail)
+        mail = raw_server_conf.get('mail', api_conf.DEFAULT_SERVER.mail)
     )
 
     # cleaning temporary variables
@@ -58,7 +53,7 @@ def get_meta():
 def get_api_status():
     return jsonify({
         "status": "online",
-        "server_time": datetime.utcnow().replace(microsecond=0).isoformat(),
+        "server_time": util.utc_now(),
         "load": getloadavg()
     })
 
@@ -73,12 +68,11 @@ def get_lots(city):
     if city not in SUPPORTED_CITIES:
         app.logger.info("Unsupported city: " + city)
         return jsonify({
-            "error": "Sorry, '" + city + "' isn't supported at the current time."
-        }), 404
+                "error": "Sorry, '" + city + "' isn't supported at the current time."
+            }), 404
     try:
-        file = open("./cache/" + city + ".json", "r")
-        last_json = file.read()
-        last_json = json.loads(last_json)
+        with open("./cache/" + city + ".json", "r") as file:
+            last_json = json.load(file)
         last_downloaded = datetime.strptime(last_json["last_downloaded"], "%Y-%m-%dT%H:%M:%S")
         if datetime.utcnow() - last_downloaded <= timedelta(minutes=10):
             app.logger.debug("Using cached data")
@@ -94,10 +88,6 @@ def make_coffee():
     return "<h1>I'm a teapot</h1>" \
            "<p>This server is a teapot, not a coffee machine.</p><br>" \
            "<img src=\"http://i.imgur.com/xVpIC9N.gif\" alt=\"British porn\" title=\"British porn\">", 418
-
-
-def file_is_allowed(file):
-    return file.endswith(".py") and "__Init__" not in file.title() and "Sample_City" not in file.title()
 
 
 def gather_supported_cities():

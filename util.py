@@ -1,5 +1,9 @@
 import datetime
 import pytz
+from datetime import datetime
+
+
+utc_now = lambda : datetime.utcnow().replace(microsecond=0).isoformat()
 
 
 def convert_date(date_string, date_format, timezone="Europe/Berlin"):
