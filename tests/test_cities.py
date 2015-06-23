@@ -26,3 +26,6 @@ class CityTestCase(unittest.TestCase):
 
     def test_zuerich(self):
         scrape_city("Zuerich", ".xml")
+
+    def test_muenster(self):
+        scrape_city("Muenster")
