@@ -1,4 +1,5 @@
-import os, sys
+import os
+import sys
 
 TEST_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)))
 

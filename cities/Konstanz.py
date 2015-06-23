@@ -3,13 +3,8 @@ import datetime
 import pytz
 from geodata import GeoData
 
-# The URL for the page where the parking lots are listed
 data_url = "http://www.konstanz.de/tourismus/01759/01765/"
-
-# Name of the city, just in case it contains umlauts which this filename shouldn't
 city_name = "Konstanz"
-
-# Name of this file (without '.py'), sorry for needing this, but it makes things easier
 file_name = "Konstanz"
 
 total_number_map = {
@@ -26,6 +21,7 @@ total_number_map = {
 }
 
 geodata = GeoData(city_name)
+
 
 def parse_html(html):
     soup = BeautifulSoup(html)

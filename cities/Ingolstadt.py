@@ -8,33 +8,33 @@ city_name = "Ingolstadt"
 file_name = "Ingolstadt"
 
 type_map = {
-        "Theater-West": "Tiefgarage",
-        "Theater-Ost": "Tiefgarage",
-        "Schloss": "Tiefgarage",
-        "Münster": "Tiefgarage",
-        "Reduit Tilly": "Tiefgarage",
-        "Hallenbad": "Parkplatz",
-        "Festplatz": "Parkplatz",
-        "Südl. Ringstraße": "Parkplatz",
-        "Hauptbahnhof": "Parkhaus",
-        "Nordbahnhof": "Parkplatz",
-        "Hauptbahnhof Ost": "Parkhaus",
-        "Congressgarage": "Tiefgarage"
+    "Theater-West": "Tiefgarage",
+    "Theater-Ost": "Tiefgarage",
+    "Schloss": "Tiefgarage",
+    "Münster": "Tiefgarage",
+    "Reduit Tilly": "Tiefgarage",
+    "Hallenbad": "Parkplatz",
+    "Festplatz": "Parkplatz",
+    "Südl. Ringstraße": "Parkplatz",
+    "Hauptbahnhof": "Parkhaus",
+    "Nordbahnhof": "Parkplatz",
+    "Hauptbahnhof Ost": "Parkhaus",
+    "Congressgarage": "Tiefgarage"
 }
 
 total_number_map = {
-        "Theater-West": 599,
-        "Theater-Ost": 682,
-        "Schloss": 435,
-        "Münster": 384,
-        "Reduit Tilly": 436,
-        "Hallenbad": 836,
-        "Festplatz": 1437,
-        "Südl. Ringstraße": 257,
-        "Hauptbahnhof": 812,
-        "Nordbahnhof": 252,
-        "Hauptbahnhof Ost": 240,
-        "Congressgarage": 213
+    "Theater-West": 599,
+    "Theater-Ost": 682,
+    "Schloss": 435,
+    "Münster": 384,
+    "Reduit Tilly": 436,
+    "Hallenbad": 836,
+    "Festplatz": 1437,
+    "Südl. Ringstraße": 257,
+    "Hauptbahnhof": 812,
+    "Nordbahnhof": 252,
+    "Hauptbahnhof Ost": 240,
+    "Congressgarage": 213
 }
 
 geodata = GeoData(city_name)

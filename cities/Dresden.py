@@ -9,14 +9,15 @@ file_name = "Dresden"
 detail_url = "/parken/detail"
 
 status_image_map = {
-        "/img/parken/p_gruen.gif": "many",
-        "/img/parken/p_gelb.gif": "few",
-        "/img/parken/p_rot.gif": "full",
-        "/img/parken/p_geschlossen.gif": "closed",
-        "/img/parken/p_blau.gif": "nodata"
+    "/img/parken/p_gruen.gif": "many",
+    "/img/parken/p_gelb.gif": "few",
+    "/img/parken/p_rot.gif": "full",
+    "/img/parken/p_geschlossen.gif": "closed",
+    "/img/parken/p_blau.gif": "nodata"
 }
 
 geodata = GeoData(city_name)
+
 
 def parse_html(html):
     soup = BeautifulSoup(html)
@@ -73,7 +74,6 @@ def parse_html(html):
                 "count": count
             })
     return data
-
 
 # def get_lot_details(lot_id):
 #     params = {

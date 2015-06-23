@@ -7,12 +7,13 @@ city_name = "Lübeck"
 file_name = "Luebeck"
 
 process_state_map = {
-        "": "open",
-        "Geöffnet": "open",
-        "Vorübergehend geschlossen.": "closed",
-        "Vorübergehend geschlossen": "closed",
-        "Geschlossen": "closed"
+    "": "open",
+    "Geöffnet": "open",
+    "Vorübergehend geschlossen.": "closed",
+    "Vorübergehend geschlossen": "closed",
+    "Geschlossen": "closed"
 }
+
 
 def parse_html(html):
     soup = BeautifulSoup(html)
@@ -69,6 +70,7 @@ def parse_html(html):
                 })
 
     return data
+
 
 def process_name(name):
     lot_type = name[:2]
