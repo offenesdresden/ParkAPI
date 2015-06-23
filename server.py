@@ -43,13 +43,16 @@ def get_api_status():
 
 @app.route("/<city>")
 def get_lots(city):
+    if city == "favicon.ico" or city == "robots.txt":
+        abort(404)
+
     app.logger.info("GET /" + city + " - " + request.headers.get("User-Agent"))
 
     if city not in supported_cities:
         app.logger.info("Unsupported city: " + city)
         return jsonify({
             "error": "Sorry, '" + city + "' isn't supported at the current time."
-        })
+        }), 404
     try:
         file = open("./cache/" + city + ".json", "r")
         last_json = file.read()
@@ -63,11 +66,6 @@ def get_lots(city):
     except FileNotFoundError:
         return jsonify(scraper.live(city))
 
-
-# @app.route("/<city>/<lot_id>")
-# def get_lot_details(city, lot_id):
-#     if city == "Dresden":
-#         return Dresden.get_lot_details(lot_id)
 
 @app.route("/coffee")
 def make_coffee():
