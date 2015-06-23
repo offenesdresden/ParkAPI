@@ -20,7 +20,7 @@ if os.getenv("env") != "development":
     config = configparser.ConfigParser()
     config.read("config.ini")
 
-    raw_server_conf = config.get('server', {})
+    raw_server_conf = config["Server"]
 
     try:
         used_port = int(raw_server_conf.get('port', api_conf.DEFAULT_SERVER.port))
@@ -43,7 +43,8 @@ else:
 def get_meta():
     return jsonify({
         "mail": SERVER_CONF.mail,
-        "cities": SUPPORTED_CITIES
+        "cities": SUPPORTED_CITIES,
+        "version": api_conf.VERSION
     })
 
 
