@@ -3,16 +3,113 @@ from geodata import GeoData
 from util import convert_date
 
 data_url = "http://www.dresden.de/freie-parkplaetze"
+data_source = "http://www.dresden.de"
 city_name = "Dresden"
 file_name = "Dresden"
 detail_url = "/parken/detail"
 
 status_image_map = {
-    "/img/parken/p_gruen.gif": "many",
-    "/img/parken/p_gelb.gif": "few",
-    "/img/parken/p_rot.gif": "full",
+    "/img/parken/p_gruen.gif": "open",
+    "/img/parken/p_gelb.gif": "open",
+    "/img/parken/p_rot.gif": "open",
     "/img/parken/p_geschlossen.gif": "closed",
     "/img/parken/p_blau.gif": "nodata"
+}
+
+type_map = {
+    "Altmarkt": "Tiefgarage",
+    "An der Frauenkirche": "Tiefgarage",
+    "Frauenkirche Neumarkt": "Tiefgarage",
+    "Haus am Zwinger": "Tiefgarage",
+    "Ostra - Allee": "Parkplatz",
+    "Schießgasse": "Parkplatz",
+    "Taschenbergpalais": "Tiefgarage",
+    "Kongresszentrum": "Tiefgarage",
+    "Parkhaus Mitte": "Parkhaus",
+    "Semperoper": "Tiefgarage",
+    "World Trade Center": "Tiefgarage",
+    "Altmarkt - Galerie": "Tiefgarage",
+    "Centrum-Galerie": "Parkhaus",
+    "Ferdinandplatz": "Parkplatz",
+    "Karstadt": "Tiefgarage",
+    "Reitbahnstraße": "Parkplatz",
+    "Wiener Platz/Hbf.": "Tiefgarage",
+    "Wöhrl - Florentinum": "Tiefgarage",
+    "City Center": "Tiefgarage",
+    "Blüherstraße": "Parkplatz",
+    "Lindengasse": "Parkplatz",
+    "Lingnerallee": "Parkplatz",
+    "Pirnaische Straße": "Parkplatz",
+    "Pirnaischer Platz": "Parkplatz",
+    "Terrassenufer": "Parkplatz",
+    "Zinzendorfstraße": "Parkplatz",
+    "Bahnhof Neustadt": "Parkplatz",
+    "Hauptstraße": "Parkhaus",
+    "Palaisplatz": "Parkplatz",
+    "Sarrasanistraße": "Parkplatz",
+    "Theresienstraße": "Parkplatz",
+    "Wiesentorstraße": "Parkplatz",
+    "Wigardstraße": "Parkplatz",
+    "Flutrinne": "Parkplatz",
+    "Messegelände": "Parkplatz",
+    "Bühlau": "Parkplatz",
+    "Cossebaude": "",
+    "Gompitz": "",
+    "Kaditz": "",
+    "Klotzsche": "",
+    "Langebrück": "",
+    "Pennrich": "",
+    "Prohlis": "",
+    "Reick": "",
+    "Terrassenufer Bus": ""
+}
+
+address_map = {
+    "Altmarkt": "Wilsdruffer Straße",
+    "An der Frauenkirche": "An der Frauenkirche 12a",
+    "Frauenkirche Neumarkt": "Landhausstraße 2",
+    "Haus am Zwinger": "Kleine Brüdergasse 3",
+    "Ostra - Allee": "Ostra-Allee",
+    "Schießgasse": "Schießgasse",
+    "Taschenbergpalais": "Kleine Brüdergasse",
+    "Kongresszentrum": "Ostra-Ufer 2",
+    "Parkhaus Mitte": "Magdeburger Str. 1",
+    "Semperoper": "Devrientstraße",
+    "World Trade Center": "Ammonstraße 70",
+    "Altmarkt - Galerie": "Webergasse 1",
+    "Centrum-Galerie": "Reitbahnstraße",
+    "Ferdinandplatz": "Ferdinandplatz",
+    "Karstadt": "Prager Straße 12",
+    "Reitbahnstraße": "Reitbahnstraße",
+    "Wiener Platz/Hbf.": "Wiener Platz",
+    "Wöhrl - Florentinum": "Prager Straße 8 - 10",
+    "City Center": "Friedrich-List-Platz 2",
+    "Blüherstraße": "Blüherstraße",
+    "Lindengasse": "Lindengasse",
+    "Lingnerallee": "Lingnerallee",
+    "Pirnaische Straße": "Pirnaische Straße",
+    "Pirnaischer Platz": "Pirnaischer Platz",
+    "Terrassenufer": "Terrassenufer",
+    "Zinzendorfstraße": "Zinzendorfstraße",
+    "Bahnhof Neustadt": "Schlesischer Platz",
+    "Hauptstraße": "Metzer Straße",
+    "Palaisplatz": "Palaisplatz",
+    "Sarrasanistraße": "Sarrasanistraße",
+    "Theresienstraße": "Theresienstraße 15",
+    "Wiesentorstraße": "Wiesentorstraße",
+    "Wigardstraße": "Wigardstraße",
+    "Flutrinne": "Messering",
+    "Messegelände": "Messering 6",
+    "Bühlau": "Quohrener Straße",
+    "Cossebaude": "Bahnhofstraße Cossebaude",
+    "Gompitz": "",
+    "Kaditz": "Kötschenbroder Str.",
+    "Klotzsche": "",
+    "Langebrück": "Güterbahnhofstraße Langebrück",
+    "Pennrich": "Oskar-Maune-Straße",
+    "Prohlis": "Langer Weg",
+    "Reick": "",
+    "Terrassenufer Bus": "Terrassenufer"
 }
 
 geodata = GeoData(city_name)
@@ -21,7 +118,8 @@ geodata = GeoData(city_name)
 def parse_html(html):
     soup = BeautifulSoup(html)
     data = {
-        "lots": []
+        "lots": [],
+        "data_source": data_source
     }
 
     # Letzte Aktualisierung auslesen, ich liebe html parsing m(
@@ -47,11 +145,11 @@ def parse_html(html):
 
             coords = geodata.coords(name)
 
-            count = raw_lot_data[1].text
-            count = count.strip()
-            if count == "":
-                count = 0
-            count = int(count)
+            total = raw_lot_data[1].text
+            total = total.strip()
+            if total == "":
+                total = 0
+            total = int(total)
 
             free = raw_lot_data[2].text
             free = free.strip()
@@ -60,12 +158,14 @@ def parse_html(html):
             free = int(free)
 
             data["lots"].append({
-                "name": name,
                 "coords": coords,
-                "id": id,
-                "state": state,
+                "name": name,
+                "total": total,
                 "free": free,
-                "count": count
+                "state": state,
+                "id": id,
+                "lot_type": type_map.get(name, ""),
+                "address": address_map.get(name, "")
             })
     return data
 
