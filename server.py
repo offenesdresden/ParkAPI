@@ -44,7 +44,8 @@ def get_meta():
     return jsonify({
         "cities": SUPPORTED_CITIES,
         "api_version": api_conf.API_VERSION,
-        "server_version": api_conf.SERVER_VERSION
+        "server_version": api_conf.SERVER_VERSION,
+        "reference": api_conf.SOURCE_REPOSITORY
     })
 
 
