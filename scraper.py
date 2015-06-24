@@ -59,12 +59,16 @@ def save_data_to_disk(data, city):
         json.dump(data, fp=file)
 
 
-def live(city_name):
+def live(city_name, debug=False):
     """Scrape data for a given city pulling all data now"""
     try:
         city = importlib.import_module("cities." + city_name)
-        html = get_html(city)
-        return pipeline(city, html)
+        if not debug:
+            html = get_html(city)
+            return pipeline(city, html)
+        else:
+            with open(os.path.join("tests", "fixtures", city_name + ".html")) as html:
+                return pipeline(city, html)
     except ImportError:
         # Couldn't find module for city
         return {"error": "Sorry, '{}' isn't supported at the current time.".format(city_name)}
