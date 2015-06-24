@@ -10,37 +10,60 @@ The idea here is to also include some more fun features like automatic time-base
 
 ### Usage
 
-For every city listed in `/cities` or that's returned when you GET `/` on the server you can GET `server.tld/city_name` to receive a JSON response following the schema below.
+For every city listed in `/cities` or that's returned when you send the request below on the server you can GET `server.tld/city_id` to receive a JSON response following the schema below.
+
+**GET /**
+
+```js
+{
+    "api_version": "1.0",
+    "server_version": "1.0.0",
+    "reference": "https://github.com/offenesdresden/ParkAPI",
+    "cities":
+        {
+        	"city1id": "City 1",
+         	"city2id": "City 2",
+         	...
+        }
+}
+```
+
+API version specifies the version of the JSON response whereas the server version correlates to the version of the software in this repo.
 
 You can use the server running at [park-api.higgsboson.tk](https://park-api.higgsboson.tk) for testing. It should usually be running at the most current version of this repo.
 
 ### Schema
 
-The current (not final!) schema for the output looks something like this:
+The schema for the output looks like this:
+
+**GET /city_id**
 
 ```js
 {
   "last_updated": "2015-06-15T12:31:00",
   "last_downloaded": "2015-06-15T12:31:25",
+  "data_source": "http://examplecity.com",
   "lots": [
     {
       "coords": {
         "lat": 51.05031,
-        "lon": 13.73754
+        "lng": 13.73754
       },
-      "count": 400,
-      "free": 235,
-      "id": "TG16",
       "name": "Altmarkt",
-      "state": "many"
+      "total": 400,
+      "free": 235,
+      "state": "open|closed|nodata",
+      "id": "lot_id",
+      "forecast":"true|false",
+      "region": "Region X", // optional
+      "address": "Musterstraße 5", // optional
+      "lot_type": "Parkhaus" // optional
     },
-    [...]
+    ...
 }
 ```
 
-We're still working on specifying which parameters will always be included.
-
-The top level params for when the data was last changed on the server and when it was pulled by the scraper should always be there.
+Times are in UTC and parameters marked as optional may not exist. Usually only when a city supplies this somehow and we can include it.
 
 ### Adding support for a new city
 
@@ -73,3 +96,5 @@ Then just start the server with
 ```bash
 $ python server.py
 ```
+
+Throwing errors? Sure you installed the requirements and are using Python 3.x? And you have specified a config file or set the environment variable? Still nothing? Please [tell us](https://github.com/offenesdresden/ParkAPI/issues/new) about it.
