@@ -1,0 +1,122 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        7.101677,
+        50.734121
+      ]
+    },
+    "properties": {
+      "name": "Bonner City Parkraum GmbH",
+      "description": "Verwaltung, Am Hof 26a, 53113 Bonn, Tel. +49(0)228 96991-0, Fax +49(0)228 96991-21, Mail bcp@citypark-bonn.de, http://www.bcp-bonn.de"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        7.103549000000001,
+        50.734559
+      ]
+    },
+    "properties": {
+      "name": "Marktgarage",
+      "description": "Marktgarage Bonn, Einfahrt Stockenstraße, Tel. +49(0)228 88657580, Bonner City Parkraum GmbH, http://bcp-bonn.de"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        7.096412,
+        50.735764
+      ]
+    },
+    "properties": {
+      "name": "Münsterplatzgarage",
+      "description": "Münsterplatzgarage Bonn, Einfahrt Budapester Straße, Tel. +49(0)228 691348, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        7.096701,
+        50.737056
+      ]
+    },
+    "properties": {
+      "name": "Friedensplatzgarage",
+      "description": "Friedensplatzgarage Bonn, Einfahrt Oxfordstraße, Tel. +49(0)228 655281, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        7.095905,
+        50.733897
+      ]
+    },
+    "properties": {
+      "name": "Bahnhofgarage",
+      "description": "Bahnhofgarage Bonn, Einfahrt Münsterstraße, Tel. +49(0)228 634328, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        7.094,
+        50.737791
+      ]
+    },
+    "properties": {
+      "name": "Stadthausgarage",
+      "description": "Stadthausgarage Bonn, Einfahrt Weiherstraße, Tel. +49(0)228 656085, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        7.103313,
+        50.739629
+      ]
+    },
+    "properties": {
+      "name": "Beethoven-Parkhaus",
+      "description": "Beethoven-Parkhaus Bonn, Einfahrt Engeltalstraße, Tel. +49(0)228 3695635, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        7.10139,
+        50.741206
+      ]
+    },
+    "properties": {
+      "name": "Parkplatz Beethovenhalle",
+      "description": "Parkplatz Beethovenhalle Bonn, Einfahrt Wachsbleiche, Tel. +49(0)228 3695635, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        7.130245,
+        50.718237
+      ]
+    },
+    "properties": {
+      "name": "Parkplatz Rheinaue",
+      "description": "Parkplatz Rheinaue Bonn, Einfahrt Charles-De-Gaulle-Straße, Tel. +49(0)228 656085, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+    }
+  }
+  ]
+}
