@@ -10,10 +10,11 @@ import util
 import structs
 from security import file_is_allowed
 import api_conf
+import importlib
 
 app = Flask(__name__)
 
-SUPPORTED_CITIES = []
+SUPPORTED_CITIES = {}
 
 if os.getenv("env") != "development":
 
@@ -30,7 +31,6 @@ if os.getenv("env") != "development":
     SERVER_CONF = structs.ServerConf(
         host=raw_server_conf.get('host', api_conf.DEFAULT_SERVER.host),
         port=used_port,
-        mail=raw_server_conf.get('mail', api_conf.DEFAULT_SERVER.mail)
     )
 
     # cleaning temporary variables
@@ -42,9 +42,9 @@ else:
 @app.route("/")
 def get_meta():
     return jsonify({
-        "mail": SERVER_CONF.mail,
         "cities": SUPPORTED_CITIES,
-        "version": api_conf.VERSION
+        "api_version": api_conf.API_VERSION,
+        "server_version": api_conf.SERVER_VERSION
     })
 
 
@@ -94,13 +94,11 @@ def gather_supported_cities():
     Iterate over files in ./cities to add them to list of available cities.
     This list is used to stop requests trying to access files and output them which are not cities.
     """
-    return [
-
-        file[:-3]
-
-        for file in
-        filter(file_is_allowed, os.listdir(os.curdir + "/cities"))
-        ]
+    cities = {}
+    for file in filter(file_is_allowed, os.listdir(os.path.join(os.curdir, "cities"))):
+        city = importlib.import_module("cities." + file.title()[:-3])
+        cities[file[:-3]] = city.city_name
+    return cities
 
 
 if __name__ == "__main__":
