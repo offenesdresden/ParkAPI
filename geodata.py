@@ -6,8 +6,8 @@ cities_path = os.path.dirname(os.path.realpath(__file__))
 
 def from_feature(feature):
     name = feature['properties']['name']
-    lon, lat = feature['geometry']['coordinates']
-    return name, {'lng': lon, 'lat': lat}
+    lng, lat = feature['geometry']['coordinates']
+    return name, {'lng': lng, 'lat': lat}
 
 
 class GeoData:
