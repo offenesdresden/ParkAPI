@@ -1,8 +1,9 @@
 from bs4 import BeautifulSoup
 from geodata import GeoData
-from util import convert_date
+from util import convert_date, remove_special_chars
 
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
+data_source = "http://www.ingolstadt.de"
 city_name = "Ingolstadt"
 file_name = "Ingolstadt"
 
@@ -45,6 +46,7 @@ def parse_html(html):
 
     data = {
         "last_updated": convert_date(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)"),
+        "data_source": data_source,
         "lots": []
     }
 
@@ -59,9 +61,12 @@ def parse_html(html):
         data["lots"].append({
             "name": lot_name,
             "free": int(elements[1].text),
-            "count": total_number_map.get(lot_name, 0),
+            "total": total_number_map.get(lot_name, 0),
             "type": type_map.get(lot_name, "unbekannt"),
-            "coords": geodata.coords(lot_name)
+            "coords": geodata.coords(lot_name),
+            "state": "nodata",
+            "id": remove_special_chars((file_name + lot_name).lower()),
+            "forecast": False
         })
 
     return data

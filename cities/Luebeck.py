@@ -1,7 +1,9 @@
 from bs4 import BeautifulSoup
-from util import convert_date
+from util import convert_date, remove_special_chars
+from geodata import GeoData
 
 data_url = "http://kwlpls.adiwidjaja.info"
+data_source = "http://www.kwl-luebeck.de"
 city_name = "Lübeck"
 file_name = "Luebeck"
 
@@ -13,12 +15,15 @@ process_state_map = {
     "Geschlossen": "closed"
 }
 
+geodata = GeoData(file_name)
+
 
 def parse_html(html):
     soup = BeautifulSoup(html)
 
     data = {
         "last_updated": convert_date(soup.find("tr").find("strong").text, "Stand: %d.%m.%Y, %H:%M Uhr"),
+        "data_source": data_source,
         "lots": []
     }
 
@@ -43,10 +48,13 @@ def parse_html(html):
                 data["lots"].append({
                     "name": type_and_name[1],
                     "type": type_and_name[0],
-                    "count": 0,
+                    "total": 0,
                     "free": 0,
                     "region": region_header,
-                    "state": process_state_map.get(raw_lot_data[1].text, "")
+                    "state": process_state_map.get(raw_lot_data[1].text, ""),
+                    "coords": geodata.coords(type_and_name[1]),
+                    "id": remove_special_chars((file_name + type_and_name[1]).lower()),
+                    "forecast": False
                 })
 
             elif len(raw_lot_data) == 4:
@@ -54,10 +62,13 @@ def parse_html(html):
                 data["lots"].append({
                     "name": type_and_name[1],
                     "type": type_and_name[0],
-                    "count": int(raw_lot_data[1].text),
+                    "total": int(raw_lot_data[1].text),
                     "free": int(raw_lot_data[2].text),
                     "region": region_header,
-                    "state": "open"
+                    "state": "open",
+                    "coords": geodata.coords(type_and_name[1]),
+                    "id": remove_special_chars((file_name + type_and_name[1]).lower()),
+                    "forecast": False
                 })
 
     return data

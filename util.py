@@ -17,3 +17,19 @@ def convert_date(date_string, date_format, timezone="Europe/Berlin"):
     last_updated = last_updated.astimezone(pytz.utc).replace(tzinfo=None)
 
     return last_updated.replace(microsecond=0).isoformat()
+
+def remove_special_chars(string):
+    replacements = {
+        "ä": "ae",
+        "ö": "oe",
+        "ü": "ue",
+        "ß": "ss",
+        "-": "",
+        " ": "",
+        ".": "",
+        ",": ""
+    }
+    for repl in replacements.keys():
+        string = string.replace(repl, replacements[repl])
+    return string
+

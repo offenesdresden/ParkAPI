@@ -13,10 +13,12 @@ def from_feature(feature):
 class GeoData:
     def __init__(self, city):
         json_path = os.path.join(cities_path, "cities", city + ".geojson")
-        with open(json_path) as f:
-            geodata = json.load(f)
-
-            self.lots = dict(map(from_feature, geodata['features']))
+        try:
+            with open(json_path) as f:
+                geodata = json.load(f)
+                self.lots = dict(map(from_feature, geodata['features']))
+        except FileNotFoundError:
+            geodata = self.lots = {}
 
     def coords(self, lot):
-        return self.lots.get(lot, [])
+        return self.lots.get(lot, None)

@@ -31,13 +31,15 @@ class CityTestCase(unittest.TestCase):
             self.assertIn("id", lot)
 
             self.assertIn("forecast", lot)
+            self.assertIs(type(lot["forecast"]), bool)
 
-            if "free" in lot and "count" in lot:
-                count, free = lot["count"], lot["free"]
-                if count < free:
-                    msg = "\n[warn] lot count should be bigger then free lot count: %d >= %d: %s => %s"
-                    print(msg % (count, free, city_name, lot))
-            if "coords" in lot and lot["coords"] != []:
+            self.assertIn("free", lot)
+            self.assertIn("total", lot)
+            total, free = lot["total"], lot["free"]
+            if total < free:
+                msg = "\n[warn] total lots should be more than free lots: %d >= %d: %s => %s"
+                print(msg % (total, free, city_name, lot))
+            if "coords" in lot and lot["coords"] is not None:
                 self.assertIn("lat", lot["coords"])
                 self.assertIn("lon", lot["coords"])
 

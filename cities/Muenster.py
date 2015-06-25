@@ -1,14 +1,15 @@
 from bs4 import BeautifulSoup
 from geodata import GeoData
-from util import convert_date
+from util import convert_date, remove_special_chars
 
 data_url = "http://www5.stadt-muenster.de/parkhaeuser/"
+data_source = "http://www.stadt-muenster.de"
 city_name = "Münster"
 file_name = "Muenster"
 
 total_number_map = {
     "PH Theater": 793,
-    "PH Hörsterplatz": 202,
+    "PP Hörsterplatz": 202,
     "PH Alter Steinweg": 350,
     "Busparkplatz": 63,  # 63 (PKW) / 15 (Busse)
     "PP Schlossplatz Nord": 450,
@@ -28,8 +29,10 @@ total_number_map = {
 state_map = {
     "frei": "open",
     "geschlossen": "closed",
-    "besetzt": "full"
+    "besetzt": "open"
 }
+
+geodata = GeoData(file_name)
 
 # Uncomment the following line if there's geodata in the format of Sample_City.geodata in this directory
 # geodata = GeoData(city_name)
@@ -41,6 +44,7 @@ def parse_html(html):
 
     data = {
         "last_updated": convert_date(lot_table_trs[-1].text.strip(), "%d.%m.%Y %H:%M Uhr"),
+        "data_source": data_source,
         "lots": []
     }
 
@@ -51,8 +55,11 @@ def parse_html(html):
             "name": type_and_name[1],
             "type": type_and_name[0],
             "free": int(tds[1].text),
-            "count": total_number_map.get(tds[0].text, 0),
-            "state": state_map.get(tds[2].text, "")
+            "total": total_number_map.get(tds[0].text, 0),
+            "state": state_map.get(tds[2].text, ""),
+            "coords": geodata.coords(type_and_name[1]),
+            "id": remove_special_chars((file_name + type_and_name[1]).lower()),
+            "forecast": False
         })
 
     return data

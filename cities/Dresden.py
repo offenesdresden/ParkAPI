@@ -165,13 +165,7 @@ def parse_html(html):
                 "state": state,
                 "id": id,
                 "lot_type": type_map.get(name, ""),
-                "address": address_map.get(name, "")
+                "address": address_map.get(name, ""),
+                "forecast": False
             })
     return data
-
-# def get_lot_details(lot_id):
-#     params = {
-#         "id": lot_id
-#     }
-#     r = requests.get(data_url + detail_url, params=params)
-#     return r.text

@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 from geodata import GeoData
-from util import convert_date
+from util import convert_date, remove_special_chars
 
 data_url = "http://www.bcp-bonn.de/bspspinfo1.php"
 data_source = "http://www.bcp-bonn.de/bcp/"
@@ -9,9 +9,9 @@ file_name = "Bonn"
 
 
 class Lot:
-    def __init__(self, name, count, address):
+    def __init__(self, name, total, address):
         self.name = name
-        self.count = count
+        self.total = total
         self.address = address
 
 
@@ -41,10 +41,14 @@ def parse_html(html):
             "coords": geodata.coords(lot.name),
             "free": int(free.text),
             "address": lot.address,
-            "count": lot.count
+            "total": lot.total,
+            "state": "nodata",
+            "id": remove_special_chars((file_name + lot.name).lower()),
+            "forecast": False
         })
 
     return {
         "last_updated": convert_date(time, "%d.%m.%y %H:%M:%S"),
+        "data_source": data_source,
         "lots": lots
     }

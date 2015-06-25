@@ -71,6 +71,9 @@ def get_lots(city):
             "error": "Sorry, '" + city + "' isn't supported at the current time."
         }), 404
     try:
+        if os.getenv("caching") == "none":
+            # the quickest way out
+            raise FileNotFoundError
         with open("./cache/" + city + ".json", "r") as file:
             last_json = json.load(file)
         last_downloaded = datetime.strptime(last_json["last_downloaded"], "%Y-%m-%dT%H:%M:%S")

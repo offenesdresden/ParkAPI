@@ -1,0 +1,83 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Am Burgtor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.692285597324371,
+          53.872994522821855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haerder Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.685883164405823,
+          53.86463773382536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haerder Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.678496360778807,
+          53.86438466345214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Linden Arcaden"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.672831535339355,
+          53.866943767066466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Falkenstraße"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.698747038841248,
+          53.86924967319042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mitte"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.683571100234985,
+          53.865371629250554
+        ]
+      }
+    }
+  ]
+}
