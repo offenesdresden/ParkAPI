@@ -65,6 +65,8 @@ The schema for the output looks like this:
 
 Times are in UTC and parameters marked as optional may not exist. Usually only when a city supplies this somehow and we can include it.
 
+Also please note that this is not valid JSON. Just an example for how the output can be expected. For a specific [JSON schema](http://json-schema.org) please have a look at the [wiki here](https://github.com/offenesdresden/ParkAPI/wiki/city.json).
+
 ### Adding support for a new city
 
 Have a look at `cities/Sample_City.py` as a place to get started and the other city scrapers for reference. The basic idea is to include all code specific to gathering data for a city in its file.
