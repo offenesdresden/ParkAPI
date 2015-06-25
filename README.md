@@ -54,7 +54,7 @@ The schema for the output looks like this:
       "free": 235,
       "state": "open|closed|nodata",
       "id": "lot_id",
-      "forecast":"true|false",
+      "forecast": true|false,
       "region": "Region X", // optional
       "address": "Musterstraße 5", // optional
       "lot_type": "Parkhaus" // optional
