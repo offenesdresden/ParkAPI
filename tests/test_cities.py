@@ -41,7 +41,7 @@ class CityTestCase(unittest.TestCase):
                 print(msg % (total, free, city_name, lot))
             if "coords" in lot and lot["coords"] is not None:
                 self.assertIn("lat", lot["coords"])
-                self.assertIn("lon", lot["coords"])
+                self.assertIn("lng", lot["coords"])
 
     def test_dresden(self):
         city_name = "Dresden"
