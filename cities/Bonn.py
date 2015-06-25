@@ -7,11 +7,14 @@ data_source = "http://www.bcp-bonn.de/bcp/"
 city_name = "Bonn"
 file_name = "Bonn"
 
+
 class Lot:
     def __init__(self, name, count, address):
         self.name = name
         self.count = count
         self.address = address
+
+
 lot_map = {
     0: Lot("Münsterplatzgarage", 319, "Budapester Straße"),
     1: Lot("Stadthausgarage", 300, "Weiherstraße"),
@@ -21,6 +24,7 @@ lot_map = {
     5: Lot("Marktgarage", 325, "Stockenstraße"),
 }
 geodata = GeoData(city_name)
+
 
 def parse_html(html):
     soup = BeautifulSoup(html)
@@ -41,6 +45,6 @@ def parse_html(html):
         })
 
     return {
-            "last_updated": convert_date(time, "%d.%m.%y %H:%M:%S"),
-            "lots": lots
+        "last_updated": convert_date(time, "%d.%m.%y %H:%M:%S"),
+        "lots": lots
     }
