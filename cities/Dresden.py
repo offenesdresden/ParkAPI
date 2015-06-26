@@ -5,7 +5,6 @@ from util import convert_date
 data_url = "http://www.dresden.de/freie-parkplaetze"
 data_source = "http://www.dresden.de"
 city_name = "Dresden"
-file_name = "Dresden"
 detail_url = "/parken/detail"
 
 status_image_map = {
@@ -112,7 +111,7 @@ address_map = {
     "Terrassenufer Bus": "Terrassenufer"
 }
 
-geodata = GeoData(city_name)
+geodata = GeoData(__file__)
 
 
 def parse_html(html):

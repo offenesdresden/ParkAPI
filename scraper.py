@@ -33,7 +33,7 @@ def get_html(city, server_mail=""):
 
 
 def parse_html(city, html):
-    """Use a city module to parse it's html"""
+    """Use a city module to parse its html"""
     return city.parse_html(html)
 
 
@@ -46,7 +46,7 @@ def add_metadata(data):
 def pipeline(city, html):
     """Take a city name and html data and go through the process of parsing and processing the data"""
     data = add_metadata(parse_html(city, html))
-    save_data_to_disk(data, city.file_name)
+    save_data_to_disk(data, city.__file__)
     return data
 
 
@@ -55,7 +55,7 @@ def save_data_to_disk(data, city):
     if not os.path.exists(api_conf.CACHE_DIRECTORY):
         os.mkdir(api_conf.CACHE_DIRECTORY)
 
-    with open(os.path.join(api_conf.CACHE_DIRECTORY, city + ".json"), "w") as file:
+    with open(os.path.join(api_conf.CACHE_DIRECTORY, os.path.basename(city[:-3]) + ".json"), "w") as file:
         json.dump(data, fp=file)
 
 

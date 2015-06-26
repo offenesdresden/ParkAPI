@@ -1,12 +1,10 @@
 from bs4 import BeautifulSoup
 from geodata import GeoData
-from util import convert_date, remove_special_chars
+from util import convert_date, generate_id
 
 data_url = "http://www.bcp-bonn.de/bspspinfo1.php"
 data_source = "http://www.bcp-bonn.de/bcp/"
 city_name = "Bonn"
-file_name = "Bonn"
-
 
 class Lot:
     def __init__(self, name, total, address):
@@ -23,7 +21,7 @@ lot_map = {
     4: Lot("Friedensplatzgarage", 822, "Oxfordstraße"),
     5: Lot("Marktgarage", 325, "Stockenstraße"),
 }
-geodata = GeoData(city_name)
+geodata = GeoData(__file__)
 
 
 def parse_html(html):
@@ -43,7 +41,7 @@ def parse_html(html):
             "address": lot.address,
             "total": lot.total,
             "state": "nodata",
-            "id": remove_special_chars((file_name + lot.name).lower()),
+            "id": generate_id(__file__, lot.name),
             "forecast": False
         })
 

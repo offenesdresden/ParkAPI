@@ -5,7 +5,6 @@ data_url = "http://www.pls-zh.ch/plsFeed/rss"
 data_source = "https://www.stadt-zuerich.ch/portal/de/index/ogd/daten/parkleitsystem.html"
 
 city_name = "Zürich"
-file_name = "Zuerich"
 
 total_number_map = {
     "Parkgarage am Central": 50,
@@ -47,7 +46,7 @@ total_number_map = {
     "Parkplatz USZ Süd": 80
 }
 
-geodata = GeoData(file_name)
+geodata = GeoData(__file__)
 
 # Falls das hier jemals einer von den Menschen hinter OpenDataZürich lesen sollte: Ihr seid so toll <3
 

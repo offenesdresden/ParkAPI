@@ -1,11 +1,10 @@
 from bs4 import BeautifulSoup
-from util import convert_date, remove_special_chars
+from util import convert_date, generate_id
 from geodata import GeoData
 
 data_url = "http://kwlpls.adiwidjaja.info"
 data_source = "http://www.kwl-luebeck.de"
 city_name = "Lübeck"
-file_name = "Luebeck"
 
 process_state_map = {
     "": "open",
@@ -15,7 +14,7 @@ process_state_map = {
     "Geschlossen": "closed"
 }
 
-geodata = GeoData(file_name)
+geodata = GeoData(__file__)
 
 
 def parse_html(html):
@@ -53,7 +52,7 @@ def parse_html(html):
                     "region": region_header,
                     "state": process_state_map.get(raw_lot_data[1].text, ""),
                     "coords": geodata.coords(type_and_name[1]),
-                    "id": remove_special_chars((file_name + type_and_name[1]).lower()),
+                    "id": generate_id(__file__, type_and_name[1]),
                     "forecast": False
                 })
 
@@ -67,7 +66,7 @@ def parse_html(html):
                     "region": region_header,
                     "state": "open",
                     "coords": geodata.coords(type_and_name[1]),
-                    "id": remove_special_chars((file_name + type_and_name[1]).lower()),
+                    "id": generate_id(__file__, type_and_name[1]),
                     "forecast": False
                 })
 

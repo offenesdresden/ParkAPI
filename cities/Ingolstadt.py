@@ -1,11 +1,10 @@
 from bs4 import BeautifulSoup
 from geodata import GeoData
-from util import convert_date, remove_special_chars
+from util import convert_date, generate_id
 
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 data_source = "http://www.ingolstadt.de"
 city_name = "Ingolstadt"
-file_name = "Ingolstadt"
 
 # Additional information for single lots: http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/
 
@@ -39,7 +38,7 @@ total_number_map = {
     "Congressgarage": 213
 }
 
-geodata = GeoData(city_name)
+geodata = GeoData(__file__)
 
 def parse_html(html):
     soup = BeautifulSoup(html)
@@ -65,7 +64,7 @@ def parse_html(html):
             "type": type_map.get(lot_name, "unbekannt"),
             "coords": geodata.coords(lot_name),
             "state": "nodata",
-            "id": remove_special_chars((file_name + lot_name).lower()),
+            "id": generate_id(__file__, lot_name),
             "forecast": False
         })
 

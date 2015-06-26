@@ -1,11 +1,10 @@
 from bs4 import BeautifulSoup
 from geodata import GeoData
-from util import convert_date, remove_special_chars
+from util import convert_date, generate_id
 
 data_url = "http://www5.stadt-muenster.de/parkhaeuser/"
 data_source = "http://www.stadt-muenster.de"
 city_name = "Münster"
-file_name = "Muenster"
 
 total_number_map = {
     "PH Theater": 793,
@@ -32,7 +31,7 @@ state_map = {
     "besetzt": "open"
 }
 
-geodata = GeoData(file_name)
+geodata = GeoData(__file__)
 
 # Uncomment the following line if there's geodata in the format of Sample_City.geodata in this directory
 # geodata = GeoData(city_name)
@@ -58,7 +57,7 @@ def parse_html(html):
             "total": total_number_map.get(tds[0].text, 0),
             "state": state_map.get(tds[2].text, ""),
             "coords": geodata.coords(type_and_name[1]),
-            "id": remove_special_chars((file_name + type_and_name[1]).lower()),
+            "id": generate_id(__file__, type_and_name[1]),
             "forecast": False
         })
 

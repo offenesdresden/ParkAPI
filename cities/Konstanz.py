@@ -1,11 +1,10 @@
 from bs4 import BeautifulSoup
-from util import convert_date, remove_special_chars
+from util import convert_date, generate_id
 from geodata import GeoData
 
 data_url = "http://www.konstanz.de/tourismus/01759/01765/"
 data_source = "http://www.konstanz.de"
 city_name = "Konstanz"
-file_name = "Konstanz"
 
 total_number_map = {
     "Marktstätte": 268,
@@ -20,7 +19,7 @@ total_number_map = {
     "Seerheincenter": 280
 }
 
-geodata = GeoData(file_name)
+geodata = GeoData(__file__)
 
 
 def parse_html(html):
@@ -58,7 +57,7 @@ def parse_html(html):
                 "total": total_number_map.get(lot_name, 0),
                 "coords": geodata.coords(lot_name),
                 "state": lot_state,
-                "id": remove_special_chars((file_name + lot_name).lower()),
+                "id": generate_id(__file__, lot_name),
                 "forecast": False
             })
 
