@@ -11,6 +11,7 @@ import structs
 from security import file_is_allowed
 import api_conf
 import importlib
+from forecast import find_forecast
 
 app = Flask(__name__)
 
@@ -84,6 +85,22 @@ def get_lots(city):
             return jsonify(scraper.live(city))
     except FileNotFoundError:
         return jsonify(scraper.live(city))
+
+
+@app.route("/<city>/<lot_id>/timespan")
+def get_longtime_forecast(city, lot_id):
+
+    try:
+        datetime.strptime(request.args["from"], '%Y-%m-%dT%H:%M:%S')
+        datetime.strptime(request.args["to"], '%Y-%m-%dT%H:%M:%S')
+    except ValueError:
+        abort(400)
+
+    data = find_forecast(lot_id, request.args["from"], request.args["to"])
+    if data is not None:
+        return jsonify(data)
+    else:
+        abort(404)
 
 
 @app.route("/coffee")
