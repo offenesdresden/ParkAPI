@@ -26,10 +26,13 @@ def parse_html(html):
     soup = BeautifulSoup(html)
 
     # last update time (UTC)
-    update_time = soup.select('p > strong')[-1].text
+    try:
+        update_time = convert_date(soup.select('p > strong')[-1].text, "Stand: %d.%m.%Y - %H:%M:%S")
+    except ValueError:
+        update_time = convert_date(soup.select('p > strong')[-2].text, "Stand: %d.%m.%Y - %H:%M:%S")
 
     data = {
-        "last_updated": convert_date(update_time, "Stand: %d.%m.%Y - %H:%M:%S"),
+        "last_updated": update_time,
         "data_source": data_source,
         "lots": []
     }
