@@ -5,29 +5,27 @@ from geodata import GeoData
 # URL for the page where the scraper can gather the data
 data_url = "http://example.com/parkingdata"
 
-# URL that is displayed as the source of this data, usually the domain of the URL above
+# URL that is displayed as the source of this data, usually the base domain of the URL above
 data_source = "http://example.com"
 
-# Name of the city, just in case it contains umlauts which this filename shouldn't
+# Name of the city, just in case it contains umlauts, spaces or other things which this filename shouldn't
 city_name = "Sample City"
 
-# Name of this file (without '.py'), sorry for needing this, but it makes things easier
-file_name = "Sample_City"
-
-# Uncomment the following line if there's geodata in the format of Sample_City.geodata in this directory
+# This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
+# No need to remove this if there's no geodata (yet), everything will still work.
 geodata = GeoData(__file__)
 
-
+# This function is called by the scraper and given the data of the page specified as data_url above.
+# It's supposed to return a dictionary containing everything the current spec expects. Tests will fail if it doesn't ;)
 def parse_html(html):
+
+    # BeautifulSoup is a great and easy way to parse the html and find the bits and pieces we're looking for.
     soup = BeautifulSoup(html)
 
-    # Do everything necessary to scrape the contents of the html
-    # into a dictionary of the format specified by the schema.
-
+    # last_updated is the date when the data on the page was last updated, it should be listed on most pages
     last_updated = soup.select("p#last_updated")[0].text
 
     data = {
-        # last_updated is the date when the data on the page was last updated, it should be listed on most pages
         # convert_date is a utility function you can use to turn this date into the correct string format
         "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M Uhr"),
         "data_source": data_source,
