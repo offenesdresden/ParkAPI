@@ -126,19 +126,16 @@ def parse_html(html):
 
     data["last_updated"] = convert_date(last_updated, "%d.%m.%Y %H.%M Uhr")
 
-    # Die einzelnen Stadteile sind in einzelne tables gegliedert
-    section_tables = soup.find_all("tbody")
+    section_tables = soup.find_all("table", {"class": "zahlen"})
     for table in section_tables:
+        region = table.select("thead th")[0].text
 
-        # jeder parkplatz steckt in einer eigenen row
-        rows = table.find_all("tr")
-        for row in rows:
-
+        for row in table.select("tbody tr"):
             raw_lot_data = row.find_all("td")
 
             name = raw_lot_data[0].find("a").text
 
-            id = raw_lot_data[0].find("a")["href"][-4:]
+            lot_id = raw_lot_data[0].find("a")["href"][-4:]
 
             state = status_image_map.get(raw_lot_data[0].find("img")["src"], "nodata")
 
@@ -162,9 +159,11 @@ def parse_html(html):
                 "total": total,
                 "free": free,
                 "state": state,
-                "id": id,
+                "id": lot_id,
                 "lot_type": type_map.get(name, ""),
                 "address": address_map.get(name, ""),
-                "forecast": False
+                "forecast": False,
+                "region": region
             })
+
     return data
