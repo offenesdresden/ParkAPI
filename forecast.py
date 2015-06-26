@@ -9,7 +9,7 @@ def find_forecast(lot_id, time_from, time_to):
                 "data": {}
             }
             for row in csv.reader(csvfile):
-                if time_from < row[0] < time_to:
+                if time_from <= row[0] <= time_to:
                     data["data"][row[0]] = row[1]
             return data
     except FileNotFoundError:

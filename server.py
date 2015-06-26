@@ -68,9 +68,7 @@ def get_lots(city):
 
     if city not in SUPPORTED_CITIES:
         app.logger.info("Unsupported city: " + city)
-        return jsonify({
-            "error": "Sorry, '" + city + "' isn't supported at the current time."
-        }), 404
+        return "Error 404: Sorry, '" + city + "' isn't supported at the current time.", 404
     try:
         if os.getenv("caching") == "none":
             # the quickest way out
@@ -94,7 +92,7 @@ def get_longtime_forecast(city, lot_id):
         datetime.strptime(request.args["from"], '%Y-%m-%dT%H:%M:%S')
         datetime.strptime(request.args["to"], '%Y-%m-%dT%H:%M:%S')
     except ValueError:
-        abort(400)
+        return "Error 400: from and/or to URL params are not in ISO format, e.g. 2015-06-26T18:00:00", 400
 
     data = find_forecast(lot_id, request.args["from"], request.args["to"])
     if data is not None:
