@@ -1,7 +1,7 @@
 {
 	"$schema":"http://jkliemann.de/parkendd/media/city_schema.json",
-	"title":"ParkenDD JSon API",
-	"description":"JSon required by ParkenDD app to show parking lots",
+	"title":"ParkenDD JSON API",
+	"description":"JSON required by ParkenDD app to show parking lots",
 	"type":"array",
 	"items":{
 		"type":"object",

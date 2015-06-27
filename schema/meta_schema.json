@@ -1,7 +1,7 @@
 {
 	"$schema":"http://jkliemann.de/parkendd/media/meta_schema.json",
-	"title":"ParkenDD JSon API",
-	"description":"JSon meta information required by ParkenDD app",
+	"title":"ParkenDD JSON API",
+	"description":"JSON meta information required by ParkenDD app",
 	"type":"Object",
 	"properties":{
 		"mail":{
