@@ -9,9 +9,7 @@ import util
 from security import file_is_allowed
 import api_conf
 
-
 USER_AGENT = "ParkAPI v{} - Info: {}".format(api_conf.SERVER_VERSION, api_conf.SOURCE_REPOSITORY)
-
 
 def get_html(city, server_mail=""):
     """Download html data for a given city"""
