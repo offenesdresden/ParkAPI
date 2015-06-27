@@ -3,6 +3,27 @@ from datetime import datetime
 from os import path
 
 
+# if city does not send totals, we can push totals to the higest known value
+# saved in the json file
+# if the lot_name does not exits returns 0
+# problem: if one lot name exist twice, it takes always the last value
+# but the same lot name should never exists more than one time 
+def get_lots_from_json ( city, lot_name ) :
+    lots = 0
+    last_values_json = "cache/"+city+".json" 
+    if os.path.isfile(last_values_json):
+        with open(last_values_json) as data_file:
+            last_values = json.load(data_file)
+            if last_values is None :
+                # if no last json file exists, return 0
+                return 0
+            for lastlots in last_values["lots"] :
+                if lastlots["name"] is lot_name:
+                    lots = int(lastlots["total"])
+    return lots
+
+
+
 def utc_now():
     return datetime.utcnow().replace(microsecond=0).isoformat()
 
