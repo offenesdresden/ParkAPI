@@ -20,6 +20,8 @@ class CityTestCase(unittest.TestCase):
         last_updated = datetime.datetime.strptime(city["last_updated"], "%Y-%m-%dT%H:%M:%S")
         self.assertIsInstance(last_updated, datetime.datetime)
 
+        self.assertTrue(len(city["lots"]) > 0)
+
         for lot in city["lots"]:
             self.assertIn("name", lot)
 

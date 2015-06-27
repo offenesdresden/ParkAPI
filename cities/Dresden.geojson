@@ -43,7 +43,7 @@
       "coordinates": [13.73368, 51.04547]
     },
     "properties": {
-      "name": "Centrum-Galerie"
+      "name": "Centrum Galerie"
     }
   }, {
     "type": "Feature",
@@ -124,7 +124,7 @@
       "coordinates": [13.73155, 51.04187]
     },
     "properties": {
-      "name": "Wiener Platz/Hbf."
+      "name": "Wiener Platz / Hauptbahnhof"
     }
   }, {
     "type": "Feature",
@@ -358,7 +358,7 @@
       "coordinates": [13.73151, 51.03855]
     },
     "properties": {
-      "name": "City  Center"
+      "name": "City Center"
     }
   }, {
     "type": "Feature",
