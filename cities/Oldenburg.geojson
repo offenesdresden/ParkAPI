@@ -1,0 +1,148 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Schlosshöfe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2168988,
+          53.1391841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Waffenplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.21115,
+          53.14169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.21514,
+          53.14161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Galeria Kaufhof"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2161275,
+          53.1396571 
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pferdemarkt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.21271,
+          53.14727
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CCO Parkdeck 1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.21322,
+          53.14406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CCO Parkdeck 2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.21322,
+          53.14406 
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hbf/ZOB"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2225073,
+          53.145681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Theaterwall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2127383,
+          53.1382987
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Theatergarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2096205,
+          53.1382523 
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Heiligengeist-Höfe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2168988,
+          53.1391841 
+        ]
+      }
+    }
+  ]
+}
