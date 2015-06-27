@@ -1,30 +1,42 @@
 import pytz
 from datetime import datetime
 from os import path
+import json
 
 
-# if city does not send totals, we can push totals to the higest known value
-# saved in the json file
-# if the lot_name does not exits returns 0
-# problem: if one lot name exist twice, it takes always the last value
-# but the same lot name should never exists more than one time 
-def get_lots_from_json ( city, lot_name ) :
+def get_lots_from_json(city, lot_name):
+    """
+    Get the total value from the highest known value in the last saved JSON file.
+    This is useful for cities that don't publish total number of spaces for a parking lot.
+
+    Caveats:
+     - Returns 0 if not found.
+     - If a lot name exists twice only the last value is returned.
+
+    :param city:
+    :param lot_name:
+    :return:
+    """
     lots = 0
-    last_values_json = "cache/"+city+".json" 
-    if os.path.isfile(last_values_json):
-        with open(last_values_json) as data_file:
+    last_values_json_path = path.join("cache", city + ".json")
+    if path.isfile(last_values_json_path):
+        with open(last_values_json_path) as data_file:
             last_values = json.load(data_file)
-            if last_values is None :
+            if last_values is None:
                 # if no last json file exists, return 0
                 return 0
-            for lastlots in last_values["lots"] :
+            for lastlots in last_values["lots"]:
                 if lastlots["name"] is lot_name:
                     lots = int(lastlots["total"])
     return lots
 
 
-
 def utc_now():
+    """
+    Returns the current UTC time in ISO format.
+
+    :return:
+    """
     return datetime.utcnow().replace(microsecond=0).isoformat()
 
 
@@ -48,6 +60,7 @@ def convert_date(date_string, date_format, timezone="Europe/Berlin"):
 def remove_special_chars(string):
     """
     Remove any umlauts, spaces and punctuation from a string.
+
     :param string:
     :return:
     """
