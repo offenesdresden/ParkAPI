@@ -48,9 +48,9 @@ def parse_html(html):
         "City": [440, "Staulinie 10"],
         "Galeria Kaufhof": [326, "Ritterstraße"],
         "Pferdemarkt": [401, "Pferdemarkt 13"],
-        # CCO 1 & 2 are together only known together with 420
-        "CCO Parkdeck 1": [210, "Heiligengeiststraße 4"],
-        "CCO Parkdeck 2": [210, "Heiligengeiststraße 4"],
+        # CCO 1 & 2 are together only known together with 420, but they seem to be somewhat like this
+        "CCO Parkdeck 1": [190, "Heiligengeiststraße 4"],
+        "CCO Parkdeck 2": [230, "Heiligengeiststraße 4"],
         "Hbf/ZOB": [358, "Karlstraße"],
         "Theaterwall": [125, "Theaterwall 4"],
         "Theatergarage": [107, "Roonstraße"],
