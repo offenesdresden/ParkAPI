@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 from geodata import GeoData
-from util import convert_date
+from util import convert_date, generate_id
 
 data_url = "http://www.dresden.de/freie-parkplaetze"
 data_source = "http://www.dresden.de"
@@ -159,7 +159,7 @@ def parse_html(html):
                 "total": total,
                 "free": free,
                 "state": state,
-                "id": lot_id,
+                "id": generate_id(__file__, name),
                 "lot_type": type_map.get(name, ""),
                 "address": address_map.get(name, ""),
                 "forecast": False,

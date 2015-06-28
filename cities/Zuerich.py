@@ -1,5 +1,6 @@
 import feedparser
 from geodata import GeoData
+from util import generate_id
 
 data_url = "http://www.pls-zh.ch/plsFeed/rss"
 data_source = "https://www.stadt-zuerich.ch/portal/de/index/ogd/daten/parkleitsystem.html"
@@ -65,10 +66,12 @@ def parse_html(xml_data):
         summary = parse_summary(entry["summary"])
         title = parse_title(entry["title"])
 
+        old_id = entry["id"].split("=")[1]
+
         data["lots"].append({
             "name": title[0],
             "address": title[1],
-            "id": entry["id"].split("=")[1],
+            "id": generate_id(__file__, title[0]),
             "state": summary[0],
             "free": summary[1],
             "total": total_number_map.get(title[0], 0),
