@@ -54,8 +54,6 @@ def get_meta():
 
 @app.route("/status")
 def get_api_status():
-    app.logger.info("GET /status - " + request.headers.get("User-Agent"))
-
     return jsonify({
         "status": "online",
         "server_time": util.utc_now(),
