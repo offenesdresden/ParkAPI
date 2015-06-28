@@ -42,6 +42,8 @@ else:
 
 @app.route("/")
 def get_meta():
+    app.logger.info("GET / - " + request.headers.get("User-Agent"))
+
     return jsonify({
         "cities": SUPPORTED_CITIES,
         "api_version": api_conf.API_VERSION,
@@ -52,6 +54,8 @@ def get_meta():
 
 @app.route("/status")
 def get_api_status():
+    app.logger.info("GET /status - " + request.headers.get("User-Agent"))
+
     return jsonify({
         "status": "online",
         "server_time": util.utc_now(),
@@ -87,6 +91,7 @@ def get_lots(city):
 
 @app.route("/<city>/<lot_id>/timespan")
 def get_longtime_forecast(city, lot_id):
+    app.logger.info("GET /" + city + "/" + lot_id + "/timespan - " + request.headers.get("User-Agent"))
 
     try:
         datetime.strptime(request.args["from"], '%Y-%m-%dT%H:%M:%S')
@@ -103,6 +108,8 @@ def get_longtime_forecast(city, lot_id):
 
 @app.route("/coffee")
 def make_coffee():
+    app.logger.info("GET /coffee - " + request.headers.get("User-Agent"))
+
     return "<h1>I'm a teapot</h1>" \
            "<p>This server is a teapot, not a coffee machine.</p><br>" \
            "<img src=\"http://i.imgur.com/xVpIC9N.gif\" alt=\"British porn\" title=\"British porn\">", 418
