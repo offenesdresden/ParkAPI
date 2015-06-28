@@ -12,6 +12,7 @@ from security import file_is_allowed
 import api_conf
 import importlib
 from forecast import find_forecast
+import psycopg2
 
 app = Flask(__name__)
 
@@ -34,7 +35,14 @@ if os.getenv("env") != "development":
         port=used_port,
     )
 
-    # cleaning temporary variables
+    db_data = {
+        "host": config["Database"]["host"],
+        "name": config["Database"]["name"],
+        "user": config["Database"]["user"],
+        "pass": config["Database"]["pass"],
+        "port": config["Database"]["port"]
+    }
+
     del raw_server_conf, used_port, config
 else:
     SERVER_CONF = api_conf.DEFAULT_SERVER
@@ -71,20 +79,39 @@ def get_lots(city):
     if city not in SUPPORTED_CITIES:
         app.logger.info("Unsupported city: " + city)
         return "Error 404: Sorry, '" + city + "' isn't supported at the current time.", 404
-    try:
-        if os.getenv("caching") == "none":
-            # the quickest way out
-            raise FileNotFoundError
-        with open("./cache/" + city + ".json", "r") as file:
-            last_json = json.load(file)
-        last_downloaded = datetime.strptime(last_json["last_downloaded"], "%Y-%m-%dT%H:%M:%S")
-        if datetime.utcnow() - last_downloaded <= timedelta(minutes=10):
-            app.logger.debug("Using cached data")
-            return jsonify(last_json)
-        else:
-            return jsonify(scraper.live(city))
-    except FileNotFoundError:
-        return jsonify(scraper.live(city))
+
+    #############
+    # DEBUG STUFF
+    #############
+
+    if os.getenv("env") == "development":
+        try:
+            if os.getenv("caching") == "none":
+                # the quickest way out
+                raise FileNotFoundError
+
+            with open("./cache/" + city + ".json", "r") as file:
+                last_json = json.load(file)
+            last_downloaded = datetime.strptime(last_json["last_downloaded"], "%Y-%m-%dT%H:%M:%S")
+            if datetime.utcnow() - last_downloaded <= timedelta(minutes=10):
+                app.logger.debug("Using cached data")
+                return jsonify(last_json)
+            else:
+                return jsonify(scraper._live(city))
+        except FileNotFoundError:
+            return jsonify(scraper._live(city))
+
+    #############
+    # REAL STUFF
+    #############
+
+    with psycopg2.connect(database=db_data["name"], user=db_data["user"], host=db_data["host"], port=db_data["port"],
+                          password=db_data["pass"]) as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi_test WHERE city=%s;", (city,))
+        data = cursor.fetchall()[-1][2]
+
+    return jsonify(data)
 
 
 @app.route("/<city>/<lot_id>/timespan")

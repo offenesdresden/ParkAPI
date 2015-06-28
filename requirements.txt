@@ -3,3 +3,4 @@ Flask
 requests
 feedparser
 pytz
+psycopg2
