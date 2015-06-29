@@ -89,9 +89,13 @@ def get_lots(city):
             cursor = conn.cursor()
             cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi WHERE city=%s;", (city,))
             data = cursor.fetchall()[-1][2]
-    except psycopg2.OperationalError:
-        app.logger.error("Unable to connect to database")
-        abort(500)
+    except (psycopg2.OperationalError, IndexError) as e:
+        if type(e) == IndexError:
+            app.logger.info("Not a single set of data found in DB for: " + city)
+            return jsonify({}), 204
+        elif type(e) == psycopg2.OperationalError:
+            app.logger.error("DATABASE ERROR: " + str(e))
+            abort(500)
 
     return jsonify(data)
 
