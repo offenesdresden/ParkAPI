@@ -41,13 +41,13 @@ def add_metadata(data):
     return data
 
 
-def save_data_to_disk(data, city):
-    """Save a data dictionary in ./cache as a json file"""
-    if not os.path.exists(api_conf.CACHE_DIRECTORY):
-        os.mkdir(api_conf.CACHE_DIRECTORY)
-
-    with open(os.path.join(api_conf.CACHE_DIRECTORY, os.path.basename(city.__file__) + ".json"), "w") as file:
-        json.dump(data, fp=file)
+# def save_data_to_disk(data, city):
+#     """Save a data dictionary in ./cache as a json file"""
+#     if not os.path.exists(api_conf.CACHE_DIRECTORY):
+#         os.mkdir(api_conf.CACHE_DIRECTORY)
+#
+#     with open(os.path.join(api_conf.CACHE_DIRECTORY, os.path.basename(city.__file__) + ".json"), "w") as file:
+#         json.dump(data, fp=file)
 
 
 def connect_to_db(db_data):
@@ -74,11 +74,13 @@ def save_data_to_db(cursor, parking_data, city):
 
 
 def _live(city_name):
-    """Scrape data for a given city pulling all data now"""
+    """
+    Scrape data for a given city pulling all data now
+    This function is only used in development mode for debugging the server without a database present.
+    """
     try:
         city = importlib.import_module("cities." + city_name)
         data = add_metadata(parse_html(city, get_html(city)))
-        save_data_to_disk(data, city)
         return data
     except ImportError:
         # Couldn't find module for city
@@ -86,19 +88,18 @@ def _live(city_name):
 
 
 def main():
-    """Iterate over all cities in ./cities, scrape and save their data"""
+    """Iterate over all cities in ./cities, scrape and save their data to the database"""
 
-    if os.getenv("env") != "development":
-        config = configparser.ConfigParser()
-        config.read("config.ini")
+    config = configparser.ConfigParser()
+    config.read("config.ini")
 
-        db_data = {
-            "host": config["Database"]["host"],
-            "name": config["Database"]["name"],
-            "user": config["Database"]["user"],
-            "pass": config["Database"]["pass"],
-            "port": config["Database"]["port"]
-        }
+    db_data = {
+        "host": config["Database"]["host"],
+        "name": config["Database"]["name"],
+        "user": config["Database"]["user"],
+        "pass": config["Database"]["pass"],
+        "port": config["Database"]["port"]
+    }
 
     if db_data is not None:
         conn = connect_to_db(db_data)
@@ -106,11 +107,9 @@ def main():
 
     for file in filter(file_is_allowed, os.listdir(os.curdir + "/cities")):
         city = importlib.import_module("cities." + file.title()[:-3])
-
         data = add_metadata(parse_html(city, get_html(city)))
-        if os.getenv("env") == "development":
-            save_data_to_disk(data, city)
-        elif cursor is not None:
+
+        if cursor is not None:
             save_data_to_db(cursor, data, file.title()[:-3])
 
     conn.commit()

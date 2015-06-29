@@ -80,36 +80,17 @@ def get_lots(city):
         app.logger.info("Unsupported city: " + city)
         return "Error 404: Sorry, '" + city + "' isn't supported at the current time.", 404
 
-    #############
-    # DEBUG STUFF
-    #############
-
     if os.getenv("env") == "development":
-        try:
-            if os.getenv("caching") == "none":
-                # the quickest way out
-                raise FileNotFoundError
+        return jsonify(scraper._live(city))
 
-            with open("./cache/" + city + ".json", "r") as file:
-                last_json = json.load(file)
-            last_downloaded = datetime.strptime(last_json["last_downloaded"], "%Y-%m-%dT%H:%M:%S")
-            if datetime.utcnow() - last_downloaded <= timedelta(minutes=10):
-                app.logger.debug("Using cached data")
-                return jsonify(last_json)
-            else:
-                return jsonify(scraper._live(city))
-        except FileNotFoundError:
-            return jsonify(scraper._live(city))
-
-    #############
-    # REAL STUFF
-    #############
-
-    with psycopg2.connect(database=db_data["name"], user=db_data["user"], host=db_data["host"], port=db_data["port"],
-                          password=db_data["pass"]) as conn:
-        cursor = conn.cursor()
-        cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi_test WHERE city=%s;", (city,))
-        data = cursor.fetchall()[-1][2]
+    try:
+        with psycopg2.connect(database=db_data["name"], user=db_data["user"], host=db_data["host"], port=db_data["port"],
+                              password=db_data["pass"]) as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi_test WHERE city=%s;", (city,))
+            data = cursor.fetchall()[-1][2]
+    except psycopg2.OperationalError:
+        abort(500)
 
     return jsonify(data)
 
