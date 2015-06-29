@@ -2,11 +2,13 @@ import pytz
 from datetime import datetime
 from os import path
 import json
+import psycopg2
+import configparser
 
 
-def get_lots_from_json(city, lot_name):
+def get_most_lots_from_json(city, lot_name):
     """
-    Get the total value from the highest known value in the last saved JSON file.
+    Get the total value from the highest known value in the last saved JSON.
     This is useful for cities that don't publish total number of spaces for a parking lot.
 
     Caveats:
@@ -17,18 +19,30 @@ def get_lots_from_json(city, lot_name):
     :param lot_name:
     :return:
     """
-    lots = 0
-    last_values_json_path = path.join("cache", city + ".json")
-    if path.isfile(last_values_json_path):
-        with open(last_values_json_path) as data_file:
-            last_values = json.load(data_file)
-            if last_values is None:
-                # if no last json file exists, return 0
-                return 0
-            for lastlots in last_values["lots"]:
-                if lastlots["name"] is lot_name:
-                    lots = int(lastlots["total"])
-    return lots
+
+    config = configparser.ConfigParser()
+    config.read("config.ini")
+    db_data = {
+        "host": config["Database"]["host"],
+        "name": config["Database"]["name"],
+        "user": config["Database"]["user"],
+        "pass": config["Database"]["pass"],
+        "port": config["Database"]["port"]
+    }
+    with psycopg2.connect(database=db_data["name"], user=db_data["user"], host=db_data["host"], port=db_data["port"],
+                          password=db_data["pass"]) as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT data FROM parkapi_test WHERE city=%s;", (city,))
+        all_data = cursor.fetchall()
+
+        most_lots = 0
+        for json_data in all_data:
+            lots = json_data[0]["lots"]
+            for lot in lots:
+                if lot["name"] == lot_name:
+                    if int(lot["total"]) > most_lots:
+                        most_lots = int(lot["total"])
+        return most_lots
 
 
 def utc_now():
