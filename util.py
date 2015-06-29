@@ -40,8 +40,8 @@ def get_most_lots_from_json(city, lot_name):
             lots = json_data[0]["lots"]
             for lot in lots:
                 if lot["name"] == lot_name:
-                    if int(lot["total"]) > most_lots:
-                        most_lots = int(lot["total"])
+                    if int(lot["free"]) > most_lots:
+                        most_lots = int(lot["free"])
         return most_lots
 
 
