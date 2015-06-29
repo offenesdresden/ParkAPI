@@ -12,17 +12,15 @@ db_data = {
     "port": config["Database"]["port"]
 }
 
-conn = psycopg2.connect(database=db_data["name"], user=db_data["user"], host=db_data["host"], port=db_data["port"],
-                        password=db_data["pass"])
-cursor = conn.cursor()
+with psycopg2.connect(database=db_data["name"], user=db_data["user"], host=db_data["host"], port=db_data["port"],
+                      password=db_data["pass"]) as conn:
 
-cursor.execute('CREATE TABLE "public"."parkapi" ('
-               '"id" SERIAL,'
-               '"timestamp_updated" TIMESTAMP NOT NULL,'
-               '"timestamp_downloaded" TIMESTAMP NOT NULL,'
-               '"city" TEXT NOT NULL,"data" JSON NOT NULL,'
-               'PRIMARY KEY ("id"))'
-               'TABLESPACE "pg_default";')
-
-conn.commit()
-conn.close()
+    cursor = conn.cursor()
+    cursor.execute('CREATE TABLE "public"."parkapi" ('
+                   '"id" SERIAL,'
+                   '"timestamp_updated" TIMESTAMP NOT NULL,'
+                   '"timestamp_downloaded" TIMESTAMP NOT NULL,'
+                   '"city" TEXT NOT NULL,"data" JSON NOT NULL,'
+                   'PRIMARY KEY ("id"))'
+                   'TABLESPACE "pg_default";')
+    conn.commit()
