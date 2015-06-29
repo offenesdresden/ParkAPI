@@ -61,7 +61,7 @@ def save_data_to_db(cursor, parking_data, city):
     timestamp_updated = parking_data["last_updated"]
     timestamp_downloaded = util.utc_now()
     json_data = json.dumps(parking_data)
-    sql_string = "INSERT INTO parkapi_test(timestamp_updated, timestamp_downloaded, city, data) " \
+    sql_string = "INSERT INTO parkapi(timestamp_updated, timestamp_downloaded, city, data) " \
                  "VALUES (%(updated)s, %(downloaded)s, %(city)s, %(data)s) RETURNING 'id';"
     cursor.execute(sql_string, {
         "updated": timestamp_updated,

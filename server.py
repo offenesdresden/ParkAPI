@@ -84,12 +84,13 @@ def get_lots(city):
         return jsonify(scraper._live(city))
 
     try:
-        with psycopg2.connect(database=db_data["name"], user=db_data["user"], host=db_data["host"], port=db_data["port"],
-                              password=db_data["pass"]) as conn:
+        with psycopg2.connect(database=db_data["name"], user=db_data["user"], host=db_data["host"],
+                              port=db_data["port"], password=db_data["pass"]) as conn:
             cursor = conn.cursor()
-            cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi_test WHERE city=%s;", (city,))
+            cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi WHERE city=%s;", (city,))
             data = cursor.fetchall()[-1][2]
     except psycopg2.OperationalError:
+        app.logger.error("Unable to connect to database")
         abort(500)
 
     return jsonify(data)

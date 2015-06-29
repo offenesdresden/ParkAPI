@@ -32,7 +32,7 @@ def get_most_lots_from_json(city, lot_name):
     with psycopg2.connect(database=db_data["name"], user=db_data["user"], host=db_data["host"], port=db_data["port"],
                           password=db_data["pass"]) as conn:
         cursor = conn.cursor()
-        cursor.execute("SELECT data FROM parkapi_test WHERE city=%s;", (city,))
+        cursor.execute("SELECT data FROM parkapi WHERE city=%s;", (city,))
         all_data = cursor.fetchall()
 
         most_lots = 0
