@@ -13,3 +13,6 @@ def main():
                        'PRIMARY KEY ("id"))'
                        'TABLESPACE "pg_default";')
         conn.commit()
+
+if __name__ == "__main__":
+    main()

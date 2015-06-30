@@ -10,13 +10,14 @@ from park_api.security import file_is_allowed
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def get_meta():
     app.logger.info("GET / - " + request.headers.get("User-Agent"))
 
     cities = {}
-    for id,city in env.supported_cities().items():
-        cities[id] = city.city_name
+    for city_id, city in env.supported_cities().items():
+        cities[city.city_name] = city_id
 
     return jsonify({
         "cities": cities,
@@ -56,8 +57,8 @@ def get_lots(city):
             cursor = conn.cursor()
             cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi WHERE city=%s;", (city,))
             data = cursor.fetchall()[-1][2]
-    except psycopg2.OperationalError:
-        app.logger.error("Unable to connect to database")
+    except (psycopg2.OperationalError, psycopg2.ProgrammingError) as e:
+        app.logger.error("Unable to connect to database: " + str(e))
         abort(500)
 
     return jsonify(data)
