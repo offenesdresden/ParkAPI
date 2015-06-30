@@ -3,6 +3,7 @@ import os
 from park_api import structs, security
 import importlib
 import configparser
+import sys
 
 API_VERSION = '1.0'
 SERVER_VERSION = '0.0.0'
@@ -74,13 +75,19 @@ def load_config():
     global ENV
     ENV = os.getenv("env", "development")
 
+    config_path = os.path.join(APP_ROOT, "config.ini")
+    try:
+        config_file = open(config_path)
+    except (OSError, FileNotFoundError) as e:
+        print("Failed load configuration: %s" % e)
+        exit(1)
     config = configparser.ConfigParser(DEFAULT_CONFIGURATION, strict=False)
-    config.read(os.path.join(APP_ROOT, "config.ini"))
+    config.read_file(config_file)
 
     try:
         raw_config = config[ENV]
     except KeyError:
-        print("environment '%s' does not exists in config.ini" % ENV)
+        print("environment '%s' does not exists in config.ini" % ENV, file=sys.stderr)
         exit(1)
 
     global SERVER_CONF, DATABASE, SUPPORTED_CITIES, LIVE_SCRAPE
