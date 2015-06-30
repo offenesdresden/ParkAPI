@@ -1,17 +1,15 @@
 #!/usr/bin/env python
-import importlib
-import requests
-import os
 import json
+
+import requests
 from bs4 import BeautifulSoup
 import psycopg2
-
-from park_api.security import file_is_allowed
 from park_api import util, env
 
 HEADERS = {
-  "User-Agent": "ParkAPI v{} - Info: {}".format(env.SERVER_VERSION, env.SOURCE_REPOSITORY),
+    "User-Agent": "ParkAPI v{} - Info: {}".format(env.SERVER_VERSION, env.SOURCE_REPOSITORY),
 }
+
 
 def get_html(city):
     """Download html data for a given city"""
@@ -38,9 +36,6 @@ def add_metadata(data):
     data["last_downloaded"] = util.utc_now()
     return data
 
-
-def connect_to_db(db_data):
-    """Return a connection to the Postgres database"""
 
 def save_data_to_db(cursor, parking_data, city):
     """Save the data given into the Postgres DB."""

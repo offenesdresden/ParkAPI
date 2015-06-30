@@ -1,12 +1,10 @@
-from flask import Flask, jsonify, json, abort, request
-from datetime import datetime, timedelta
-import os
+from datetime import datetime
 from os import getloadavg
-import psycopg2
 
-from park_api import scraper, util, structs, env
+from flask import Flask, jsonify, abort, request
+import psycopg2
+from park_api import scraper, util, env
 from park_api.forecast import find_forecast
-from park_api.security import file_is_allowed
 
 app = Flask(__name__)
 
@@ -45,7 +43,7 @@ def get_lots(city):
 
     city_module = env.supported_cities().get(city, None)
 
-    if city_module == None:
+    if city_module is None:
         app.logger.info("Unsupported city: " + city)
         return "Error 404: Sorry, '" + city + "' isn't supported at the current time.", 404
 

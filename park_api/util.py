@@ -1,12 +1,11 @@
 import pytz
 from datetime import datetime
 from os import path
-import json
 import psycopg2
 
 from park_api import env
 
-def get_most_lots_from_json(city, lot_name):
+def get_most_lots_from_known_data(city, lot_name):
     """
     Get the total value from the highest known value in the last saved JSON.
     This is useful for cities that don't publish total number of spaces for a parking lot.

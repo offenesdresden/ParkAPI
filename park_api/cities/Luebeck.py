@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from park_api.util import convert_date, generate_id
+from park_api.util import convert_date, generate_id, get_most_lots_from_known_data
 from park_api.geodata import GeoData
 
 data_url = "http://kwlpls.adiwidjaja.info"
@@ -47,7 +47,7 @@ def parse_html(html):
                 data["lots"].append({
                     "name": type_and_name[1],
                     "type": type_and_name[0],
-                    "total": 0,
+                    "total": get_most_lots_from_known_data("Lübeck", type_and_name[1]),
                     "free": 0,
                     "region": region_header,
                     "state": process_state_map.get(raw_lot_data[1].text, ""),
