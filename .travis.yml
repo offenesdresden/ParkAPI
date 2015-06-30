@@ -8,4 +8,4 @@ matrix:
   allow_failures:
     - python: "nightly"
 cache: pip
-script: python -m unittest discover tests
+script: cp config_example.ini config.ini; python -m unittest discover tests
