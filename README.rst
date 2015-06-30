@@ -45,6 +45,36 @@ server version correlates to the version of the software in this repo.
 You can use the server running at `park-api.higgsboson.tk`_ for testing.
 It should usually be running at the most current version of this repo.
 
+Setup your own server
+---------------------
+
+- First you will need python (at least 3.3), pip and virtualenv installed.
+  In the following section it is assumed, that python is python3 and
+  virtualenv is virtualenv3. If this is not the case for your distribution use
+  the correct executables.
+
+- Clone the repo:
+
+    $ git clone git@github.com:offenesdresden/ParkAPI.git
+    $ cd ParkAPI
+
+- Create a new virtualenv:
+
+    $ virtualenv venv
+    $ . venv/bin/activate
+
+- Install dependencies
+
+    (venv) $ pip install -e .
+
+- Run the server
+
+    bin/parkapi-server
+
+- Run the tests
+
+    python -m unittest discover tests
+
 Schema
 ------
 
