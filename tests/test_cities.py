@@ -8,7 +8,7 @@ import datetime
 def scrape_city(city, extension=".html"):
     path = os.path.join(helpers.TEST_ROOT, "fixtures", city.lower() + extension)
     with open(path, 'rb') as f:
-        city = importlib.import_module("cities." + city)
+        city = importlib.import_module("park_api.cities." + city)
         return city.parse_html(f.read().decode('utf-8', 'replace'))
 
 

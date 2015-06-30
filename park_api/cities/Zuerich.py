@@ -1,6 +1,6 @@
 import feedparser
-from geodata import GeoData
-from util import generate_id
+from park_api.util import convert_date, generate_id
+from park_api.geodata import GeoData
 
 data_url = "http://www.pls-zh.ch/plsFeed/rss"
 data_source = "https://www.stadt-zuerich.ch/portal/de/index/ogd/daten/parkleitsystem.html"

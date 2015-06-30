@@ -1,9 +1,13 @@
 import os
 import csv
 
+from park_api import env
+
 def find_forecast(lot_id, time_from, time_to):
     try:
-        with open(os.path.join("forecast_data", lot_id + ".csv")) as csvfile:
+        csv_path = os.path.join(env.APP_ROOT, "forecast_data", lot_id + ".csv")
+
+        with open(csv_path) as csvfile:
             data = {
                 "version": 1.0,
                 "data": {}

@@ -1,6 +1,8 @@
 import os
 import json
 
+from park_api import env
+
 
 def from_feature(feature):
     name = feature['properties']['name']
@@ -10,7 +12,8 @@ def from_feature(feature):
 
 class GeoData:
     def __init__(self, city):
-        json_path = os.path.join(city[:-3] + ".geojson")
+        json_file = city[:-3] + ".geojson"
+        json_path = os.path.join(env.APP_ROOT, "park_api", "cities", json_file)
         try:
             with open(json_path) as f:
                 geodata = json.load(f)

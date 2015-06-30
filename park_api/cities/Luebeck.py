@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-from util import convert_date, generate_id
-from geodata import GeoData
+from park_api.util import convert_date, generate_id
+from park_api.geodata import GeoData
 
 data_url = "http://kwlpls.adiwidjaja.info"
 data_source = "http://www.kwl-luebeck.de"
