@@ -53,27 +53,27 @@ Setup your own server
   virtualenv is virtualenv3. If this is not the case for your distribution use
   the correct executables.
 
-- Clone the repo:
+- Clone the repo::
 
-    $ git clone git@github.com:offenesdresden/ParkAPI.git
-    $ cd ParkAPI
+  $ git clone git@github.com:offenesdresden/ParkAPI.git
+  $ cd ParkAPI
 
-- Create a new virtualenv:
+- Create a new virtualenv::
 
-    $ virtualenv venv
-    $ . venv/bin/activate
+  $ virtualenv venv
+  $ . venv/bin/activate
 
-- Install dependencies
+- Install dependencies::
 
-    (venv) $ pip install -e .
+  (venv) $ pip install -e .
 
-- Run the server
+- Run the server::
 
-    bin/parkapi-server
+  $ bin/parkapi-server
 
-- Run the tests
+- Run the tests::
 
-    python -m unittest discover tests
+  $ python -m unittest discover tests
 
 Schema
 ------
