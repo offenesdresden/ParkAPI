@@ -134,7 +134,7 @@ def gather_supported_cities():
     cities = {}
     for file in filter(file_is_allowed, os.listdir(os.path.join(os.curdir, "cities"))):
         city = importlib.import_module("cities." + file.title()[:-3])
-        cities[file[:-3]] = city.city_name
+        cities[city.city_name] = file[:-3]
     return cities
 
 
