@@ -4,6 +4,8 @@
 
 ParkAPI is a small project trying to consolidate pages where cities publish the amount of empty spaces on their public parking lots (albeit as HTML) into a simple to use JSON API. It’s trying to become the new backend for ParkenDD ([iOS](https://github.com/kiliankoe/ParkenDD) & [Android](https://github.com/jklmnn/ParkenDD)).
 
+![image](./image.jpg)
+
 Currently it’s just a tiny python flask powered server and **not yet ready for actual usage**.
 
 The idea here is to also include some more fun features like automatic time-based scraping and caching those results for quicker responses and reduced load on the servers providing data or providing forecast data right alongside.
@@ -110,3 +112,7 @@ Now all that's left to do is to send us a pull request with your new stuff :)
 Very cool! Thanks for helping out! [You rock!](http://i.giphy.com/JVdF14CQQH7gs.gif)
 
 *Note*: Please don't include umlauts or other special characters in the name of the city file(s). The correct city name is specified inside the `city.py` file, but the filename should be ascii-compatible and with underscores instead of spaces. Should a city with the same name already exist you're going to have to find some way to make it unique, maybe by including a state or region?
+
+#### Credits
+
+Image header by [Mattes](https://commons.wikimedia.org/wiki/User:Mattes) (Own work) [CC BY 2.0 de](http://creativecommons.org/licenses/by/2.0/de/deed.en), via Wikimedia Commons
