@@ -3,8 +3,8 @@ from datetime import datetime
 from os import path
 import json
 import psycopg2
-import configparser
 
+from park_api import env
 
 def get_most_lots_from_json(city, lot_name):
     """
@@ -19,18 +19,7 @@ def get_most_lots_from_json(city, lot_name):
     :param lot_name:
     :return:
     """
-
-    config = configparser.ConfigParser()
-    config.read("config.ini")
-    db_data = {
-        "host": config["Database"]["host"],
-        "name": config["Database"]["name"],
-        "user": config["Database"]["user"],
-        "pass": config["Database"]["pass"],
-        "port": config["Database"]["port"]
-    }
-    with psycopg2.connect(database=db_data["name"], user=db_data["user"], host=db_data["host"], port=db_data["port"],
-                          password=db_data["pass"]) as conn:
+    with psycopg2.connect(**env.DATABASE) as conn:
         cursor = conn.cursor()
         cursor.execute("SELECT data FROM parkapi WHERE city=%s;", (city,))
         all_data = cursor.fetchall()

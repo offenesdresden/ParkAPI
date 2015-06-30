@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-from util import convert_date, generate_id
-from geodata import GeoData
+from park_api.util import convert_date, generate_id
+from park_api.geodata import GeoData
 
 # URL for the page where the scraper can gather the data
 data_url = "http://example.com/parkingdata"

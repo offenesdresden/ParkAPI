@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-from geodata import GeoData
-from util import convert_date, generate_id
+from park_api.util import convert_date, generate_id
+from park_api.geodata import GeoData
 
 data_url = "http://www5.stadt-muenster.de/parkhaeuser/"
 data_source = "http://www.stadt-muenster.de"

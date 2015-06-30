@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-from geodata import GeoData
-from util import convert_date, generate_id
+from park_api.geodata import GeoData
+from park_api.util import convert_date, generate_id
 
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 data_source = "http://www.ingolstadt.de"
