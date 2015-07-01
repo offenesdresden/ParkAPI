@@ -74,8 +74,11 @@ def main():
     cursor = conn.cursor()
 
     for file, city in env.supported_cities().items():
-        data = add_metadata(parse_html(city, get_html(city)))
-        save_data_to_db(cursor, data, file.title())
+        try:
+            data = add_metadata(parse_html(city, get_html(city)))
+            save_data_to_db(cursor, data, file.title())
+        except Exception as e:
+            print("Failed to scrape '%s': %s" %(city, e))
 
     conn.commit()
     conn.close()
