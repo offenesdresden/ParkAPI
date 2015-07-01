@@ -1,19 +1,10 @@
 from bs4 import BeautifulSoup
 from park_api.geodata import GeoData
-from park_api.util import convert_date, generate_id
+from park_api.util import convert_date, generate_id, get_most_lots_from_known_data
 
-data_url = "http://www.dresden.de/freie-parkplaetze"
+data_url = "https://apps.dresden.de/ords/f?p=1110"
 data_source = "http://www.dresden.de"
 city_name = "Dresden"
-detail_url = "/parken/detail"
-
-status_image_map = {
-    "/img/parken/p_gruen.gif": "open",
-    "/img/parken/p_gelb.gif": "open",
-    "/img/parken/p_rot.gif": "open",
-    "/img/parken/p_geschlossen.gif": "closed",
-    "/img/parken/p_blau.gif": "nodata"
-}
 
 type_map = {
     "Altmarkt": "Tiefgarage",
@@ -118,52 +109,50 @@ def parse_html(html):
     soup = BeautifulSoup(html)
     data = {
         "lots": [],
-        "data_source": data_source
+        "data_source": data_source,
+        "last_updated": convert_date(soup.find(id="P1_LAST_UPDATE").text, "%d.%m.%Y %H:%M:%S")
     }
 
-    # Letzte Aktualisierung auslesen, ich liebe html parsing m(
-    last_updated = soup.find("ul", {"class": "links"}).findNext("p").text.strip()
+    for table in soup.find_all("table"):
+        if table["summary"] != "":
+            region = table["summary"]
 
-    data["last_updated"] = convert_date(last_updated, "%d.%m.%Y %H.%M Uhr")
+            for lot_row in table.find_all("tr"):
+                if lot_row.find("th") is not None:
+                    continue
 
-    section_tables = soup.find_all("table", {"class": "zahlen"})
-    for table in section_tables:
-        region = table.select("thead th")[0].text
+                state_div = lot_row.find("div")
+                if "green" in state_div["class"]:
+                    state = "open"
+                elif "yellow" in state_div["class"]:
+                    state = "open"
+                elif "red" in state_div["class"]:
+                    state = "open"
+                elif "park-closed" in state_div["class"]:
+                    state = "closed"
+                else:
+                    state = "nodata"
 
-        for row in table.select("tbody tr"):
-            raw_lot_data = row.find_all("td")
+                lot_name = lot_row.find("td", {"headers": "BEZEICHNUNG"}).text
 
-            name = raw_lot_data[0].find("a").text
+                try:
+                    total = int(lot_row.find("td", {"headers": "KAPAZITAET"}).text)
+                    free = int(lot_row.find("td", {"headers": "FREI"}).text)
+                except ValueError:
+                    total = get_most_lots_from_known_data("Dresden", lot_name)
+                    free = 0
 
-            lot_id = raw_lot_data[0].find("a")["href"][-4:]
-
-            state = status_image_map.get(raw_lot_data[0].find("img")["src"], "nodata")
-
-            coords = geodata.coords(name)
-
-            total = raw_lot_data[1].text
-            total = total.strip()
-            if total == "":
-                total = 0
-            total = int(total)
-
-            free = raw_lot_data[2].text
-            free = free.strip()
-            if free == "":
-                free = 0
-            free = int(free)
-
-            data["lots"].append({
-                "coords": coords,
-                "name": name,
-                "total": total,
-                "free": free,
-                "state": state,
-                "id": generate_id(__file__, name),
-                "lot_type": type_map.get(name, ""),
-                "address": address_map.get(name, ""),
-                "forecast": False,
-                "region": region
-            })
+                data["lots"].append({
+                    "coords": geodata.coords(lot_name),
+                    "name": lot_name,
+                    "total": total,
+                    "free": free,
+                    "state": state,
+                    "id": generate_id(__file__, lot_name),
+                    "lot_type": type_map.get(lot_name, ""),
+                    "address": address_map.get(lot_name, ""),
+                    "forecast": False,
+                    "region": region
+                })
 
     return data

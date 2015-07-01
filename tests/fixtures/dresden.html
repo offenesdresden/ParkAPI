@@ -1,1001 +1,429 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
-
+<!--[if HTML5]><![endif]-->
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6 no-css3 no-js pointerevents extappl extappl_parken" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 no-css3 no-js pointerevents extappl extappl_parken" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 no-css3 no-js pointerevents extappl extappl_parken" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 pointerevents extappl extappl_parken" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js pointerevents extappl extappl_parken" lang="en"> <!--<![endif]-->
 <head>
-    <title>Freie Parkplätze - Leben, Arbeiten und Wohnen - Dresden</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="content-language" content="de" />
-    <meta name="keywords" content="Dresden" />
-    <meta name="author" content="Dresden" />
-    <meta name="thema" content="Leben, Arbeiten und Wohnen" />
-    <meta http-equiv="Content-Script-Type" content="text/javascript" />
-    <meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="de" />
-    <link rel="shortcut icon" href="http://www.dresden.de/css/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="http://www.dresden.de/css/favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/lhdd_pm.xml" />
-    <link rel="stylesheet" type="text/css" href="/dyncss/css_lhdd.php?l=lhdd&amp;t=leben&amp;x=app_parkinformationssystem" />
-    <link rel="stylesheet" type="text/css" href="/css/macfix.css" />
-    <script type="text/javascript" src="/js/jLoad.min.js"></script>
-    <script type="text/javascript" src="/js/jLoadSetup.js"></script>
-    <script type="text/javascript">
-        <!--//--><![CDATA[//><!--
-        jQuery.noConflict();
-        //--><!]]>
-    </script>
-    <script type="text/javascript" src="http://info.dresden.de/www/delivery/fl.js"></script>
-    <!-- 192.168.115.240-->
+<!--[if !HTML5]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+  <meta charset="UTF-8">
+  <title>Page 1</title>
+  <link rel="icon" href="/i/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/i/favicon.ico" type="image/x-icon">
+
+  <script src="/i/dresden_de/jquery.responsiveiframe.js"></script>
+  <script src="/i/dresden_de/manualResizeiFrameWindow.js"></script>
+  <script>
+    var ri = responsiveIframe();
+    ri.allowResponsiveEmbedding();
+  </script>
+
+
+<link rel="stylesheet" href="/i/css/apex.min.css?v=4.2.6.00.03" type="text/css" />
+<!--[if IE]><link rel="stylesheet" href="/i/css/apex_ie.min.css?v=4.2.6.00.03" type="text/css" /><![endif]-->
+<link rel="stylesheet" href="/i/libraries/jquery-ui/1.8.22/themes/base/jquery-ui.min.css" type="text/css" />
+
+<link rel="stylesheet" href="/i/themes/theme_25/css/4_2.css?v=4.2.6.00.03" type="text/css" />
+<link rel="stylesheet" href="/i/themes/theme_25/css/responsive_grid.css?v=4.2.6.00.03" type="text/css" />
+
+
+
+<script type="text/javascript">
+var apex_img_dir = "/i/", htmldb_Img_Dir = apex_img_dir;
+</script>
+<script src="/i/libraries/apex/minified/desktop_all.min.js?v=4.2.6.00.03" type="text/javascript"></script>
+<script src="/i/libraries/apex/minified/legacy.min.js?v=4.2.6.00.03" type="text/javascript"></script>
+
+<script type="text/javascript" src="/i/libraries/modernizr/2.5.3/modernizr.min.js?v=4.2.6.00.03"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/i/libraries/respond-js/1.1.0/respond.min.js?v=4.2.6.00.03"></script><![endif]-->
+<script type="text/javascript" src="/i/themes/theme_25/js/4_2.min.js?v=4.2.6.00.03"></script>
+
+
+
+
+<link rel="stylesheet" href="/resource_ext/css/styles.css">
+<style type="text/css">.tk-adobe-garamond-pro{font-family:"adobe-garamond-pro",sans-serif;}</style>
+
+<style>
+  th[id=FREI] {
+    width: 25%; }
+  th[id=KAPAZITAET] {
+    width: 25%; }
+  th[id=BEZEICHNUNG] {
+    width: 50%; }
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
 </head>
+<body >
+<!--[if lte IE 6]><div id="outdated-browser">You are using an outdated web browser. For a list of supported browsers, please reference the Oracle Application Express Installation Guide.</div><![endif]-->
+<form action="wwv_flow.accept" method="post" name="wwv_flow" id="wwvFlowForm" novalidate >
+<input type="hidden" name="p_flow_id" value="1110" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="1" id="pFlowStepId" /><input type="hidden" name="p_instance" value="6566568839197" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="5803178837978" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><div id="uBodyContainer">
 
-<body id="inhalt">
-    <p class="accessibility">
-        <!--UdmComment--><strong>Springe direkt zu:</strong> <a href="#contentnav">Hauptnavigation</a> | <a href="#content">Inhaltsbereich</a> | <a href="#search" onclick="location = this.href; focusElem('search'); return false;">Suchfunktion</a>
-        <!--/UdmComment-->
-    </p>
-    <!--UdmComment-->
-    <div id="header">
-        <div class="headercontainer">
-            <div class="leftcontainer">
-                <div class="logo">
-                    <div class="himgtop">
-                        <a href="/"><img src="/img/layoutv4/themen/common/dresden_de.png" alt="Landeshauptstadt Dresden" title="Landeshauptstadt Dresden" /></a>
-                    </div>
-                </div>
-                <div class="headercontent">
-                    <div class="headerpic">
-                        <img src="/media/bilder/632_verkehr.jpg" alt="Verkehr in Dresden" title="Verkehr in Dresden" /> </div>
 
-                    <div id="metanav" class="v2">
-                        <form id="mainLangSelect" action="/redirect.php" method="post">
-                            <fieldset>
-                                <label class="accessibility">Sprache</label>
-                                <select name="langSelectForwardTo" onchange="document.getElementById('mainLangSelect').submit();">
-                                    <option value="/index.php" selected="selected">deutsch</option>
-                                    <option value="/en/03/c_09.php">english</option>
-                                    <option value="index_fr.php">française</option>
-                                    <option value="index_es.php">español</option>
-                                    <option value="index_it.php">italiano</option>
-                                    <option value="index_cs.php">český</option>
-                                    <option value="index_pl.php">polski</option>
-                                    <option value="index_ru.php">по-русски</option>
-                                </select>
-                                <input type="submit" class="submit" value="" />
-                            </fieldset>
-                        </form>
-                        <form id="quicksearch" action="/suche/" method="get" class="search searchv2" accept-charset="UTF-8">
-                            <fieldset>
-                                <a name="search" class="anker"></a>
-                                <input type="text" name="q" value="Suche" class="suchfeld" id="vts_searchbox_head" />
-                                <input type="submit" name="cmd" value="" title="suchen" class="submit" />
-                                <input type="hidden" class="hidden" name="uldd" value="www.dresden.de/de" />
-                                <input type="hidden" class="hidden" name="ps" value="20" />
-                                <input type="hidden" class="hidden" name="m" value="any" />
-                                <input type="hidden" class="hidden" name="wm" value="sub" />
-                            </fieldset>
-                        </form>
-                        <script type="text/javascript">
-                            <!--//--><![CDATA[//><!--
-                            jLoad.exec(["JQUERY"]);
-                            (function($) {
-                                $(document).ready(function() {
-                                    $('#vts_searchbox_head').attr("value", "Suche");
-                                    $('#vts_searchbox_head').bind("click", function() {
-                                        var search_input = $("#vts_searchbox_head").attr("value");
-                                        if (search_input != '' && search_input == "Suche") {
-                                            $(this).attr("value", "");
-                                        }
-                                    });
-                                    $('#vts_searchbox_head').bind("focusout", function() {
-                                        var search_input = $("#vts_searchbox_head").attr("value");
-                                        if (search_input == '') {
-                                            $(this).attr("value", "Suche");
-                                        }
-                                    });
-                                    var specific_options = {
-                                        "url": "/suche/suggestions.itl",
-                                        "messages": {
-                                            "noResults": "Keine Suchergebnisse.",
-                                            "results": function(amount) {
-                                                return amount + (amount > 1 ? " Ergebnisse sind" : " Ergebniss ist") +
-                                                    " verfügbar, bitte nutzen Sie die Auf- und Abtasten um zwischen den Ergebnissen umzuschalten.";
-                                            }
-                                        }
-                                    }
-                                    $('input[name="q"]').igAutocomplete(specific_options);
-                                });
-                            })(jQuery);
-                            //--><!]]>
-                        </script>
-                        <br class="fixfloat" />
-                    </div>
-                </div>
-                <br class="fixfloat" />
-            </div>
-        </div>
+<div id="uOneCol">
+  <div class="apex_grid_container">
+    <div class="apex_cols apex_span_12">
+      <div class="apex_row">
+<div class="apex_cols apex_span_12 alpha omega">
+
+<div id="P1_AUSWAHL_BEREICH_CONTAINER"><label for="P1_AUSWAHL_BEREICH" class="visuallyhidden">Kontakt</label><span id="P1_AUSWAHL_BEREICH" class="display_only"  ><h2 class="heading ">Freie Parkplätze</h2></span></div>
+</div>
+</div><div class="apex_row">
+<div class="apex_cols apex_span_12 alpha omega">
+<div class="report-search-controls"><div class="apex_row">
+<div class="apex_cols apex_span_12 alpha omega">
+<div id="P1_BEREICH_INFO_CONTAINER"><label for="P1_BEREICH_INFO" class="visuallyhidden">Bereich Info</label><span id="P1_BEREICH_INFO" class="display_only"  ><div class="Content" style="margin-left: 0.65em; margin-top: 0.6em;">Parkbereich auswählen</div></span></div>
+</div>
+</div><div class="apex_row">
+<div class="apex_cols apex_span_8 alpha">
+<div id="P1_SUCHE_CONTAINER"><label for="P1_SUCHE" class="visuallyhidden">Auswahl des Bereiches</label><span class="select" style="margin: 10px 10px 0px 10px;"><input type="hidden" name="p_arg_names" value="4727326174767181" /><select id="P1_SUCHE" name="p_t01" class="selectlist"  size="1" ><option value="1" selected="selected" >beliebig</option>
+<option value="Busparkpl&#xE4;tze">Busparkpl&#xE4;tze</option>
+<option value="Innere Altstadt">Innere Altstadt</option>
+<option value="Neustadt">Neustadt</option>
+<option value="P+R">Park + Ride</option>
+<option value="Prager Strasse">Prager Stra&#xDF;e</option>
+<option value="Ring Ost">Ring Ost</option>
+<option value="Ring S&#xFC;d">Ring S&#xFC;d</option>
+<option value="Ring West">Ring West</option>
+<option value="Sonstige">Sonstige</option>
+</select></span></div>
+</div><div class="apex_cols apex_span_4 omega">
+<div id="P1_GO_CONTAINER">
+<div class="Content_text" style="margin-top:10px">
+<p><button class="next" onclick="apex.submit(&#x27;Go&#x27;);"  id="P1_GO" type="button"><span>Anzeigen</span></button> </p>
+</div></div>
+
+</div>
+</div></div>
+</div>
+</div><div class="apex_row">
+<div class="apex_cols apex_span_7 alpha">
+
+<div id="report_4723419357543205_catch"><table class="uReportContainer"  id="report_R4723419357543205" summary="" style="table-layout:auto;">
+<tbody class="uReportPagination">
+<tr><td></td></tr>
+</tbody>
+<tbody class="uReportBody">
+<tr><td>
+<table summary="Innere Altstadt" class="uReportAlternative">
+<thead><tr><th  id="BEZEICHNUNG" >Innere Altstadt</th><th  id="KAPAZITAET" >Stellplätze</th><th  id="FREI" >frei</th></tr>
+</thead>
+<tbody>
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:431">Altmarkt</a></div></td><td  headers="KAPAZITAET"><div class="column content_text" style="width:15px;">400</div></td><td  headers="FREI"><div class="column content_text">280</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:403">An der Frauenkirche</a></div></td><td  headers="KAPAZITAET"><div class="column content_text" style="width:15px;">120</div></td><td  headers="FREI"><div class="column content_text">103</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:422">Frauenkirche Neumarkt</a></div></td><td  headers="KAPAZITAET"><div class="column content_text" style="width:15px;">250</div></td><td  headers="FREI"><div class="column content_text">124</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:402">Haus am Zwinger</a></div></td><td  headers="KAPAZITAET"><div class="column content_text" style="width:15px;">171</div></td><td  headers="FREI"><div class="column content_text">102</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:442">Ostra-Allee</a></div></td><td  headers="KAPAZITAET"><div class="column content_text" style="width:15px;">90</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:411">Schießgasse</a></div></td><td  headers="KAPAZITAET"><div class="column content_text" style="width:15px;">255</div></td><td  headers="FREI"><div class="column content_text">96</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:401">Taschenbergpalais</a></div></td><td  headers="KAPAZITAET"><div class="column content_text" style="width:15px;">98</div></td><td  headers="FREI"><div class="column content_text">52</div></td></tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+<tbody class="uReportPagination">
+
+</tbody>
+</table>
+<div class="uReportDownloadLinks"></div></div>
+
+<div id="report_4732009266861975_catch"><table class="uReportContainer"  id="report_R4732009266861975" summary="" style="table-layout:auto;">
+<tbody class="uReportPagination">
+<tr><td></td></tr>
+</tbody>
+<tbody class="uReportBody">
+<tr><td>
+<table summary="Ring West" class="uReportAlternative">
+<thead><tr><th  id="BEZEICHNUNG" >Ring West</th><th  id="KAPAZITAET" >Stellplätze</th><th  id="FREI" >frei</th></tr>
+</thead>
+<tbody>
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:421">Kongresszentrum</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">250</div></td><td  headers="FREI"><div class="column content_text">134</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:429">Parkhaus Mitte</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">280</div></td><td  headers="FREI"><div class="column content_text">232</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:408">Semperoper</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">400</div></td><td  headers="FREI"><div class="column content_text">324</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:407">World Trade Center</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">220</div></td><td  headers="FREI"><div class="column content_text">190</div></td></tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+<tbody class="uReportPagination">
+
+</tbody>
+</table>
+<div class="uReportDownloadLinks"></div></div>
+
+<div id="report_4730226451857517_catch"><table class="uReportContainer"  id="report_R4730226451857517" summary="" style="table-layout:auto;">
+<tbody class="uReportPagination">
+<tr><td></td></tr>
+</tbody>
+<tbody class="uReportBody">
+<tr><td>
+<table summary="Prager Strasse" class="uReportAlternative">
+<thead><tr><th  id="BEZEICHNUNG" >Prager Straße</th><th  id="KAPAZITAET" >Stellplätze</th><th  id="FREI" >frei</th></tr>
+</thead>
+<tbody>
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:409">Altmarkt - Galerie</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">480</div></td><td  headers="FREI"><div class="column content_text">360</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:438">Centrum Galerie</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">1059</div></td><td  headers="FREI"><div class="column content_text">651</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:419">Ferdinandplatz</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">140</div></td><td  headers="FREI"><div class="column content_text">104</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:404">Karstadt</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">265</div></td><td  headers="FREI"><div class="column content_text">135</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:415">Reitbahnstraße</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">285</div></td><td  headers="FREI"><div class="column content_text">129</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:410">Wiener Platz / Hauptbahnhof</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">350</div></td><td  headers="FREI"><div class="column content_text">164</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:405">Wöhrl - Florentinum</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">264</div></td><td  headers="FREI"><div class="column content_text">234</div></td></tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+<tbody class="uReportPagination">
+
+</tbody>
+</table>
+<div class="uReportDownloadLinks"></div></div>
+
+<div id="report_4731405111860779_catch"><table class="uReportContainer"  id="report_R4731405111860779" summary="" style="table-layout:auto;">
+<tbody class="uReportPagination">
+<tr><td></td></tr>
+</tbody>
+<tbody class="uReportBody">
+<tr><td>
+<table summary="Ring Süd" class="uReportAlternative">
+<thead><tr><th  id="BEZEICHNUNG" >Ring Süd</th><th  id="KAPAZITAET" >Stellplätze</th><th  id="FREI" >frei</th></tr>
+</thead>
+<tbody>
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:406">City Center</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">150</div></td><td  headers="FREI"><div class="column content_text">125</div></td></tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+<tbody class="uReportPagination">
+
+</tbody>
+</table>
+<div class="uReportDownloadLinks"></div></div>
+
+<div id="report_4730831645859027_catch"><table class="uReportContainer"  id="report_R4730831645859027" summary="" style="table-layout:auto;">
+<tbody class="uReportPagination">
+<tr><td></td></tr>
+</tbody>
+<tbody class="uReportBody">
+<tr><td>
+<table summary="Ring Ost" class="uReportAlternative">
+<thead><tr><th  id="BEZEICHNUNG" >Ring Ost</th><th  id="KAPAZITAET" >Stellplätze</th><th  id="FREI" >frei</th></tr>
+</thead>
+<tbody>
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:443">Blüherstraße</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">130</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:413">Lindengasse</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">75</div></td><td  headers="FREI"><div class="column content_text">62</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:444">Lingnerallee</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">350</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:445">Pirnaische Straße</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">600</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:412">Pirnaischer Platz</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">156</div></td><td  headers="FREI"><div class="column content_text">113</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:416">Terrassenufer</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">69</div></td><td  headers="FREI"><div class="column content_text">36</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:446">Zinzendorfstraße</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">400</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+<tbody class="uReportPagination">
+
+</tbody>
+</table>
+<div class="uReportDownloadLinks"></div></div>
+
+<div id="report_4729009482852601_catch"><table class="uReportContainer"  id="report_R4729009482852601" summary="" style="table-layout:auto;">
+<tbody class="uReportPagination">
+<tr><td></td></tr>
+</tbody>
+<tbody class="uReportBody">
+<tr><td>
+<table summary="Neustadt" class="uReportAlternative">
+<thead><tr><th  id="BEZEICHNUNG" >Neustadt</th><th  id="KAPAZITAET" >Stellplätze</th><th  id="FREI" >frei</th></tr>
+</thead>
+<tbody>
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:447">Bahnhof Neustadt</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">40</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:448">Palaisplatz</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">100</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo yellow"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:420">Sarrasanistraße</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">55</div></td><td  headers="FREI"><div class="column content_text">3</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:418">Theresienstraße</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">140</div></td><td  headers="FREI"><div class="column content_text">62</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:417">Wiesentorstraße</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">120</div></td><td  headers="FREI"><div class="column content_text">86</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:449">Wigardstraße</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">180</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+<tbody class="uReportPagination">
+
+</tbody>
+</table>
+<div class="uReportDownloadLinks"></div></div>
+
+<div id="report_4732615500863737_catch"><table class="uReportContainer"  id="report_R4732615500863737" summary="" style="table-layout:auto;">
+<tbody class="uReportPagination">
+<tr><td></td></tr>
+</tbody>
+<tbody class="uReportBody">
+<tr><td>
+<table summary="Sonstige" class="uReportAlternative">
+<thead><tr><th  id="BEZEICHNUNG" >Sonstige</th><th  id="KAPAZITAET" >Stellplätze</th><th  id="FREI" >frei</th></tr>
+</thead>
+<tbody>
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-closed"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:424">Flutrinne</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">1200</div></td><td  headers="FREI"><div class="column content_text">1200</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:433">Klotzsche</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">36</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:434">Reick</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">21</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+<tbody class="uReportPagination">
+
+</tbody>
+</table>
+<div class="uReportDownloadLinks"></div></div>
+
+<div id="report_4729616062854479_catch"><table class="uReportContainer"  id="report_R4729616062854479" summary="" style="table-layout:auto;">
+<tbody class="uReportPagination">
+<tr><td></td></tr>
+</tbody>
+<tbody class="uReportBody">
+<tr><td>
+<table summary="Park + Ride" class="uReportAlternative">
+<thead><tr><th  id="BEZEICHNUNG" >Park + Ride</th><th  id="KAPAZITAET" >Stellplätze</th><th  id="FREI" >frei</th></tr>
+</thead>
+<tbody>
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:437">Cossebaude</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">38</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:427">Kaditz</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">190</div></td><td  headers="FREI"><div class="column content_text">177</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo blue"><a href="f?p=1110:2:6566568839197::NO::P2_P_ID:439">Langebrück</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">50</div></td><td  headers="FREI"><div class="column content_text"></div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:436">Pennrich</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">50</div></td><td  headers="FREI"><div class="column content_text">44</div></td></tr>
+
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:426">Prohlis</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">67</div></td><td  headers="FREI"><div class="column content_text">44</div></td></tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+<tbody class="uReportPagination">
+
+</tbody>
+</table>
+<div class="uReportDownloadLinks"></div></div>
+
+<!--<div class="contentsection ">
+<div class="content">
+<section class="element element_textpic">
+<div class="row">--><div id="report_6658014628890385_catch"><table class="uReportContainer"  id="report_R6658014628890385" summary="" style="table-layout:auto;">
+<tbody class="uReportPagination">
+<tr><td></td></tr>
+</tbody>
+<tbody class="uReportBody">
+<tr><td>
+<table summary="Busparkplätze" class="uReportAlternative">
+<thead><tr><th  id="BEZEICHNUNG" >Busparkplätze</th><th  id="KAPAZITAET" >Stellplätze</th><th  id="FREI" >frei</th></tr>
+</thead>
+<tbody>
+<tr><td  headers="BEZEICHNUNG"><div class="column content_text park-logo green"><a font-size: 1.375em;line-height: 1.36364em;color: #a6921a; href="f?p=1110:2:6566568839197::NO::P2_P_ID:430">Terrassenufer Bus</a></div></td><td  headers="KAPAZITAET"><div class="column content_text">22</div></td><td  headers="FREI"><div class="column content_text">16</div></td></tr>
+
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+<tbody class="uReportPagination">
+
+</tbody>
+</table>
+<div class="uReportDownloadLinks"></div></div><!--</div>
+</section>
+</div>
+</div>-->
+
+</div><div class="apex_cols apex_span_5 omega">
+<div id="P1_KONTAKT_CONTAINER"><label for="P1_KONTAKT" class="visuallyhidden">Kontakt</label><span id="P1_KONTAKT" class="display_only"  ><h3 class="heading" style="margin-top: 0.25em;">Kontakt</h3></span></div><div id="P1_EMAIL_CONTAINER"><label for="P1_EMAIL" class="visuallyhidden">Email</label><strong>E-Mail</strong><span id="P1_EMAIL" class="display_only"  ><a href="https://eformstest.dresden.de/intelliform/forms/ebit-test/ebit-testkunde/A15_Kontaktformular_de/index?receiver_name=Kontakt&amp;receiver_email=tiefbauamt-verkehrstechnik%40dresden.de&amp;back_address=https://apps.dresden.de/ords/f?p=1110:1:::NO:::" target="_blank"> tiefbauamt-verkehrstechnik@dresden.de</a></span><hr></div><div id="P1_THEMENSTADTPLAN_CONTAINER"><label for="P1_THEMENSTADTPLAN" class="visuallyhidden">Themenstadtplan</label><span id="P1_THEMENSTADTPLAN" class="display_only"  ><h3 class="heading">Themenstadtplan</h4></span></div><div id="P1_LINK_THEMENSTADTPLAN_CONTAINER"><label for="P1_LINK_THEMENSTADTPLAN" class="visuallyhidden">Link Themenstadtplan</label><span id="P1_LINK_THEMENSTADTPLAN" class="display_only"  ><a href="http://stadtplan.dresden.de/?&TH=STA_PARK" target="_blank" class="map_link">Parkplätze im Themenstadtplan anzeigen</a></span><hr></div><div id="P1_LETZTE_AKTUALISIERUNG_CONTAINER"><label for="P1_LETZTE_AKTUALISIERUNG" class="visuallyhidden">Letzte Aktualisierung</label><span id="P1_LETZTE_AKTUALISIERUNG" class="display_only"  ><h3 class="heading">Letzte Aktualisierung</h3></span></div><div id="P1_LAST_UPDATE_CONTAINER"><label for="P1_LAST_UPDATE" class="visuallyhidden"></label><div class="text"><span id="P1_LAST_UPDATE" class="display_only"  >01.07.2015 09:18:36</span></div><hr></div><div id="P1_LEGENDE_CONTAINER"><label for="P1_LEGENDE" class="visuallyhidden">Legende</label><span id="P1_LEGENDE" class="display_only"  ><h3 class="heading">Legende</h3></span></div><div id="P1_LEGENDE_SYMBOLE_CONTAINER"><label for="P1_LEGENDE_SYMBOLE" class="visuallyhidden">Legende Symbole</label><span id="P1_LEGENDE_SYMBOLE" class="display_only"  ><div class="column park-logo blue" style="margin: 0px; left: 0px;">keine aktuelle Stellplatzangabe verfügbar</div><br /><div class="column park-logo red">Parkhaus/Parkplatz belegt</div><br /><div class="column park-logo yellow">wenig freie Stellplätze</div><br /><div class="column park-logo green">freie Stellplätze verfügbar</div><br /><div class="column park-closed">Parkhaus/Parkplatz zur Zeit geschlossen</div></span></div>
+</div>
+</div>
     </div>
-    <!--/UdmComment-->
-    <!--UdmComment-->
-    <div id="head">
-        <img src="/css/print_head.gif" width="656" />
+  </div>
+</div>
+</div><footer id="uFooter">
+  <div class="apex_grid_container clearfix">
+    <div class="apex_cols apex_span_12">
+      <div class="uFooterContent">
 
+        <div id="customize"></div>
+<!--    <a href="f?p=1110:1:6566568839197:SET_SESSION_SCREEN_READER_ON::::">Set Screen Reader Mode On</a>
+        <span class="uFooterVersion">
+          release 1.0
+        </span>-->
+      </div>
     </div>
-    <div class="printdata">
-        <p><span>Adresse:</span> www.dresden.de/freie-parkplaetze/index.php</p>
-        <p><span>letzte Änderung der Seite:</span>07.01.2014, 18:35:04 Uhr</p>
-        <p><span>gedruckt am:</span>15.06.2015, 12:32:28 Uhr</p>
-    </div>
-    <!--/UdmComment-->
-    <div class="contentcontainerborder">
-        <div class="contentcontainerbg">
-            <div id="contentcontainer">
-                <div id="contentnav">
-                    <div class="contentnavbox">
-                        <!--UdmComment-->
-                        <h2 class="maintopics"><a name="navigation"></a>Themen</h2>
-                        <!--/UdmComment-->
-                        <ul class="maintopics">
-                            <li class="leaf first">
-                                <a href="/de/stadt.php">
-                                    <!--UdmComment--><span class="stadt">Stadt, Verwaltung &amp; Rat</span>
-                                    <!--/UdmComment-->
-                                </a>
-                            </li>
-                            <li class="leaf">
-                                <a href="/de/wirtschaft.php">
-                                    <!--UdmComment--><span class="wirtschaft">Wirtschaft &amp; Wissenschaft</span>
-                                    <!--/UdmComment-->
-                                </a>
-                            </li>
-                            <li class="leaf">
-                                <a href="/de/kultur.php">
-                                    <!--UdmComment--><span class="kultur">Kultur &amp; Sport</span>
-                                    <!--/UdmComment-->
-                                </a>
-                            </li>
-                            <li class="leaf">
-                                <a href="/de/tourismus.php">
-                                    <!--UdmComment--><span class="">Tourismus</span>
-                                    <!--/UdmComment-->
-                                </a>
-                            </li>
-                            <li class="leaf active">
-                                <!--UdmComment--><span class="leben">Leben, Arbeiten &amp; Wohnen</span>
-                                <!--/UdmComment-->
-                            </li>
-                            <li class="leaf last">
-                                <a href="/de/stadtentwicklung.php">
-                                    <!--UdmComment--><span class="stadtentwicklung">Stadtentwicklung &amp; Umwelt</span>
-                                    <!--/UdmComment-->
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="sub">
-                            <li class="node first last path">
-                                <a href="/de/leben.php">
-                                    <!--UdmComment--><span class="leben">Leben, Arbeiten &amp; Wohnen</span>
-                                    <!--/UdmComment-->
-                                </a>
-                                <ul>
-                                    <li class="leaf first">
-                                        <a href="/de/03/verkehr/verkehr-aktuell.php">
-                                            <!--UdmComment--><span class="leben">Aktuelle Meldungen</span>
-                                            <!--/UdmComment-->
-                                        </a>
-                                    </li>
-                                    <li class="leaf">
-                                        <a href="/de/03/verkehr/020_Bus_und_Bahn.php">
-                                            <!--UdmComment--><span class="leben">Bus, Bahn und Taxi</span>
-                                            <!--/UdmComment-->
-                                        </a>
-                                    </li>
-                                    <li class="node path">
-                                        <a href="/de/03/verkehr/auto.php">
-                                            <!--UdmComment--><span class="leben">Pkw und Krad</span>
-                                            <!--/UdmComment-->
-                                        </a>
-                                        <ul>
-                                            <li class="leaf first active">
-                                                <!--UdmComment--><span class="leben">Freie Parkplätze</span>
-                                                <!--/UdmComment-->
-                                            </li>
-                                            <li class="leaf">
-                                                <a href="/de/03/verkehr/auto/elbe-bruecken-infosystem-aktuell.php">
-                                                    <!--UdmComment--><span class="leben">Elbe-Brücken-Informations-System</span>
-                                                    <!--/UdmComment-->
-                                                </a>
-                                            </li>
-                                            <li class="leaf">
-                                                <a href="/de/03/verkehr/auto/013_Parken_mit_Motorrad.php">
-                                                    <!--UdmComment--><span class="leben">Parken mit dem Motorrad</span>
-                                                    <!--/UdmComment-->
-                                                </a>
-                                            </li>
-                                            <li class="leaf">
-                                                <a href="/de/03/verkehr/auto/025_Parken_Caravan.php">
-                                                    <!--UdmComment--><span class="leben">Parken mit Caravan</span>
-                                                    <!--/UdmComment-->
-                                                </a>
-                                            </li>
-                                            <li class="leaf">
-                                                <a href="/de/03/verkehr/auto/050_P_R-___B_R-Projekte.php">
-                                                    <!--UdmComment--><span class="leben">Park-and-Ride-Konzept</span>
-                                                    <!--/UdmComment-->
-                                                </a>
-                                            </li>
-                                            <li class="leaf last">
-                                                <a href="/de/03/verkehr/auto/017_CarSharing.php">
-                                                    <!--UdmComment--><span class="leben">CarSharing</span>
-                                                    <!--/UdmComment-->
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="leaf">
-                                        <a href="/de/03/verkehr/lkw-reisebus.php">
-                                            <!--UdmComment--><span class="leben">Lkw und Reisebus</span>
-                                            <!--/UdmComment-->
-                                        </a>
-                                    </li>
-                                    <li class="leaf">
-                                        <a href="/de/03/verkehr/radfahrer-fussgaenger10.php">
-                                            <!--UdmComment--><span class="leben">Radfahrer und Fußgänger </span>
-                                            <!--/UdmComment-->
-                                        </a>
-                                    </li>
-                                    <li class="leaf">
-                                        <a href="/de/03/verkehr/menschen-mit-mobilitaetsbehinderung.php">
-                                            <!--UdmComment--><span class="leben">Menschen mit Behinderung</span>
-                                            <!--/UdmComment-->
-                                        </a>
-                                    </li>
-                                    <li class="leaf">
-                                        <a href="/de/03/verkehr/Flugzeug_Schiffahrt.php">
-                                            <!--UdmComment--><span class="leben">Schiff und Flugzeug</span>
-                                            <!--/UdmComment-->
-                                        </a>
-                                    </li>
-                                    <li class="leaf">
-                                        <a href="/de/03/verkehr/verkehrsplanung.php">
-                                            <!--UdmComment--><span class="leben">Planung und Politik</span>
-                                            <!--/UdmComment-->
-                                        </a>
-                                    </li>
-                                    <li class="leaf last">
-                                        <a href="/de/03/verkehr/brennpunkte-verkehr.php">
-                                            <!--UdmComment--><span class="leben">Brennpunkte</span>
-                                            <!--/UdmComment-->
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="contentnavbox">
-
-                        <div class="service">
-                            <h2><!--UdmComment-->Service<!--/UdmComment--></h2>
-                            <ul>
-                                <li>
-                                    <a href="/de/09/suche_orientierung.php">
-                                        <!--UdmComment--><span>Suche und Orientierung</span>
-                                        <!--/UdmComment-->
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/de/09/025_presse.php">
-                                        <!--UdmComment--><span>Presse</span>
-                                        <!--/UdmComment-->
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/de/09/newsletter.php">
-                                        <!--UdmComment--><span>Newsletter</span>
-                                        <!--/UdmComment-->
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/de/09/stadtplan.php">
-                                        <!--UdmComment--><span>Stadtplan</span>
-                                        <!--/UdmComment-->
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/de/09/partner_werbung.php">
-                                        <!--UdmComment--><span>Partner und Werbung</span>
-                                        <!--/UdmComment-->
-                                    </a>
-                                </li>
-                                <li class="hidden">
-                                    <!--UdmComment-->__
-                                    <!--/UdmComment-->
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="service amtsmarke">
-                            <h2><!--UdmComment-->Herausgeber<!--/UdmComment--></h2>
-                            <ul class="herausgeber">
-                                <li class="hidden">
-                                    <!--UdmComment-->__
-                                    <!--/UdmComment-->
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!--UdmComment-->
-                <div id="breadcrumb">
-                    <em class="accessibility"><a name="breadcrumblink"></a>IHR_VERLAUFSPFAD</em>
-                    <ul>
-                        <li>
-                            <!--UdmComment--><span>&lt;</span>
-                            <!--/UdmComment-->
-                            <a href="/index.php">
-                                <!--UdmComment-->Dresden
-                                <!--/UdmComment-->
-                            </a>
-                        </li>
-                        <li>
-                            <!--UdmComment--><span>&lt;</span>
-                            <!--/UdmComment-->
-                            <a href="/de/leben.php">
-                                <!--UdmComment-->Leben, Arbeiten &amp; Wohnen
-                                <!--/UdmComment-->
-                            </a>
-                        </li>
-                        <li>
-                            <!--UdmComment--><span>&lt;</span>
-                            <!--/UdmComment-->
-                            <a href="/de/03/verkehr.php">
-                                <!--UdmComment-->Verkehr in der Stadt
-                                <!--/UdmComment-->
-                            </a>
-                        </li>
-                        <li>
-                            <!--UdmComment--><span>&lt;</span>
-                            <!--/UdmComment-->
-                            <a href="/de/03/verkehr/auto.php">
-                                <!--UdmComment-->Pkw und Krad
-                                <!--/UdmComment-->
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!--/UdmComment-->
-                <a class="anker" name="inhalt"></a>
-                <div id="content">
-                    <a class="anker" name="inhalt"></a>
-                    <div class="contentelements">
-                        <h1>Freie Parkplätze</h1>
-                        <div class="block noborder">
-                            <div class="col336">
-                                <form accept-charset="UTF-8" action="/freie-parkplaetze/parken/listing" method="post">
-                                    <fieldset class="offscreen">
-                                        <input type="hidden" name="PHPSESSID" value="al9696kfaq7u65nh6lq5eenqf7" />
-                                    </fieldset>
-                                    <p>
-                                        <label for="parken_stadtteil">Auswahl einer Bereiches</label>
-                                        <select name="data[parken][stadtteil]" onchange="this.form.submit()" id="parken_stadtteil">
-                                            <option value="0">beliebig</option>
-                                            <option value="9">Busparkplätze</option>
-                                            <option value="1">Innere Altstadt</option>
-                                            <option value="6">Neustadt</option>
-                                            <option value="8">Park + Ride</option>
-                                            <option value="3">Prager Straße</option>
-                                            <option value="5">Ring Ost</option>
-                                            <option value="4">Ring Süd</option>
-                                            <option value="2">Ring West</option>
-                                            <option value="7">Sonstige</option>
-                                        </select>
-                                    </p>
-                                    <div class="buttons">
-                                        <input name="data[DO_ACTION][__param__listing]" type="submit" value="anzeigen" class="submit" id="DO_ACTIONParamListing" /> </div>
-                                </form>
-                            </div>
-                            <span class="fixfloat"></span>
-                            <div class="leftcol">
-                                <h2>Aktuelle Parkplatz- und Belegungsliste</h2>
-                                <p>Zum Aktualisieren klicken Sie bitte auf den Aktualisieren-Button Ihres Browsers.</p>
-                                <table class="zahlen nodeco">
-                                    <thead>
-                                        <tr>
-                                            <th>Innere Altstadt</th>
-                                            <th>Stellplätze</th>
-                                            <th>frei</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG16">Altmarkt</a> </td>
-                                            <td>
-                                                400 </td>
-                                            <td>
-                                                235 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG03">An der Frauenkirche</a> </td>
-                                            <td>
-                                                120 </td>
-                                            <td>
-                                                66 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG13">Frauenkirche Neumarkt</a> </td>
-                                            <td>
-                                                250 </td>
-                                            <td>
-                                                159 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG02">Haus am Zwinger</a> </td>
-                                            <td>
-                                                171 </td>
-                                            <td>
-                                                37 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP19">Ostra - Allee</a> </td>
-                                            <td>
-                                                90 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_geschlossen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP01">Schießgasse</a> </td>
-                                            <td>
-                                                255 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr class="last">
-                                            <td>
-                                                <img src="/img/parken/p_rot.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG01">Taschenbergpalais</a> </td>
-                                            <td>
-                                                98 </td>
-                                            <td>
-                                                0 </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table class="zahlen nodeco">
-                                    <thead>
-                                        <tr>
-                                            <th>Ring West</th>
-                                            <th>Stellplätze</th>
-                                            <th>frei</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG12">Kongresszentrum</a> </td>
-                                            <td>
-                                                250 </td>
-                                            <td>
-                                                163 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PH15">Parkhaus Mitte</a> </td>
-                                            <td>
-                                                280 </td>
-                                            <td>
-                                                228 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG08">Semperoper</a> </td>
-                                            <td>
-                                                400 </td>
-                                            <td>
-                                                289 </td>
-                                        </tr>
-                                        <tr class="last">
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG07">World Trade Center</a> </td>
-                                            <td>
-                                                220 </td>
-                                            <td>
-                                                158 </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table class="zahlen nodeco">
-                                    <thead>
-                                        <tr>
-                                            <th>Prager Straße</th>
-                                            <th>Stellplätze</th>
-                                            <th>frei</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG09">Altmarkt - Galerie</a> </td>
-                                            <td>
-                                                480 </td>
-                                            <td>
-                                                209 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PH17">Centrum-Galerie</a> </td>
-                                            <td>
-                                                1050 </td>
-                                            <td>
-                                                298 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP08">Ferdinandplatz</a> </td>
-                                            <td>
-                                                140 </td>
-                                            <td>
-                                                41 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG04">Karstadt</a> </td>
-                                            <td>
-                                                250 </td>
-                                            <td>
-                                                103 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP10">Reitbahnstraße</a> </td>
-                                            <td>
-                                                285 </td>
-                                            <td>
-                                                83 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG11">Wiener Platz/Hbf.</a> </td>
-                                            <td>
-                                                350 </td>
-                                            <td>
-                                                136 </td>
-                                        </tr>
-                                        <tr class="last">
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG05">Wöhrl - Florentinum</a> </td>
-                                            <td>
-                                                260 </td>
-                                            <td>
-                                                174 </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table class="zahlen nodeco">
-                                    <thead>
-                                        <tr>
-                                            <th>Ring Süd</th>
-                                            <th>Stellplätze</th>
-                                            <th>frei</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="last">
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=TG06">City  Center</a> </td>
-                                            <td>
-                                                300 </td>
-                                            <td>
-                                                102 </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table class="zahlen nodeco">
-                                    <thead>
-                                        <tr>
-                                            <th>Ring Ost</th>
-                                            <th>Stellplätze</th>
-                                            <th>frei</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP04">Blüherstraße</a> </td>
-                                            <td>
-                                                130 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP07">Lindengasse</a> </td>
-                                            <td>
-                                                75 </td>
-                                            <td>
-                                                51 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP05">Lingnerallee</a> </td>
-                                            <td>
-                                                350 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP03">Pirnaische Straße</a> </td>
-                                            <td>
-                                                600 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP02">Pirnaischer Platz</a> </td>
-                                            <td>
-                                                156 </td>
-                                            <td>
-                                                70 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP12">Terrassenufer</a> </td>
-                                            <td>
-                                                69 </td>
-                                            <td>
-                                                10 </td>
-                                        </tr>
-                                        <tr class="last">
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP06">Zinzendorfstraße</a> </td>
-                                            <td>
-                                                400 </td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table class="zahlen nodeco">
-                                    <thead>
-                                        <tr>
-                                            <th>Neustadt</th>
-                                            <th>Stellplätze</th>
-                                            <th>frei</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP17">Bahnhof Neustadt</a> </td>
-                                            <td>
-                                                40 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PH14">Hauptstraße</a> </td>
-                                            <td>
-                                                150 </td>
-                                            <td>
-                                                33 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP18">Palaisplatz</a> </td>
-                                            <td>
-                                                100 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP15">Sarrasanistraße</a> </td>
-                                            <td>
-                                                55 </td>
-                                            <td>
-                                                20 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP16">Theresienstraße</a> </td>
-                                            <td>
-                                                140 </td>
-                                            <td>
-                                                17 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP14">Wiesentorstraße</a> </td>
-                                            <td>
-                                                120 </td>
-                                            <td>
-                                                51 </td>
-                                        </tr>
-                                        <tr class="last">
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP13">Wigardstraße</a> </td>
-                                            <td>
-                                                180 </td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table class="zahlen nodeco">
-                                    <thead>
-                                        <tr>
-                                            <th>Sonstige</th>
-                                            <th>Stellplätze</th>
-                                            <th>frei</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_geschlossen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP22">Flutrinne</a> </td>
-                                            <td>
-                                                1200 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr class="last">
-                                            <td>
-                                                <img src="/img/parken/p_geschlossen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP21">Messegelände</a> </td>
-                                            <td>
-                                                754 </td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table class="zahlen nodeco">
-                                    <thead>
-                                        <tr>
-                                            <th>Park + Ride</th>
-                                            <th>Stellplätze</th>
-                                            <th>frei</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_geschlossen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PR01">Bühlau</a> </td>
-                                            <td>
-                                                1 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PR05">Cossebaude</a> </td>
-                                            <td>
-                                                38 </td>
-                                            <td>
-                                                26 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PR00">Gompitz</a> </td>
-                                            <td>
-                                                50 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PR03">Kaditz</a> </td>
-                                            <td>
-                                                190 </td>
-                                            <td>
-                                                173 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PR06">Klotzsche</a> </td>
-                                            <td>
-                                                36 </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PR08">Langebrück</a> </td>
-                                            <td>
-                                                50 </td>
-                                            <td>
-                                                29 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PR04">Pennrich</a> </td>
-                                            <td>
-                                                50 </td>
-                                            <td>
-                                                34 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PR02">Prohlis</a> </td>
-                                            <td>
-                                                67 </td>
-                                            <td>
-                                                38 </td>
-                                        </tr>
-                                        <tr class="last">
-                                            <td>
-                                                <img src="/img/parken/p_blau.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PR07">Reick</a> </td>
-                                            <td>
-                                                21 </td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table class="zahlen nodeco">
-                                    <thead>
-                                        <tr>
-                                            <th>Busparkplätze</th>
-                                            <th>Stellplätze</th>
-                                            <th>frei</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="last">
-                                            <td>
-                                                <img src="/img/parken/p_gruen.gif" alt="" /><a href="/freie-parkplaetze/parken/detail?id=PP20">Terrassenufer Bus</a> </td>
-                                            <td>
-                                                22 </td>
-                                            <td>
-                                                9 </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="rightcol">
-
-                                <div class="contact">
-                                    <div>
-                                        <h2>Kontakt</h2>
-                                        <p>Straßen- und Tiefbauamt</p>
-                                        <!--UdmComment-->
-                                        <dl>
-                                            <dt class="email" title="E-Mail Adresse"><span class="accessibility">E-Mail Adresse</span>&nbsp;</dt>
-                                            <dd class="email"><a href="/kontaktformular/index.php?receiver_email=tiefbauamt-verkehrstechnik%40dresden.de&amp;back_address=/freie-parkplaetze/&amp;receiver_name=Stra%C3%9Fen-+und+Tiefbauamt">E-Mail</a></dd>
-                                        </dl>
-                                        <!-- Ende dl -->
-                                        <span class="fixfloat"></span>
-                                        <!--/UdmComment-->
-
-                                    </div>
-                                    <!-- Ende loop -->
-                                </div>
-                                <h3>Ansicht auswählen</h3>
-                                <ul class="links">
-                                    <li><a href="http://stadtplan.dresden.de/?POS-XY=5411655|5658073&POS-OFFSET=2500&POS-MARK=false&TH=STA_PARK" onclick="window.open(this.href,'cm3_dresden');return false">Kartenansicht</a></li>
-                                </ul>
-                                <h3>Letzte Aktualisierung</h3>
-                                <p>
-                                    15.06.2015 12.31 Uhr </p>
-                                <h3>Legende</h3>
-                                <p>
-                                    <img src="/img/parken/p_blau.gif" alt="" /> keine aktuelle Stellplatzangabe verfügbar
-                                    <br/>
-                                    <img src="/img/parken/p_rot.gif" alt="" /> Parkhaus/Parkplatz belegt
-                                    <br/>
-                                    <img src="/img/parken/p_gelb.gif" alt="" /> wenig freie Stellplätze
-                                    <br/>
-                                    <img src="/img/parken/p_gruen.gif" alt="" /> freie Stellplätze verfügbar
-                                    <br/>
-                                    <img src="/img/parken/p_geschlossen.gif" alt="" /> Parkhaus/Parkplatz zur Zeit geschlossen
-                                    <br/>
-                                </p>
-                            </div>
-                            <span class="fixfloat"></span>
-                        </div>
-                    </div>
-                    <br class="fixfloat" />
-                    <div class="adsfooter"></div>
-                    <!--UdmComment-->
-                    <div id="footer">
-                        <ul class="footer_left">
-                            <li><a href="#inhalt" class="top">zum Seitenanfang</a></li>
-                            <li><a class="print" href="javascript:window.print()">drucken</a></li>
-                        </ul>
+  </div>
+</footer>
+<input type="hidden" name="p_md5_checksum" value=""  /><input type="hidden" name="p_page_checksum" value="DCCA6C96A881BCF321A871774444FD50" id="pPageChecksum" /></form>
 
 
+<script type="text/javascript" src="/i/libraries/apex/minified/widget.selectList.min.js?v=4.2.6.00.03"></script>
+<script type="text/javascript" src="/i/libraries/apex/minified/widget.report.min.js?v=4.2.6.00.03"></script>
+<script type="text/javascript">
+apex.jQuery( document ).ready( function() {
+(function(){apex.widget.selectList("#P1_SUCHE",{"ajaxIdentifier":"5177D4CBD63908BB5ACC95F5332FCF552BE66BF9660E57DC55F4C0BFD53B13B3"});})();
+(function(){apex.widget.report.init("R4723419357543205",{"styleChecked":"#dddddd","internalRegionId":"4723419357543205"});})();
+(function(){apex.widget.report.init("R4732009266861975",{"styleChecked":"#dddddd","internalRegionId":"4732009266861975"});})();
+(function(){apex.widget.report.init("R4730226451857517",{"styleChecked":"#dddddd","internalRegionId":"4730226451857517"});})();
+(function(){apex.widget.report.init("R4731405111860779",{"styleChecked":"#dddddd","internalRegionId":"4731405111860779"});})();
+(function(){apex.widget.report.init("R4730831645859027",{"styleChecked":"#dddddd","internalRegionId":"4730831645859027"});})();
+(function(){apex.widget.report.init("R4729009482852601",{"styleChecked":"#dddddd","internalRegionId":"4729009482852601"});})();
+(function(){apex.widget.report.init("R4732615500863737",{"styleChecked":"#dddddd","internalRegionId":"4732615500863737"});})();
+(function(){apex.widget.report.init("R4729616062854479",{"styleChecked":"#dddddd","internalRegionId":"4729616062854479"});})();
+(function(){apex.widget.report.init("R6658014628890385",{"styleChecked":"#dddddd","internalRegionId":"6658014628890385"});})();
 
 
-                        <br class="fixfloat" />
-                    </div>
-                    <!--/UdmComment-->
-                </div>
-                <br class="fixfloat" />
-            </div>
-        </div>
-    </div>
-    <!--adcol begin -->
-    <!--UdmComment-->
-    <div id="info">
-        <!-- Info-Container -->
-        <div class="premium">
-            <!-- Premiumwerbung -->
-            <!-- /var/www/sites/dresden.de/info/web-site/var/www.dresden.de.conf.php-->
-        </div>
-        <div class="common">
-            <h3>Anzeige</h3>
+apex.item( 'P1_SUCHE' ).setFocus();
+});</script>
 
-
-
-
-
-            <h3 class="stripline">&nbsp;</h3>
-
-
-
-
-
-        </div>
-    </div>
-    <!--/UdmComment-->
-    <div id="navfooter">
-        <div class="stripe">
-            <ul>
-                <li>
-                    <a href="/de/09/kontakt.php">
-                        <!--UdmComment--><span>Kontakt</span>
-                        <!--/UdmComment-->
-                    </a>
-                </li>
-                <li>
-                    <a href="/de/09/impressum.php">
-                        <!--UdmComment--><span>Impressum</span>
-                        <!--/UdmComment-->
-                    </a>
-                </li>
-                <li>
-                    <a href="/de/09/datenschutz.php">
-                        <!--UdmComment--><span>Datenschutz</span>
-                        <!--/UdmComment-->
-                    </a>
-                </li>
-            </ul>
-            <div class="copyright">
-                <!--UdmComment-->© Landeshauptstadt Dresden
-                <!--/UdmComment-->
-            </div>
-            <ul class="social_media">
-                <li><a href="https://www.facebook.com/Dresden.Marketing" onclick="window.open(this.href,'_blank');return false" class="facebook"><span class="accessibility">Facebook</span></a></li>
-                <li><a href="https://plus.google.com/111552645417904039080#111552645417904039080/posts" onclick="window.open(this.href,'_blank');return false" class="googleplus"><span class="accessibility">Google+</span></a></li>
-                <li><a href="http://www.youtube.de/wwwdresdende" onclick="window.open(this.href,'_blank');return false" class="youtube"><span class="accessibility">Youtube</span></a></li>
-            </ul>
-        </div>
-        <div class="edge"></div>
-        <span class="fixfloat"></span>
-    </div>
-    <!--adcol end-->
-    <div class="accessibility tracking">
-        <!-- BEGIN etracker code ETRC 3.0 -->
-        <script type="text/javascript">
-            <!--//--><![CDATA[//><!--
-            document.write(String.fromCharCode(60) + "script type=\"text/javascript\" src=\"http" + ("https:" == document.location.protocol ? "s" : "") + "://code.etracker.com/t.js?et=AEbcyx\">" + String.fromCharCode(60) + "/script>");
-            //--><!]]>
-        </script>
-        <!-- etracker PLUGIN DETECTION END -->
-        <!-- etracker PARAMETER 3.0 -->
-        <script type="text/javascript">
-            <!--//--><![CDATA[//><!--
-            var et_easy = 0;
-            var et_ssl = 1;
-            var et_pagename = "Root/LHDD/De/Leben/Verkehr/Park-DB";
-            var et_areas = "Root/LHDD/De/Leben/Verkehr";
-            var et_ilevel = 0;
-            var et_url = "";
-            var et_se = 1;
-            //--><!]]>
-        </script>
-        <!-- etracker PARAMETER END -->
-        <script type="text/javascript">
-            <!--//--><![CDATA[//><!--
-            _etc();
-            //--><!]]>
-        </script>
-        <noscript>
-            <p>
-                <a href="https://www.etracker.de/app?et=AEbcyx"><img style="border:0px;" alt="" src="https://www.etracker.com/nscnt.php?et=AEbcyx&amp;et_pagename=Root/Root/LHDD/De/Leben/Verkehr/Park-DB&amp;et_areas=Root/Root/LHDD/De/Leben/Verkehr" /></a>
-            </p>
-        </noscript>
-        <!-- etracker CODE END -->
-    </div>
 </body>
-
 </html>
