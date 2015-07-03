@@ -6,7 +6,7 @@ from park_api.geodata import GeoData
 data_url = "http://oldenburg-service.de/pls2.php"
 
 # URL that is displayed as the source of this data, usually the base domain of the URL above
-data_source = "http://www.oldenburg.de"
+data_source = "http://www.oldenburg.de/microsites/verkehr/parken/parkplaetzeparkleitsystem/parkplaetze.html"
 
 # Name of the city, just in case it contains umlauts, spaces or other things which this filename shouldn't
 city_name = "Oldenburg"

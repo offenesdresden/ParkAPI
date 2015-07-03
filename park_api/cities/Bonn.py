@@ -3,7 +3,7 @@ from park_api.geodata import GeoData
 from park_api.util import convert_date, generate_id
 
 data_url = "http://www.bcp-bonn.de/bspspinfo1.php"
-data_source = "http://www.bcp-bonn.de/bcp/"
+data_source = "http://www.bcp-bonn.de/bcp/index.php?id=80"
 city_name = "Bonn"
 
 class Lot:

@@ -5,7 +5,7 @@ from park_api.geodata import GeoData
 # URL for the page where the scraper can gather the data
 data_url = "http://example.com/parkingdata"
 
-# URL that is displayed as the source of this data, usually the base domain of the URL above
+# URL that is displayed as the source of this data, in case the above is another API endpoint or special subsite.
 data_source = "http://example.com"
 
 # Name of the city, just in case it contains umlauts, spaces or other things which this filename shouldn't

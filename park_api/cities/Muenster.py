@@ -3,7 +3,7 @@ from park_api.util import convert_date, generate_id
 from park_api.geodata import GeoData
 
 data_url = "http://www5.stadt-muenster.de/parkhaeuser/"
-data_source = "http://www.stadt-muenster.de"
+data_source = "http://www5.stadt-muenster.de/parkhaeuser/"
 city_name = "Münster"
 
 total_number_map = {

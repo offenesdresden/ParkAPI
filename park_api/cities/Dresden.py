@@ -3,7 +3,7 @@ from park_api.geodata import GeoData
 from park_api.util import convert_date, generate_id, get_most_lots_from_known_data
 
 data_url = "https://apps.dresden.de/ords/f?p=1110"
-data_source = "http://www.dresden.de"
+data_source = "https://www.dresden.de/parken"
 city_name = "Dresden"
 
 type_map = {
@@ -11,7 +11,7 @@ type_map = {
     "An der Frauenkirche": "Tiefgarage",
     "Frauenkirche Neumarkt": "Tiefgarage",
     "Haus am Zwinger": "Tiefgarage",
-    "Ostra - Allee": "Parkplatz",
+    "Ostra-Allee": "Parkplatz",
     "Schießgasse": "Parkplatz",
     "Taschenbergpalais": "Tiefgarage",
     "Kongresszentrum": "Tiefgarage",
@@ -59,7 +59,7 @@ address_map = {
     "An der Frauenkirche": "An der Frauenkirche 12a",
     "Frauenkirche Neumarkt": "Landhausstraße 2",
     "Haus am Zwinger": "Kleine Brüdergasse 3",
-    "Ostra - Allee": "Ostra-Allee",
+    "Ostra-Allee": "Ostra-Allee",
     "Schießgasse": "Schießgasse",
     "Taschenbergpalais": "Kleine Brüdergasse",
     "Kongresszentrum": "Ostra-Ufer 2",

@@ -3,7 +3,7 @@ from park_api.geodata import GeoData
 from park_api.util import convert_date, generate_id
 
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
-data_source = "http://www.ingolstadt.de"
+data_source = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 city_name = "Ingolstadt"
 
 # Additional information for single lots: http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/

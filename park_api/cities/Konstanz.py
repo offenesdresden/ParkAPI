@@ -3,7 +3,7 @@ from park_api.util import convert_date, generate_id
 from park_api.geodata import GeoData
 
 data_url = "http://www.konstanz.de/tourismus/01759/01765/"
-data_source = "http://www.konstanz.de"
+data_source = "http://www.konstanz.de/tourismus/01759/01765/"
 city_name = "Konstanz"
 
 total_number_map = {

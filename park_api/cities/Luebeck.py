@@ -3,7 +3,7 @@ from park_api.util import convert_date, generate_id, get_most_lots_from_known_da
 from park_api.geodata import GeoData
 
 data_url = "http://kwlpls.adiwidjaja.info"
-data_source = "http://www.kwl-luebeck.de"
+data_source = "http://www.kwl-luebeck.de/parken/aktuelle-parkplatzbelegung/"
 city_name = "Lübeck"
 
 process_state_map = {
