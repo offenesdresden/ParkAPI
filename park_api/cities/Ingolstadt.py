@@ -8,34 +8,67 @@ city_name = "Ingolstadt"
 
 # Additional information for single lots: http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/
 
-type_map = {
-    "Theater-West": "Tiefgarage",
-    "Theater-Ost": "Tiefgarage",
-    "Schloss": "Tiefgarage",
-    "Münster": "Tiefgarage",
-    "Reduit Tilly": "Tiefgarage",
-    "Hallenbad": "Parkplatz",
-    "Festplatz": "Parkplatz",
-    "Südl. Ringstraße": "Parkplatz",
-    "Hauptbahnhof": "Parkhaus",
-    "Nordbahnhof": "Parkplatz",
-    "Hauptbahnhof Ost": "Parkhaus",
-    "Congressgarage": "Tiefgarage"
-}
-
-total_number_map = {
-    "Theater-West": 599,
-    "Theater-Ost": 682,
-    "Schloss": 435,
-    "Münster": 384,
-    "Reduit Tilly": 436,
-    "Hallenbad": 836,
-    "Festplatz": 1437,
-    "Südl. Ringstraße": 257,
-    "Hauptbahnhof": 812,
-    "Nordbahnhof": 252,
-    "Hauptbahnhof Ost": 240,
-    "Congressgarage": 213
+data_map = {
+    "Theater-West": {
+        "type": "Tiefgarage",
+        "total": 599,
+        "address": "Schutterstraße"
+    },
+    "Theater-Ost": {
+        "type": "Tiefgarage",
+        "total": 682,
+        "address": "Schloßländle"
+    },
+    "Schloss": {
+        "type": "Tiefgarage",
+        "total": 435,
+        "address": "Esplanade"
+    },
+    "Münster": {
+        "type": "Tiefgarage",
+        "total": 384,
+        "address": "Bergbräustraße"
+    },
+    "Reduit Tilly": {
+        "type": "Tiefgarage",
+        "total": 436,
+        "address": "Regimentstraße"
+    },
+    "Hallenbad": {
+        "type": "Parkplatz",
+        "total": 836,
+        "address": "Jahnstraße 9"
+    },
+    "Festplatz": {
+        "type": "Parkplatz",
+        "total": 1437,
+        "address": "Dreizehnerstraße"
+    },
+    "Südl. Ringstraße": {
+        "type": "Parkplatz",
+        "total": 257,
+        "address": "Südliche Ringstraße"
+    },
+    "Hauptbahnhof": {
+        "type": "Parkhaus",
+        "total": 812,
+        "address": "Elisabethstraße 3"
+    },
+    "Nordbahnhof": {
+        "type": "Parkplatz",
+        "total": 252,
+        "address": "Am Nordbahnhof 3"
+    },
+    "Hauptbahnhof Ost": {
+        "type": "Parkhaus",
+        "total": 240,
+        "address": "Martin-Hemm-Straße 8"
+    },
+    "Congressgarage": {
+        "type": "Tiefgarage",
+        "total": 213,
+        "address": "Schloßlände 25"
+    }
 }
 
 geodata = GeoData(__file__)
@@ -60,8 +93,9 @@ def parse_html(html):
         data["lots"].append({
             "name": lot_name,
             "free": int(elements[1].text),
-            "total": total_number_map.get(lot_name, 0),
-            "type": type_map.get(lot_name, "unbekannt"),
+            "total": data_map.get(lot_name)["total"],
+            "type": data_map.get(lot_name)["type"],
+            "address": data_map.get(lot_name)["address"],
             "coords": geodata.coords(lot_name),
             "state": "nodata",
             "id": generate_id(__file__, lot_name),
