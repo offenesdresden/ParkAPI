@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import json
+import traceback
 
 import requests
 from bs4 import BeautifulSoup
@@ -74,6 +75,7 @@ def main():
             save_data_to_db(cursor, data, file.title())
         except Exception as e:
             print("Failed to scrape '%s': %s" %(city, e))
+            print(traceback.format_exc())
 
     conn.commit()
     conn.close()
