@@ -78,6 +78,214 @@
           53.865371629250554
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St. Marien"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.685576,
+          53.868792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lastadie P3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.679573,
+          53.871794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lastadie P4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.679092,
+          53.871658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lastadie P5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.679384,
+          53.871582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Muk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.676412,
+          53.869446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Radisson Hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.677713,
+          53.867886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Falkenstrasse"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.698406,
+          53.870015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kanalstrasse 1-5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.696196,
+          53.868307
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haerder-Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.685786,
+          53.86463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Am Holstentor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.678493,
+          53.864537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kowitzberg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.877064,
+          53.975518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Backbord"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.880241,
+          53.970161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Godewind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.873723,
+          53.966037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Am Leuchtturm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.880637,
+          53.960927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Leuchtenfeld"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.877633,
+          53.960965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hafenbahnhof"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.863745,
+          53.958396
+        ]
+      }
     }
   ]
 }
