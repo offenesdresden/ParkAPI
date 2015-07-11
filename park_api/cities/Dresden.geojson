@@ -378,5 +378,32 @@
     "properties": {
       "name": "World Trade Center"
     }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [13.627012, 51.040645]
+    },
+    "properties":{
+      "name": "Gompitz"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [13.789429, 51.115716]
+    },
+    "properties":{
+      "name": "Klotzsche"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [13.790230, 51.020982]
+    },
+    "properties":{
+      "name": "Reick"
+    }
   }]
 }

@@ -43,15 +43,15 @@ type_map = {
     "Flutrinne": "Parkplatz",
     "Messegelände": "Parkplatz",
     "Bühlau": "Parkplatz",
-    "Cossebaude": "",
-    "Gompitz": "",
-    "Kaditz": "",
-    "Klotzsche": "",
-    "Langebrück": "",
-    "Pennrich": "",
-    "Prohlis": "",
-    "Reick": "",
-    "Terrassenufer Bus": ""
+    "Cossebaude": "Parkplatz",
+    "Gompitz": "Parkplatz",
+    "Kaditz": "Parkplatz",
+    "Klotzsche": "Parkplatz",
+    "Langebrück": "Parkplatz",
+    "Pennrich": "Parkplatz",
+    "Prohlis": "Parkplatz",
+    "Reick": "Parkplatz",
+    "Terrassenufer Bus": "Parkplatz"
 }
 
 address_map = {
@@ -68,6 +68,7 @@ address_map = {
     "World Trade Center": "Ammonstraße 70",
     "Altmarkt - Galerie": "Webergasse 1",
     "Centrum-Galerie": "Reitbahnstraße",
+    "Centrum Galerie": "Reitbahnstraße",
     "Ferdinandplatz": "Ferdinandplatz",
     "Karstadt": "Prager Straße 12",
     "Reitbahnstraße": "Reitbahnstraße",
@@ -92,13 +93,13 @@ address_map = {
     "Messegelände": "Messering 6",
     "Bühlau": "Quohrener Straße",
     "Cossebaude": "Bahnhofstraße Cossebaude",
-    "Gompitz": "",
+    "Gompitz": "Gompitzer Höhe",
     "Kaditz": "Kötschenbroder Str.",
-    "Klotzsche": "",
+    "Klotzsche": "Zur Neuen Brücke",
     "Langebrück": "Güterbahnhofstraße Langebrück",
     "Pennrich": "Oskar-Maune-Straße",
     "Prohlis": "Langer Weg",
-    "Reick": "",
+    "Reick": "Lohrmannstraße",
     "Terrassenufer Bus": "Terrassenufer"
 }
 
