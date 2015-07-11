@@ -84,9 +84,9 @@ Also please note that this is not valid JSON. Just an example for how the output
         (venv) $ pip install -e .
 
  - Set up postgresql:
-   	
-	$ sudo -u postgres createuser -P -d park_api
-	$ sudo -u postgres createdb -O park_api park_api
+
+        $ sudo -u postgres createuser -P -d park_api  
+        $ sudo -u postgres createdb -O park_api park_api
 
  - Run the server:
 
