@@ -1,0 +1,310 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.544743, 47.376579]
+    },
+    "properties": {
+      "name": "Parkgarage am Central"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.540748, 47.414848]
+    },
+    "properties": {
+      "name": "Parkhaus Accu"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.509675, 47.379458]
+    },
+    "properties": {
+      "name": "Parkhaus Albisriederplatz"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.535761, 47.367417]
+    },
+    "properties": {
+      "name": "Parkhaus Bleicherweg"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.540263, 47.412805]
+    },
+    "properties": {
+      "name": "Parkhaus Center Eleven"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.533806, 47.374211]
+    },
+    "properties": {
+      "name": "Parkhaus City Parking"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.540662, 47.410876]
+    },
+    "properties": {
+      "name": "Parkhaus Cityport"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.550214, 47.407194]
+    },
+    "properties": {
+      "name": "Parkhaus Dorflinde"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.553440, 47.360644]
+    },
+    "properties": {
+      "name": "Parkhaus Feldegg"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.537618, 47.375773]
+    },
+    "properties": {
+      "name": "Parkhaus Globus"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.510323, 47.380354]
+    },
+    "properties": {
+      "name": "Parkhaus Hardau II"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.537886, 47.381218]
+    },
+    "properties": {
+      "name": "Parkhaus Hauptbahnhof"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.547632, 47.368666]
+    },
+    "properties": {
+      "name": "Parkhaus Hohe Promenade"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.536227, 47.373847]
+    },
+    "properties": {
+      "name": "Parkhaus Jelmoli"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.543973, 47.413423]
+    },
+    "properties": {
+      "name": "Parkhaus Jungholz"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.539274, 47.414062]
+    },
+    "properties": {
+      "name": "Parkhaus Max-Bill-Platz"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.553929, 47.413568]
+    },
+    "properties": {
+      "name": "Parkhaus Messe Zürich AG"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.547353, 47.411839]
+    },
+    "properties": {
+      "name": "Parkhaus Nordhaus"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.536066, 47.413199]
+    },
+    "properties": {
+      "name": "Parkhaus Octavo"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.511443, 47.391929]
+    },
+    "properties": {
+      "name": "Parkhaus P West"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.536077, 47.365860]
+    },
+    "properties": {
+      "name": "Parkhaus Park Hyatt"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.539574, 47.412654]
+    },
+    "properties": {
+      "name": "Parkhaus Parkside"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.516330, 47.387150]
+    },
+    "properties": {
+      "name": "Parkhaus Pfingstweid"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.539633, 47.38699]
+    },
+    "properties": {
+      "name": "Parkhaus Stampfenbach"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.535883, 47.372177]
+    },
+    "properties": {
+      "name": "Parkhaus Talgarten"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.54970217, 47.37878088]
+    },
+    "properties": {
+      "name": "Parkhaus USZ Nord"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.547235, 47.397478]
+    },
+    "properties": {
+      "name": "Parkhaus Uni Irchel"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.540615, 47.374112]
+    },
+    "properties": {
+      "name": "Parkhaus Urania"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.547986, 47.361727]
+    },
+    "properties": {
+      "name": "Parkhaus Utoquai"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.545035, 47.410500]
+    },
+    "properties": {
+      "name": "Parkhaus Züri 11 Shopping"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.553629, 47.356073]
+    },
+    "properties": {
+      "name": "Parkhaus Zürichhorn"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.505049, 47.382326]
+    },
+    "properties": {
+      "name": "Parkplatz Bienen"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.552577, 47.415573]
+    },
+    "properties": {
+      "name": "Parkplatz Eisfeld"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [8.55141073, 47.37479042]
+    },
+    "properties": {
+      "name": "Parkplatz USZ Süd"
+    }
+  }]
+}
