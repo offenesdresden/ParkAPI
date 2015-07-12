@@ -138,11 +138,14 @@ def parse_html(html):
                 lot_name = lot_row.find("td", {"headers": "BEZEICHNUNG"}).text
 
                 try:
-                    total = int(lot_row.find("td", {"headers": "KAPAZITAET"}).text)
                     free = int(lot_row.find("td", {"headers": "FREI"}).text)
                 except ValueError:
-                    total = get_most_lots_from_known_data("Dresden", lot_name)
                     free = 0
+
+                try:
+                    total = int(lot_row.find("td", {"headers": "KAPAZITAET"}).text)
+                except ValueError:
+                    total = get_most_lots_from_known_data("Dresden", lot_name)
 
                 id = generate_id(__file__, lot_name)
                 forecast = os.path.isfile("forecast_data/" + id + ".csv")
