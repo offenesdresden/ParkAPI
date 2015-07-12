@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from park_api.geodata import GeoData
 from park_api.util import convert_date, generate_id, get_most_lots_from_known_data
+import os.path
 
 data_url = "https://apps.dresden.de/ords/f?p=1110"
 data_source = "https://www.dresden.de/parken"
@@ -143,16 +144,19 @@ def parse_html(html):
                     total = get_most_lots_from_known_data("Dresden", lot_name)
                     free = 0
 
+                id = generate_id(__file__, lot_name)
+                forecast = os.path.isfile("forecast_data/" + id + ".csv")
+
                 data["lots"].append({
                     "coords": geodata.coords(lot_name),
                     "name": lot_name,
                     "total": total,
                     "free": free,
                     "state": state,
-                    "id": generate_id(__file__, lot_name),
+                    "id": id,
                     "lot_type": type_map.get(lot_name, ""),
                     "address": address_map.get(lot_name, ""),
-                    "forecast": False,
+                    "forecast": forecast,
                     "region": region
                 })
 
