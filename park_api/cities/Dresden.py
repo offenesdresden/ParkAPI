@@ -108,7 +108,7 @@ geodata = GeoData(__file__)
 
 
 def parse_html(html):
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "html.parser")
     data = {
         "lots": [],
         "data_source": data_source,

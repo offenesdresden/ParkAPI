@@ -74,7 +74,7 @@ data_map = {
 geodata = GeoData(__file__)
 
 def parse_html(html):
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "html.parser")
 
     data = {
         "last_updated": convert_date(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)"),

@@ -37,7 +37,7 @@ geodata = GeoData(__file__)
 # geodata = GeoData(city_name)
 
 def parse_html(html):
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "html.parser")
 
     lot_table_trs = soup.select("table[cellpadding=5]")[0].find_all("tr")
 

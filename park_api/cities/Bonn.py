@@ -25,7 +25,7 @@ geodata = GeoData(__file__)
 
 
 def parse_html(html):
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "html.parser")
 
     free_lots = soup.find_all("td", {"class": "stell"})
     assert len(free_lots) == 6, "Expect to find 6 lots in Bonn, got: %d" % len(free_lots)

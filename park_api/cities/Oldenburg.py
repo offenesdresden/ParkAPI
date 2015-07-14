@@ -19,7 +19,7 @@ geodata = GeoData(__file__)
 # It's supposed to return a dictionary containing everything the current spec expects. Tests will fail if it doesn't ;)
 def parse_html(html):
     # BeautifulSoup is a great and easy way to parse the html and find the bits and pieces we're looking for.
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "html.parser")
 
     # last_updated is the date when the data on the page was last updated
     last_updated = str(soup.select("body"))
@@ -38,7 +38,7 @@ def parse_html(html):
         "Geschlossen": "closed"
     }
 
-    # Oldenburg does not send the totals on there website, 
+    # Oldenburg does not send the totals on there website,
     # so wie take some Values from a 2011st PDF:
     # http://www.oldenburg.de/fileadmin/oldenburg/Benutzer/PDF/41/414/Parkplatz_Uebersicht2.pdf
     # and http://gis4oldenburg.oldenburg.de/?es=C12S77
@@ -66,7 +66,7 @@ def parse_html(html):
         lot_free = int(td[1].b.text)
 
         # get the values from the map above, or return zero
-        # should trown an execption -> error@parkenDD.de 
+        # should trown an execption -> error@parkenDD.de
         lot_total = lots_map[lot_name][0]
         lot_address = lots_map[lot_name][1]
 

@@ -18,7 +18,7 @@ def get_html(city):
 
     # Requests fails to correctly check the encoding for every site,
     # we're going to have to get that manually (in some cases). This sucks.
-    soup = BeautifulSoup(r.text)
+    soup = BeautifulSoup(r.text, "html.parser")
     meta_content = soup.find("meta", {"http-equiv": "content-type"})
     if meta_content is not None:
         encoding = meta_content["content"].split("=")[-1]

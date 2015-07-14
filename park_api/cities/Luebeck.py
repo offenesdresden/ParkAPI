@@ -18,7 +18,7 @@ geodata = GeoData(__file__)
 
 
 def parse_html(html):
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "html.parser")
 
     data = {
         "last_updated": convert_date(soup.find("tr").find("strong").text, "Stand: %d.%m.%Y, %H:%M Uhr"),
