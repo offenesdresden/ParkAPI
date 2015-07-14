@@ -76,7 +76,9 @@ def remove_special_chars(string):
         ".": "",
         ",": "",
         "'": "",
-        "\"": ""
+        "\"": "",
+        "/": "",
+        "\\": ""
     }
     for repl in replacements.keys():
         string = string.replace(repl, replacements[repl])
