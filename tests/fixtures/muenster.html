@@ -1,488 +1,404 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="de" lang="de" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Stadt M&uuml;nster - Tiefbauamt - Parkleitsystem</title>
 
-<csactionitem name="BA3630050"></csactionitem>
-<csactions>
-<csaction name="BA3630050" class="CSS Write" type="onparse" val0="ns.css" val1="ns.css" val2="ie.css" val3="ie.css" val4="ie.css" val5="true" val6="ie.css" urlparams="1,2,3,4,5,7"></csaction>
-</csactions>
-<csscriptdict import>
-<script type="text/javascript" src="http://www.muenster.de/stadt/tiefbauamt/CSScript/CSScriptLib.js"></script>
-</csscriptdict>
-<csactiondict>
-<script type="text/javascript"><!--
-CSAct[/*CMP*/ 'BA3630050'] = new Array(doCSSWrite,/*URL*/ 'http://www.muenster.de/stadt/tiefbauamt/ns.css',/*URL*/ 'http://www.muenster.de/stadt/tiefbauamt/ns.css',/*URL*/ 'http://www.muenster.de/stadt/tiefbauamt/ie.css',/*URL*/ 'http://www.muenster.de/stadt/tiefbauamt/ie.css',/*URL*/ 'http://www.muenster.de/stadt/tiefbauamt/ie.css',true,/*URL*/ 'http://www.muenster.de/stadt/tiefbauamt/ie.css');
-CSAction(new Array(/*CMP*/ 'BA3630050'));
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 
+	Stadt Muenster
 
-// --></script>
-</csactiondict>
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2015 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at http://typo3.org/
+-->
 
-<SCRIPT LANGUAGE="JavaScript">
+<base href="http://www.stadt-muenster.de/" />
 
 
-<!-- Hiding
-                v_string=navigator.appVersion;
-                        if (v_string.charAt(0)>2)
-                {
-                v_dummy1 = new Image();
-                v_dummy1.src="pics/pls-parken-pur2013-05.gif";
+<meta http-equiv='x-ua-compatible' content='IE=8'/>
+<meta http-equiv='refresh' content='60'>
+<meta http-equiv='cache-control' content='max-age=0' />
+<meta http-equiv='cache-control' content='no-cache' />
+<meta http-equiv='expires' content='0' />
+<meta http-equiv='expires' content='Tue, 01 Jan 1980 1:00:00 GMT' />
+<meta http-equiv='pragma' content='no-cache' />
+<meta name="generator" content="TYPO3 CMS" />
 
-				v_dummy2 = new Image();
-                v_dummy2.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy3 = new Image();
-                v_dummy3.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy4 = new Image();
-                v_dummy4.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy5 = new Image();
-                v_dummy5.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy6 = new Image();
-                v_dummy6.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy7 = new Image();
-                v_dummy7.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy8 = new Image();
-                v_dummy8.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy9 = new Image();
-                v_dummy9.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy10 = new Image();
-                v_dummy10.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy11 = new Image();
-                v_dummy11.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy12 = new Image();
-                v_dummy12.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy13 = new Image();
-                v_dummy13.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy14 = new Image();
-                v_dummy14.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy15 = new Image();
-                v_dummy15.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy16 = new Image();
-                v_dummy16.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy17 = new Image();
-                v_dummy17.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy18 = new Image();
-                v_dummy18.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy19 = new Image();
-                v_dummy19.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy20 = new Image();
-                v_dummy20.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy21 = new Image();
-                v_dummy21.src="pics/pls-parken-pur2013-05.gif";
-
-				v_dummy22 = new Image();
-                v_dummy22.src="pics/pls-parken-pur2013-05.gif";
-
-                v_popup1 = new Image();
-                v_popup1.src="pics/pls-theater.gif";
-
-				v_popup2 = new Image();
-                v_popup2.src="pics/pls-hoerster1.gif";
-
-				v_popup3 = new Image();
-                v_popup3.src="pics/pls-hoerster2.gif";
-
-				v_popup4 = new Image();
-                v_popup4.src="pics/pls-bus.gif";
-
-				v_popup5 = new Image();
-                v_popup5.src="pics/pls-schlossplatz-nord.gif";
-
-				v_popup6 = new Image();
-                v_popup6.src="pics/pls-schlossplatz-sued.gif";
-
-				v_popup7 = new Image();
-                v_popup7.src="pics/pls-aegidii.gif";
-
-				v_popup8 = new Image();
-                v_popup8.src="pics/pls-georgskommende.gif";
-
-				v_popup9 = new Image();
-                v_popup9.src="pics/pls-karstadt.gif";
-
-				v_popup10 = new Image();
-                v_popup10.src="pics/pls-stubengasse-haus.gif";
-
-				v_popup11 = new Image();
-                v_popup11.src="pics/pls-stubengasse.gif";
-
-				v_popup12 = new Image();
-                v_popup12.src="pics/pls-bremer-platz.gif";
-
-				v_popup13 = new Image();
-                v_popup13.src="pics/pls-engelenschanze.gif";
-
-				v_popup14 = new Image();
-                v_popup14.src="pics/pls-bahnhofstrasse.gif";
-
-				v_popup15 = new Image();
-                v_popup15.src="pics/pls-cineplex.gif";
-
-				v_popup16 = new Image();
-                v_popup16.src="pics/pls-stadthaus3.gif";
-
-				v_popup17 = new Image();
-                v_popup17.src="pics/pls-halle-nord.gif";
-
-				v_popup18 = new Image();
-                v_popup18.src="pics/pls-halle-sued.gif";
-
-				v_popup19 = new Image();
-                v_popup19.src="pics/pls-halle-p4.gif";
-
-				v_popup20 = new Image();
-                v_popup20.src="pics/pls-halle-p5.gif";
-
-				v_popup21 = new Image();
-                v_popup21.src="pics/pls-arkaden.gif";
-
-				v_popup22 = new Image();
-                v_popup22.src="pics/pls-alter-steinweg.gif";
-
-
-		        }
-
-                function hiLite(imgDocID,imgObjName)
-                {
-                        if (v_string.charAt(0)>2)
-                {
-                document.images[imgDocID].src = eval(imgObjName + ".src")
-                }
-                }
-
-        //-->
+<link rel="stylesheet" type="text/css" href="contrib/normalize/normalize.css" media="all" />
+<link rel="stylesheet" type="text/css" href="typo3temp/compressor/merged-b88430f1b8259043472f8953f148689a-725ccfe1ee2f601261cd87619aa38a7b.css?1434461605" media="all" />
 
 
 
-</SCRIPT>
+<script src="typo3temp/compressor/merged-4cf5abf8b6fd7c7fcc80d8f3742f059f-6da97c3683c9113bb58315ebc61b21f6.js?1434461605" type="text/javascript"></script>
+<script src="typo3temp/compressor/modernizr.min-b6fb81c9fd92139d2474768da69b2fa7.js?1434461605" type="text/javascript"></script>
+
 
 
 </head>
-<body onload="javascript:Timer=setTimeout('location.reload();', 60000);">
-
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr valign="bottom" bgcolor="#f4f4f4">
-<td>
-<a href="http://www.muenster.de/stadt/tiefbauamt/index.html"><img src="pics/tiefbauamt-logo-pls.gif" width="200" height="35" border="0" alt="Logo des Tiefbauamts" vspace="5"></a>
-</td>
-<td align="right" valign="top"><a href="http://www.muenster.de/stadt/index.php"><img src="http://www.muenster.de/stadt/pics/mslogo30.gif" width="180" height="30" align="right" border="0"></a>
-</td>
-</tr>
-</table>
-
-
-
-
-<p>
-<span class="ue">Das Parkleitsystem</span>
-<hr noshade size="1">
-
-
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr valign="top">
-<td>
-
-<table border="0" cellpadding="5" cellspacing="1" width="100%">
-<tr valign="top" bgcolor="silver">
-<th>Parkplatz/-haus</th>
-<th>freie&nbsp;Pl&auml;tze</th>
-<th>Status</th>
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#d2efe1"><A href="theater.cfm" onclick="self.open('theater.cfm?frei=614&zeitstempel=23.06.2015 08:01&status=frei&gesamt=748', 'Parkhaus_Theater',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup1')" onMouseOut="hiLite('pop1','v_dummy1')">PH Theater</a></td>
-
-<td>614</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#d2efe1"><A href="hoerster.cfm" onclick="self.open('hoerster.cfm?frei=181&zeitstempel=23.06.2015 08:01&status=frei&gesamt=202', 'Parkplatz_Hoersterplatz',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup2')" onMouseOut="hiLite('pop1','v_dummy2')">PP H&ouml;rsterplatz</a></td>
-
-<td>181</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#d2efe1"><A href="alter-steinweg.cfm" onclick="self.open('alter-steinweg.cfm?frei=346&zeitstempel=23.06.2015 08:01&status=frei&gesamt=390', 'Parkhaus_Alter_Steinweg',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup22')" onMouseOut="hiLite('pop1','v_dummy22')">PH Alter Steinweg</a></td>
-
-<td>346</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#d2eefc"><A href="bus.cfm" onclick="self.open('bus.cfm?frei=0&zeitstempel=23.06.2015 08:01&status=geschlossen&gesamt=63', 'Busparkplatz',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup4')" onMouseOut="hiLite('pop1','v_dummy4')">Busparkplatz</a></td>
-
-<td>0</td>
-
-<td align="center" bgcolor="#ff6666">geschlossen</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#d2eefc"><A href="schlossplatz-nord.cfm" onclick="self.open('schlossplatz-nord.cfm?frei=0&zeitstempel=23.06.2015 08:01&status=geschlossen&gesamt=450', 'Parkplatz_Schlossplatz_Nord',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup5')" onMouseOut="hiLite('pop1','v_dummy5')">PP&nbsp;Schlossplatz&nbsp;Nord</a></td>
-
-<td>0</td>
-
-<td align="center" bgcolor="#ff6666">geschlossen</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#d2eefc"><A href="schlossplatz-sued.cfm" onclick="self.open('schlossplatz-sued.cfm?frei=0&zeitstempel=23.06.2015 08:01&status=besetzt&gesamt=460', 'Parkplatz_Schlossplatz_Sued',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup6')" onMouseOut="hiLite('pop1','v_dummy6')">PP&nbsp;Schlossplatz&nbsp;S&uuml;d</a></td>
-
-<td>0</td>
-
-<td align="center" bgcolor="#ff6666">besetzt</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#d2eefc"><A href="aegidii.cfm" onclick="self.open('aegidii.cfm?frei=662&zeitstempel=23.06.2015 08:01&status=frei&gesamt=750', 'Parkhaus_Aegidii',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup7')" onMouseOut="hiLite('pop1','v_dummy7')">PH Aegidii</a></td>
-
-<td>662</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#d2eefc"><A href="georgskommende.cfm" onclick="self.open('georgskommende.cfm?frei=213&zeitstempel=23.06.2015 08:01&status=frei&gesamt=272', 'Parkplatz_Georgskommende',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup8')" onMouseOut="hiLite('pop1','v_dummy8')">PP Georgskommende</a></td>
-
-<td>213</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#d2eefc"><A href="arkaden.cfm" onclick="self.open('arkaden.cfm?frei=150&zeitstempel=23.06.2015 08:01&status=frei&gesamt=150', 'Parkplatz_Münster_Arkaden',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup21')" onMouseOut="hiLite('pop1','v_dummy21')">PH Münster Arkaden</a></td>
-
-<td>150</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#fde8e9"><A href="karstadt.cfm" onclick="self.open('karstadt.cfm?frei=162&zeitstempel=23.06.2015 08:01&status=frei&gesamt=183', 'Parkhaus_Karstadt',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup9')" onMouseOut="hiLite('pop1','v_dummy9')">PH Karstadt</a></td>
-
-<td>162</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#fde8e9"><A href="stubengasse-haus.cfm" onclick="self.open('stubengasse-haus.cfm?frei=226&zeitstempel=23.06.2015 08:01&status=frei&gesamt=318', 'Parkhaus_Stubengasse',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup11')" onMouseOut="hiLite('pop1','v_dummy10')">PH Stubengasse</a></td>
-
-<td>226</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#fde8e9"><A href="bremer-platz.cfm" onclick="self.open('bremer-platz.cfm?frei=211&zeitstempel=23.06.2015 08:01&status=frei&gesamt=354', 'Parkhaus_Bremer_Platz',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup12')" onMouseOut="hiLite('pop1','v_dummy12')">PH Bremer Platz</a></td>
-
-<td>211</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#fde8e9"><A href="engelenschanze.cfm" onclick="self.open('engelenschanze.cfm?frei=333&zeitstempel=23.06.2015 08:01&status=frei&gesamt=480', 'Parkhaus_Engelenschanze',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup13')" onMouseOut="hiLite('pop1','v_dummy13')">PH Engelenschanze</a></td>
-
-<td>333</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#fde8e9"><A href="bahnhofstrasse.cfm" onclick="self.open('bahnhofstrasse.cfm?frei=260&zeitstempel=23.06.2015 08:01&status=frei&gesamt=311', 'Parkhaus_Bahnhofstrasse',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup14')" onMouseOut="hiLite('pop1','v_dummy14')">PH Bahnhofstra&szlig;e</a></td>
-
-<td>260</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#ffffe5"><A href="cineplex.cfm" onclick="self.open('cineplex.cfm?frei=527&zeitstempel=23.06.2015 08:01&status=frei&gesamt=590', 'Parkhaus_Cineplex',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup15')" onMouseOut="hiLite('pop1','v_dummy15')">PH Cineplex</a></td>
-
-<td>527</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr valign="top" bgcolor="#f4f4f4">
-
-
-<td bgcolor="#ffffe5"><A href="stadthaus3.cfm" onclick="self.open('stadthaus3.cfm?frei=372&zeitstempel=23.06.2015 08:01&status=frei&gesamt=372', 'Parkhaus_Stadthaus3',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup16')" onMouseOut="hiLite('pop1','v_dummy16')">PH Stadthaus 3</a></td>
-
-<td>372</td>
-
-<td align="center" bgcolor="#66cc99">frei</td>
-
-</tr>
-
-
-
-<tr bgcolor="#f4f4f4">
-<td colspan="3"><strong>23.06.2015 08:01&nbsp;Uhr</strong></td>
-</tr>
-</table>
-</td>
-
-<td background="pics/innenstadtplan.gif">
-
-
-<map name="parken" id="parken">
-
-<area alt="Parkhaus Theater" coords="395,102,421,128" href="theater.cfm" onclick="self.open('theater.cfm?frei=614&gesamt=748&status=frei&zeitstempel=23.06.2015 08:01', 'Parkhaus_Theater',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup1')" onMouseOut="hiLite('pop1','v_dummy1')">
-
-<area alt="Parkplatz H&ouml;rsterplatz" coords="433,140,459,166" href="hoerster.cfm" onclick="self.open('hoerster.cfm?frei=181&gesamt=202&status=frei&zeitstempel=23.06.2015 08:01', 'Parkplatz_Hoersterplatz',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup2')" onMouseOut="hiLite('pop1','v_dummy2')">
-
-<area alt="Busparkplatz" coords="265,121,291,145" href="bus.cfm" onclick="self.open('bus.cfm?frei=0&gesamt=63&status=geschlossen&zeitstempel=23.06.2015 08:01', 'Busparkplatz',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup4')" onMouseOut="hiLite('pop1','v_dummy4')">
-
-<area alt="Parkplatz Schlossplatz Nord" coords="268,147,292,171" href="schlossplatz-nord.cfm" onclick="self.open('schlossplatz-nord.cfm?frei=0&gesamt=450&status=geschlossen&zeitstempel=23.06.2015 08:01', 'Parkplatz_Schlossplatz_Nord',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup5')" onMouseOut="hiLite('pop1','v_dummy5')">
-
-<area alt="Parkplatz Schlossplatz S&uuml;d" coords="265,175,291,200" href="schlossplatz-sued.cfm" onclick="self.open('schlossplatz-sued.cfm?frei=0&gesamt=460&status=besetzt&zeitstempel=23.06.2015 08:01', 'Parkplatz_Schlossplatz_Sued',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup6')" onMouseOut="hiLite('pop1','v_dummy6')">
-
-<area alt="Parkhaus Aegidii" coords="337,210,362,236" href="aegidii.cfm" onclick="self.open('aegidii.cfm?frei=662&gesamt=750&status=frei&zeitstempel=23.06.2015 08:01', 'Parkhaus_Aegidii',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup7')" onMouseOut="hiLite('pop1','v_dummy7')">
-
-<area alt="Parkplatz Georgskommende" coords="305,232,329,258" href="georgskommende.cfm" onclick="self.open('georgskommende.cfm?frei=213&gesamt=272&status=frei&zeitstempel=23.06.2015 08:01', 'Parkplatz_Georgskommende',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup8')" onMouseOut="hiLite('pop1','v_dummy8')">
-
-<area alt="Parkhaus Karstadt" coords="433,200,458,226" href="karstadt.cfm" onclick="self.open('karstadt.cfm?frei=162&gesamt=183&status=frei&zeitstempel=23.06.2015 08:01', 'Parkhaus_Karstadt',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup9')" onMouseOut="hiLite('pop1','v_dummy9')">
-
-<area alt="Parkhaus Stubengasse" coords="423,228,443,246" href="stubengasse-haus.cfm" onclick="self.open('stubengasse-haus.cfm?frei=226&gesamt=318&status=frei&zeitstempel=23.06.2015 08:01', 'Parkhaus_Stubengasse',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup11')" onMouseOut="hiLite('pop1','v_dummy11')">
-
-<area alt="Parkhaus Bremer Platz" coords="515,260,540,285" href="bremer-platz.cfm" onclick="self.open('bremer-platz.cfm?frei=211&gesamt=354&status=frei&zeitstempel=23.06.2015 08:01', 'Parkhaus_Bremer_Platz',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup12')" onMouseOut="hiLite('pop1','v_dummy12')">
-
-<area alt="Parkhaus Engelenschanze" coords="437,307,463,333" href="engelenschanze.cfm" onclick="self.open('engelenschanze.cfm?frei=333&gesamt=480&status=frei&zeitstempel=23.06.2015 08:01', 'Parkhaus_Engelenschanze',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup13')" onMouseOut="hiLite('pop1','v_dummy13')">
-
-<area alt="Parkhaus Bahnhofstra&szlig;e" coords="464,307,489,333" href="bahnhofstrasse.cfm" onclick="self.open('bahnhofstrasse.cfm?frei=260&gesamt=311&status=frei&zeitstempel=23.06.2015 08:01', 'Parkhaus_Bahnhofstrasse',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup14')" onMouseOut="hiLite('pop1','v_dummy14')">
-
-<area alt="Parkhaus Cineplex" coords="485,389,512,415" href="cineplex.cfm" onclick="self.open('cineplex.cfm?frei=527&gesamt=590&status=frei&zeitstempel=23.06.2015 08:01', 'Parkhaus_Cineplex',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup15')" onMouseOut="hiLite('pop1','v_dummy15')">
-
-<area alt="Parkhaus Stadthaus 3" coords="521,400,542,422" href="stadthaus3.cfm" onclick="self.open('stadthaus3.cfm?frei=372&gesamt=372&status=frei&zeitstempel=23.06.2015 08:01', 'Parkhaus_Stadthaus3',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup16')" onMouseOut="hiLite('pop1','v_dummy16')">
-
-<area alt="Parkhaus Münster Arkaden" coords="389,233,403,247" href="arkaden.cfm" onclick="self.open('arkaden.cfm?frei=150&gesamt=150&status=frei&zeitstempel=23.06.2015 08:01', 'Parkplatz_Arkaden',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup21')" onMouseOut="hiLite('pop1','v_dummy21')" shape="RECT">
-
-<area alt="Parkhaus Alter Steinweg" coords="450,185,470,205" href="alter-steinweg.cfm" onclick="self.open('alter-steinweg.cfm?frei=346&gesamt=390&status=frei&zeitstempel=23.06.2015 08:01', 'Parkhaus_Alter_Steinweg',&#13;&#10;'width=550,height=570,toolbar=0'); return false;" onMouseOver="hiLite('pop1','v_popup22')" onMouseOut="hiLite('pop1','v_dummy22')" shape="RECT">
-
-</map>
-
-<img src="pics/pls-parken-pur2013-05.gif" width="650" height="500" border="0" alt="Innenstadtplan" usemap="#parken" name="pop1" name="pop2" name="pop3" name="pop4" name="pop5" name="pop6" name="pop7" name="pop8" name="pop9" name="pop10" name="pop11" name="pop12" name="pop13" name="pop14"><br>
-<br>
-
-<div align="center">F&uuml;r Detailinformationen zu den einzelnen Parkh&auml;usern klicken Sie auf das jeweilige Symbol.<br>
-Die schattierte, rot umrandete Fläche markiert die Umweltzone (gilt seit 1. Januar 2010).<br>
-<a href="http://www.muenster.de/stadt/umwelt/umweltzone.html" target="_blank" title="&ouml;ffnet Seite in neuem Fenster">Informationen zur Umweltzone in Münster</a>. </div>
-
-</td>
-</tr>
-</table>
-<br>
-<hr noshade size="1">
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr valign="top">
-<td align="left"><a href="http://www.muenster.de/stadt/tiefbauamt/index.html"><strong>zum Angebot des Tiefbauamtes</strong></a></td>
-<td align="right">
-&copy; Stadt M&uuml;nster - <a href="http://www.muenster.de/stadt/tiefbauamt/impressum.html"><strong>Impressum</strong></a></td>
-</tr>
-</table>
-
+<body>
+<div id="c26841" class="csc-default"><div	xmlns="http://www.w3.org/1999/xhtml" lang="en"
+		xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+		id="tx_cqParkingWrap">
+
+	<div id="headerWrap">
+	<div id="headerBacklink">
+		<a href="http://www.muenster.de/stadt/tiefbauamt/index.html">
+			<img alt="Logo des Tiefbauamts" src="typo3conf/ext/cq_parking/Resources/Public/img/tiefbauamt-logo-pls.gif" width="200" height="35" />
+		</a>
+	</div>
+	<div id="headerLogo">
+		<a href="http://www.muenster.de/stadt/index.php">
+			<img src="http://www.muenster.de/stadt/pics/mslogo30.gif" width="180" height="30">
+		</a>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+	<h1>Das Parkleitsystem</h1>
+
+	<hr/>
+
+	<div id="parkingList">
+		<table>
+			<tr>
+				<th>Parkplatz/-haus</th>
+				<th>freie Plätze</th>
+				<th>Status</th>
+			</tr>
+			
+	<tr>
+		<td class="name area1">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker1" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=1&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=6711a08cc4c0168456182a1139ccae7d">PH Theater</a>
+		</td>
+		<td class="freeCount">445</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area1">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker2" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=2&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=69a0c47e5dfcaa02f9ae3f75acada1ae">PP Hörsterplatz</a>
+		</td>
+		<td class="freeCount">28</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area1">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker3" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=3&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=336bb7cd63a3778d7c7e9e05e8b85b22">PH Alter Steinweg</a>
+		</td>
+		<td class="freeCount">132</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area2">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker4" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=4&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=4be2187b18339f807f64fbcde7cf8761">Busparkplatz</a>
+		</td>
+		<td class="freeCount">44</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area2">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker5" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=5&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=856c27a88429dc3dd6681ee7615744a0">PP Schlossplatz Nord</a>
+		</td>
+		<td class="freeCount">299</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area2">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker6" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=6&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=8940a0fdf8786234a09ce6d0e4717d5f">PP Schlossplatz Süd</a>
+		</td>
+		<td class="freeCount">115</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area2">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker7" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=7&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=41fd441d36ea43ae3a075bbb92ee4691">PH Aegidii</a>
+		</td>
+		<td class="freeCount">303</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area2">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker8" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=8&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=774174c7f0996f5079d2cc063b19840d">PP Georgskommende</a>
+		</td>
+		<td class="freeCount">190</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area2">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker9" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=9&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=8ef0d07c34afd90b1acb26326e108889">PH Münster Arkaden</a>
+		</td>
+		<td class="freeCount">29</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area3">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker10" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=10&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=6a5e6bf8721754fd8f5c3f0e87892fe2">PH Karstadt</a>
+		</td>
+		<td class="freeCount">67</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area3">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker11" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=11&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=42dfec01c11410a3eded346bbbcdeacc">PH Stubengasse</a>
+		</td>
+		<td class="freeCount">46</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area3">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker12" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=12&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=199b4cac98183099fb66093bf140b209">PH Bremer Platz</a>
+		</td>
+		<td class="freeCount">157</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area3">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker13" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=13&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=105e43c682530e03055fae384d45fe37">PH Engelenschanze</a>
+		</td>
+		<td class="freeCount">164</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area3">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker14" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=14&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=a6aec51fad03d761f621af92e8db3984">PH Bahnhofstraße</a>
+		</td>
+		<td class="freeCount">191</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area4">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker15" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=15&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=5ad9a847479170967882895c364c6ae9">PH Cineplex</a>
+		</td>
+		<td class="freeCount">405</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+	<tr>
+		<td class="name area4">
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="parkingLink marker16" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=16&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=4991cd51430d85d45f571860e7c1a30c">PH Stadthaus 3</a>
+		</td>
+		<td class="freeCount">283</td>
+		
+				<td class="status free">frei</td>
+			
+	</tr>
+
+
+		</table>
+		<div class="clear"></div>
+		<strong id="lastRefresh">
+			14.07.2015 16:48 Uhr
+		</strong>
+	</div>
+
+	<div id="parkingMapWrap">
+		<div id="tx_cqParkingMap" class="clearfix">
+			<img alt="Stadtplan Muenster" usemap="#parken" src="typo3conf/ext/cq_parking/Resources/Public/img/innenstadtplan_muenster.gif" width="650" height="500" />
+			<div id="tx_cqParkingMarkerArray">
+				
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker1" style="top:112px; left:399px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=1&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=6711a08cc4c0168456182a1139ccae7d">
+				
+						<img alt="PH Theater" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker2" style="top:145px; left:448px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=2&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=69a0c47e5dfcaa02f9ae3f75acada1ae">
+				
+						<img alt="PP Hörsterplatz" src="typo3temp/_processed_/csm_parkplatz_ba3928037a.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker3" style="top:188px; left:454px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=3&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=336bb7cd63a3778d7c7e9e05e8b85b22">
+				
+						<img alt="PH Alter Steinweg" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker4" style="top:131px; left:273px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=4&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=4be2187b18339f807f64fbcde7cf8761">
+				
+						<img alt="Busparkplatz" src="typo3temp/_processed_/csm_parkplatz_ba3928037a.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker5" style="top:148px; left:274px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=5&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=856c27a88429dc3dd6681ee7615744a0">
+				
+						<img alt="PP Schlossplatz Nord" src="typo3temp/_processed_/csm_parkplatz_ba3928037a.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker6" style="top:174px; left:274px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=6&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=8940a0fdf8786234a09ce6d0e4717d5f">
+				
+						<img alt="PP Schlossplatz Süd" src="typo3temp/_processed_/csm_parkplatz_ba3928037a.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker7" style="top:221px; left:342px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=7&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=41fd441d36ea43ae3a075bbb92ee4691">
+				
+						<img alt="PH Aegidii" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker8" style="top:237px; left:310px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=8&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=774174c7f0996f5079d2cc063b19840d">
+				
+						<img alt="PP Georgskommende" src="typo3temp/_processed_/csm_parkplatz_ba3928037a.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker9" style="top:235px; left:392px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=9&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=8ef0d07c34afd90b1acb26326e108889">
+				
+						<img alt="PH Münster Arkaden" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker10" style="top:210px; left:437px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=10&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=6a5e6bf8721754fd8f5c3f0e87892fe2">
+				
+						<img alt="PH Karstadt" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker11" style="top:230px; left:428px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=11&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=42dfec01c11410a3eded346bbbcdeacc">
+				
+						<img alt="PH Stubengasse" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker12" style="top:266px; left:522px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=12&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=199b4cac98183099fb66093bf140b209">
+				
+						<img alt="PH Bremer Platz" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker13" style="top:316px; left:448px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=13&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=105e43c682530e03055fae384d45fe37">
+				
+						<img alt="PH Engelenschanze" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker14" style="top:313px; left:470px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=14&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=a6aec51fad03d761f621af92e8db3984">
+				
+						<img alt="PH Bahnhofstraße" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker15" style="top:395px; left:492px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=15&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=5ad9a847479170967882895c364c6ae9">
+				
+						<img alt="PH Cineplex" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+	
+			<a onclick="self.open(this.href, '', 'width=550,height=630,toolbar=0'); return false;" class="marker marker16" style="top:402px; left:528px;" href="tiefbauamt/parkleitsystem.html?tx_cqparking_carparkoutput%5Bcarpark%5D=16&amp;tx_cqparking_carparkoutput%5Baction%5D=show&amp;tx_cqparking_carparkoutput%5Bcontroller%5D=Carpark&amp;cHash=4991cd51430d85d45f571860e7c1a30c">
+				
+						<img alt="PH Stadthaus 3" src="typo3temp/_processed_/csm_parkhaus_eca07da195.png" width="20" height="20" />
+					
+			</a>
+		
+
+
+			</div>
+		</div>
+		<div id="mapInfoText">
+			Für Detailinformationen zu den einzelnen Parkhäusern klicken Sie auf das jeweilige Symbol.<br>
+			Die schattierte, rot umrandete Fläche markiert die Umweltzone (gilt seit 1. Januar 2010).<br>
+			<a target="_blank" href="http://www.muenster.de/stadt/umwelt/umweltzone.html">Informationen zur Umweltzone in Münster
+			</a>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+
+	<hr/>
+
+	<div id="footerWrap">
+	<div id="footerBacklink">
+		<a href="http://www.muenster.de/stadt/tiefbauamt/index.html"><strong>zum Angebot des Tiefbauamtes</strong></a>
+	</div>
+	<div id="footerLegal">
+		© Stadt Münster - <a href="http://www.muenster.de/stadt/tiefbauamt/impressum.html"><strong>Impressum</strong></a>
+	</div>
+	<div class="clear"></div>
+</div>
+
+</div>
+</div>
+<script src="typo3temp/compressor/merged-a268982a3bd2218409898870cc71ae37-3c4fc719d8949024502342439543f1e4.js?1434461605" type="text/javascript"></script>
+<script src="typo3temp/compressor/merged-bf7badae745650dafe809f83515e15c7-40a2e39e719e974e6a9e4adedf9f190d.js?1434461605" type="text/javascript"></script>
 
 
 </body>
