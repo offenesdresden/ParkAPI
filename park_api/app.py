@@ -39,7 +39,10 @@ def get_lots(city):
     if city == "favicon.ico" or city == "robots.txt":
         abort(404)
 
-    app.logger.info("GET /" + city + " - " + request.headers.get("User-Agent"))
+    user_agent = request.headers.get("User-Agent")
+    if user_agent is None:
+        user_agent = "no user-agent"
+    app.logger.info("GET /" + city + " - " + user_agent)
 
     city_module = env.supported_cities().get(city, None)
 
