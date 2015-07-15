@@ -77,7 +77,7 @@ Also please note that this is not valid JSON. Just an example for how the output
  - Create a new virtualenv:
 
         $ virtualenv venv
-        $ . venv/bin/activate
+        $ source venv/bin/activate
 
  - Install dependencies:
 
