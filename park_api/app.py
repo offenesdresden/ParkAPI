@@ -11,7 +11,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def get_meta():
-    app.logger.info("GET / - " + request.headers.get("User-Agent"))
+    user_agent = "no user-agent" if request.headers.get("User-Agent") is None else request.headers.get("User-Agent")
+    app.logger.info("GET / - " + user_agent)
 
     cities = {}
     for city_id, city in env.supported_cities().items():
@@ -39,9 +40,7 @@ def get_lots(city):
     if city == "favicon.ico" or city == "robots.txt":
         abort(404)
 
-    user_agent = request.headers.get("User-Agent")
-    if user_agent is None:
-        user_agent = "no user-agent"
+    user_agent = "no user-agent" if request.headers.get("User-Agent") is None else request.headers.get("User-Agent")
     app.logger.info("GET /" + city + " - " + user_agent)
 
     city_module = env.supported_cities().get(city, None)
@@ -67,7 +66,8 @@ def get_lots(city):
 
 @app.route("/<city>/<lot_id>/timespan")
 def get_longtime_forecast(city, lot_id):
-    app.logger.info("GET /" + city + "/" + lot_id + "/timespan - " + request.headers.get("User-Agent"))
+    user_agent = "no user-agent" if request.headers.get("User-Agent") is None else request.headers.get("User-Agent")
+    app.logger.info("GET /" + city + "/" + lot_id + "/timespan - " + user_agent)
 
     try:
         datetime.strptime(request.args["from"], '%Y-%m-%dT%H:%M:%S')
@@ -84,7 +84,8 @@ def get_longtime_forecast(city, lot_id):
 
 @app.route("/coffee")
 def make_coffee():
-    app.logger.info("GET /coffee - " + request.headers.get("User-Agent"))
+    user_agent = "no user-agent" if request.headers.get("User-Agent") is None else request.headers.get("User-Agent")
+    app.logger.info("GET /coffee - " + user_agent)
 
     return "<h1>I'm a teapot</h1>" \
            "<p>This server is a teapot, not a coffee machine.</p><br>" \
