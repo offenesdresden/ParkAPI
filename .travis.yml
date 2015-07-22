@@ -11,6 +11,7 @@ matrix:
     - python: "nightly"
 cache: pip
 script:
+  - python tests/validate-geojson.py park_api/cities/*.geojson
   - python -m unittest discover tests
 before_script:
   - psql -c 'create database park_api;' -U postgres
