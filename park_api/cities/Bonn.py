@@ -1,27 +1,21 @@
 from bs4 import BeautifulSoup
 from park_api.geodata import GeoData
-from park_api.util import convert_date, generate_id
+from park_api.util import convert_date
 
 data_url = "http://www.bcp-bonn.de/bspspinfo1.php"
 data_source = "http://www.bcp-bonn.de/bcp/index.php?id=80"
 city_name = "Bonn"
 
-class Lot:
-    def __init__(self, name, total, address):
-        self.name = name
-        self.total = total
-        self.address = address
-
+geodata = GeoData(__file__)
 
 lot_map = {
-    0: Lot("Münsterplatzgarage", 319, "Budapester Straße"),
-    1: Lot("Stadthausgarage", 300, "Weiherstraße"),
-    2: Lot("Beethoven-Parkhaus", 426, "Engeltalstraße"),
-    3: Lot("Bahnhofgarage", 110, " Münsterstraße"),
-    4: Lot("Friedensplatzgarage", 822, "Oxfordstraße"),
-    5: Lot("Marktgarage", 325, "Stockenstraße"),
-}
-geodata = GeoData(__file__)
+        0: "Münsterplatzgarage",
+        1: "Stadthausgarage",
+        2: "Beethoven-Parkhaus",
+        3: "Bahnhofgarage",
+        4: "Friedensplatzgarage",
+        5: "Marktgarage",
+        }
 
 
 def parse_html(html):
@@ -33,15 +27,15 @@ def parse_html(html):
 
     lots = []
     for idx, free in enumerate(free_lots):
-        lot = lot_map.get(idx)
+        lot = geodata.lot(lot_map[idx])
         lots.append({
             "name": lot.name,
-            "coords": geodata.coords(lot.name),
+            "coords": lot.coords,
             "free": int(free.text),
             "address": lot.address,
             "total": lot.total,
             "state": "nodata",
-            "id": generate_id(__file__, lot.name),
+            "id": lot.id,
             "forecast": False
         })
 

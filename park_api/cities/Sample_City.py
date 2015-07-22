@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from park_api.util import convert_date, generate_id
+from park_api.util import convert_date
 from park_api.geodata import GeoData
 
 # URL for the page where the scraper can gather the data
@@ -20,7 +20,7 @@ geodata = GeoData(__file__)
 def parse_html(html):
 
     # BeautifulSoup is a great and easy way to parse the html and find the bits and pieces we're looking for.
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "html.parser")
 
     # last_updated is the date when the data on the page was last updated, it should be listed on most pages
     last_updated = soup.select("p#last_updated")[0].text
@@ -36,24 +36,21 @@ def parse_html(html):
         lot_name = tr.find("td", {"class": "lot_name"}).text
         lot_free = tr.find("td", {"class": "lot_free"}).text
         lot_total = tr.find("td", {"class": "lot_total"}).text
-        lot_address = tr.find("td", {"class": "lot_address"}).text
-        lot_type = tr.find("td", {"class": "lot_type"}).text
 
         # please be careful about the state only being allowed to contain either open, closed or nodata
         # should the page list other states, please map these into the three listed possibilities
         state = tr.find("td", {"class": "lot_state"}).text
 
+        lot = geodata.lot(lot_name)
         data["lots"].append({
-            "name": lot_name,
+            "name": lot.name,
             "free": lot_free,
             "total": lot_total,
-            "address": lot_address,
-            "coords": geodata.coords(lot_name),
+            "address": lot.address,
+            "coords": lot.coords,
             "state": state,
-            "type": lot_type,
-            # use the utility function generate_id to generate an ID for this lot
-            # it takes this file path and the lot's name as params
-            "id": generate_id(__file__, lot_name),
+            "type": lot.type,
+            "id": lot.id,
             "forecast": False,
         })
 

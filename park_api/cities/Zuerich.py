@@ -1,51 +1,10 @@
 import feedparser
-from park_api.util import convert_date, generate_id
+from park_api.util import convert_date
 from park_api.geodata import GeoData
 
 data_url = "http://www.pls-zh.ch/plsFeed/rss"
 data_source = "https://www.stadt-zuerich.ch/portal/de/index/ogd/daten/parkleitsystem.html"
-
 city_name = "Zürich"
-
-total_number_map = {
-    "Parkgarage am Central": 50,
-    "Parkhaus Accu": 194,
-    "Parkhaus Albisriederplatz": 66,
-    "Parkhaus Bleicherweg": 275,
-    "Parkhaus Center Eleven": 342,
-    "Parkhaus City Parking": 620,
-    "Parkhaus Cityport": 153,
-    "Parkhaus Crowne Plaza": 520,
-    "Parkhaus Dorflinde": 98,
-    "Parkhaus Feldegg": 346,
-    "Parkhaus Globus": 178,
-    "Parkhaus Hardau II": 982,
-    "Parkhaus Hauptbahnhof": 176,
-    "Parkhaus Hohe Promenade": 556,
-    "Parkhaus Jelmoli": 222,
-    "Parkhaus Jungholz": 124,
-    "Parkhaus Max-Bill-Platz": 59,
-    "Parkhaus Messe Zürich AG": 2000,
-    "Parkhaus Nordhaus": 175,
-    "Parkhaus Octavo": 123,
-    "Parkhaus Opéra": 299,
-    "Parkhaus P West": 1000,
-    "Parkhaus Park Hyatt": 267,
-    "Parkhaus Parkside": 38,
-    "Parkhaus Pfingstweid": 276,
-    "Parkhaus Stampfenbach": 237,
-    "Parkhaus Talgarten": 110,
-    "Parkhaus USZ Nord": 90,
-    "Parkhaus Uni Irchel": 1227,
-    "Parkhaus Urania": 607,
-    "Parkhaus Utoquai": 175,
-    "Parkhaus Züri 11 Shopping": 60,
-    "Parkhaus Zürichhorn": 245,
-    "Parkplatz Bienen": 110,
-    "Parkplatz Eisfeld": 240,
-    "Parkplatz Theater 11": 188,
-    "Parkplatz USZ Süd": 80
-}
 
 geodata = GeoData(__file__)
 
@@ -68,14 +27,15 @@ def parse_html(xml_data):
 
         old_id = entry["id"].split("=")[1]
 
+        lot = geodata.lot(title[0])
         data["lots"].append({
-            "name": title[0],
+            "name": lot.name,
             "address": title[1],
-            "id": generate_id(__file__, title[0]),
+            "id": lot.id,
             "state": summary[0],
             "free": summary[1],
-            "total": total_number_map.get(title[0], 0),
-            "coords": geodata.coords(title[0]),
+            "total": lot.total,
+            "coords": lot.coords,
             "forecast": False,
         })
 

@@ -4,7 +4,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hauptbahnhof"
+        "name": "Hauptbahnhof",
+        "total": 812,
+        "address": "Elisabethstraße 3",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -17,7 +20,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hauptbahnhof Ost"
+        "name": "Hauptbahnhof Ost",
+        "Hauptbahnhof Ost": 240,
+        "address": "Martin-Hemm-Straße 8",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -30,7 +36,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hallenbad"
+        "name": "Hallenbad",
+        "total": 836,
+        "address": "Jahnstraße 9",
+        "type": "Parkplatz"
       },
       "geometry": {
         "type": "Point",
@@ -43,7 +52,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Festplatz"
+        "name": "Festplatz",
+        "total": 1437,
+        "address": "Dreizehnerstraße",
+        "type": "Parkplatz"
       },
       "geometry": {
         "type": "Point",
@@ -69,7 +81,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Nordbahnhof"
+        "name": "Nordbahnhof",
+        "total": 252,
+        "address": "Am Nordbahnhof 3",
+        "type": "Parkplatz"
       },
       "geometry": {
         "type": "Point",
@@ -82,7 +97,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Südl. Ringstraße"
+        "name": "Südl. Ringstraße",
+        "total": 257,
+        "address": "Südliche Ringstraße",
+        "type": "Parkplatz"
       },
       "geometry": {
         "type": "Point",
@@ -95,7 +113,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Congressgarage"
+        "name": "Congressgarage",
+        "total": 213,
+        "address": "Schloßlände 25",
+        "type": "Tiefgarage"
       },
       "geometry": {
         "type": "Point",
@@ -108,7 +129,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Münster"
+        "name": "Münster",
+        "total": 384,
+        "address": "Bergbräustraße",
+        "type": "Tiefgarage"
       },
       "geometry": {
         "type": "Point",
@@ -121,7 +145,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Reduit Tilly"
+        "name": "Reduit Tilly",
+        "total": 436,
+        "address": "Regimentstraße",
+        "type": "Tiefgarage"
       },
       "geometry": {
         "type": "Point",
@@ -134,7 +161,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Schloss"
+        "name": "Schloss",
+        "total": 435,
+        "address": "Esplanade",
+        "type": "Tiefgarage"
       },
       "geometry": {
         "type": "Point",
@@ -147,7 +177,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Theater-Ost"
+        "name": "Theater-Ost",
+        "total": 682,
+        "address": "Schloßländle",
+        "type": "Tiefgarage"
       },
       "geometry": {
         "type": "Point",
@@ -160,7 +193,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Theater-West"
+        "name": "Theater-West",
+        "total": 599,
+        "address": "Schutterstraße",
+        "type": "Tiefgarage"
       },
       "geometry": {
         "type": "Point",

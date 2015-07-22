@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from park_api.util import convert_date, generate_id
+from park_api.util import convert_date
 from park_api.geodata import GeoData
 
 # URL for the page where the scraper can gather the data
@@ -76,16 +76,17 @@ def parse_html(html):
         # should the page list other states, please map these into the three listed possibilities
         state = status_map.get(td[3].text, "nodata")
 
+        lot = geodata.lot(lot_name)
         data["lots"].append({
             # use the utility function generate_id to generate an ID for this lot
             # it takes this file path and the lot's name as params
-            "id": generate_id(__file__, lot_name),
-            "name": lot_name,
+            "id": lot.id,
+            "name": lot.name,
             "free": lot_free,
             "state": state,
             "total": lot_total,
             "address": lot_address,
-            "coords": geodata.coords(lot_name),
+            "coords": lot.coords,
             # "type": lot_type,
             "forecast": False
         })

@@ -7,7 +7,8 @@
       "coordinates": [8.544743, 47.376579]
     },
     "properties": {
-      "name": "Parkgarage am Central"
+      "name": "Parkgarage am Central",
+      "total": 50
     }
   }, {
     "type": "Feature",
@@ -16,7 +17,8 @@
       "coordinates": [8.540748, 47.414848]
     },
     "properties": {
-      "name": "Parkhaus Accu"
+      "name": "Parkhaus Accu",
+      "total": 194
     }
   }, {
     "type": "Feature",
@@ -25,7 +27,8 @@
       "coordinates": [8.509675, 47.379458]
     },
     "properties": {
-      "name": "Parkhaus Albisriederplatz"
+      "name": "Parkhaus Albisriederplatz",
+      "total": 66
     }
   }, {
     "type": "Feature",
@@ -34,7 +37,8 @@
       "coordinates": [8.535761, 47.367417]
     },
     "properties": {
-      "name": "Parkhaus Bleicherweg"
+      "name": "Parkhaus Bleicherweg",
+      "total": 275
     }
   }, {
     "type": "Feature",
@@ -43,7 +47,8 @@
       "coordinates": [8.540263, 47.412805]
     },
     "properties": {
-      "name": "Parkhaus Center Eleven"
+      "name": "Parkhaus Center Eleven",
+      "total": 342
     }
   }, {
     "type": "Feature",
@@ -52,7 +57,8 @@
       "coordinates": [8.533806, 47.374211]
     },
     "properties": {
-      "name": "Parkhaus City Parking"
+      "name": "Parkhaus City Parking",
+      "total": 620
     }
   }, {
     "type": "Feature",
@@ -61,7 +67,8 @@
       "coordinates": [8.540662, 47.410876]
     },
     "properties": {
-      "name": "Parkhaus Cityport"
+      "name": "Parkhaus Cityport",
+      "total": 153
     }
   }, {
     "type": "Feature",
@@ -70,7 +77,8 @@
       "coordinates": [8.550214, 47.407194]
     },
     "properties": {
-      "name": "Parkhaus Dorflinde"
+      "name": "Parkhaus Dorflinde",
+      "total": 98
     }
   }, {
     "type": "Feature",
@@ -79,7 +87,8 @@
       "coordinates": [8.553440, 47.360644]
     },
     "properties": {
-      "name": "Parkhaus Feldegg"
+      "name": "Parkhaus Feldegg",
+      "total": 346
     }
   }, {
     "type": "Feature",
@@ -88,7 +97,8 @@
       "coordinates": [8.537618, 47.375773]
     },
     "properties": {
-      "name": "Parkhaus Globus"
+      "name": "Parkhaus Globus",
+      "total": 178
     }
   }, {
     "type": "Feature",
@@ -97,7 +107,8 @@
       "coordinates": [8.510323, 47.380354]
     },
     "properties": {
-      "name": "Parkhaus Hardau II"
+      "name": "Parkhaus Hardau II",
+      "total": 982
     }
   }, {
     "type": "Feature",
@@ -106,7 +117,8 @@
       "coordinates": [8.537886, 47.381218]
     },
     "properties": {
-      "name": "Parkhaus Hauptbahnhof"
+      "name": "Parkhaus Hauptbahnhof",
+      "total": 176
     }
   }, {
     "type": "Feature",
@@ -115,7 +127,8 @@
       "coordinates": [8.547632, 47.368666]
     },
     "properties": {
-      "name": "Parkhaus Hohe Promenade"
+      "name": "Parkhaus Hohe Promenade",
+      "total": 556
     }
   }, {
     "type": "Feature",
@@ -124,7 +137,8 @@
       "coordinates": [8.536227, 47.373847]
     },
     "properties": {
-      "name": "Parkhaus Jelmoli"
+      "name": "Parkhaus Jelmoli",
+      "total": 222
     }
   }, {
     "type": "Feature",
@@ -133,7 +147,8 @@
       "coordinates": [8.543973, 47.413423]
     },
     "properties": {
-      "name": "Parkhaus Jungholz"
+      "name": "Parkhaus Jungholz",
+      "total": 124
     }
   }, {
     "type": "Feature",
@@ -142,7 +157,8 @@
       "coordinates": [8.539274, 47.414062]
     },
     "properties": {
-      "name": "Parkhaus Max-Bill-Platz"
+      "name": "Parkhaus Max-Bill-Platz",
+      "total": 59
     }
   }, {
     "type": "Feature",
@@ -151,7 +167,8 @@
       "coordinates": [8.553929, 47.413568]
     },
     "properties": {
-      "name": "Parkhaus Messe Zürich AG"
+      "name": "Parkhaus Messe Zürich AG",
+      "total": 2000
     }
   }, {
     "type": "Feature",
@@ -160,7 +177,8 @@
       "coordinates": [8.547353, 47.411839]
     },
     "properties": {
-      "name": "Parkhaus Nordhaus"
+      "name": "Parkhaus Nordhaus",
+      "total": 175
     }
   }, {
     "type": "Feature",
@@ -169,7 +187,8 @@
       "coordinates": [8.536066, 47.413199]
     },
     "properties": {
-      "name": "Parkhaus Octavo"
+      "name": "Parkhaus Octavo",
+      "total": 123
     }
   }, {
     "type": "Feature",
@@ -178,7 +197,8 @@
       "coordinates": [8.511443, 47.391929]
     },
     "properties": {
-      "name": "Parkhaus P West"
+      "name": "Parkhaus P West",
+      "total": 1000
     }
   }, {
     "type": "Feature",
@@ -187,7 +207,8 @@
       "coordinates": [8.536077, 47.365860]
     },
     "properties": {
-      "name": "Parkhaus Park Hyatt"
+      "name": "Parkhaus Park Hyatt",
+      "total": 267
     }
   }, {
     "type": "Feature",
@@ -196,7 +217,8 @@
       "coordinates": [8.539574, 47.412654]
     },
     "properties": {
-      "name": "Parkhaus Parkside"
+      "name": "Parkhaus Parkside",
+      "total": 38
     }
   }, {
     "type": "Feature",
@@ -205,7 +227,8 @@
       "coordinates": [8.516330, 47.387150]
     },
     "properties": {
-      "name": "Parkhaus Pfingstweid"
+      "name": "Parkhaus Pfingstweid",
+      "total": 276
     }
   }, {
     "type": "Feature",
@@ -214,7 +237,8 @@
       "coordinates": [8.539633, 47.38699]
     },
     "properties": {
-      "name": "Parkhaus Stampfenbach"
+      "name": "Parkhaus Stampfenbach",
+      "total": 237
     }
   }, {
     "type": "Feature",
@@ -223,7 +247,8 @@
       "coordinates": [8.535883, 47.372177]
     },
     "properties": {
-      "name": "Parkhaus Talgarten"
+      "name": "Parkhaus Talgarten",
+      "total": 110
     }
   }, {
     "type": "Feature",
@@ -232,7 +257,8 @@
       "coordinates": [8.54970217, 47.37878088]
     },
     "properties": {
-      "name": "Parkhaus USZ Nord"
+      "name": "Parkhaus USZ Nord",
+      "total": 90
     }
   }, {
     "type": "Feature",
@@ -241,7 +267,8 @@
       "coordinates": [8.547235, 47.397478]
     },
     "properties": {
-      "name": "Parkhaus Uni Irchel"
+      "name": "Parkhaus Uni Irchel",
+      "total": 1227
     }
   }, {
     "type": "Feature",
@@ -250,7 +277,8 @@
       "coordinates": [8.540615, 47.374112]
     },
     "properties": {
-      "name": "Parkhaus Urania"
+      "name": "Parkhaus Urania",
+      "total": 607
     }
   }, {
     "type": "Feature",
@@ -259,7 +287,8 @@
       "coordinates": [8.547986, 47.361727]
     },
     "properties": {
-      "name": "Parkhaus Utoquai"
+      "name": "Parkhaus Utoquai",
+      "total": 175
     }
   }, {
     "type": "Feature",
@@ -268,7 +297,8 @@
       "coordinates": [8.545035, 47.410500]
     },
     "properties": {
-      "name": "Parkhaus Züri 11 Shopping"
+      "name": "Parkhaus Züri 11 Shopping",
+      "total": 60
     }
   }, {
     "type": "Feature",
@@ -277,7 +307,8 @@
       "coordinates": [8.553629, 47.356073]
     },
     "properties": {
-      "name": "Parkhaus Zürichhorn"
+      "name": "Parkhaus Zürichhorn",
+      "total": 245
     }
   }, {
     "type": "Feature",
@@ -286,7 +317,8 @@
       "coordinates": [8.505049, 47.382326]
     },
     "properties": {
-      "name": "Parkplatz Bienen"
+      "name": "Parkplatz Bienen",
+      "total": 110
     }
   }, {
     "type": "Feature",
@@ -295,7 +327,8 @@
       "coordinates": [8.552577, 47.415573]
     },
     "properties": {
-      "name": "Parkplatz Eisfeld"
+      "name": "Parkplatz Eisfeld",
+      "total": 240
     }
   }, {
     "type": "Feature",
@@ -304,7 +337,29 @@
       "coordinates": [8.55141073, 47.37479042]
     },
     "properties": {
-      "name": "Parkplatz USZ Süd"
+      "name": "Parkplatz USZ Süd",
+      "total": 80
     }
+  }, {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Crowne Plaza",
+        "total": 520
+      },
+      "geometry": null
+  }, {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Opéra",
+        "total": 299
+      },
+      "geometry": null
+  }, {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Theater 11",
+        "total": 188
+      },
+      "geometry": null
   }]
 }

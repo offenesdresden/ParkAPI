@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from park_api.util import convert_date, generate_id, get_most_lots_from_known_data
+from park_api.util import convert_date, get_most_lots_from_known_data
 from park_api.geodata import GeoData
 
 data_url = "http://kwlpls.adiwidjaja.info"
@@ -16,12 +16,13 @@ process_state_map = {
 
 geodata = GeoData(__file__)
 
-
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
 
+    date_field = soup.find("tr").find("strong").text
+    last_updated = convert_date(date_field, "Stand: %d.%m.%Y, %H:%M Uhr")
     data = {
-        "last_updated": convert_date(soup.find("tr").find("strong").text, "Stand: %d.%m.%Y, %H:%M Uhr"),
+        "last_updated": last_updated,
         "data_source": data_source,
         "lots": []
     }
@@ -34,7 +35,6 @@ def parse_html(html):
         if len(row.find_all("th")) > 0:
             # This is a header row, save it for later
             region_header = row.find("th", {"class": "head1"}).text
-
         else:
             if row.find("td").text == "Gesamt":
                 continue
@@ -42,33 +42,29 @@ def parse_html(html):
             # This is a parking lot row
             raw_lot_data = row.find_all("td")
 
-            if len(raw_lot_data) == 2:
-                type_and_name = process_name(raw_lot_data[0].text)
-                data["lots"].append({
-                    "name": type_and_name[1],
-                    "type": type_and_name[0],
-                    "total": get_most_lots_from_known_data("Lübeck", type_and_name[1]),
-                    "free": 0,
-                    "region": region_header,
-                    "state": process_state_map.get(raw_lot_data[1].text, ""),
-                    "coords": geodata.coords(type_and_name[1]),
-                    "id": generate_id(__file__, type_and_name[1]),
-                    "forecast": False
-                })
+            type_and_name = process_name(raw_lot_data[0].text)
 
+            if len(raw_lot_data) == 2:
+                total = get_most_lots_from_known_data("Lübeck", type_and_name[1])
+                free = 0
+                state = process_state_map.get(raw_lot_data[1].text, "")
             elif len(raw_lot_data) == 4:
-                type_and_name = process_name(raw_lot_data[0].text)
-                data["lots"].append({
-                    "name": type_and_name[1],
-                    "type": type_and_name[0],
-                    "total": int(raw_lot_data[1].text),
-                    "free": int(raw_lot_data[2].text),
-                    "region": region_header,
-                    "state": "open",
-                    "coords": geodata.coords(type_and_name[1]),
-                    "id": generate_id(__file__, type_and_name[1]),
-                    "forecast": False
-                })
+                total = int(raw_lot_data[1].text)
+                free = int(raw_lot_data[2].text)
+                state = "open"
+
+            lot = geodata.lot(type_and_name[1])
+            data["lots"].append({
+                "name": lot.name,
+                "type": type_and_name[0],
+                "total": total,
+                "free": free,
+                "region": region_header,
+                "state": state,
+                "coords": lot.coords,
+                "id": lot.id,
+                "forecast": False
+            })
 
     return data
 
@@ -81,9 +77,4 @@ def process_name(name):
         "PP": "Parkplatz",
         "PH": "Parkhaus",
     }
-    if lot_type in type_mapping.keys():
-        lot_type = type_mapping[lot_type]
-    else:
-        lot_type = ""
-
-    return lot_type, lot_name
+    return type_mapping.get(lot_type, ""), lot_name
