@@ -20,7 +20,7 @@ def get_most_lots_from_known_data(city, lot_name):
     """
     with psycopg2.connect(**env.DATABASE) as conn:
         cursor = conn.cursor()
-        cursor.execute("SELECT data FROM parkapi WHERE city=%s;", (city,))
+        cursor.execute("SELECT data FROM parkapi WHERE city=%s LIMIT 600;", (city,))
         all_data = cursor.fetchall()
 
         most_lots = 0
