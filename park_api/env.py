@@ -24,7 +24,7 @@ DEFAULT_CONFIGURATION = {
     "database_host": "127.0.0.1",
     "database_port": 5432,
     "database_name": "park_api",
-    "database_user": "park_api",
+    "database_user": None,
     "database_password": None,
 }
 
@@ -41,14 +41,30 @@ def is_testing():
     return ENV == "testing"
 
 
+def getuser():
+    for name in ('LOGNAME', 'USER', 'LNAME', 'USERNAME'):
+        user = os.environ.get(name)
+        if user:
+            return user
+
+    # If this fails, the exception will "explain" why
+    import pwd
+    return pwd.getpwuid(os.getuid())[0]
+
+
 def database_config(config):
-    return {
+    conf = {
         "host": config.get("database_host"),
         "port": config.get("database_port"),
         "database": config.get("database_name"),
-        "user": config.get("database_user"),
         "password": config.get("database_password"),
     }
+    user = config.get("database_user")
+    if user == None or len(user) == 0:
+        conf["user"] = getuser()
+    else:
+        conf["user"] = user
+    return conf
 
 
 def load_cities():
