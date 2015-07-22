@@ -4,8 +4,16 @@ python:
   - "3.3"
   - "3.4"
   - "nightly"
+addons:
+  postgresql: "9.4"
 matrix:
   allow_failures:
     - python: "nightly"
 cache: pip
-script: cp config_example.ini config.ini; python -m unittest discover tests
+script:
+  - python -m unittest discover tests
+before_script:
+  - psql -c 'create database park_api;' -U postgres
+  - pip install -e .
+  - cp config_travis.ini config.ini
+  - python bin/parkapi-setupdb

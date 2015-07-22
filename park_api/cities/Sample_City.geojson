@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parking Lot 1",
+        "total": 200,
+        "address": "Musterstraße 1",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2168988,
+          53.1391841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parking Lot 2",
+        "total": 20,
+        "address": "Musterstraße 2",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.21115,
+          53.14169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parking Lot 3",
+        "total": 50,
+        "address": "Musterstraße 3",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.21514,
+          53.14161
+        ]
+      }
+    }
+    ]
+}

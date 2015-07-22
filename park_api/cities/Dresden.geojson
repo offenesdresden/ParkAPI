@@ -7,7 +7,9 @@
       "coordinates": [13.75051, 51.05229]
     },
     "properties": {
-      "name": "Terrassenufer Bus"
+      "name": "Terrassenufer Bus",
+      "address": "Terrassenufer",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -16,7 +18,9 @@
       "coordinates": [13.79952, 50.99958]
     },
     "properties": {
-      "name": "Prohlis"
+      "name": "Prohlis",
+      "address": "Langer Weg",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -25,7 +29,9 @@
       "coordinates": [13.71951, 51.06752]
     },
     "properties": {
-      "name": "Flutrinne"
+      "name": "Flutrinne",
+      "address": "Messering",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -34,7 +40,9 @@
       "coordinates": [13.73584, 51.05149]
     },
     "properties": {
-      "name": "Haus am Zwinger"
+      "name": "Haus am Zwinger",
+      "address": "Kleine Brüdergasse 3",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -43,7 +51,9 @@
       "coordinates": [13.73368, 51.04547]
     },
     "properties": {
-      "name": "Centrum Galerie"
+      "name": "Centrum Galerie",
+      "address": "Reitbahnstraße",
+      "type": "Parkhaus"
     }
   }, {
     "type": "Feature",
@@ -52,7 +62,9 @@
       "coordinates": [13.73772, 51.04449]
     },
     "properties": {
-      "name": "Wöhrl - Florentinum"
+      "name": "Wöhrl - Florentinum",
+      "address": "Prager Straße 8 - 10",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -61,7 +73,9 @@
       "coordinates": [13.74196, 51.06541]
     },
     "properties": {
-      "name": "Bahnhof Neustadt"
+      "name": "Bahnhof Neustadt",
+      "address": "Schlesischer Platz",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -70,7 +84,9 @@
       "coordinates": [13.73408, 51.05553]
     },
     "properties": {
-      "name": "Semperoper"
+      "name": "Semperoper",
+      "address": "Devrientstraße",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -79,7 +95,9 @@
       "coordinates": [13.73279, 51.04334]
     },
     "properties": {
-      "name": "Reitbahnstraße"
+      "name": "Reitbahnstraße",
+      "address": "Reitbahnstraße",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -88,7 +106,9 @@
       "coordinates": [13.7353, 51.05176]
     },
     "properties": {
-      "name": "Taschenbergpalais"
+      "name": "Taschenbergpalais",
+      "address": "Kleine Brüdergasse",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -97,7 +117,9 @@
       "coordinates": [13.73924, 51.06026]
     },
     "properties": {
-      "name": "Palaisplatz"
+      "name": "Palaisplatz",
+      "address": "Palaisplatz",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -106,7 +128,9 @@
       "coordinates": [13.7446, 51.05077]
     },
     "properties": {
-      "name": "Schießgasse"
+      "name": "Schießgasse",
+      "address": "Schießgasse",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -115,7 +139,9 @@
       "coordinates": [13.74126, 51.04151]
     },
     "properties": {
-      "name": "Lindengasse"
+      "name": "Lindengasse",
+      "address": "Lindengasse",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -124,7 +150,9 @@
       "coordinates": [13.73155, 51.04187]
     },
     "properties": {
-      "name": "Wiener Platz / Hauptbahnhof"
+      "name": "Wiener Platz / Hbf.",
+      "address": "Wiener Platz",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -133,7 +161,9 @@
       "coordinates": [13.74326, 51.04785]
     },
     "properties": {
-      "name": "Pirnaischer Platz"
+      "name": "Pirnaischer Platz",
+      "address": "Pirnaischer Platz",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -142,7 +172,9 @@
       "coordinates": [13.7439, 51.05165]
     },
     "properties": {
-      "name": "An der Frauenkirche"
+      "name": "An der Frauenkirche",
+      "address": "An der Frauenkirche 12a",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -151,7 +183,9 @@
       "coordinates": [13.62639, 51.0405]
     },
     "properties": {
-      "name": "Pennrich"
+      "name": "Pennrich",
+      "address": "Oskar-Maune-Straße",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -160,7 +194,9 @@
       "coordinates": [13.63258, 51.08521]
     },
     "properties": {
-      "name": "Cossebaude"
+      "name": "Cossebaude",
+      "address": "Bahnhofstraße Cossebaude",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -169,7 +205,9 @@
       "coordinates": [13.85426, 51.06065]
     },
     "properties": {
-      "name": "Bühlau"
+      "name": "Bühlau",
+      "address": "Quohrener Straße",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -178,7 +216,9 @@
       "coordinates": [13.69097, 51.08133]
     },
     "properties": {
-      "name": "Kaditz"
+      "name": "Kaditz",
+      "address": "Kötschenbroder Str.",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -187,7 +227,9 @@
       "coordinates": [13.7449, 51.06057]
     },
     "properties": {
-      "name": "Hauptstraße"
+      "name": "Hauptstraße",
+      "address": "Metzer Straße",
+      "type": "Parkhaus"
     }
   }, {
     "type": "Feature",
@@ -196,7 +238,9 @@
       "coordinates": [13.73988, 51.04645]
     },
     "properties": {
-      "name": "Ferdinandplatz"
+      "name": "Ferdinandplatz",
+      "address": "Ferdinandplatz",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -205,7 +249,9 @@
       "coordinates": [13.75072, 51.05768]
     },
     "properties": {
-      "name": "Wigardstraße"
+      "name": "Wigardstraße",
+      "address": "Wigardstraße",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -214,7 +260,9 @@
       "coordinates": [13.73093, 51.05383]
     },
     "properties": {
-      "name": "Ostra-Allee"
+      "name": "Ostra-Allee",
+      "address": "Ostra-Allee",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -223,7 +271,9 @@
       "coordinates": [13.7305, 51.05922]
     },
     "properties": {
-      "name": "Kongresszentrum"
+      "name": "Kongresszentrum",
+      "address": "Ostra-Ufer 2",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -232,7 +282,9 @@
       "coordinates": [13.75035, 51.04379]
     },
     "properties": {
-      "name": "Lingnerallee"
+      "name": "Lingnerallee",
+      "address": "Lingnerallee",
+      "Lingnerallee": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -241,7 +293,9 @@
       "coordinates": [13.74208, 51.06314]
     },
     "properties": {
-      "name": "Theresienstraße"
+      "name": "Theresienstraße",
+      "address": "Theresienstraße 15",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -250,7 +304,9 @@
       "coordinates": [13.73754, 51.05031]
     },
     "properties": {
-      "name": "Altmarkt"
+      "name": "Altmarkt",
+      "address": "Wilsdruffer Straße",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -259,7 +315,9 @@
       "coordinates": [13.74493, 51.05776]
     },
     "properties": {
-      "name": "Sarrasanistraße"
+      "name": "Sarrasanistraße",
+      "address": "Sarrasanistraße",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -268,7 +326,9 @@
       "coordinates": [13.74174, 51.05082]
     },
     "properties": {
-      "name": "Frauenkirche Neumarkt"
+      "name": "Frauenkirche Neumarkt",
+      "address": "Landhausstraße 2",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -277,7 +337,9 @@
       "coordinates": [13.72595, 51.05793]
     },
     "properties": {
-      "name": "Parkhaus Mitte"
+      "name": "Parkhaus Mitte",
+      "address": "Magdeburger Str. 1",
+      "type": "Parkhaus"
     }
   }, {
     "type": "Feature",
@@ -286,7 +348,9 @@
       "coordinates": [13.73801, 51.04669]
     },
     "properties": {
-      "name": "Karstadt"
+      "name": "Karstadt",
+      "address": "Prager Straße 12",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -295,7 +359,9 @@
       "coordinates": [13.71218, 51.06911]
     },
     "properties": {
-      "name": "Messegelände"
+      "name": "Messegelände",
+      "address": "Messering 6",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -304,7 +370,9 @@
       "coordinates": [13.84038, 51.12714]
     },
     "properties": {
-      "name": "Langebrück"
+      "name": "Langebrück",
+      "address": "Güterbahnhofstraße Langebrück",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -313,7 +381,9 @@
       "coordinates": [13.73407, 51.04951]
     },
     "properties": {
-      "name": "Altmarkt - Galerie"
+      "name": "Altmarkt - Galerie",
+      "address": "Webergasse 1",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -322,7 +392,9 @@
       "coordinates": [13.74466, 51.04458]
     },
     "properties": {
-      "name": "Zinzendorfstraße"
+      "name": "Zinzendorfstraße",
+      "address": "Zinzendorfstraße",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -331,7 +403,9 @@
       "coordinates": [13.74688, 51.05357]
     },
     "properties": {
-      "name": "Terrassenufer"
+      "name": "Terrassenufer",
+      "address": "Terrassenufer",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -340,7 +414,9 @@
       "coordinates": [13.74746, 51.04641]
     },
     "properties": {
-      "name": "Pirnaische Straße"
+      "name": "Pirnaische Straße",
+      "address": "Pirnaische Straße",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -349,7 +425,9 @@
       "coordinates": [13.74859, 51.04413]
     },
     "properties": {
-      "name": "Blüherstraße"
+      "name": "Blüherstraße",
+      "address": "Blüherstraße",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -358,7 +436,9 @@
       "coordinates": [13.73151, 51.03855]
     },
     "properties": {
-      "name": "City Center"
+      "name": "City Center",
+      "address": "Friedrich-List-Platz 2",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -367,7 +447,9 @@
       "coordinates": [13.74339, 51.05706]
     },
     "properties": {
-      "name": "Wiesentorstraße"
+      "name": "Wiesentorstraße",
+      "address": "Wiesentorstraße",
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -376,7 +458,9 @@
       "coordinates": [13.72215, 51.04952]
     },
     "properties": {
-      "name": "World Trade Center"
+      "name": "World Trade Center",
+      "address": "Ammonstraße 70",
+      "type": "Tiefgarage"
     }
   }, {
     "type": "Feature",
@@ -385,7 +469,9 @@
       "coordinates": [13.627012, 51.040645]
     },
     "properties":{
-      "name": "Gompitz"
+      "name": "Gompitz",
+      "type": "Parkplatz",
+      "address": "Gompitzer Höhe"
     }
   }, {
     "type": "Feature",
@@ -394,7 +480,9 @@
       "coordinates": [13.789429, 51.115716]
     },
     "properties":{
-      "name": "Klotzsche"
+      "name": "Klotzsche",
+      "type": "Parkplatz",
+      "address": "Zur Neuen Brücke"
     }
   }, {
     "type": "Feature",
@@ -403,7 +491,9 @@
       "coordinates": [13.790230, 51.020982]
     },
     "properties":{
-      "name": "Reick"
+      "name": "Reick",
+      "type": "Parkplatz",
+      "address": "Lohrmannstraße"
     }
   }]
 }

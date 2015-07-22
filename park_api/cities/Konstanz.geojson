@@ -4,7 +4,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Marktstätte"
+        "name": "Marktstätte",
+        "total": 268
       },
       "geometry": {
         "type": "Point",
@@ -17,7 +18,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Altstadt"
+        "name": "Altstadt",
+        "total": 359
       },
       "geometry": {
         "type": "Point",
@@ -30,7 +32,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lago"
+        "name": "Lago",
+        "total": 930
       },
       "geometry": {
         "type": "Point",
@@ -43,7 +46,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Augustiner / Karstadt"
+        "name": "Augustiner / Karstadt",
+        "total": 284
       },
       "geometry": {
         "type": "Point",
@@ -56,7 +60,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Fischmarkt"
+        "name": "Fischmarkt",
+        "total": 158
       },
       "geometry": {
         "type": "Point",
@@ -69,7 +74,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Döbele"
+        "name": "Döbele",
+        "total": 335
       },
       "geometry": {
         "type": "Point",
@@ -82,7 +88,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Am Seerhein"
+        "name": "Am Seerhein",
+        "total": 500
       },
       "geometry": {
         "type": "Point",
@@ -95,7 +102,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Byk Gulden Str."
+        "name": "Byk Gulden Str.",
+        "total": 100
       },
       "geometry": {
         "type": "Point",
@@ -108,7 +116,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Benediktiner"
+        "name": "Benediktiner",
+        "total": 118
       },
       "geometry": {
         "type": "Point",
@@ -121,7 +130,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Seerheincenter"
+        "name": "Seerheincenter",
+        "total": 280
       },
       "geometry": {
         "type": "Point",
