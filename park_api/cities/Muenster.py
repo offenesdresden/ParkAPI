@@ -18,9 +18,10 @@ def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
 
     lot_table_trs = soup.select("div#parkingList table")[0].find_all("tr")
+    date_field = soup.find(id="lastRefresh").text.strip()
 
     data = {
-        "last_updated": convert_date(lot_table_trs[-1].text.strip(), "%d.%m.%Y %H:%M Uhr"),
+        "last_updated": convert_date(date_field, "%d.%m.%Y %H:%M Uhr"),
         "data_source": data_source,
         "lots": []
     }
