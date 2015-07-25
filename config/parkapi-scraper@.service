@@ -1,0 +1,8 @@
+[Service]
+User=%i
+WorkingDirectory=/home/%i/ParkAPI/current
+Environment=VIRTUAL_ENV="/home/%i/ParkAPI/current/venv"
+Environment=PATH="/home/%i/ParkAPI/current/venv/bin:$PATH"
+Environment=env=%i
+ExecStart=/usr/bin/env venv/bin/python bin/parkapi-server
+Restart=Always

@@ -1,4 +1,5 @@
 include README.rst
+include Capfile
 include tests/*.py
 include log/.gitkeep
 include tests/fixtures/*.html

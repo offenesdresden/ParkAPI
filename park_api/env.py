@@ -41,6 +41,10 @@ def is_testing():
     return ENV == "testing"
 
 
+def is_staging():
+    return ENV == "staging"
+
+
 def getuser():
     for name in ('LOGNAME', 'USER', 'LNAME', 'USERNAME'):
         user = os.environ.get(name)
