@@ -5,5 +5,5 @@ config.ini
 __pycache__
 cache
 *.pyc
-*.log
+log/*.log
 ParkAPI.egg-info
