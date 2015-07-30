@@ -12,7 +12,7 @@ def main():
 
     app.logger.addHandler(logging.StreamHandler())
 
-    if env.is_production():
+    if not env.is_development():
         app.logger.setLevel(logging.INFO)
         log_handler.setLevel(logging.INFO)
 
