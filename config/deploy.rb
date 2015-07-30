@@ -14,54 +14,24 @@ set :linked_dirs, %w{log}
 set :shared_venv, Proc.new { shared_path.join("venv") }
 set :requirements, Proc.new { release_path.join("requirements.txt") }
 
-# see config/*.service
-
-# add to /etc/sudoers
-#  production ALL=(ALL) NOPASSWD: /usr/bin/systemctl start parkapi-server@production
-#  production ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop parkapi-server@production
-#  production ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart parkapi-server@production
-#  production ALL=(ALL) NOPASSWD: /usr/bin/systemctl status parkapi-server@production
-#
-#  production ALL=(ALL) NOPASSWD: /usr/bin/systemctl start parkapi-scraper@production
-#  production ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop parkapi-scraper@production
-#  production ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart parkapi-scraper@production
-#  production ALL=(ALL) NOPASSWD: /usr/bin/systemctl status parkapi-scraper@production
-#
-#  staging ALL=(ALL) NOPASSWD: /usr/bin/systemctl start parkapi-server@staging
-#  staging ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop parkapi-server@staging
-#  staging ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart parkapi-server@staging
-#  staging ALL=(ALL) NOPASSWD: /usr/bin/systemctl status parkapi-server@staging
-#
-#  staging ALL=(ALL) NOPASSWD: /usr/bin/systemctl start parkapi-scraper@staging
-#  staging ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop parkapi-scraper@staging
-#  staging ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart parkapi-scraper@staging
-#  staging ALL=(ALL) NOPASSWD: /usr/bin/systemctl status parkapi-scraper@staging
-#
-
-[:server, :scraper].each do |service|
-  namespace service do
-    [:start, :stop, :status, :restart].each do |action|
-      desc "#{action} #{service}"
-      task action do
-        on roles(:app), in: :sequence do
-          execute :sudo, "/usr/bin/systemctl", action, "parkapi-#{service}@#{fetch(:stage)}"
-          if action != :status
-            execute :sudo, "/usr/bin/systemctl", "status", "parkapi-#{service}@#{fetch(:stage)}"
-          end
-        end
-      end
-    end
-  end
-end
-
-namespace :scraper do
-  desc "show next scraper schedule"
-  task :timer do
-    on roles(:app) do
-      execute "/usr/bin/systemctl", "list-timers"
-    end
-  end
-end
+set :slack_team, "openknowledgegermany"
+set :slack_token, "xxxxxxxxxxxxxxxxxxxxxxxx"
+set :slack_icon_url,         -> { "http://gravatar.com/avatar/885e1c523b7975c4003de162d8ee8fee?r=g&s=40" }
+set :slack_icon_emoji,       -> { ":shipit:" }
+set :slack_channel,          -> { "dresden-parkendd" }
+set :slack_channel_starting, -> { nil }
+set :slack_channel_finished, -> { nil }
+set :slack_channel_failed,   -> { nil }
+set :slack_username,         -> { "Deploybot" }
+set :slack_run_starting,     -> { true }
+set :slack_run_finished,     -> { true }
+set :slack_run_failed,       -> { true }
+set :slack_msg_starting,     -> { "#{ENV['USER'] || ENV['USERNAME']} has started deploying branch #{fetch :branch} of #{fetch :application} to #{fetch :stage}" }
+set :slack_msg_finished,     -> { "#{ENV['USER'] || ENV['USERNAME']} has finished deploying branch #{fetch :branch} of #{fetch :application} to #{fetch :stage}" }
+set :slack_msg_failed,       -> { "#{ENV['USER'] || ENV['USERNAME']} failed to deploy branch #{fetch :branch} of #{fetch :application} to #{fetch :stage}" }
+set :slack_title_starting,   -> { nil }
+set :slack_title_finished,   -> { nil }
+set :slack_title_failed,     -> { nil }
 
 namespace :deploy do
   after :finishing, "deploy:cleanup"
