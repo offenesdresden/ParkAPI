@@ -38,14 +38,27 @@ set :requirements, Proc.new { release_path.join("requirements.txt") }
 #  staging ALL=(ALL) NOPASSWD: /usr/bin/systemctl status parkapi-scraper@staging
 #
 
-namespace :server do
-  desc "Restart parkendd application"
-  [:start, :stop, :status, :restart].each do |action|
-    desc "#{action} server"
-    task action do
-      on roles(:app), in: :sequence do
-        execute :sudo, "/usr/bin/systemctl", action, "parkapi-server@#{fetch(:stage)}"
+[:server, :scraper].each do |service|
+  namespace service do
+    [:start, :stop, :status, :restart].each do |action|
+      desc "#{action} #{service}"
+      task action do
+        on roles(:app), in: :sequence do
+          execute :sudo, "/usr/bin/systemctl", action, "parkapi-#{service}@#{fetch(:stage)}"
+          if action != :status
+            execute :sudo, "/usr/bin/systemctl", "status", "parkapi-#{service}@#{fetch(:stage)}"
+          end
+        end
       end
+    end
+  end
+end
+
+namespace :scraper do
+  desc "show next scraper schedule"
+  task :timer do
+    on roles(:app) do
+      execute "/usr/bin/systemctl", "list-timers"
     end
   end
 end
