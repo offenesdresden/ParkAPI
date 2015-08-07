@@ -5,6 +5,8 @@ import psycopg2
 
 from park_api import env
 
+LOT_COUNTS_PER_CITY = {}
+
 def get_most_lots_from_known_data(city, lot_name):
     """
     Get the total value from the highest known value in the last saved JSON.
@@ -18,19 +20,24 @@ def get_most_lots_from_known_data(city, lot_name):
     :param lot_name:
     :return:
     """
-    with psycopg2.connect(**env.DATABASE) as conn:
-        cursor = conn.cursor()
-        cursor.execute("SELECT data FROM parkapi WHERE city=%s LIMIT 600;", (city,))
-        all_data = cursor.fetchall()
-
-        most_lots = 0
-        for json_data in all_data:
-            lots = json_data[0]["lots"]
-            for lot in lots:
-                if lot["name"] == lot_name:
-                    if int(lot["free"]) > most_lots:
-                        most_lots = int(lot["free"])
-        return most_lots
+    global LOT_COUNTS_PER_CITY
+    # FIXME ugly work around, this should be really fixed in a different way
+    lot_counts = LOT_COUNTS_PER_CITY.get(city, {})
+    if lot_counts == {}:
+        with psycopg2.connect(**env.DATABASE) as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT data FROM parkapi WHERE city=%s LIMIT 600;", (city,))
+            all_data = cursor.fetchall()
+            most_lots = 0
+            for json_data in all_data:
+                lots = json_data[0]["lots"]
+                for lot in lots:
+                    highest_count = lot_counts.get(lot_name, 0)
+                    count = int(lot["free"])
+                    if count > highest_count:
+                        lot_counts[lot_name] = count
+        LOT_COUNTS_PER_CITY[city] = lot_counts
+    return lot_counts.get(lot_name, 0)
 
 
 def utc_now():
