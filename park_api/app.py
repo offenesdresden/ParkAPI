@@ -55,7 +55,7 @@ def get_lots(city):
     try:
         with psycopg2.connect(**env.DATABASE) as conn:
             cursor = conn.cursor()
-            cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi WHERE city=%s;", (city,))
+            cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;", (city,))
             data = cursor.fetchall()[-1][2]
     except (psycopg2.OperationalError, psycopg2.ProgrammingError) as e:
         app.logger.error("Unable to connect to database: " + str(e))
