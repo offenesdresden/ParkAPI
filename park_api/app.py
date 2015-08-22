@@ -16,7 +16,9 @@ def get_meta():
 
     cities = {}
     for city_id, city in env.supported_cities().items():
-        cities[city.city_name] = city_id
+        coords = {"lat":city.lat, "lon":city.lon}
+        city_data = {"name":city.city_name, "coords":coords}
+        cities[city_id] = city_data
 
     return jsonify({
         "cities": cities,

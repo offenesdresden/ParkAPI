@@ -11,6 +11,10 @@ data_source = "http://example.com"
 # Name of the city, just in case it contains umlauts, spaces or other things which this filename shouldn't
 city_name = "Sample City"
 
+# Reference coordinates for the city
+lat = 0
+lon = 0
+
 # This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
 # No need to remove this if there's no geodata (yet), everything will still work.
 geodata = GeoData(__file__)

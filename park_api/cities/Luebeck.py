@@ -5,6 +5,8 @@ from park_api.geodata import GeoData
 data_url = "http://kwlpls.adiwidjaja.info"
 data_source = "http://www.kwl-luebeck.de/parken/aktuelle-parkplatzbelegung/"
 city_name = "Lübeck"
+lat = 53.8689300
+lon = 10.6872900
 
 process_state_map = {
     "": "open",

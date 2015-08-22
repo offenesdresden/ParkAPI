@@ -11,6 +11,9 @@ data_source = "http://www.oldenburg.de/microsites/verkehr/parken/parkplaetzepark
 # Name of the city, just in case it contains umlauts, spaces or other things which this filename shouldn't
 city_name = "Oldenburg"
 
+lat = 53.1411800
+lon = 8.2146700
+
 # This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
 # No need to remove this if there's no geodata (yet), everything will still work.
 geodata = GeoData(__file__)

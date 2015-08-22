@@ -5,6 +5,8 @@ from park_api.geodata import GeoData
 data_url = "http://www.konstanz.de/tourismus/01759/01765/"
 data_source = "http://www.konstanz.de/tourismus/01759/01765/"
 city_name = "Konstanz"
+lat = 47.6603300
+lon = 9.1758200
 
 geodata = GeoData(__file__)
 

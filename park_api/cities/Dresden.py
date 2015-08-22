@@ -6,6 +6,8 @@ from park_api.util import convert_date, get_most_lots_from_known_data
 data_url = "https://apps.dresden.de/ords/f?p=1110"
 data_source = "https://www.dresden.de/parken"
 city_name = "Dresden"
+lat = 51.0508900
+lon = 13.7383200
 
 geodata = GeoData(__file__)
 

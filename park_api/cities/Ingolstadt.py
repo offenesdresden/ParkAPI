@@ -5,6 +5,8 @@ from park_api.util import convert_date
 data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 data_source = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
 city_name = "Ingolstadt"
+lat = 48.7650800
+lon = 11.4237200
 
 # Additional information for single lots: http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/
 
