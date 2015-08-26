@@ -15,7 +15,6 @@ GEM
     colorize (0.7.7)
     ffi (1.9.10)
     i18n (0.7.0)
-    json (1.8.3)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     rake (10.4.2)
@@ -23,9 +22,6 @@ GEM
       ffi
     rbnacl-libsodium (1.0.3)
       rbnacl (~> 3.0, >= 3.0.1)
-    slackistrano (0.1.9)
-      capistrano (>= 3.0.1)
-      json
     sshkit (1.7.1)
       colorize (>= 0.7.0)
       net-scp (>= 1.1.2)
@@ -38,4 +34,3 @@ DEPENDENCIES
   capistrano
   net-ssh!
   rbnacl-libsodium
-  slackistrano

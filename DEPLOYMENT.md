@@ -31,3 +31,9 @@ $ cap production deploy
 ```
 $ cap production release:reset
 ```
+
+* Nothing works after deploy? Don't freak out use to step back
+
+```
+$ cap production deploy:rollback
+```
