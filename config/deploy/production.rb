@@ -40,6 +40,6 @@ namespace :release do
     ensure_remote
     sh "git", "checkout", "stable"
     sh "git", "push", "offenesdresden", "stable"
-    sh "git" "checkout", "master"
+    sh "git", "checkout", "master"
   end
 end
