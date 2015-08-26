@@ -11,6 +11,7 @@ namespace :release do
     sh "git", "checkout", "stable"
     sh "git", "merge", "master"
     sh "python", "-m", "unittest", "discover", "tests"
+    sh "python", "tests/validate-geojson.py", *Dir.glob("park_api/cities/*.geojson")
   end
 
   desc "Push release and switch back to master"
