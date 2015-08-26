@@ -1,7 +1,21 @@
 {
   "type": "FeatureCollection",
-  "features": [
-    {
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              11.4237200,
+              48.7650800
+          ]
+      },
+      "properties": {
+          "name": "Ingolstadt",
+          "type": "city",
+          "url": "http://www.ingolstadt.mobi/parkplatzauskunft.cfm",
+          "source": "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
+      }
+  }, {
       "type": "Feature",
       "properties": {
         "name": "Hauptbahnhof",

@@ -1,7 +1,21 @@
 {
   "type": "FeatureCollection",
-  "features": [
-    {
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+             10.6872900,
+             53.8689300
+          ]
+      },
+      "properties": {
+          "name": "Lücbeck",
+          "type": "city",
+          "url": "http://www.kwl-luebeck.de/parken/aktuelle-parkplatzbelegung/",
+          "source": "http://kwlpls.adiwidjaja.info"
+      }
+    }, {
       "type": "Feature",
       "properties": {
         "name": "Am Burgtor"

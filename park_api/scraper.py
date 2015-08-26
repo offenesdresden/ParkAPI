@@ -14,7 +14,7 @@ HEADERS = {
 
 def get_html(city):
     """Download html data for a given city"""
-    r = requests.get(city.data_url, headers=HEADERS)
+    r = requests.get(city.source, headers=HEADERS)
 
     # Requests fails to correctly check the encoding for every site,
     # we're going to have to get that manually (in some cases). This sucks.
@@ -55,12 +55,12 @@ def save_data_to_db(cursor, parking_data, city):
     print("Saved " + city + " to DB.")
 
 
-def _live(city):
+def _live(module):
     """
     Scrape data for a given city pulling all data now
     This function is only used in development mode for debugging the server without a database present.
     """
-    return add_metadata(parse_html(city, get_html(city)))
+    return add_metadata(module.parse_html(get_html(module.geodata.city)))
 
 
 def main():
@@ -69,12 +69,13 @@ def main():
     conn = psycopg2.connect(**env.DATABASE)
     cursor = conn.cursor()
 
-    for file, city in env.supported_cities().items():
+    for module in env.supported_cities().values():
+        city = module.geodata.city
         try:
-            data = add_metadata(parse_html(city, get_html(city)))
-            save_data_to_db(cursor, data, file.title())
+            data = add_metadata(module.parse_html(get_html(city)))
+            save_data_to_db(cursor, data, city.id)
         except Exception as e:
-            print("Failed to scrape '%s': %s" %(city, e))
+            print("Failed to scrape '%s': %s" %(city.name, e))
             print(traceback.format_exc())
 
     conn.commit()

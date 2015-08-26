@@ -1,21 +1,21 @@
 {
   "type": "FeatureCollection",
-  "features": [
-    {
+  "features": [{
       "type": "Feature",
-      "properties": {
-        "name": "Marktstätte",
-        "total": 268
-      },
       "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.176427125930786,
-          47.659538040284566
-        ]
+          "type": "Point",
+          "coordinates": [
+              9.1758200,
+              47.6603300
+          ]
+      },
+      "properties": {
+          "name": "Konstanz",
+          "type": "city",
+          "url": "http://www.konstanz.de/tourismus/01759/01765/",
+          "source": "http://www.konstanz.de/tourismus/01759/01765/"
       }
-    },
-    {
+  }, {
       "type": "Feature",
       "properties": {
         "name": "Altstadt",

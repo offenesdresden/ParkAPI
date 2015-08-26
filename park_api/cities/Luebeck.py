@@ -2,12 +2,6 @@ from bs4 import BeautifulSoup
 from park_api.util import convert_date, get_most_lots_from_known_data
 from park_api.geodata import GeoData
 
-data_url = "http://kwlpls.adiwidjaja.info"
-data_source = "http://www.kwl-luebeck.de/parken/aktuelle-parkplatzbelegung/"
-city_name = "Lübeck"
-lat = 53.8689300
-lon = 10.6872900
-
 process_state_map = {
     "": "open",
     "Geöffnet": "open",
@@ -25,7 +19,6 @@ def parse_html(html):
     last_updated = convert_date(date_field, "Stand: %d.%m.%Y, %H:%M Uhr")
     data = {
         "last_updated": last_updated,
-        "data_source": data_source,
         "lots": []
     }
 

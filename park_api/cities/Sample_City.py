@@ -2,24 +2,11 @@ from bs4 import BeautifulSoup
 from park_api.util import convert_date
 from park_api.geodata import GeoData
 
-# URL for the page where the scraper can gather the data
-data_url = "http://example.com/parkingdata"
-
-# URL that is displayed as the source of this data, in case the above is another API endpoint or special subsite.
-data_source = "http://example.com"
-
-# Name of the city, just in case it contains umlauts, spaces or other things which this filename shouldn't
-city_name = "Sample City"
-
-# Reference coordinates for the city
-lat = 0
-lon = 0
-
 # This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
 # No need to remove this if there's no geodata (yet), everything will still work.
 geodata = GeoData(__file__)
 
-# This function is called by the scraper and given the data of the page specified as data_url above.
+# This function is called by the scraper and given the data of the page specified as source in geojson above.
 # It's supposed to return a dictionary containing everything the current spec expects. Tests will fail if it doesn't ;)
 def parse_html(html):
 
@@ -32,7 +19,7 @@ def parse_html(html):
     data = {
         # convert_date is a utility function you can use to turn this date into the correct string format
         "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M Uhr"),
-        "data_source": data_source,
+        # URL for the page where the scraper can gather the data
         "lots": []
     }
 

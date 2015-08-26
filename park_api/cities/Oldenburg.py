@@ -2,18 +2,6 @@ from bs4 import BeautifulSoup
 from park_api.util import convert_date
 from park_api.geodata import GeoData
 
-# URL for the page where the scraper can gather the data
-data_url = "http://oldenburg-service.de/pls2.php"
-
-# URL that is displayed as the source of this data, usually the base domain of the URL above
-data_source = "http://www.oldenburg.de/microsites/verkehr/parken/parkplaetzeparkleitsystem/parkplaetze.html"
-
-# Name of the city, just in case it contains umlauts, spaces or other things which this filename shouldn't
-city_name = "Oldenburg"
-
-lat = 53.1411800
-lon = 8.2146700
-
 # This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
 # No need to remove this if there's no geodata (yet), everything will still work.
 geodata = GeoData(__file__)
@@ -32,7 +20,6 @@ def parse_html(html):
     data = {
         # convert_date is a utility function you can use to turn this date into the correct string format
         "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M Uhr"),
-        "data_source": data_source,
         "lots": []
     }
 

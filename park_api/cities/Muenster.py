@@ -2,12 +2,6 @@ from bs4 import BeautifulSoup
 from park_api.util import convert_date
 from park_api.geodata import GeoData
 
-data_url = "http://www5.stadt-muenster.de/parkhaeuser/"
-data_source = "http://www5.stadt-muenster.de/parkhaeuser/"
-city_name = "Münster"
-lat = 51.9623600
-lon = 7.6257100
-
 state_map = {
     "frei": "open",
     "geschlossen": "closed",
@@ -24,7 +18,6 @@ def parse_html(html):
 
     data = {
         "last_updated": convert_date(date_field, "%d.%m.%Y %H:%M Uhr"),
-        "data_source": data_source,
         "lots": []
     }
 

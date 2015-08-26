@@ -2,12 +2,6 @@ from bs4 import BeautifulSoup
 from park_api.geodata import GeoData
 from park_api.util import convert_date
 
-data_url = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
-data_source = "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
-city_name = "Ingolstadt"
-lat = 48.7650800
-lon = 11.4237200
-
 # Additional information for single lots: http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/
 
 geodata = GeoData(__file__)
@@ -17,7 +11,6 @@ def parse_html(html):
 
     data = {
         "last_updated": convert_date(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)"),
-        "data_source": data_source,
         "lots": []
     }
 

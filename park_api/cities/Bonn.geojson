@@ -5,6 +5,21 @@
     "geometry": {
       "type": "Point",
       "coordinates": [
+          7.0954800,
+          50.7343800
+      ]
+    },
+    "properties": {
+        "name": "Bonn",
+        "type": "city",
+        "url": "http://www.bcp-bonn.de/bspspinfo1.php",
+        "source": "http://www.bcp-bonn.de/bcp/index.php?id=80"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
         7.101677,
         50.734121
       ]
