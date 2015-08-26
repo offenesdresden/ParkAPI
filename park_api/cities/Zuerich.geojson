@@ -1,6 +1,21 @@
 {
   "type": "FeatureCollection",
   "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              8.5500000,
+              47.3666700
+          ]
+      },
+      "properties": {
+          "name": "Zürich",
+          "type": "city",
+          "url": "https://www.stadt-zuerich.ch/portal/de/index/ogd/daten/parkleitsystem.html",
+          "source": "http://www.pls-zh.ch/plsFeed/rss"
+      }
+  }, {
     "type": "Feature",
     "geometry": {
       "type": "Point",

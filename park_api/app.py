@@ -15,10 +15,14 @@ def get_meta():
     app.logger.info("GET / - " + user_agent)
 
     cities = {}
-    for city_id, city in env.supported_cities().items():
-        coords = {"lat":city.lat, "lon":city.lon}
-        city_data = {"name":city.city_name, "coords":coords}
-        cities[city_id] = city_data
+    for module in env.supported_cities().values():
+        city = module.geodata.city
+        cities[city.id] = {
+                "name": city.name,
+                "coords": city.coords,
+                "source": city.source,
+                "url": city.url
+                }
 
     return jsonify({
         "cities": cities,

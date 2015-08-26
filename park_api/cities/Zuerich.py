@@ -2,15 +2,8 @@ import feedparser
 from park_api.util import convert_date
 from park_api.geodata import GeoData
 
-data_url = "http://www.pls-zh.ch/plsFeed/rss"
-data_source = "https://www.stadt-zuerich.ch/portal/de/index/ogd/daten/parkleitsystem.html"
-city_name = "Zürich"
-lat = 47.3666700
-lon = 8.5500000
-
-geodata = GeoData(__file__)
-
 # Falls das hier jemals einer von den Menschen hinter OpenDataZürich lesen sollte: Ihr seid so toll <3
+geodata = GeoData(__file__)
 
 def parse_html(xml_data):
     feed = feedparser.parse(xml_data)
@@ -19,8 +12,7 @@ def parse_html(xml_data):
     data = {
         "lots": [],
         # remove trailing timezone for consensistency
-        "last_updated": last_updated.replace("Z", ""),
-        "data_source": data_source
+        "last_updated": last_updated.replace("Z", "")
     }
 
     for entry in feed["entries"]:

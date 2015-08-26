@@ -1,7 +1,21 @@
 {
   "type": "FeatureCollection",
-  "features": [
-    {
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              7.6257100,
+              51.9623600
+          ]
+      },
+      "properties": {
+          "name": "Münster",
+          "type": "city",
+          "url": "http://www5.stadt-muenster.de/parkhaeuser/",
+          "source": "http://www5.stadt-muenster.de/parkhaeuser/"
+      }
+  }, {
       "type": "Feature",
       "properties": {
         "name": "PH Theater",
@@ -128,6 +142,6 @@
         "total": 372
       },
       "geometry": null
-    },
+    }
   ]
 }

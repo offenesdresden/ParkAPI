@@ -1,6 +1,21 @@
 {
   "type": "FeatureCollection",
   "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              13.7383200,
+              51.0508900
+          ]
+      },
+      "properties": {
+          "name": "Dresden",
+          "type": "city",
+          "url": "https://www.dresden.de/parken",
+          "source": "https://apps.dresden.de/ords/f?p=1110"
+      }
+  }, {
     "type": "Feature",
     "geometry": {
       "type": "Point",
