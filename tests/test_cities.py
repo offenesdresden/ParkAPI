@@ -16,7 +16,6 @@ class CityTestCase(unittest.TestCase):
     def sanity_check(self, city_name, city):
         self.assertIn("lots", city)
         self.assertIn("last_updated", city)
-        self.assertIn("data_source", city)
         last_updated = datetime.datetime.strptime(city["last_updated"], "%Y-%m-%dT%H:%M:%S")
         self.assertIsInstance(last_updated, datetime.datetime)
 

@@ -3,10 +3,6 @@ from bs4 import BeautifulSoup
 from park_api.geodata import GeoData
 from park_api.util import convert_date, get_most_lots_from_known_data
 
-data_url = "https://apps.dresden.de/ords/f?p=1110"
-data_source = "https://www.dresden.de/parken"
-city_name = "Dresden"
-
 geodata = GeoData(__file__)
 
 
@@ -16,7 +12,6 @@ def parse_html(html):
     last_updated = convert_date(date_field, "%d.%m.%Y %H:%M:%S")
     data = {
         "lots": [],
-        "data_source": data_source,
         "last_updated": last_updated
     }
 

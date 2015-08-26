@@ -2,10 +2,6 @@ from bs4 import BeautifulSoup
 from park_api.util import convert_date
 from park_api.geodata import GeoData
 
-data_url = "http://www.konstanz.de/tourismus/01759/01765/"
-data_source = "http://www.konstanz.de/tourismus/01759/01765/"
-city_name = "Konstanz"
-
 geodata = GeoData(__file__)
 
 
@@ -20,7 +16,6 @@ def parse_html(html):
 
     data = {
         "last_updated": update_time,
-        "data_source": data_source,
         "lots": []
     }
 

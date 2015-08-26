@@ -2,10 +2,6 @@ from bs4 import BeautifulSoup
 from park_api.geodata import GeoData
 from park_api.util import convert_date
 
-data_url = "http://www.bcp-bonn.de/bspspinfo1.php"
-data_source = "http://www.bcp-bonn.de/bcp/index.php?id=80"
-city_name = "Bonn"
-
 geodata = GeoData(__file__)
 
 lot_map = {
@@ -16,7 +12,6 @@ lot_map = {
         4: "Friedensplatzgarage",
         5: "Marktgarage",
         }
-
 
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
@@ -41,6 +36,5 @@ def parse_html(html):
 
     return {
         "last_updated": convert_date(time, "%d.%m.%y %H:%M:%S"),
-        "data_source": data_source,
         "lots": lots
     }

@@ -1,7 +1,21 @@
 {
   "type": "FeatureCollection",
-  "features": [
-    {
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              8.2146700,
+              53.1411800
+          ]
+      },
+      "properties": {
+          "name": "Oldenburg",
+          "type": "city",
+          "url": "http://www.oldenburg.de/microsites/verkehr/parken/parkplaetzeparkleitsystem/parkplaetze.html",
+          "source": "http://oldenburg-service.de/pls2.php"
+      }
+  }, {
       "type": "Feature",
       "properties": {
         "name": "Schlosshöfe"
