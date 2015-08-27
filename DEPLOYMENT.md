@@ -37,3 +37,10 @@ $ cap production release:reset
 ```
 $ cap production deploy:rollback
 ```
+
+* Download/upload configuration
+
+```
+$ cap production config:download
+$ cap production config:upload
+```
