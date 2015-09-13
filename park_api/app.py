@@ -3,16 +3,18 @@ from os import getloadavg
 
 from flask import Flask, jsonify, abort, request
 import psycopg2
-from park_api import scraper, util, env
+from park_api import scraper, util, env, db
 from park_api.forecast import find_forecast
 
 app = Flask(__name__)
 
+def user_agent(request):
+    ua = request.headers.get("User-Agent")
+    return "no user-agent" if ua is None else ua
 
 @app.route("/")
 def get_meta():
-    user_agent = "no user-agent" if request.headers.get("User-Agent") is None else request.headers.get("User-Agent")
-    app.logger.info("GET / - " + user_agent)
+    app.logger.info("GET / - " + user_agent(request))
 
     cities = {}
     for module in env.supported_cities().values():
@@ -46,8 +48,7 @@ def get_lots(city):
     if city == "favicon.ico" or city == "robots.txt":
         abort(404)
 
-    user_agent = "no user-agent" if request.headers.get("User-Agent") is None else request.headers.get("User-Agent")
-    app.logger.info("GET /" + city + " - " + user_agent)
+    app.logger.info("GET /" + city + " - " + user_agent(request))
 
     city_module = env.supported_cities().get(city, None)
 
@@ -59,10 +60,11 @@ def get_lots(city):
         return jsonify(scraper._live(city_module))
 
     try:
-        with psycopg2.connect(**env.DATABASE) as conn:
-            cursor = conn.cursor()
-            cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;", (city,))
-            data = cursor.fetchall()[-1][2]
+      with db.cursor() as cursor:
+          sql = "SELECT timestamp_updated, timestamp_downloaded, data" \
+                  " FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;"
+          cursor.execute(sql, (city,))
+          data = cursor.fetchall()[-1][2]
     except (psycopg2.OperationalError, psycopg2.ProgrammingError) as e:
         app.logger.error("Unable to connect to database: " + str(e))
         abort(500)
@@ -72,8 +74,7 @@ def get_lots(city):
 
 @app.route("/<city>/<lot_id>/timespan")
 def get_longtime_forecast(city, lot_id):
-    user_agent = "no user-agent" if request.headers.get("User-Agent") is None else request.headers.get("User-Agent")
-    app.logger.info("GET /" + city + "/" + lot_id + "/timespan - " + user_agent)
+    app.logger.info("GET /" + city + "/" + lot_id + "/timespan - " + user_agent(request))
 
     try:
         datetime.strptime(request.args["from"], '%Y-%m-%dT%H:%M:%S')
@@ -90,8 +91,7 @@ def get_longtime_forecast(city, lot_id):
 
 @app.route("/coffee")
 def make_coffee():
-    user_agent = "no user-agent" if request.headers.get("User-Agent") is None else request.headers.get("User-Agent")
-    app.logger.info("GET /coffee - " + user_agent)
+    app.logger.info("GET /coffee - " + user_agent(request))
 
     return "<h1>I'm a teapot</h1>" \
            "<p>This server is a teapot, not a coffee machine.</p><br>" \

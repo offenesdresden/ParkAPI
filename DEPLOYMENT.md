@@ -8,20 +8,39 @@ We use [capistrano](http://capistranorb.com/) to deploy servers.
 TODO: automatic pull from master on commit
 
 ## How to deploy a new version to production
-1. Merge master into stable, run tests
+* Merge master into stable, run tests
 
 ```
 $ cap production release:prepare
 ```
 
-2. Push release and switch back to master
+* Push release and switch back to master
 
 ```
 $ cap production release:push
 ```
 
-3. Deploy new code from stable
+* Deploy new code from stable
 
 ```
 $ cap production deploy
+```
+
+* To reset stable branch to offenesdresden/stable (abort release)
+
+```
+$ cap production release:reset
+```
+
+* Nothing works after deploy? Don't freak out use to step back
+
+```
+$ cap production deploy:rollback
+```
+
+* Download/upload configuration
+
+```
+$ cap production config:download
+$ cap production config:upload
 ```

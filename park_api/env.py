@@ -21,11 +21,7 @@ DEFAULT_CONFIGURATION = {
     "host": "::1",
     "debug": False,
     "live_scrape": True,
-    "database_host": "127.0.0.1",
-    "database_port": 5432,
-    "database_name": "park_api",
-    "database_user": None,
-    "database_password": None,
+    "database_uri": "postgres:///park_api",
 }
 
 
@@ -43,32 +39,6 @@ def is_testing():
 
 def is_staging():
     return ENV == "staging"
-
-
-def getuser():
-    for name in ('LOGNAME', 'USER', 'LNAME', 'USERNAME'):
-        user = os.environ.get(name)
-        if user:
-            return user
-
-    # If this fails, the exception will "explain" why
-    import pwd
-    return pwd.getpwuid(os.getuid())[0]
-
-
-def database_config(config):
-    conf = {
-        "host": config.get("database_host"),
-        "port": config.get("database_port"),
-        "database": config.get("database_name"),
-        "password": config.get("database_password"),
-    }
-    user = config.get("database_user")
-    if user == None or len(user) == 0:
-        conf["user"] = getuser()
-    else:
-        conf["user"] = user
-    return conf
 
 
 def load_cities():
@@ -110,12 +80,12 @@ def load_config():
         print("environment '%s' does not exists in config.ini" % ENV, file=sys.stderr)
         exit(1)
 
-    global SERVER_CONF, DATABASE, SUPPORTED_CITIES, LIVE_SCRAPE
+    global SERVER_CONF, DATABASE_URI, SUPPORTED_CITIES, LIVE_SCRAPE
     SERVER_CONF = structs.ServerConf(host=raw_config.get('host'),
                                      port=raw_config.getint("port"),
                                      debug=raw_config.getboolean("debug"))
     LIVE_SCRAPE = raw_config.getboolean("live_scrape")
-    DATABASE = database_config(raw_config)
+    DATABASE_URI = raw_config.get("database_uri")
 
 
 load_config()
