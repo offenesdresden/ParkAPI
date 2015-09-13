@@ -3,6 +3,7 @@ import unittest
 import helpers
 import importlib
 import datetime
+from park_api import db
 
 
 def scrape_city(city, extension=".html"):
@@ -13,6 +14,8 @@ def scrape_city(city, extension=".html"):
 
 
 class CityTestCase(unittest.TestCase):
+    def setUp(self):
+        db.setup()
     def sanity_check(self, city_name, city):
         self.assertIn("lots", city)
         self.assertIn("last_updated", city)
