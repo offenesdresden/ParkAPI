@@ -44,3 +44,9 @@ $ cap production deploy:rollback
 $ cap production config:download
 $ cap production config:upload
 ```
+
+* Follow server logs
+
+```
+$ cap production log:tail
+```

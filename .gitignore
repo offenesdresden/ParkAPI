@@ -7,3 +7,4 @@ cache
 *.pyc
 log/*.log
 ParkAPI.egg-info
+.tox
