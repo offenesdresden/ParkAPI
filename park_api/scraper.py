@@ -5,7 +5,7 @@ import traceback
 import requests
 from bs4 import BeautifulSoup
 import psycopg2
-from park_api import util, env
+from park_api import util, env, db
 
 HEADERS = {
     "User-Agent": "ParkAPI v{} - Info: {}".format(env.SERVER_VERSION, env.SOURCE_REPOSITORY),
@@ -43,9 +43,9 @@ def save_data_to_db(cursor, parking_data, city):
     timestamp_updated = parking_data["last_updated"]
     timestamp_downloaded = util.utc_now()
     json_data = json.dumps(parking_data)
-    sql_string = "INSERT INTO parkapi(timestamp_updated, timestamp_downloaded, city, data) " \
-                 "VALUES (%(updated)s, %(downloaded)s, %(city)s, %(data)s) RETURNING 'id';"
-    cursor.execute(sql_string, {
+    sql = "INSERT INTO parkapi(timestamp_updated, timestamp_downloaded, city, data) " \
+            "VALUES (%(updated)s, %(downloaded)s, %(city)s, %(data)s) RETURNING 'id';"
+    cursor.execute(sql, {
         "updated": timestamp_updated,
         "downloaded": timestamp_downloaded,
         "city": city,
@@ -62,21 +62,18 @@ def _live(module):
     """
     return add_metadata(module.parse_html(get_html(module.geodata.city)))
 
+def scrape_city(module):
+   city = module.geodata.city
+   data = add_metadata(module.parse_html(get_html(city)))
+   with db.cursor(commit=True) as cursor:
+       save_data_to_db(cursor, data, city.id)
 
 def main():
     """Iterate over all cities in ./cities, scrape and save their data to the database"""
-
-    conn = psycopg2.connect(**env.DATABASE)
-    cursor = conn.cursor()
-
+    # the catch-all enterprise loop
     for module in env.supported_cities().values():
-        city = module.geodata.city
         try:
-            data = add_metadata(module.parse_html(get_html(city)))
-            save_data_to_db(cursor, data, city.id)
+            scrape_city(module)
         except Exception as e:
             print("Failed to scrape '%s': %s" %(city.name, e))
             print(traceback.format_exc())
-
-    conn.commit()
-    conn.close()

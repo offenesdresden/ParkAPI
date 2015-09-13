@@ -4,3 +4,5 @@ requests
 feedparser
 pytz
 psycopg2
+yoyo-migrations
+requests-mock
