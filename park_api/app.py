@@ -3,7 +3,7 @@ from os import getloadavg
 
 from flask import Flask, jsonify, abort, request
 import psycopg2
-from park_api import scraper, util, env
+from park_api import scraper, util, env, db
 from park_api.forecast import find_forecast
 
 app = Flask(__name__)
@@ -60,10 +60,11 @@ def get_lots(city):
         return jsonify(scraper._live(city_module))
 
     try:
-        with psycopg2.connect(**env.DATABASE) as conn:
-            cursor = conn.cursor()
-            cursor.execute("SELECT timestamp_updated, timestamp_downloaded, data FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;", (city,))
-            data = cursor.fetchall()[-1][2]
+      with db.cursor() as cursor:
+          sql = "SELECT timestamp_updated, timestamp_downloaded, data" \
+                  " FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;"
+          cursor.execute(sql, (city,))
+          data = cursor.fetchall()[-1][2]
     except (psycopg2.OperationalError, psycopg2.ProgrammingError) as e:
         app.logger.error("Unable to connect to database: " + str(e))
         abort(500)

@@ -3,7 +3,7 @@ from datetime import datetime
 from os import path
 import psycopg2
 
-from park_api import env
+from park_api import env, db
 
 LOT_COUNTS_PER_CITY = {}
 
@@ -24,8 +24,7 @@ def get_most_lots_from_known_data(city, lot_name):
     # FIXME ugly work around, this should be really fixed in a different way
     lot_counts = LOT_COUNTS_PER_CITY.get(city, {})
     if lot_counts == {}:
-        with psycopg2.connect(**env.DATABASE) as conn:
-            cursor = conn.cursor()
+        with db.cursor() as cursor:
             cursor.execute("SELECT data FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 600;", (city,))
             all_data = cursor.fetchall()
             most_lots = 0
