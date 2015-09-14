@@ -76,5 +76,5 @@ def main():
         try:
             scrape_city(module)
         except Exception as e:
-            print("Failed to scrape '%s': %s" %(city.name, e))
+            print("Failed to scrape '%s': %s" %(module.geodata.city.name, e))
             print(traceback.format_exc())
