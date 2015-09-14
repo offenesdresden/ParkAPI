@@ -71,6 +71,7 @@ def scrape_city(module):
 def main():
     """Iterate over all cities in ./cities, scrape and save their data to the database"""
     # the catch-all enterprise loop
+    db.setup()
     for module in env.supported_cities().values():
         try:
             scrape_city(module)
