@@ -510,5 +510,16 @@
       "type": "Parkplatz",
       "address": "Lohrmannstraße"
     }
+  }, {
+    "type": "Feature",
+    "geometry":{
+      "type":"Point",
+      "coordinates": [13.732423, 51.041808]
+    },
+    "properties":{
+      "name": "Wiener Platz / Hauptbahnhof",
+      "type": "Tiefgarage",
+      "address": "Wiener Platz"
+    }
   }]
 }
