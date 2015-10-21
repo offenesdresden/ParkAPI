@@ -13,7 +13,8 @@
           "name": "Ingolstadt",
           "type": "city",
           "url": "http://www.ingolstadt.mobi/parkplatzauskunft.cfm",
-          "source": "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
+          "source": "http://www.ingolstadt.mobi/parkplatzauskunft.cfm",
+	  "active_support": true
       }
   }, {
       "type": "Feature",

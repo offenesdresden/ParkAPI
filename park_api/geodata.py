@@ -14,7 +14,7 @@ class Lot(namedtuple('Lot', ['name', 'id', 'type', 'lng', 'lat', 'address', 'tot
         return None
 
 
-class City(namedtuple('City', ['name', 'id', 'lng', 'lat', 'url', 'source'])):
+class City(namedtuple('City', ['name', 'id', 'lng', 'lat', 'url', 'source', 'active_support'])):
     @property
     def coords(self):
         if self.lng != None and self.lat != None:
@@ -58,7 +58,8 @@ class GeoData:
     def _city_from_props(self, name, lng, lat, props):
         url = props.get("url", None)
         source = props.get("source", None)
-        return City(name, self.city_name, lng, lat, url, source)
+        active_support = props.get("active_support", None)
+        return City(name, self.city_name, lng, lat, url, source, active_support)
 
     def _lot_from_props(self, name, lng, lat, props):
         address = props.get("address", None)

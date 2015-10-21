@@ -13,7 +13,8 @@
           "name": "Sample City",
           "type": "city",
           "url": "http://example.com",
-          "source": "http://example.com/parkingdata"
+          "source": "http://example.com/parkingdata",
+	  "active_support":false
       }
   }, {
       "type": "Feature",

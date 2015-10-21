@@ -13,7 +13,8 @@
           "name": "Münster",
           "type": "city",
           "url": "http://www5.stadt-muenster.de/parkhaeuser/",
-          "source": "http://www5.stadt-muenster.de/parkhaeuser/"
+          "source": "http://www5.stadt-muenster.de/parkhaeuser/",
+	  "active_support": false
       }
   }, {
       "type": "Feature",

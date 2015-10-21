@@ -13,7 +13,8 @@
           "name": "Dresden",
           "type": "city",
           "url": "https://www.dresden.de/parken",
-          "source": "https://apps.dresden.de/ords/f?p=1110"
+          "source": "https://apps.dresden.de/ords/f?p=1110",
+	  "active_support": true
       }
   }, {
     "type": "Feature",

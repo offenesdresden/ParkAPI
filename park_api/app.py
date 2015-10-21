@@ -23,7 +23,8 @@ def get_meta():
                 "name": city.name,
                 "coords": city.coords,
                 "source": city.source,
-                "url": city.url
+                "url": city.url,
+		"active_support": city.active_support
                 }
 
     return jsonify({
