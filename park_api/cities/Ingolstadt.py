@@ -27,7 +27,7 @@ def parse_html(html):
             "name": lot.name,
             "free": int(elements[1].text),
             "total": lot.total,
-            "type": lot.type,
+            "lot_type": lot.type,
             "address": lot.address,
             "coords": lot.coords,
             "state": "nodata",
