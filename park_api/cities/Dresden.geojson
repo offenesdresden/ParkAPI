@@ -13,7 +13,8 @@
           "name": "Dresden",
           "type": "city",
           "url": "https://www.dresden.de/parken",
-          "source": "https://apps.dresden.de/ords/f?p=1110"
+          "source": "https://apps.dresden.de/ords/f?p=1110",
+	  "active_support": true
       }
   }, {
     "type": "Feature",
@@ -509,6 +510,17 @@
       "name": "Reick",
       "type": "Parkplatz",
       "address": "Lohrmannstraße"
+    }
+  }, {
+    "type": "Feature",
+    "geometry":{
+      "type":"Point",
+      "coordinates": [13.732423, 51.041808]
+    },
+    "properties":{
+      "name": "Wiener Platz / Hauptbahnhof",
+      "type": "Tiefgarage",
+      "address": "Wiener Platz"
     }
   }]
 }

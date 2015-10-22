@@ -27,7 +27,7 @@ def parse_html(html):
         lot = geodata.lot(type_and_name[1])
         data["lots"].append({
             "name": lot.name,
-            "type": type_and_name[0],
+            "lot_type": type_and_name[0],
             "free": int(tds[1].text),
             "total": lot.total,
             "state": state_map.get(tds[2].text, ""),

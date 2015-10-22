@@ -13,7 +13,8 @@
           "name": "Ingolstadt",
           "type": "city",
           "url": "http://www.ingolstadt.mobi/parkplatzauskunft.cfm",
-          "source": "http://www.ingolstadt.mobi/parkplatzauskunft.cfm"
+          "source": "http://www.ingolstadt.mobi/parkplatzauskunft.cfm",
+	  "active_support": true
       }
   }, {
       "type": "Feature",
@@ -35,7 +36,7 @@
       "type": "Feature",
       "properties": {
         "name": "Hauptbahnhof Ost",
-        "Hauptbahnhof Ost": 240,
+        "total": 240,
         "address": "Martin-Hemm-Straße 8",
         "type": "Parkhaus"
       },

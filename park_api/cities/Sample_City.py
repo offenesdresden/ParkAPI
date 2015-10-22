@@ -40,7 +40,7 @@ def parse_html(html):
             "address": lot.address,
             "coords": lot.coords,
             "state": state,
-            "type": lot.type,
+            "lot_type": lot.type,
             "id": lot.id,
             "forecast": False,
         })

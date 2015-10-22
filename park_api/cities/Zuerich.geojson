@@ -13,7 +13,8 @@
           "name": "Zürich",
           "type": "city",
           "url": "https://www.stadt-zuerich.ch/portal/de/index/ogd/daten/parkleitsystem.html",
-          "source": "http://www.pls-zh.ch/plsFeed/rss"
+          "source": "http://www.pls-zh.ch/plsFeed/rss",
+	  "active_support": true
       }
   }, {
     "type": "Feature",

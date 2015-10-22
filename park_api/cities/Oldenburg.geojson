@@ -13,7 +13,8 @@
           "name": "Oldenburg",
           "type": "city",
           "url": "http://www.oldenburg.de/microsites/verkehr/parken/parkplaetzeparkleitsystem/parkplaetze.html",
-          "source": "http://oldenburg-service.de/pls2.php"
+          "source": "http://oldenburg-service.de/pls2.php",
+	  "active_support": false
       }
   }, {
       "type": "Feature",
