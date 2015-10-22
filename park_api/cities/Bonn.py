@@ -13,11 +13,13 @@ lot_map = {
         5: "Marktgarage",
         }
 
+
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
 
-    free_lots = soup.find_all("td", {"class": "stell"})
-    assert len(free_lots) == 6, "Expect to find 6 lots in Bonn, got: %d" % len(free_lots)
+    free_lots = soup.find_all("td", class_="stell")
+    assert len(free_lots) == 6, \
+        "Expect to find 6 lots in Bonn, got: %d" % len(free_lots)
     time = soup.find("td", {"class": "stand"}).text.strip()
 
     lots = []
