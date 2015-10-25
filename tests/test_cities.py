@@ -30,7 +30,7 @@ class CityTestCase(unittest.TestCase):
             self.assertIn("coords", lot)
 
             self.assertIn("state", lot)
-            self.assertRegex(lot["state"], "(open|closed|nodata)")
+            self.assertIn(lot["state"], ["open", "closed", "nodata"])
 
             self.assertIn("id", lot)
 

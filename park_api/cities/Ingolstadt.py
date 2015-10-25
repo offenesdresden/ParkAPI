@@ -30,7 +30,7 @@ def parse_html(html):
             "lot_type": lot.type,
             "address": lot.address,
             "coords": lot.coords,
-            "state": "unknown",
+            "state": "nodata",
             "id": lot.id,
             "forecast": False
         })
