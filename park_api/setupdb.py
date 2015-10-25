@@ -4,6 +4,7 @@ from yoyo.connections import connect
 
 from park_api import env
 
+
 def main():
     conn, paramstyle = connect(env.DATABASE_URI)
     schema_path = os.path.join(env.APP_ROOT, "schema/db")

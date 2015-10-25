@@ -10,6 +10,7 @@ state_map = {
 
 geodata = GeoData(__file__)
 
+
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
 

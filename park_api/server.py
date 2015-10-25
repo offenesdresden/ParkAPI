@@ -4,9 +4,12 @@ import os
 from park_api import env, db
 from park_api.app import app
 
+
 def main():
     log_path = os.path.join(env.APP_ROOT, "log", env.ENV + ".log")
-    log_handler = RotatingFileHandler(log_path, maxBytes=1000000, backupCount=1)
+    log_handler = RotatingFileHandler(log_path,
+                                      maxBytes=1000000,
+                                      backupCount=1)
     formatter = logging.Formatter("%(asctime)s %(levelname)s: %(message)s ")
     log_handler.setFormatter(formatter)
 

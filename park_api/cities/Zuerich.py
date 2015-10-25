@@ -1,9 +1,11 @@
 import feedparser
-from park_api.util import convert_date
 from park_api.geodata import GeoData
 
-# Falls das hier jemals einer von den Menschen hinter OpenDataZürich lesen sollte: Ihr seid so toll <3
+
+# Falls das hier jemals einer von den Menschen
+# hinter OpenDataZürich lesen sollte: Ihr seid so toll <3
 geodata = GeoData(__file__)
+
 
 def parse_html(xml_data):
     feed = feedparser.parse(xml_data)
@@ -18,8 +20,6 @@ def parse_html(xml_data):
     for entry in feed["entries"]:
         summary = parse_summary(entry["summary"])
         title = parse_title(entry["title"])
-
-        old_id = entry["id"].split("=")[1]
 
         lot = geodata.lot(title[0])
         data["lots"].append({
@@ -52,6 +52,9 @@ def parse_summary(summary):
 
 
 def parse_title(title):
-    """Parse a string from the format 'Parkgarage am Central / Seilergraben' into both its params"""
+    """
+    Parse a string from the format 'Parkgarage am Central / Seilergraben'
+    into both its params
+    """
     title = title.split(" / ")
     return title

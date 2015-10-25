@@ -77,7 +77,8 @@ def load_config():
     try:
         raw_config = config[ENV]
     except KeyError:
-        print("environment '%s' does not exists in config.ini" % ENV, file=sys.stderr)
+        print("environment '%s' does not exists in config.ini" % ENV,
+              file=sys.stderr)
         exit(1)
 
     global SERVER_CONF, DATABASE_URI, SUPPORTED_CITIES, LIVE_SCRAPE

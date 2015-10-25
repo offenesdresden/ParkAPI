@@ -8,9 +8,11 @@ from park_api.forecast import find_forecast
 
 app = Flask(__name__)
 
+
 def user_agent(request):
     ua = request.headers.get("User-Agent")
     return "no user-agent" if ua is None else ua
+
 
 @app.route("/")
 def get_meta():
@@ -24,8 +26,8 @@ def get_meta():
                 "coords": city.coords,
                 "source": city.source,
                 "url": city.url,
-		"active_support": city.active_support
-                }
+                "active_support": city.active_support
+        }
 
     return jsonify({
         "cities": cities,
@@ -55,7 +57,9 @@ def get_lots(city):
 
     if city_module is None:
         app.logger.info("Unsupported city: " + city)
-        return "Error 404: Sorry, '" + city + "' isn't supported at the current time.", 404
+        return ("Error 404: Sorry, '" +
+                city +
+                "' isn't supported at the current time.", 404)
 
     if env.LIVE_SCRAPE:
         return jsonify(scraper._live(city_module))
@@ -75,13 +79,15 @@ def get_lots(city):
 
 @app.route("/<city>/<lot_id>/timespan")
 def get_longtime_forecast(city, lot_id):
-    app.logger.info("GET /" + city + "/" + lot_id + "/timespan - " + user_agent(request))
+    app.logger.info("GET /%s/%s/timespan %s" %
+                    (city, lot_id, user_agent(request)))
 
     try:
         datetime.strptime(request.args["from"], '%Y-%m-%dT%H:%M:%S')
         datetime.strptime(request.args["to"], '%Y-%m-%dT%H:%M:%S')
     except ValueError:
-        return "Error 400: from and/or to URL params are not in ISO format, e.g. 2015-06-26T18:00:00", 400
+        return ("Error 400: from and/or to URL params "
+                "are not in ISO format, e.g. 2015-06-26T18:00:00", 400)
 
     data = find_forecast(lot_id, request.args["from"], request.args["to"])
     if data is not None:
@@ -94,6 +100,10 @@ def get_longtime_forecast(city, lot_id):
 def make_coffee():
     app.logger.info("GET /coffee - " + user_agent(request))
 
-    return "<h1>I'm a teapot</h1>" \
-           "<p>This server is a teapot, not a coffee machine.</p><br>" \
-           "<img src=\"http://i.imgur.com/xVpIC9N.gif\" alt=\"British porn\" title=\"British porn\">", 418
+    return """
+    <h1>I'm a teapot</h1>
+    <p>This server is a teapot, not a coffee machine.</p><br>
+    <img src="http://i.imgur.com/xVpIC9N.gif"
+         alt="British porn"
+         title="British porn"/>
+    """, 418

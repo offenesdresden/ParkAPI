@@ -10,9 +10,11 @@ def parse_html(html):
 
     # last update time (UTC)
     try:
-        update_time = convert_date(soup.select('p > strong')[-1].text, "Stand: %d.%m.%Y - %H:%M:%S")
+        date_col = soup.select('p > strong')[-1].text
+        update_time = convert_date(date_col, "Stand: %d.%m.%Y - %H:%M:%S")
     except ValueError:
-        update_time = convert_date(soup.select('p > strong')[-2].text, "Stand: %d.%m.%Y - %H:%M:%S")
+        date_col = soup.select('p > strong')[-2].text
+        update_time = convert_date(date_col, "Stand: %d.%m.%Y - %H:%M:%S")
 
     data = {
         "last_updated": update_time,
@@ -38,7 +40,7 @@ def parse_html(html):
                 if "green" in str(lot.select("td + td")[0]):
                     lot_state = "open"
                 else:
-                    lot_state ="closed"
+                    lot_state = "closed"
             except ValueError:
                 lot_state = "nodata"
 

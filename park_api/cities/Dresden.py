@@ -32,14 +32,15 @@ def parse_html(html):
 
                 lot_name = lot_row.find("td", {"headers": "BEZEICHNUNG"}).text
 
-
                 try:
-                    free = int(lot_row.find("td", {"headers": "FREI"}).text)
+                    col = lot_row.find("td", {"headers": "FREI"})
+                    free = int(col.text)
                 except ValueError:
                     free = 0
 
                 try:
-                    total = int(lot_row.find("td", {"headers": "KAPAZITAET"}).text)
+                    col = lot_row.find("td", {"headers": "KAPAZITAET"})
+                    total = int(col.text)
                 except ValueError:
                     total = get_most_lots_from_known_data("Dresden", lot_name)
 
