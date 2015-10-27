@@ -1,0 +1,150 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.029166666667,
+                    50.978055555556
+                ]
+            },
+            "properties": {
+                "name": "Erfurt",
+                "type": "city",
+                "url": "http://www.erfurt.de/",
+                "source": "http://stadtplan.erfurt.de/cgi-bin/grafik.plx?L=de&PS=24&T=600&MAP=aspf&Mode=0&ME=3&X=15&Y=15&OBJ=",
+                "active_support": false
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Anger 1",
+                "total": 617,
+                "address": "Fleischgasse 2",
+                "type": "Parkhaus"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.0370504,
+                    50.9779121
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Thomaseck",
+                "total": 353,
+                "address": "Thomasstraße",
+                "type": "Parkplatz"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.0338341,
+                    50.9725714
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Forum 1",
+                "total": 284,
+                "address": "Forum 1, Lachsgasse",
+                "type": "Tiefgarage"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.0330801,
+                    50.9734289
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Forum 2+3",
+                "total": 316,
+                "address": "Hirschlachufer 7",
+                "type": "Tiefgarage"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.0330455,
+                    50.9744646
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Thüringenhaus",
+                "total": 214,
+                "address": "Wallstraße",
+                "type": "Tiefgarage"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.0311626,
+                    50.9843184
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Domplatz",
+                "total": 370,
+                "address": "Bechtheimer Straße 1",
+                "type": "Tiefgarage"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.02073,
+                    50.97828
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Hauptbahnhof",
+                "total": 384,
+                "address": "Willy-Brandt-Platz 2",
+                "type": "Tiefgarage"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.037674,
+                    50.973088
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sparkassen-Finanzzentrum",
+                "total": 0,
+                "address": "Bonifaciusstraße 15",
+                "type": "Tiefgarage"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.018662,
+                    50.970866
+                ]
+            }
+        }
+    ]
+}
