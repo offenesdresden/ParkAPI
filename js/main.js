@@ -7,7 +7,7 @@ var map = new GMaps({
   lng: 13.73754
 });
 
-var baseurl = "https:///park-api.higgsboson.tk/";
+var baseurl = "https://park-api.higgsboson.tk/";
 $.get(baseurl, function(data) {
 
   var urls = _.map(data.cities, function (value, key) {
