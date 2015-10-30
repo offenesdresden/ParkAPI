@@ -5,6 +5,7 @@ from flask import Flask, jsonify, abort, request
 import psycopg2
 from park_api import scraper, util, env, db
 from park_api.forecast import find_forecast
+from park_api.crossdomain import crossdomain
 
 app = Flask(__name__)
 
@@ -15,6 +16,7 @@ def user_agent(request):
 
 
 @app.route("/")
+@crossdomain("*")
 def get_meta():
     app.logger.info("GET / - " + user_agent(request))
 
@@ -38,6 +40,7 @@ def get_meta():
 
 
 @app.route("/status")
+@crossdomain("*")
 def get_api_status():
     return jsonify({
         "status": "online",
@@ -47,6 +50,7 @@ def get_api_status():
 
 
 @app.route("/<city>")
+@crossdomain("*")
 def get_lots(city):
     if city == "favicon.ico" or city == "robots.txt":
         abort(404)
@@ -78,6 +82,7 @@ def get_lots(city):
 
 
 @app.route("/<city>/<lot_id>/timespan")
+@crossdomain("*")
 def get_longtime_forecast(city, lot_id):
     app.logger.info("GET /%s/%s/timespan %s" %
                     (city, lot_id, user_agent(request)))
