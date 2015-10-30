@@ -2,12 +2,14 @@ import os
 import unittest
 import helpers
 import importlib
-import datetime
+from datetime import datetime
 from park_api import db
 
 
 def scrape_city(city, extension=".html"):
-    path = os.path.join(helpers.TEST_ROOT, "fixtures", city.lower() + extension)
+    path = os.path.join(helpers.TEST_ROOT,
+                        "fixtures",
+                        city.lower() + extension)
     with open(path, 'rb') as f:
         city = importlib.import_module("park_api.cities." + city)
         return city.parse_html(f.read().decode('utf-8', 'replace'))
@@ -16,11 +18,13 @@ def scrape_city(city, extension=".html"):
 class CityTestCase(unittest.TestCase):
     def setUp(self):
         db.setup()
+
     def sanity_check(self, city_name, city):
         self.assertIn("lots", city)
         self.assertIn("last_updated", city)
-        last_updated = datetime.datetime.strptime(city["last_updated"], "%Y-%m-%dT%H:%M:%S")
-        self.assertIsInstance(last_updated, datetime.datetime)
+        last_updated = datetime.strptime(city["last_updated"],
+                                         "%Y-%m-%dT%H:%M:%S")
+        self.assertIsInstance(last_updated, datetime)
 
         self.assertTrue(len(city["lots"]) > 0)
 
@@ -30,7 +34,8 @@ class CityTestCase(unittest.TestCase):
             self.assertIn("coords", lot)
 
             self.assertIn("state", lot)
-            self.assertRegex(lot["state"], "(open|closed|nodata)")
+            self.assertIn(lot["state"],
+                          ["open", "closed", "nodata", "unknown"])
 
             self.assertIn("id", lot)
 
@@ -41,7 +46,8 @@ class CityTestCase(unittest.TestCase):
             self.assertIn("total", lot)
             total, free = lot["total"], lot["free"]
             if total < free:
-                msg = "\n[warn] total lots should be more than free lots: %d >= %d: %s => %s"
+                msg = "\n[warn] total lots should be more than free lots:"\
+                      " %d >= %d: %s => %s"
                 print(msg % (total, free, city_name, lot))
             if "coords" in lot and lot["coords"] is not None:
                 self.assertIn("lat", lot["coords"])

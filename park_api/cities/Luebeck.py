@@ -12,6 +12,7 @@ process_state_map = {
 
 geodata = GeoData(__file__)
 
+
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
 
@@ -40,7 +41,8 @@ def parse_html(html):
             type_and_name = process_name(raw_lot_data[0].text)
 
             if len(raw_lot_data) == 2:
-                total = get_most_lots_from_known_data("Lübeck", type_and_name[1])
+                total = get_most_lots_from_known_data("Lübeck",
+                                                      type_and_name[1])
                 free = 0
                 state = process_state_map.get(raw_lot_data[1].text, "")
             elif len(raw_lot_data) == 4:

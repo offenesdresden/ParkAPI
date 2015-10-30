@@ -2,9 +2,10 @@ from bs4 import BeautifulSoup
 from park_api.geodata import GeoData
 from park_api.util import convert_date
 
-# Additional information for single lots: http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/
-
+# Additional information for single lots:
+# http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/
 geodata = GeoData(__file__)
+
 
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
@@ -30,7 +31,7 @@ def parse_html(html):
             "lot_type": lot.type,
             "address": lot.address,
             "coords": lot.coords,
-            "state": "nodata",
+            "state": "unknown",
             "id": lot.id,
             "forecast": False
         })

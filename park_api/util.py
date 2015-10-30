@@ -1,16 +1,16 @@
 import pytz
 from datetime import datetime
-from os import path
-import psycopg2
 
-from park_api import env, db
+from park_api import db
 
 LOT_COUNTS_PER_CITY = {}
+
 
 def get_most_lots_from_known_data(city, lot_name):
     """
     Get the total value from the highest known value in the last saved JSON.
-    This is useful for cities that don't publish total number of spaces for a parking lot.
+    This is useful for cities that don't publish
+    total number of spaces for a parking lot.
 
     Caveats:
      - Returns 0 if not found.
@@ -25,9 +25,13 @@ def get_most_lots_from_known_data(city, lot_name):
     lot_counts = LOT_COUNTS_PER_CITY.get(city, {})
     if lot_counts == {}:
         with db.cursor() as cursor:
-            cursor.execute("SELECT data FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 600;", (city,))
+            sql = """
+            SELECT data FROM parkapi
+            WHERE city=%s
+            ORDER BY timestamp_downloaded DESC LIMIT 600;
+            """
+            cursor.execute(sql, (city,))
             all_data = cursor.fetchall()
-            most_lots = 0
             for json_data in all_data:
                 lots = json_data[0]["lots"]
                 for lot in lots:
@@ -46,6 +50,7 @@ def utc_now():
     :return:
     """
     return datetime.utcnow().replace(microsecond=0).isoformat()
+
 
 def remove_special_chars(string):
     """
@@ -75,7 +80,8 @@ def remove_special_chars(string):
 
 def convert_date(date_string, date_format, timezone="Europe/Berlin"):
     """
-    Convert a date into a ISO formatted UTC date string. Timezone defaults to Europe/Berlin.
+    Convert a date into a ISO formatted UTC date string.
+    Timezone defaults to Europe/Berlin.
 
     :param date_string:
     :param date_format:

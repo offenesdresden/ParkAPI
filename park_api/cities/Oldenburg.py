@@ -2,14 +2,21 @@ from bs4 import BeautifulSoup
 from park_api.util import convert_date
 from park_api.geodata import GeoData
 
-# This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
-# No need to remove this if there's no geodata (yet), everything will still work.
+# This loads the geodata for this city if <city>.geojson
+# exists in the same directory as this file.
+# No need to remove this if there's no geodata (yet),
+# everything will still work.
 geodata = GeoData(__file__)
 
-# This function is called by the scraper and given the data of the page specified as data_url above.
-# It's supposed to return a dictionary containing everything the current spec expects. Tests will fail if it doesn't ;)
+
+# This function is called by the scraper and
+# given the data of the page specified as data_url above.
+# It's supposed to return a dictionary,
+# containing everything the current spec expects.
+# Tests will fail if it doesn't ;)
 def parse_html(html):
-    # BeautifulSoup is a great and easy way to parse the html and find the bits and pieces we're looking for.
+    # BeautifulSoup is a great and easy way to parse the html and
+    # find the bits and pieces we're looking for.
     soup = BeautifulSoup(html, "html.parser")
 
     # last_updated is the date when the data on the page was last updated
@@ -18,7 +25,8 @@ def parse_html(html):
     last_updated = last_updated[start:start + 16] + ' Uhr'
 
     data = {
-        # convert_date is a utility function you can use to turn this date into the correct string format
+        # convert_date is a utility function
+        # you can use to turn this date into the correct string format
         "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M Uhr"),
         "lots": []
     }
@@ -38,7 +46,8 @@ def parse_html(html):
         "City": [440, "Staulinie 10"],
         "Galeria Kaufhof": [326, "Ritterstraße"],
         "Pferdemarkt": [401, "Pferdemarkt 13"],
-        # CCO 1 & 2 are together only known together with 420, but they seem to be somewhat like this
+        # CCO 1 & 2 are together only known together with 420,
+        # but they seem to be somewhat like this
         "CCO Parkdeck 1": [190, "Heiligengeiststraße 4"],
         "CCO Parkdeck 2": [230, "Heiligengeiststraße 4"],
         "Hbf/ZOB": [358, "Karlstraße"],
@@ -62,14 +71,13 @@ def parse_html(html):
 
         # lot_type = tr.find("td").text
 
-        # please be careful about the state only being allowed to contain either open, closed or nodata
-        # should the page list other states, please map these into the three listed possibilities
+        # please be careful about the state only being allowed to contain
+        # either open, closed or nodata should the page list other states,
+        # please map these into the three listed possibilities
         state = status_map.get(td[3].text, "nodata")
 
         lot = geodata.lot(lot_name)
         data["lots"].append({
-            # use the utility function generate_id to generate an ID for this lot
-            # it takes this file path and the lot's name as params
             "id": lot.id,
             "name": lot.name,
             "free": lot_free,
