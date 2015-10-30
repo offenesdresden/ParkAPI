@@ -27,7 +27,7 @@ def parse_html(html):
         type_and_name = process_name(tds[0].text)
         lot = geodata.lot(type_and_name[1])
         data["lots"].append({
-            "name": lot.name,
+            "name": type_and_name[1].strip("\n"),
             "lot_type": type_and_name[0],
             "free": int(tds[1].text),
             "total": lot.total,
@@ -41,8 +41,8 @@ def parse_html(html):
 
 
 def process_name(name):
-    lot_type = name[:2]
-    lot_name = name[3:]
+    lot_type = name[:3]
+    lot_name = name[4:]
 
     type_mapping = {
         "PP": "Parkplatz",
