@@ -21,6 +21,10 @@ def parse_html(html):
     for raw_lot in raw_lots:
         elements = raw_lot.find_all("td")
 
+        state = "open"
+        if "class" in raw_lot.attrs and raw_lot["class"][0] == "strike":
+            state = "closed"
+
         lot_name = elements[0].text
 
         lot = geodata.lot(lot_name)
@@ -31,7 +35,7 @@ def parse_html(html):
             "lot_type": lot.type,
             "address": lot.address,
             "coords": lot.coords,
-            "state": "unknown",
+            "state": state,
             "id": lot.id,
             "forecast": False
         })
