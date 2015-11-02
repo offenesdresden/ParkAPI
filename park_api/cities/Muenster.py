@@ -24,8 +24,8 @@ def parse_html(html):
 
     for tr in lot_table_trs[1:-1]:
         tds = tr.find_all("td")
-        type_and_name = process_name(tds[0].text)
-        lot = geodata.lot(type_and_name[1])
+        type_and_name = process_name(tds[0].text.strip())
+        lot = geodata.lot(tds[0].text.strip())
         data["lots"].append({
             "name": type_and_name[1].strip("\n"),
             "lot_type": type_and_name[0],
@@ -41,8 +41,8 @@ def parse_html(html):
 
 
 def process_name(name):
-    lot_type = name[:3]
-    lot_name = name[4:]
+    lot_type = name[:3].strip()
+    lot_name = name[3:].strip()
 
     type_mapping = {
         "PP": "Parkplatz",
