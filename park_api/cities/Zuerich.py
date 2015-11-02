@@ -19,20 +19,24 @@ def parse_html(xml_data):
 
     for entry in feed["entries"]:
         summary = parse_summary(entry["summary"])
-        title = parse_title(entry["title"])
+        title_elements = parse_title(entry["title"])
 
-        lot = geodata.lot(title[0])
+        lot_identifier = (title_elements[2] + " " + title_elements[0]).strip()
+        lot = geodata.lot(lot_identifier)
+
         data["lots"].append({
-            "name": lot.name,
-            "address": title[1],
+            "name": title_elements[0],
+            "address": title_elements[1],
             "id": lot.id,
             "state": summary[0],
             "free": summary[1],
             "total": lot.total,
             "coords": lot.coords,
             "forecast": False,
+            "type": title_elements[2]
         })
 
+    print(data)
     return data
 
 
@@ -56,5 +60,13 @@ def parse_title(title):
     Parse a string from the format 'Parkgarage am Central / Seilergraben'
     into both its params
     """
-    title = title.split(" / ")
-    return title
+    types = ["Parkhaus", "Parkplatz"]
+
+    name = title.split(" / ")[0]
+    address = title.split(" / ")[1]
+    type = ""
+    if name.split(" ")[0] in types:
+        type = name.split(" ")[0]
+        name = " ".join(name.split(" ")[1:])
+
+    return name, address, type
