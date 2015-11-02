@@ -36,7 +36,6 @@ def parse_html(xml_data):
             "type": title_elements[2]
         })
 
-    print(data)
     return data
 
 
