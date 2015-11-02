@@ -19,6 +19,19 @@
   }, {
       "type": "Feature",
       "properties": {
+        "name": "Marktstätte",
+        "total": 268
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.17631447315216,
+          47.659621142013435
+        ]
+      }
+    },{
+      "type": "Feature",
+      "properties": {
         "name": "Altstadt",
         "total": 359
       },
