@@ -22,7 +22,7 @@ def parse_html(html):
         elements = raw_lot.find_all("td")
 
         state = "open"
-        if "class" in raw_lot.attrs and raw_lot["class"][0] == "strike":
+        if "class" in raw_lot.attrs and "strike" in raw_lot["class"]:
             state = "closed"
 
         lot_name = elements[0].text
