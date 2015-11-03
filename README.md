@@ -4,6 +4,8 @@
 
 ParkAPI is a project trying to consolidate pages where cities publish the amount of empty spaces on their public parking lots (be it an HTML page, XML data or something else) into a simple to use JSON API. This then serves as a backend for the mobile app ParkenDD ([iOS](https://github.com/kiliankoe/ParkenDD) & [Android](https://github.com/jklmnn/ParkenDD)).
 
+**View the current data directly directly in your browser [here](https://offenesdresden.github.io/ParkAPI/).**
+
 ![image](./image.jpg)
 
 The idea here is to fetch new data from the relevant pages regularly and serve that from the application so that the amount of stress on the original servers can be kept to a minimum. This data then also enables the calculation of forecast data (short- and longterm) that can be provided right alongside.
