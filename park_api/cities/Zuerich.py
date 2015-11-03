@@ -33,7 +33,7 @@ def parse_html(xml_data):
             "total": lot.total,
             "coords": lot.coords,
             "forecast": False,
-            "type": title_elements[2]
+            "lot_type": title_elements[2]
         })
 
     return data
