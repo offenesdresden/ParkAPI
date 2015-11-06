@@ -1,9 +1,10 @@
 import os
 
-from park_api import structs, security
+from park_api import security
 import importlib
 import configparser
 import sys
+from collections import namedtuple
 
 API_VERSION = '1.0'
 SERVER_VERSION = '0.0.0'
@@ -23,6 +24,8 @@ DEFAULT_CONFIGURATION = {
     "live_scrape": True,
     "database_uri": "postgres:///park_api",
 }
+
+ServerConf = namedtuple('ServerConf', ['port', 'host', 'debug'])
 
 
 def is_production():
@@ -82,9 +85,9 @@ def load_config():
         exit(1)
 
     global SERVER_CONF, DATABASE_URI, SUPPORTED_CITIES, LIVE_SCRAPE
-    SERVER_CONF = structs.ServerConf(host=raw_config.get('host'),
-                                     port=raw_config.getint("port"),
-                                     debug=raw_config.getboolean("debug"))
+    SERVER_CONF = ServerConf(host=raw_config.get('host'),
+                             port=raw_config.getint("port"),
+                             debug=raw_config.getboolean("debug"))
     LIVE_SCRAPE = raw_config.getboolean("live_scrape")
     DATABASE_URI = raw_config.get("database_uri")
 
