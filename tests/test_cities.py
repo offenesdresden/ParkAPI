@@ -2,89 +2,46 @@ import os
 import unittest
 import helpers
 import importlib
+import glob
 from datetime import datetime
-from park_api import db
+from park_api import db, env
 
 
-def scrape_city(city, extension=".html"):
-    path = os.path.join(helpers.TEST_ROOT,
-                        "fixtures",
-                        city.lower() + extension)
-    with open(path, 'rb') as f:
-        city = importlib.import_module("park_api.cities." + city)
-        return city.parse_html(f.read().decode('utf-8', 'replace'))
+def scrape_city(city):
+    pattern = os.path.join(helpers.TEST_ROOT,
+                           "fixtures",
+                           city.lower() + ".*")
+    for path in glob.glob(pattern):
+        with open(path, 'rb') as f:
+            city = importlib.import_module("park_api.cities." + city)
+            return city.parse_html(f.read().decode('utf-8', 'replace'))
+    raise Exception("no test input file find for %s: %s" % (city, pattern))
 
 
 class CityTestCase(unittest.TestCase):
     def setUp(self):
         db.setup()
 
-    def sanity_check(self, city_name, city):
-        self.assertIn("lots", city)
-        self.assertIn("last_updated", city)
-        last_updated = datetime.strptime(city["last_updated"],
-                                         "%Y-%m-%dT%H:%M:%S")
-        self.assertIsInstance(last_updated, datetime)
+    def sanity_check(self, city_name, lots):
+        self.assertGreater(len(lots), 1)
 
-        self.assertTrue(len(city["lots"]) > 0)
+        for lot in lots:
+            self.assertIsInstance(lot.updated_at, datetime)
+            self.assertIsInstance(lot.name, str)
 
-        for lot in city["lots"]:
-            self.assertIn("name", lot)
-
-            self.assertIn("coords", lot)
-
-            self.assertIn("state", lot)
-            self.assertIn(lot["state"],
+            self.assertIn(lot.state,
                           ["open", "closed", "nodata", "unknown"])
 
-            self.assertIn("id", lot)
-
-            self.assertIn("forecast", lot)
-            self.assertIs(type(lot["forecast"]), bool)
-
-            self.assertIn("free", lot)
-            self.assertIn("total", lot)
-            total, free = lot["total"], lot["free"]
-            if total < free:
+            self.assertIsInstance(lot.free, int)
+            self.assertIsInstance(lot.total, int)
+            if lot.total < lot.free:
                 msg = "\n[warn] total lots should be more than free lots:"\
                       " %d >= %d: %s => %s"
-                print(msg % (total, free, city_name, lot))
-            if "coords" in lot and lot["coords"] is not None:
-                self.assertIn("lat", lot["coords"])
-                self.assertIn("lng", lot["coords"])
+                print(msg % (lot.total, lot.free, city_name, lot))
 
-    def test_dresden(self):
-        city_name = "Dresden"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_ingolstadt(self):
-        city_name = "Ingolstadt"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_konstanz(self):
-        city_name = "Konstanz"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_luebeck(self):
-        city_name = "Luebeck"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_zuerich(self):
-        city_name = "Zuerich"
-        self.sanity_check(city_name, scrape_city(city_name, ".xml"))
-
-    def test_muenster(self):
-        city_name = "Muenster"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_bonn(self):
-        city_name = "Bonn"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_oldenburg(self):
-        city_name = "Oldenburg"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_sample(self):
-        city_name = "Sample_City"
-        self.sanity_check(city_name, scrape_city(city_name))
+for city in env.supported_cities().keys():
+    def gen_test(city):
+        def test(self):
+            self.sanity_check(city, scrape_city(city))
+        return test
+    setattr(CityTestCase, "test_%s" % city.lower(), gen_test(city))

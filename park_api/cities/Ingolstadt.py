@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-from park_api.geodata import GeoData
-from park_api.util import convert_date
+from park_api.models import GeoData, Lots
+from park_api.util import parse_date
 
 # Additional information for single lots:
 # http://www2.ingolstadt.de/Wirtschaft/Parken/Parkeinrichtungen_der_IFG/
@@ -10,34 +10,20 @@ geodata = GeoData(__file__)
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
 
-    data = {
-        "last_updated": convert_date(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)"),
-        "lots": []
-    }
+    updated_at = parse_date(soup.p.string, "(%d.%m.%Y, %H.%M Uhr)")
+    lots = Lots()
 
-    # get all lots
-    raw_lots = soup.find_all("tr")
+    for raw_lot in soup.find_all("tr"):
+        tds = raw_lot.find_all("td")
 
-    for raw_lot in raw_lots:
-        elements = raw_lot.find_all("td")
-
-        state = "open"
         if "class" in raw_lot.attrs and raw_lot["class"][0] == "strike":
             state = "closed"
+        else:
+            state = "open"
 
-        lot_name = elements[0].text
-
-        lot = geodata.lot(lot_name)
-        data["lots"].append({
-            "name": lot.name,
-            "free": int(elements[1].text),
-            "total": lot.total,
-            "lot_type": lot.type,
-            "address": lot.address,
-            "coords": lot.coords,
-            "state": state,
-            "id": lot.id,
-            "forecast": False
-        })
-
-    return data
+        lot = geodata.lot(tds[0].text)
+        lot.free = int(tds[1].text)
+        lot.state = state
+        lot.updated_at = updated_at
+        lots.append(lot)
+    return lots

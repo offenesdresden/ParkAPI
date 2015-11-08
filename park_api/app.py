@@ -1,9 +1,8 @@
 from datetime import datetime
 from os import getloadavg
-
 from flask import Flask, jsonify, abort, request
-import psycopg2
-from park_api import scraper, util, env, db
+
+from park_api import scraper, util, env
 from park_api.forecast import find_forecast
 from park_api.crossdomain import crossdomain
 
@@ -16,14 +15,7 @@ def get_meta():
     cities = {}
     for module in env.supported_cities().values():
         city = module.geodata.city
-        cities[city.id] = {
-                "name": city.name,
-                "coords": city.coords,
-                "source": city.source,
-                "url": city.url,
-                "active_support": city.active_support
-        }
-
+        cities[city.id] = city.as_json()
     return jsonify({
         "cities": cities,
         "api_version": env.API_VERSION,
@@ -57,19 +49,13 @@ def get_lots(city):
                 "' isn't supported at the current time.", 404)
 
     if env.LIVE_SCRAPE:
-        return jsonify(scraper._live(city_module))
+        lots = scraper.scrape(city_module)
+        return jsonify(lots.as_json())
 
-    try:
-      with db.cursor() as cursor:
-          sql = "SELECT timestamp_updated, timestamp_downloaded, data" \
-                  " FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;"
-          cursor.execute(sql, (city,))
-          data = cursor.fetchall()[0]["data"]
-    except (psycopg2.OperationalError, psycopg2.ProgrammingError) as e:
-        app.logger.error("Unable to connect to database: " + str(e))
-        abort(500)
+    lots = city_module.geodata.lots
+    lots.load()
 
-    return jsonify(data)
+    return jsonify(lots.as_json())
 
 
 @app.route("/<city>/<lot_id>/timespan")

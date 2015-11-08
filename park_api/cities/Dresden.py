@@ -1,63 +1,46 @@
-import os
 from bs4 import BeautifulSoup
-from park_api.geodata import GeoData
-from park_api.util import convert_date, get_most_lots_from_known_data
+from park_api.models import GeoData, Lots
+from park_api.util import parse_date
 
 geodata = GeoData(__file__)
 
 
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
-    date_field = soup.find(id="P1_LAST_UPDATE").text
-    last_updated = convert_date(date_field, "%d.%m.%Y %H:%M:%S")
-    data = {
-        "lots": [],
-        "last_updated": last_updated
-    }
+    date = soup.find(id="P1_LAST_UPDATE").text
 
+    lots = Lots()
+    updated_at = parse_date(date, "%d.%m.%Y %H:%M:%S")
     for table in soup.find_all("table"):
-        if table["summary"] != "":
-            region = table["summary"]
+        if table["summary"] == "":
+            continue
+        region = table["summary"]
 
-            for lot_row in table.find_all("tr"):
-                if lot_row.find("th") is not None:
-                    continue
+        for lot_row in table.find_all("tr"):
+            if lot_row.find("th") is not None:
+                continue
 
-                cls = lot_row.find("div")["class"]
-                state = "nodata"
-                if "green" in cls or "yellow" in cls or "red" in cls:
-                    state = "open"
-                elif "park-closed" in cls:
-                    state = "closed"
+            name = lot_row.find("td", {"headers": "BEZEICHNUNG"}).text
+            lot = geodata.lot(name)
 
-                lot_name = lot_row.find("td", {"headers": "BEZEICHNUNG"}).text
+            col = lot_row.find("td", {"headers": "FREI"})
+            if col.text.strip() == "":
+                lot.free = 0
+            else:
+                lot.free = int(col.text)
 
-                try:
-                    col = lot_row.find("td", {"headers": "FREI"})
-                    free = int(col.text)
-                except ValueError:
-                    free = 0
+            cls = lot_row.find("div")["class"]
+            if "green" in cls or "yellow" in cls or "red" in cls:
+                lot.state = "open"
+            elif "park-closed" in cls:
+                lot.state = "closed"
 
-                try:
-                    col = lot_row.find("td", {"headers": "KAPAZITAET"})
-                    total = int(col.text)
-                except ValueError:
-                    total = get_most_lots_from_known_data("Dresden", lot_name)
-
-                lot = geodata.lot(lot_name)
-                forecast = os.path.isfile("forecast_data/" + lot.id + ".csv")
-
-                data["lots"].append({
-                    "coords": lot.coords,
-                    "name": lot_name,
-                    "total": total,
-                    "free": free,
-                    "state": state,
-                    "id": lot.id,
-                    "lot_type": lot.type,
-                    "address": lot.address,
-                    "forecast": forecast,
-                    "region": region
-                })
-
-    return data
+            col = lot_row.find("td", {"headers": "KAPAZITAET"})
+            try:
+                lot.total = int(col.text)
+            except ValueError:
+                pass
+            lot.region = region
+            lot.updated_at = updated_at
+            lots.append(lot)
+    return lots

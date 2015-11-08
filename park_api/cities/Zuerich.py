@@ -1,6 +1,6 @@
 import feedparser
-from park_api.geodata import GeoData
-
+from park_api.util import parse_date
+from park_api.models import GeoData, Lots
 
 # Falls das hier jemals einer von den Menschen
 # hinter OpenDataZürich lesen sollte: Ihr seid so toll <3
@@ -10,48 +10,41 @@ geodata = GeoData(__file__)
 def parse_html(xml_data):
     feed = feedparser.parse(xml_data)
 
-    last_updated = feed["entries"][0]["updated"]
-    data = {
-        "lots": [],
-        # remove trailing timezone for consensistency
-        "last_updated": last_updated.replace("Z", "")
-    }
+    lots = Lots()
+    updated_at = parse_date(feed["entries"][0]["updated"],
+                            "%Y-%m-%dT%H:%M:%SZ")
 
     for entry in feed["entries"]:
-        summary = parse_summary(entry["summary"])
-        title_elements = parse_title(entry["title"])
+        state, free = parse_summary(entry["summary"])
+        name, address, type_ = parse_title(entry["title"])
 
-        lot_identifier = (title_elements[2] + " " + title_elements[0]).strip()
-        lot = geodata.lot(lot_identifier)
+        identifier = ("%s %s" % (name, type_)).strip()
+        lot = geodata.lot(identifier)
+        lot.name = name
+        lot.address = address
+        lot.state = state
+        lot.free = free
+        lot.lot_type = type_
+        lot.updated_at = updated_at
+        lots.append(lot)
 
-        data["lots"].append({
-            "name": title_elements[0],
-            "address": title_elements[1],
-            "id": lot.id,
-            "state": summary[0],
-            "free": summary[1],
-            "total": lot.total,
-            "coords": lot.coords,
-            "forecast": False,
-            "type": title_elements[2]
-        })
-
-    return data
+    return lots
 
 
 def parse_summary(summary):
     """Parse a string from the format 'open /   41' into both its params"""
     summary = summary.split("/")
 
-    summary[0] = summary[0].strip()
+    state = summary[0].strip()
     if "?" in summary[0]:
-        summary[0] = "nodata"
+        state = "nodata"
 
-    try:
-        summary[1] = int(summary[1])
-    except ValueError:
-        summary[1] = 0
-    return summary
+    s = summary[1].strip()
+    if "?" in s:
+        free = 0
+    else:
+        free = int(s)
+    return state, free
 
 
 def parse_title(title):

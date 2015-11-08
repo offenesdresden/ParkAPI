@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-from park_api.geodata import GeoData
-from park_api.util import convert_date
+from park_api.models import GeoData, Lots
+from park_api.util import parse_date
 
 geodata = GeoData(__file__)
 
@@ -22,21 +22,13 @@ def parse_html(html):
         "Expect to find 6 lots in Bonn, got: %d" % len(free_lots)
     time = soup.find("td", {"class": "stand"}).text.strip()
 
-    lots = []
+    lots = Lots()
+    updated_at = parse_date(time, "%d.%m.%y %H:%M:%S")
     for idx, free in enumerate(free_lots):
         lot = geodata.lot(lot_map[idx])
-        lots.append({
-            "name": lot.name,
-            "coords": lot.coords,
-            "free": int(free.text),
-            "address": lot.address,
-            "total": lot.total,
-            "state": "nodata",
-            "id": lot.id,
-            "forecast": False
-        })
+        lot.free = int(free.text)
+        lot.updated_at = updated_at
+        lot.state = "nodata"
+        lots.append(lot)
 
-    return {
-        "last_updated": convert_date(time, "%d.%m.%y %H:%M:%S"),
-        "lots": lots
-    }
+    return lots

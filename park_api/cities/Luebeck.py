@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-from park_api.util import convert_date, get_most_lots_from_known_data
-from park_api.geodata import GeoData
+from park_api.util import parse_date
+from park_api.models import GeoData, Lots
 
 process_state_map = {
     "": "open",
@@ -17,16 +17,13 @@ def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
 
     date_field = soup.find("tr").find("strong").text
-    last_updated = convert_date(date_field, "Stand: %d.%m.%Y, %H:%M Uhr")
-    data = {
-        "last_updated": last_updated,
-        "lots": []
-    }
 
     rows = soup.find_all("tr")
     rows = rows[1:]
     region_header = ""
 
+    lots = Lots()
+    updated_at = parse_date(date_field, "Stand: %d.%m.%Y, %H:%M Uhr")
     for row in rows:
         if len(row.find_all("th")) > 0:
             # This is a header row, save it for later
@@ -39,31 +36,20 @@ def parse_html(html):
             raw_lot_data = row.find_all("td")
 
             type_and_name = process_name(raw_lot_data[0].text)
+            lot = geodata.lot(type_and_name[1])
 
             if len(raw_lot_data) == 2:
-                total = get_most_lots_from_known_data("Lübeck",
-                                                      type_and_name[1])
-                free = 0
-                state = process_state_map.get(raw_lot_data[1].text, "")
+                lot.state = process_state_map.get(raw_lot_data[1].text, "")
             elif len(raw_lot_data) == 4:
-                total = int(raw_lot_data[1].text)
-                free = int(raw_lot_data[2].text)
-                state = "open"
+                lot.total = int(raw_lot_data[1].text)
+                lot.free = int(raw_lot_data[2].text)
+                lot.state = "open"
 
-            lot = geodata.lot(type_and_name[1])
-            data["lots"].append({
-                "name": lot.name,
-                "lot_type": type_and_name[0],
-                "total": total,
-                "free": free,
-                "region": region_header,
-                "state": state,
-                "coords": lot.coords,
-                "id": lot.id,
-                "forecast": False
-            })
-
-    return data
+            lot.lot_type = type_and_name[0]
+            lot.region = region_header
+            lot.updated_at = updated_at
+            lots.append(lot)
+    return lots
 
 
 def process_name(name):

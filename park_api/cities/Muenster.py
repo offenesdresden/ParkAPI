@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
-from park_api.util import convert_date
-from park_api.geodata import GeoData
+from park_api.util import parse_date
+from park_api.models import GeoData, Lots
 
 state_map = {
     "frei": "open",
@@ -17,27 +17,20 @@ def parse_html(html):
     lot_table_trs = soup.select("div#parkingList table")[0].find_all("tr")
     date_field = soup.find(id="lastRefresh").text.strip()
 
-    data = {
-        "last_updated": convert_date(date_field, "%d.%m.%Y %H:%M Uhr"),
-        "lots": []
-    }
-
+    lots = Lots()
+    updated_at = parse_date(date_field, "%d.%m.%Y %H:%M Uhr")
     for tr in lot_table_trs[1:-1]:
         tds = tr.find_all("td")
-        type_and_name = process_name(tds[0].text.strip())
-        lot = geodata.lot(tds[0].text.strip())
-        data["lots"].append({
-            "name": type_and_name[1].strip("\n"),
-            "lot_type": type_and_name[0],
-            "free": int(tds[1].text),
-            "total": lot.total,
-            "state": state_map.get(tds[2].text, ""),
-            "coords": lot.coords,
-            "id": lot.id,
-            "forecast": False
-        })
-
-    return data
+        description = tds[0].text.strip()
+        type_, name = process_name(description)
+        lot = geodata.lot(description)
+        lot.name = type_.strip("\n")
+        lot.lot_type = name[0]
+        lot.free = int(tds[1].text)
+        lot.state = state_map.get(tds[2].text, "")
+        lot.updated_at = updated_at
+        lots.append(lot)
+    return lots
 
 
 def process_name(name):
