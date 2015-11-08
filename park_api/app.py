@@ -10,16 +10,9 @@ from park_api.crossdomain import crossdomain
 app = Flask(__name__)
 
 
-def user_agent(request):
-    ua = request.headers.get("User-Agent")
-    return "no user-agent" if ua is None else ua
-
-
 @app.route("/")
 @crossdomain("*")
 def get_meta():
-    app.logger.info("GET / - " + user_agent(request))
-
     cities = {}
     for module in env.supported_cities().values():
         city = module.geodata.city
@@ -55,8 +48,6 @@ def get_lots(city):
     if city == "favicon.ico" or city == "robots.txt":
         abort(404)
 
-    app.logger.info("GET /" + city + " - " + user_agent(request))
-
     city_module = env.supported_cities().get(city, None)
 
     if city_module is None:
@@ -84,9 +75,6 @@ def get_lots(city):
 @app.route("/<city>/<lot_id>/timespan")
 @crossdomain("*")
 def get_longtime_forecast(city, lot_id):
-    app.logger.info("GET /%s/%s/timespan %s" %
-                    (city, lot_id, user_agent(request)))
-
     try:
         datetime.strptime(request.args["from"], '%Y-%m-%dT%H:%M:%S')
         datetime.strptime(request.args["to"], '%Y-%m-%dT%H:%M:%S')
@@ -103,8 +91,6 @@ def get_longtime_forecast(city, lot_id):
 
 @app.route("/coffee")
 def make_coffee():
-    app.logger.info("GET /coffee - " + user_agent(request))
-
     return """
     <h1>I'm a teapot</h1>
     <p>This server is a teapot, not a coffee machine.</p><br>
@@ -112,3 +98,11 @@ def make_coffee():
          alt="British porn"
          title="British porn"/>
     """, 418
+
+
+@app.before_request
+def log_request():
+    ua = request.headers.get("User-Agent")
+    if not ua:
+        ua = "no user-agent"
+    app.logger.info("%s %s - %s" % (request.method, request.path, ua))
