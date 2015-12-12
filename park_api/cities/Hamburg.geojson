@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              10.0153400,
+              53.5753200
+          ]
+      },
+      "properties": {
+          "name": "Hamburg",
+          "type": "city",
+          "url": "http://www.geoportal-hamburg.de/Geoportal/geo-online/index.html",
+          "source": "http://geodienste-hamburg.de/HH_WFS_BWVI_opendata?service=WFS&request=GetFeature&VERSION=1.1.0&typename=verkehr_parkhaeuser",
+          "active_support": true
+      }
+  }]
+}
