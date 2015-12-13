@@ -17,6 +17,7 @@ def parse_html(xml):
     
     for member in soup.find('wfs:featurecollection').find_all('gml:featuremember'):
         name = member.find('app:name').string
+        count = 0
         try:
             count = member.find('app:stellplaetze_gesamt').string
         except AttributeError:
