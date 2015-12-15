@@ -1,6 +1,8 @@
-from bs4 import BeautifulSoup
+﻿from bs4 import BeautifulSoup
 from park_api.geodata import GeoData
 from park_api.util import convert_date
+import re
+import datetime
 
 geodata = GeoData(__file__)
 
@@ -9,9 +11,9 @@ lot_map = {
         1: "Thomaseck",
         2: "Forum 1",
         3: "Forum 2+3",
-        4: "Th\xfcringenhaus",
+        4: "Thüringenhaus",
         5: "Domplatz",
-        6: "Hauptbahnhof"
+        6: "Hauptbahnhof",
         7: "Sparkassen-Finanzzentrum"
         }
 
@@ -20,7 +22,7 @@ def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
     
     # get page
-    m = re.findall(r'Ob(.*von.*);', soup)
+    m = re.findall(r'Ob(.*von.*);', html)
     time = str(datetime.datetime.now())
     lots_tmp = {}
     
@@ -49,6 +51,6 @@ def parse_html(html):
         })
 
     return {
-        "last_updated": convert_date(time, "%d.%m.%y %H:%M:%S"),
+        "last_updated": convert_date(time.split('.')[0], "%Y-%m-%d %H:%M:%S"),
         "lots": lots
     }
