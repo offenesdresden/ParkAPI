@@ -5,7 +5,7 @@ from park_api.geodata import GeoData
 geodata = GeoData(__file__)
 
 def parse_html(xml):
-    soup = BeautifulSoup(xml)
+    soup = BeautifulSoup(xml, "html.parser")
     
     data = {
         "lots": [],
@@ -19,7 +19,7 @@ def parse_html(xml):
         name = member.find('app:name').string
         count = 0
         try:
-            count = member.find('app:stellplaetze_gesamt').string
+            count = int(member.find('app:stellplaetze_gesamt').string)
         except AttributeError:
             pass
         free = 0
