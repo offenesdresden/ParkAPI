@@ -22,4 +22,4 @@ def main():
 
     db.setup()
 
-    app.run(**vars(env.SERVER_CONF))
+    app.run(**env.SERVER_CONF._asdict())
