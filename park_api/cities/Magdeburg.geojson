@@ -16,5 +16,181 @@
           "source": "http://www.movi.de/parkinfo/uebersicht.shtml",
 	  "active_support": false
       }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Karstadt",
+      "type": "Parkplatz",
+      "total":300
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Listemannstraße",
+      "type": "Parkplatz",
+      "total":184
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Universitätsplatz",
+      "type": "Tiefgarage",
+      "total":120
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Allee Center",
+      "type": "Tiefgarage",
+      "total":1300
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Hotel Ratswaage",
+      "type": "Parkhaus",
+      "total":139
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Petriförder Ost",
+      "type": "Parkplatz",
+      "total":120
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Petriförder West",
+      "type": "Parkplatz",
+      "total":50
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "City Carré",
+      "type": "Tiefgarage",
+      "total":600
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Hotel Maritim",
+      "type": "Tiefgarage",
+      "total":440
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Ulrichshaus",
+      "type": "Tiefgarage",
+      "total":360
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Domviertel",
+      "type": "Tiefgarage",
+      "total":75
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Friedensplatz",
+      "type": "Tiefgarage",
+      "total":90
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Elbauenpark",
+      "type": "Parkplatz",
+      "total":1400
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Lange Lake",
+      "type": "Parkplatz",
+      "total":2580
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Endstelle Diesdorf",
+      "type": "Parkplatz",
+      "total":21
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0,0]
+    },
+    "properties": {
+      "name": "Milchhof",
+      "type": "Parkplatz",
+      "total":75
+    }
   }]
 }
