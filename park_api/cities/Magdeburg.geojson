@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              11.616667,
+              52.133333
+          ]
+      },
+      "properties": {
+          "name": "Magdeburg",
+          "type": "city",
+          "url": "http://www.movi.de/parkinfo/uebersicht.shtml",
+          "source": "http://www.movi.de/parkinfo/uebersicht.shtml",
+	  "active_support": false
+      }
+  }]
+}
