@@ -9,9 +9,9 @@ def parse_html(xml):
     
     data = {
         "lots": [],
-        "last_updated": soup.find('wfs:featurecollection')['timestamp'][:-1]
+        "last_updated": soup.find('wfs:featurecollection')["timestamp"][:-1]
     }
-    
+        
     region = "Hamburg"
     forecast = False
     
