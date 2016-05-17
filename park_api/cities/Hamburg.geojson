@@ -14,7 +14,7 @@
           "type": "city",
           "url": "http://www.geoportal-hamburg.de/Geoportal/geo-online/index.html",
           "source": "http://geodienste-hamburg.de/HH_WFS_BWVI_opendata?service=WFS&request=GetFeature&VERSION=1.1.0&typename=verkehr_parkhaeuser",
-          "active_support": true
+          "active_support": false
       }
   }]
 }
