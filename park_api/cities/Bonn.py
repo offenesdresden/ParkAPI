@@ -19,9 +19,11 @@ def parse_html(html):
     
     lots = []
     
-    for row in soup.find_all("div", class_='vc_row wpb_row section vc_row-fluid parking-lots grid_section'):
-      for column in row.find_all("div", class_='vc_col-sm-3 wpb_column vc_column_container '):
+    for row in soup.find_all("div", class_='parking-lots'):
+      for column in row.find_all("div", class_='wpb_column vc_column_container vc_col-sm-3'):
+        print(column)
         h3 = column.find_all("h3")
+        print(h3)
         if not h3[0].a == None:
           name = h3[0].a.string
           lot = geodata.lot(name)
@@ -29,6 +31,19 @@ def parse_html(html):
             "name": name,
             "coords": lot.coords,
             "free": int(h3[1].span.strong.get_text()),
+            "address": lot.address,
+            "total": lot.total,
+            "state": "unknown",
+            "id": lot.id,
+            "forecast": False
+         })
+        else:
+          name = h3[0].string
+          lot = geodata.lot(name)
+          lots.append({
+            "name": name,
+            "coords": lot.coords,
+            "free": 0,
             "address": lot.address,
             "total": lot.total,
             "state": "nodata",
