@@ -26,10 +26,8 @@ def parse_html(html):
           name = h3[0].a.string
           lot = geodata.lot(name)
           ltype = None
-          if "Parkhaus" in name:
-            ltype = "Parkhaus"
-          elif "Parkplatz" in name:
-            ltype="Parkplatz"
+          for p in [pt for pt in ["Parkhaus", "Parkplatz"] if pt in name]:
+            ltype = p
           lots.append({
             "name": name,
             "coords": lot.coords,
