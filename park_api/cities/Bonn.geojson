@@ -12,8 +12,8 @@
     "properties": {
         "name": "Bonn",
         "type": "city",
-        "url": "http://www.bcp-bonn.de/bcp/index.php?id=80",
-        "source": "http://www.bcp-bonn.de/bspspinfo1.php",
+        "url": "http://www.bcp-bonn.de",
+        "source": "http://www.bcp-bonn.de",
         "active_support": false
     }
   }, {
