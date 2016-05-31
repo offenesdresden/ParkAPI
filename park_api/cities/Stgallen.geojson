@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              8.5500000,
+              47.3666700
+          ]
+      },
+      "properties": {
+          "name": "St. Gallen",
+          "type": "city",
+          "url": "http://www.pls-sg.ch/parkraeume/",
+          "source": http://www.pls-sg.ch/rss/",
+	  "active_support": false
+      }
+  }
+}
