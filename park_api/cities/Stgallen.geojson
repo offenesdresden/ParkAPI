@@ -13,8 +13,8 @@
           "name": "St. Gallen",
           "type": "city",
           "url": "http://www.pls-sg.ch/parkraeume/",
-          "source": http://www.pls-sg.ch/rss/",
+          "source":"http://www.pls-sg.ch/rss/",
 	  "active_support": false
       }
-  }
+  }]
 }

@@ -9,5 +9,11 @@ geodata = GeoData(__file__)
 
 def parse_html(xml_data):
     feed = feedparser.parse(xml_data)
+    last_updated = feed["entries"][0]["updated"]
+    data = {
+        "lots": [],
+        # remove trailing timezone for consensistency
+        "last_updated": last_updated.replace("Z", "")
+    }
 
-    print(feed)
+    print(data)
