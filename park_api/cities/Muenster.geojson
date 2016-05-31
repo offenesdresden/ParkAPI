@@ -22,7 +22,10 @@
         "name": "PH Theater",
         "total": 793
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.626454, 51.965676]
+      }
     },
     {
       "type": "Feature",
@@ -30,7 +33,10 @@
         "name": "PP Hörsterplatz",
         "total": 202
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.632232, 51.964237]
+      }
     },
     {
       "type": "Feature",
@@ -38,7 +44,10 @@
         "name": "PH Alter Steinweg",
         "total": 350
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.632326, 51.962245]
+      }
     },
     {
       "type": "Feature",
@@ -46,7 +55,10 @@
         "name": "Busparkplatz",
         "total": 63
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.616792, 51.965429]
+      }
     },
     {
       "type": "Feature",
@@ -54,7 +66,10 @@
         "name": "PP Schlossplatz Nord",
         "total": 450
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.617017, 51.964472]
+      }
     },
     {
       "type": "Feature",
@@ -62,7 +77,10 @@
         "name": "PP Schlossplatz Süd",
         "total": 460
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.616700, 51.962386]
+      }
     },
     {
       "type": "Feature",
@@ -70,7 +88,10 @@
         "name": "PH Aegidii",
         "total": 780
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.622396, 51.960839]
+      }
     },
     {
       "type": "Feature",
@@ -78,7 +99,10 @@
         "name": "PP Georgskommende",
         "total": 272
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.619322, 51.959491]
+      }
     },
     {
       "type": "Feature",
@@ -86,7 +110,10 @@
         "name": "PH Münster Arkaden",
         "total": 248
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.626499, 51.959854]
+      }
     },
     {
       "type": "Feature",
@@ -94,7 +121,10 @@
         "name": "PH Karstadt",
         "total": 183
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.629907, 51.960783]
+      }
     },
     {
       "type": "Feature",
@@ -102,7 +132,10 @@
         "name": "PH Stubengasse",
         "total": 318
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.630287, 51.959884]
+      }
     },
     {
       "type": "Feature",
@@ -110,7 +143,10 @@
         "name": "PH Bremer Platz",
         "total": 416
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.637701, 51.957459]
+      }
     },
     {
       "type": "Feature",
@@ -118,7 +154,10 @@
         "name": "PH Engelenschanze",
         "total": 480
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.631493, 51.955674]
+      }
     },
     {
       "type": "Feature",
@@ -126,7 +165,10 @@
         "name": "PH Bahnhofstraße",
         "total": 339
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.632764, 51.955504]
+      }
     },
     {
       "type": "Feature",
@@ -134,7 +176,10 @@
         "name": "PH Cineplex",
         "total": 590
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.635975, 51.949828]
+      }
     },
     {
       "type": "Feature",
@@ -142,7 +187,10 @@
         "name": "PH Stadthaus 3",
         "total": 372
       },
-      "geometry": null
+      "geometry": {
+        "type":"point",
+        "coordinates":[7.641026, 51.949385]
+      }
     }
   ]
 }
