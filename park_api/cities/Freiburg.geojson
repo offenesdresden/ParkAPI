@@ -1,0 +1,290 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              7.656337,
+              47.987226
+          ]
+      },
+      "properties": {
+          "name": "Freiburg",
+          "type": "city",
+          "url": "http://www.freiburg.de/pb/,Lde/231355.html",
+          "source": "http://stadtplan.freiburg.de/wfs/gdm_pls/gdm_plslive?request=getfeature&service=wfs&version=1.1.0&typename=pls&outputformat=geojson&srsname=epsg:4326",
+	        "active_support":false
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292318",
+        "obs_parkid": "1",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231471.html",
+        "park_zone": "Universität",
+        "name": "KG II",
+        "address": "P19"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.847394236723898,
+          47.99344631755006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292319",
+        "obs_parkid": "2",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231423.html",
+        "park_zone": "Altstadt",
+        "name": "Zähringer Tor",
+        "address": "P12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.85401373813563,
+          47.99897306942212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292321",
+        "obs_parkid": "4",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231439.html",
+        "park_zone": "Altstadt",
+        "name": "Landratsamt",
+        "address": "P14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.857073440394663,
+          48.00007397051193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292322",
+        "obs_parkid": "5",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231447.html",
+        "park_zone": "Altstadt",
+        "name": "Schlossberg",
+        "address": "P15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.855133809588589,
+          47.99403157051466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292323",
+        "obs_parkid": "6",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231455.html",
+        "park_zone": "Altstadt",
+        "name": "Schwabentor",
+        "address": "P16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.856301436251751,
+          47.99127875875355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292324",
+        "obs_parkid": "7",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231463.html",
+        "park_zone": "Universität",
+        "name": "Martinstor",
+        "address": "P18"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.847355875603023,
+          47.99252122643358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292325",
+        "obs_parkid": "8",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231415.html",
+        "park_zone": "Rathaus",
+        "name": "Rotteck",
+        "address": "P10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.846289674197204,
+          47.99581563822502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292326",
+        "obs_parkid": "9",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231359.html",
+        "park_zone": "Bahnhof",
+        "name": "Bahnhofsgarage",
+        "address": "P1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.840827649980254,
+          47.99530427666567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292327",
+        "obs_parkid": "10",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231367.html",
+        "park_zone": "Bahnhof",
+        "name": "Konzerthaus",
+        "address": "P2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.84141154283007,
+          47.99694656853075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292328",
+        "obs_parkid": "11",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231375.html",
+        "park_zone": "Bahnhof",
+        "name": "Volksbank",
+        "address": "P3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.843404280234661,
+          47.99803589052632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292329",
+        "obs_parkid": "12",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231383.html",
+        "park_zone": "Bahnhof",
+        "name": "Am Bahnhof",
+        "address": "P4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.842908834987216,
+          47.998985389852045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292330",
+        "obs_parkid": "13",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231391.html",
+        "park_zone": "Bahnhof",
+        "name": "UNI - FMF/VF",
+        "address": "P5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.844723312496449,
+          48.00130086290828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292331",
+        "obs_parkid": "14",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231399.html",
+        "park_zone": "Rathaus",
+        "name": "Unterlinden",
+        "address": "P8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.848858803255791,
+          47.997882818254276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292332",
+        "obs_parkid": "15",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231407.html",
+        "park_zone": "Rathaus",
+        "name": "Schwarzwald City",
+        "address": "P9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.851110338871799,
+          47.99722128099989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "obs_id": "1292333",
+        "obs_parkid": "16",
+        "park_url": "http://www.freiburg.de/pb/,Lde/231431.html",
+        "park_zone": "Altstadt",
+        "name": "Karlsbau",
+        "address": "P13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.853839757759242,
+          47.99746077629321
+        ]
+      }
+  }]
+}
