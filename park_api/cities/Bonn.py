@@ -22,7 +22,7 @@ def parse_html(html):
     for row in soup.find_all("div", class_='parking-lots'):
       for column in row.find_all("div", class_='wpb_column vc_column_container vc_col-sm-3'):
         h3 = column.find_all("h3")
-        if not h3[0].a == None:
+        if not h3[0].a == None and len(h3) > 1:
           name = h3[0].a.string
           lot = geodata.lot(name)
           ltype = None
