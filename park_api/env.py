@@ -6,7 +6,7 @@ import configparser
 import sys
 
 API_VERSION = '1.0'
-SERVER_VERSION = '0.0.0'
+SERVER_VERSION = '0.1.0'
 SOURCE_REPOSITORY = 'https://github.com/offenesdresden/ParkAPI'
 
 APP_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), ".."))
