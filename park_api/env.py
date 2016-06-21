@@ -4,9 +4,11 @@ from park_api import structs, security
 import importlib
 import configparser
 import sys
+import subprocess
+import logging
 
 API_VERSION = '1.0'
-SERVER_VERSION = '0.0.0'
+SERVER_VERSION = '0.1.0'
 SOURCE_REPOSITORY = 'https://github.com/offenesdresden/ParkAPI'
 
 APP_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), ".."))
@@ -88,5 +90,14 @@ def load_config():
     LIVE_SCRAPE = raw_config.getboolean("live_scrape")
     DATABASE_URI = raw_config.get("database_uri")
 
+def determine_server_version():
+    global SERVER_VERSION
+    try:
+        proc = subprocess.Popen(["git", "rev-list", "--all", "--count"], stdout=subprocess.PIPE)
+        rev = proc.stdout.read().decode('utf-8').strip()
+        SERVER_VERSION = '0.1.{0}'.format(rev)
+    except (UnicodeDecodeError, OSError) as e:
+        logging.warning("Could not determine server version correctly: {0}".format(str(e)))
 
 load_config()
+determine_server_version()

@@ -145,6 +145,24 @@
       "name": "Parkplatz Rheinaue",
       "description": "Parkplatz Rheinaue Bonn, Einfahrt Charles-De-Gaulle-Straße, Tel. +49(0)228 656085, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
     }
+  },{
+    "type":"Feature",
+    "geometry":{
+      "type":"Point",
+      "coordinates": [7.0936335, 50.7339257]
+    },
+    "properties": {
+      "name":"Beethoven-Parkplatz"
+    }
+  },{
+    "type":"Feature",
+    "geometry":{
+      "type":"Point",
+      "coordinates": [7.1286246, 50.7171669]
+    },
+    "properties": {
+      "name":"Parkplatz Charles-de-Gaulle-Straße"
+    }
   }
   ]
 }
