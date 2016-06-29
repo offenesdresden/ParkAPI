@@ -14,7 +14,12 @@
           "type": "city",
           "url": "http://www.freiburg.de/pb/,Lde/231355.html",
           "source": "http://stadtplan.freiburg.de/wfs/gdm_pls/gdm_plslive?request=getfeature&service=wfs&version=1.1.0&typename=pls&outputformat=geojson&srsname=epsg:4326",
-	        "active_support":true
+          "active_support":true,
+          "attribution":{
+            "contributor":"Freiburg",
+            "url":"...",
+            "license":"dl-de/by-2-0"
+          }
       }
     },
     {
