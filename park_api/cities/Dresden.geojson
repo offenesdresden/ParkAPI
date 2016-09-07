@@ -522,5 +522,41 @@
       "type": "Tiefgarage",
       "address": "Wiener Platz"
     }
+  },
+  {
+    "type": "Feature",
+    "geometry":{
+      "type":"Point",
+      "coordinates": [13.725973, 51.049571]
+    },
+    "properties":{
+      "name": "Freiberger Platz",
+      "type": "Parkplatz",
+      "address": "Freiberger Platz"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry":{
+      "type":"Point",
+      "coordinates": [13.744492, 51.0345974]
+    },
+    "properties":{
+      "name": "Strehlener Straße",
+      "type": "Parkplatz",
+      "address": "Strehlener Straße 27"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry":{
+      "type":"Point",
+      "coordinates": [13.7536965, 51.0461396]
+    },
+    "properties":{
+      "name": "SP1 Straßburger Platz",
+      "type": "Parkhaus",
+      "address": "Straßburger Platz 1"
+    }
   }]
 }
