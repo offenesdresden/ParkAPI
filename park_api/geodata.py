@@ -16,7 +16,7 @@ class Lot(namedtuple('Lot', lot_fields)):
             return {'lng': self.lng, 'lat': self.lat}
         return None
 
-city_fields = ['name', 'id', 'lng', 'lat', 'url', 'source', 'active_support']
+city_fields = ['name', 'id', 'lng', 'lat', 'url', 'source', 'active_support', 'attribution']
 
 
 class City(namedtuple('City', city_fields)):
@@ -53,6 +53,7 @@ class GeoData:
                              None,
                              None,
                              None,
+                             None,
                              None)
 
     def _process_feature(self, feature):
@@ -70,13 +71,15 @@ class GeoData:
         url = props.get("url", None)
         source = props.get("source", None)
         active_support = props.get("active_support", None)
+        attribution = props.get("attribution", None)
         return City(name,
                     self.city_name,
                     lng,
                     lat,
                     url,
                     source,
-                    active_support)
+                    active_support,
+                    attribution)
 
     def _lot_from_props(self, name, lng, lat, props):
         address = props.get("address", None)

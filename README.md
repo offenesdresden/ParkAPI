@@ -10,7 +10,7 @@ ParkAPI is a project trying to consolidate pages where cities publish the amount
 
 The idea here is to fetch new data from the relevant pages regularly and serve that from the application so that the amount of stress on the original servers can be kept to a minimum. This data then also enables the calculation of forecast data (short- and longterm) that can be provided right alongside.
 
-This software is currently running at [park-api.higgsboson.tk](https://park-api.higgsboson.tk). It should always be at the most current version of this repo.
+This software is currently running at [api.parkendd.de](https://api.parkendd.de). It should always be at the most current version of this repo.
 
 ### Usage
 
