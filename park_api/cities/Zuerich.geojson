@@ -14,7 +14,12 @@
           "type": "city",
           "url": "https://www.stadt-zuerich.ch/portal/de/index/ogd/daten/parkleitsystem.html",
           "source": "http://www.pls-zh.ch/plsFeed/rss",
-	  "active_support": true
+	  "active_support": true,
+          "attribution":{
+            "contributor":"PLS Parkleitsystem Zürich AG",
+            "url":"http://www.plszh.ch/impressum.jsp",
+            "license":"Creative-Commons-Null-Lizenz (CC-0)"
+          }
       }
   }, {
     "type": "Feature",
