@@ -1,0 +1,164 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              10.203201,
+              56.153005
+          ]
+      },
+      "properties": {
+          "name": "Aarhus",
+          "type": "city",
+          "url": "https://www.aarhus.dk",
+          "source": "http://www.odaa.dk/api/action/datastore_search?resource_id=2a82a145-0195-4081-a13c-b0e587e9b89c",
+	  "active_support":false
+      }
+  }, {
+      "type": "Feature",
+      "properties": {
+        "name": "Nørreport",
+        "total": 65,
+        "address": "Nørreport 22",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.212737,
+          56.161859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Scandinavian Center",
+        "total": 1240,
+        "address": "Margrethepladsen 2",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.198423,
+          56.151647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bruuns Galleri",
+        "total": 967,
+        "address": "Værkmestergade 25",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.206229,
+          56.149843
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Busgadehuset",
+        "total": 105,
+        "address": "Telefonsmøgen 18",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.206103,
+          56.155285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Magasin",
+        "total": 383,
+        "address": "Åboulevarden 80",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.204983,
+          56.156690
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kalkværksvej",
+        "total": 210,
+        "address": "Kalkværksvej",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.211539,
+          56.149350
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salling",
+        "total": 700,
+        "address": "Østergade 25",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.207709,
+          56.153909
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Navitas",
+        "total": 449,
+        "address": "Inge Lehmanns Gade",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.216824,
+          56.159878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dokk1",
+        "total": 973,
+        "address": "Hack Kampmanns Plads 2",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.213976,
+          56.152698
+        ]
+      }
+    }
+    ]
+}
