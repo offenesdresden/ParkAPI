@@ -1,0 +1,128 @@
+{  
+   "help":"http://www.odaa.dk/api/3/action/help_show?name=datastore_search",
+   "success":true,
+   "result":{  
+      "resource_id":"2a82a145-0195-4081-a13c-b0e587e9b89c",
+      "fields":[  
+         {  
+            "type":"int4",
+            "id":"_id"
+         },
+         {  
+            "type":"text",
+            "id":"date"
+         },
+         {  
+            "type":"text",
+            "id":"garageCode"
+         },
+         {  
+            "type":"int4",
+            "id":"totalSpaces"
+         },
+         {  
+            "type":"int4",
+            "id":"vehicleCount"
+         }
+      ],
+      "records":[  
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":56,
+            "_id":1,
+            "totalSpaces":65,
+            "garageCode":"NORREPORT"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":512,
+            "_id":2,
+            "totalSpaces":512,
+            "garageCode":"SKOLEBAKKEN"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":885,
+            "_id":3,
+            "totalSpaces":1240,
+            "garageCode":"SCANDCENTER"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":352,
+            "_id":4,
+            "totalSpaces":967,
+            "garageCode":"BRUUNS"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":6187,
+            "_id":5,
+            "totalSpaces":142,
+            "garageCode":"BUSGADEHUSET"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":175,
+            "_id":6,
+            "totalSpaces":383,
+            "garageCode":"MAGASIN"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":29,
+            "_id":7,
+            "totalSpaces":210,
+            "garageCode":"KALKVAERKSVEJ"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":278,
+            "_id":8,
+            "totalSpaces":700,
+            "garageCode":"SALLING"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":0,
+            "_id":9,
+            "totalSpaces":0,
+            "garageCode":"DOKK1"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":73,
+            "_id":10,
+            "totalSpaces":449,
+            "garageCode":"Navitas"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":102,
+            "_id":11,
+            "totalSpaces":105,
+            "garageCode":"NewBusgadehuset"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":35,
+            "_id":12,
+            "totalSpaces":319,
+            "garageCode":"Urban Level 1"
+         },
+         {  
+            "date":"2016/10/29 17:30:04",
+            "vehicleCount":66,
+            "_id":13,
+            "totalSpaces":654,
+            "garageCode":"Urban Level 2+3"
+         }
+      ],
+      "_links":{  
+         "start":"/api/action/datastore_search?resource_id=2a82a145-0195-4081-a13c-b0e587e9b89c",
+         "next":"/api/action/datastore_search?offset=100&resource_id=2a82a145-0195-4081-a13c-b0e587e9b89c"
+      },
+      "total":13
+   }
+}
+

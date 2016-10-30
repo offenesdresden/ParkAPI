@@ -93,6 +93,10 @@ class CityTestCase(unittest.TestCase):
         city_name = "Freiburg"
         self.sanity_check(city_name, scrape_city(city_name, ".json"))
 
+    def test_aarhus(self):
+        city_name = "Aarhus"
+        self.sanity_check(city_name, scrape_city(city_name, ".json"))
+
     def test_sample(self):
         city_name = "Sample_City"
         self.sanity_check(city_name, scrape_city(city_name))
