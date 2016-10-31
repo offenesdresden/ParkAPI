@@ -14,7 +14,12 @@
           "type": "city",
           "url": "https://www.aarhus.dk",
           "source": "http://www.odaa.dk/api/action/datastore_search?resource_id=2a82a145-0195-4081-a13c-b0e587e9b89c",
-	  "active_support":false
+	      "active_support": true,
+          "attribution":{
+            "contributor":"Manuel R. Ciosici",
+            "url":"https://www.odaa.dk/dataset/parkeringshuse-i-aarhus",
+            "license":"Aarhus License – https://www.odaa.dk/base/image/Vilkår%20for%20brug%20af%20danske%20offentlige%20data%20-%20Aarhus%20Kommune.%20docx.pdf"
+          }
       }
   }, {
       "type": "Feature",
