@@ -14,7 +14,12 @@
           "type": "city",
           "url": "http://www.aalborgcity.dk/live-parkering.aspx",
           "source": "http://plcinfo.mintrafik.dk/gadget/getParkPlacesAreaMarkers.aspx",
-	  "active_support":false
+	      "active_support": true,
+          "attribution":{
+            "contributor":"Manuel R. Ciosici",
+            "url":"http://www.aalborgcity.dk/live-parkering.aspx",
+            "license":""
+          }
       }
   }, {
       "type": "Feature",
