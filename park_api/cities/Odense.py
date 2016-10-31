@@ -32,7 +32,7 @@ def parse_html(text_content):
 
         # please be careful about the state only being allowed to contain either open, closed or nodata
         # should the page list other states, please map these into the three listed possibilities
-        state = "nodata"
+        state = "unknown"
 
         lot = geodata.lot(lot_code)
 

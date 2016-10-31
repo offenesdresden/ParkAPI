@@ -40,7 +40,7 @@ def parse_html(text_content):
     for record in data_as_json["result"]["records"]:
         lot_code = record["garageCode"]
         total = int(record["totalSpaces"])
-        free = int(record["totalSpaces"]) - int(record["vehicleCount"])
+        free = max(int(record["totalSpaces"]) - int(record["vehicleCount"]), 0)
 
         if lot_code not in map_json_names.keys() and lot_code not in cummulatives.keys():
             continue
@@ -53,7 +53,7 @@ def parse_html(text_content):
                 "total": total,
                 "address": lot.address,
                 "coords": lot.coords,
-                "state": "nodata",
+                "state": "unknown",
                 "lot_type": lot.type,
                 "id": lot.id,
                 "forecast": False,
@@ -67,7 +67,7 @@ def parse_html(text_content):
                     "total": total,
                     "address": lot.address,
                     "coords": lot.coords,
-                    "state": "nodata",
+                    "state": "unknown",
                     "lot_type": lot.type,
                     "id": lot.id,
                     "forecast": False,
@@ -80,7 +80,7 @@ def parse_html(text_content):
                     "total": current_data["total"] + total,
                     "address": lot.address,
                     "coords": lot.coords,
-                    "state": "nodata",
+                    "state": "unknown",
                     "lot_type": lot.type,
                     "id": lot.id,
                     "forecast": False,
