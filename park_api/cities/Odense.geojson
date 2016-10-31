@@ -1,0 +1,308 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              10.387269,
+              55.401000
+          ]
+      },
+      "properties": {
+          "name": "Odense",
+          "type": "city",
+          "url": "https://www.odenseparkering.dk/",
+          "source": "https://www.odenseparkering.dk/parkingrt/livetest.json",
+	  "active_support":false
+      }
+  }, {
+      "type": "Feature",
+      "properties": {
+        "name": "brandts_klaedefabrik_(euro_park)",
+        "total": 153,
+        "address": "Pantheons Passage 1",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.379879,
+          55.39607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "filosoffen_q_park_(ski_data)",
+        "total": 218,
+        "address": "Filosofgangen 17B",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.381473,
+          55.393475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "gronnegade_q_park",
+        "total": 116,
+        "address": "Grønnegade 21X",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.37975,
+          55.396923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "magasin_q_park",
+        "total": 105,
+        "address": "Klingenberg 6",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.387138,
+          55.395157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p1_kunsten",
+        "total": 20,
+        "address": "Filosofgangen 52",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.379949,
+          55.392036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p10_graabrodre",
+        "total": 300,
+        "address": "Store Gråbrødrestræde 12",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.384143,
+          55.39636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p11_slottet",
+        "total": 31,
+        "address": "Vindegade 14",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.386555,
+          55.3985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p12_asylgade",
+        "total": 40,
+        "address": "Asylgade 7",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.387023,
+          55.397152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p13_klosterbakken_(q_park)",
+        "total": 41,
+        "address": "Klosterbakken 10",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.388736,
+          55.39362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p18_tbt_nord",
+        "total": 509,
+        "address": "Dannebrogsgade 2",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.390037,
+          55.39949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p2_filosofgangen",
+        "total": 17,
+        "address": "Filosofhaven 20",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.381905,
+          55.39336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p3_skt._anne_plads",
+        "total": 20,
+        "address": "Skt. Anne Plads 4",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.384666,
+          55.393715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p4_klaregade",
+        "total": 13,
+        "address": "Klosterbakken 13",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.386967,
+          55.393368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p5_munkemolle",
+        "total": 13,
+        "address": "Klosterbakken 20A",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.388275,
+          55.393307
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p6_kronprinsensgade",
+        "total": 40,
+        "address": "Kronprinsensgade 3T",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.392431,
+          55.39475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p7_kongestien",
+        "total": 36,
+        "address": "Brandts Passage 31",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.382004,
+          55.395294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p8_klostervej",
+        "total": 72,
+        "address": "Klostervej 10",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.382108,
+          55.397015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "odense_p9_vinden",
+        "total": 26,
+        "address": "Vindegade 52",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.38314,
+          55.39807
+        ]
+      }
+    }
+    ]
+}
