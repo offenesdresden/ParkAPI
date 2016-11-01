@@ -1,0 +1,233 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              9.924623,
+              57.050031
+          ]
+      },
+      "properties": {
+          "name": "Aalborg",
+          "type": "city",
+          "url": "http://www.aalborgcity.dk/live-parkering.aspx",
+          "source": "http://plcinfo.mintrafik.dk/gadget/getParkPlacesAreaMarkers.aspx",
+	      "active_support": true,
+          "attribution":{
+            "contributor":"Manuel R. Ciosici",
+            "url":"http://www.aalborgcity.dk/live-parkering.aspx",
+            "license":""
+          }
+      }
+  }, {
+      "type": "Feature",
+      "properties": {
+        "name": "Parking Lot 1",
+        "total": 200,
+        "address": "Musterstraße 1",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2168988,
+          53.1391841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sømandshjemmet",
+        "total": 78,
+        "address": "Østerbro 27",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.93556,
+          57.04646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sauers Plads",
+        "total": 360,
+        "address": "Sauers Plads",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.92745,
+          57.04419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salling",
+        "total": 312,
+        "address": "Braskensgade",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.922735,
+          57.04758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Palads",
+        "total": 475,
+        "address": "Jomfru Anes Gård 5",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.920601,
+          57.05014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Musikkens Hus",
+        "total": 285,
+        "address": "Nyhavnsgade 53",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.93311,
+          57.04737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kongrescenter",
+        "total": 700,
+        "address": "Vesterbro 14",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.91458,
+          57.04456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kennedy Arkaden",
+        "total": 350,
+        "address": "John F. Kennedys Plads 1U",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.918808,
+          57.04178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gåsepigen",
+        "total": 145,
+        "address": "Stengade 1",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.91376,
+          57.04751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Føtex",
+        "total": 150,
+        "address": "Fjordgade 6",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.924956,
+          57.04754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Friis",
+        "total": 731,
+        "address": "Nytorv 27",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.927327,
+          57.04769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "C W Obel",
+        "total": 376,
+        "address": "Badehusvej 14",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.910837,
+          57.05243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Budolfi Plads",
+        "total": 157,
+        "address": "Vingårdsgade 10",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.9183,
+          57.0475
+        ]
+      }
+    }
+    ]
+}
