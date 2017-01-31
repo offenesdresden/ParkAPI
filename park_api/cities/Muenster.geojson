@@ -12,8 +12,8 @@
       "properties": {
           "name": "Münster",
           "type": "city",
-          "url": "http://www5.stadt-muenster.de/parkhaeuser/",
-          "source": "http://www5.stadt-muenster.de/parkhaeuser/",
+          "url": "http://www.stadt-muenster.de/tiefbauamt/parkleitsystem",
+          "source": "http://www.stadt-muenster.de/tiefbauamt/parkleitsystem",
 	  "active_support": false
       }
   }, {
