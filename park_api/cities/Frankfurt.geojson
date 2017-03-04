@@ -11,7 +11,7 @@
           "type": "city",
           "url": "http://offenedaten.frankfurt.de",
           "source": "http://offenedaten.frankfurt.de/dataset/912fe0ab-8976-4837-b591-57dbf163d6e5/resource/48378186-5732-41f3-9823-9d1938f2695e/download/parkdatendyn.xml",
-          "active_support":false
+          "active_support":true
       }
   }]
 }
