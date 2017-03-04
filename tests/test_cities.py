@@ -89,6 +89,10 @@ class CityTestCase(unittest.TestCase):
         city_name = "Hamburg"
         self.sanity_check(city_name, scrape_city(city_name, ".xml"))
 
+    def test_frankfurt(self):
+        city_name = "Frankfurt"
+        self.sanity_check(city_name, scrape_city(city_name, ".xml"))
+
     def test_freiburg(self):
         city_name = "Freiburg"
         self.sanity_check(city_name, scrape_city(city_name, ".json"))
@@ -109,6 +113,3 @@ class CityTestCase(unittest.TestCase):
         city_name = "Sample_City"
         self.sanity_check(city_name, scrape_city(city_name))
 
-    def test_frankfurt(self):
-        city_name = "Frankfurt"
-        self.sanity_check(city_name, scrape_city(city_name, ".xml"))
