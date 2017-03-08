@@ -4,7 +4,7 @@
       "type": "Feature",
       "geometry": {
           "type": "Point",
-          "coordinates": [50.116667, 8.683333]
+          "coordinates": [8.683333, 50.116667]
       },
       "properties": {
           "name": "Frankfurt am Main",
