@@ -45,9 +45,10 @@ class GeoData:
         private_path = os.path.join(env.APP_ROOT, "park_api", "cities", private_file)
         try:
             with open(private_path) as p:
-                self._process_private(json.load(p))
+                self.private_data = json.load(p)
+                self._process_private(self.private_data)
         except FileNotFoundError:
-            pass
+            self.private_data = None
 
     def _process_json(self, json):
         self.lots = {}
