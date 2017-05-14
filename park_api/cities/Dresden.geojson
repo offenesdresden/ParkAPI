@@ -36,7 +36,9 @@
     "properties": {
       "name": "Prohlis",
       "address": "Langer Weg",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 67,
+      "aux": 359
     }
   }, {
     "type": "Feature",
@@ -47,7 +49,9 @@
     "properties": {
       "name": "Flutrinne",
       "address": "Messering",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 1200,
+      "aux": 419
     }
   }, {
     "type": "Feature",
@@ -58,7 +62,9 @@
     "properties": {
       "name": "Haus am Zwinger",
       "address": "Kleine Brüdergasse 3",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 171,
+      "aux": 294
     }
   }, {
     "type": "Feature",
@@ -69,7 +75,9 @@
     "properties": {
       "name": "Centrum Galerie",
       "address": "Reitbahnstraße",
-      "type": "Parkhaus"
+      "type": "Parkhaus",
+      "total": 1059,
+      "aux": 301
     }
   }, {
     "type": "Feature",
@@ -80,7 +88,9 @@
     "properties": {
       "name": "Wöhrl - Florentinum",
       "address": "Prager Straße 8 - 10",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 264,
+      "aux": 297
     }
   }, {
     "type": "Feature",
@@ -102,7 +112,9 @@
     "properties": {
       "name": "Semperoper",
       "address": "Devrientstraße",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 400,
+      "aux": 300
     }
   }, {
     "type": "Feature",
@@ -113,7 +125,9 @@
     "properties": {
       "name": "Reitbahnstraße",
       "address": "Reitbahnstraße",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 285,
+      "aux": 307
     }
   }, {
     "type": "Feature",
@@ -124,7 +138,9 @@
     "properties": {
       "name": "Taschenbergpalais",
       "address": "Kleine Brüdergasse",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 98,
+      "aux": 293
     }
   }, {
     "type": "Feature",
@@ -146,7 +162,9 @@
     "properties": {
       "name": "Schießgasse",
       "address": "Schießgasse",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 255,
+      "aux":304
     }
   }, {
     "type": "Feature",
@@ -157,7 +175,9 @@
     "properties": {
       "name": "Lindengasse",
       "address": "Lindengasse",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 75,
+      "aux": 306
     }
   }, {
     "type": "Feature",
@@ -168,7 +188,9 @@
     "properties": {
       "name": "Wiener Platz / Hbf.",
       "address": "Wiener Platz",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 350,
+      "aux": 357
     }
   }, {
     "type": "Feature",
@@ -179,7 +201,9 @@
     "properties": {
       "name": "Pirnaischer Platz",
       "address": "Pirnaischer Platz",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 156,
+      "aux": 305
     }
   }, {
     "type": "Feature",
@@ -190,7 +214,9 @@
     "properties": {
       "name": "An der Frauenkirche",
       "address": "An der Frauenkirche 12a",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 120,
+      "aux": 295
     }
   }, {
     "type": "Feature",
@@ -212,7 +238,9 @@
     "properties": {
       "name": "Cossebaude",
       "address": "Bahnhofstraße Cossebaude",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 38,
+      "aux": 1175
     }
   }, {
     "type": "Feature",
@@ -223,7 +251,9 @@
     "properties": {
       "name": "Bühlau",
       "address": "Quohrener Straße",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 1,
+      "aux": 358
     }
   }, {
     "type": "Feature",
@@ -234,7 +264,9 @@
     "properties": {
       "name": "Kaditz",
       "address": "Kötschenbroder Str.",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 190,
+      "aux": 675
     }
   }, {
     "type": "Feature",
@@ -245,7 +277,9 @@
     "properties": {
       "name": "Hauptstraße",
       "address": "Metzer Straße",
-      "type": "Parkhaus"
+      "type": "Parkhaus",
+      "total": 150,
+      "aux": 633
     }
   }, {
     "type": "Feature",
@@ -256,7 +290,9 @@
     "properties": {
       "name": "Ferdinandplatz",
       "address": "Ferdinandplatz",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 140,
+      "aux": 632
     }
   }, {
     "type": "Feature",
@@ -289,7 +325,9 @@
     "properties": {
       "name": "Kongresszentrum",
       "address": "Ostra-Ufer 2",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 250,
+      "aux": 424
     }
   }, {
     "type": "Feature",
@@ -311,7 +349,9 @@
     "properties": {
       "name": "Theresienstraße",
       "address": "Theresienstraße 15",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 140,
+      "aux": 303
     }
   }, {
     "type": "Feature",
@@ -322,7 +362,9 @@
     "properties": {
       "name": "Altmarkt",
       "address": "Wilsdruffer Straße",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 400,
+      "aux": 1101
     }
   }, {
     "type": "Feature",
@@ -333,7 +375,9 @@
     "properties": {
       "name": "Sarrasanistraße",
       "address": "Sarrasanistraße",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 55,
+      "aux": 932
     }
   }, {
     "type": "Feature",
@@ -344,7 +388,9 @@
     "properties": {
       "name": "Frauenkirche Neumarkt",
       "address": "Landhausstraße 2",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 250,
+      "aux": 490
     }
   }, {
     "type": "Feature",
@@ -355,7 +401,9 @@
     "properties": {
       "name": "Parkhaus Mitte",
       "address": "Magdeburger Str. 1",
-      "type": "Parkhaus"
+      "type": "Parkhaus",
+      "total": 280,
+      "aux": 931
     }
   }, {
     "type": "Feature",
@@ -366,7 +414,9 @@
     "properties": {
       "name": "Karstadt",
       "address": "Prager Straße 12",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 265,
+      "aux": 296
     }
   }, {
     "type": "Feature",
@@ -377,7 +427,9 @@
     "properties": {
       "name": "Messegelände",
       "address": "Messering 6",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 754,
+      "aux": 360
     }
   }, {
     "type": "Feature",
@@ -388,7 +440,9 @@
     "properties": {
       "name": "Langebrück",
       "address": "Güterbahnhofstraße Langebrück",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 50,
+      "aux": 1176
     }
   }, {
     "type": "Feature",
@@ -399,7 +453,9 @@
     "properties": {
       "name": "Altmarkt - Galerie",
       "address": "Webergasse 1",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 480,
+      "aux": 319
     }
   }, {
     "type": "Feature",
@@ -421,7 +477,9 @@
     "properties": {
       "name": "Terrassenufer",
       "address": "Terrassenufer",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 69,
+      "aux": 308
     }
   }, {
     "type": "Feature",
@@ -454,7 +512,9 @@
     "properties": {
       "name": "City Center",
       "address": "Friedrich-List-Platz 2",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 350,
+      "aux": 298
     }
   }, {
     "type": "Feature",
@@ -465,7 +525,9 @@
     "properties": {
       "name": "Wiesentorstraße",
       "address": "Wiesentorstraße",
-      "type": "Parkplatz"
+      "type": "Parkplatz",
+      "total": 120,
+      "aux": 302
     }
   }, {
     "type": "Feature",
@@ -476,7 +538,9 @@
     "properties": {
       "name": "World Trade Center",
       "address": "Ammonstraße 70",
-      "type": "Tiefgarage"
+      "type": "Tiefgarage",
+      "total": 220,
+      "aux": 299
     }
   }, {
     "type": "Feature",
@@ -487,7 +551,9 @@
     "properties":{
       "name": "Gompitz",
       "type": "Parkplatz",
-      "address": "Gompitzer Höhe"
+      "address": "Gompitzer Höhe",
+      "total": 50,
+      "aux": 1095
     }
   }, {
     "type": "Feature",
@@ -520,7 +586,9 @@
     "properties":{
       "name": "Wiener Platz / Hauptbahnhof",
       "type": "Tiefgarage",
-      "address": "Wiener Platz"
+      "address": "Wiener Platz",
+      "total": 200,
+      "aux": 356
     }
   },
   {

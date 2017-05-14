@@ -6,7 +6,7 @@ from park_api import env
 from park_api.util import remove_special_chars
 
 
-lot_fields = ['name', 'id', 'type', 'lng', 'lat', 'address', 'total']
+lot_fields = ['name', 'id', 'type', 'lng', 'lat', 'address', 'total', 'aux']
 
 
 class Lot(namedtuple('Lot', lot_fields)):
@@ -106,8 +106,9 @@ class GeoData:
         address = props.get("address", None)
         total = props.get("total", 0)
         _type = props.get("type", None)
+        _aux = props.get("aux", None)
         _id = generate_id(self.city_name + name)
-        return Lot(name, _id, _type, lng, lat, address, total)
+        return Lot(name, _id, _type, lng, lat, address, total, _aux)
 
     def _coords(self, feature):
         geometry = feature.get("geometry", None)
@@ -121,5 +122,5 @@ class GeoData:
         lot = self.lots.get(name, None)
         if lot is None:
             _id = generate_id(self.city_name + name)
-            return Lot(name, _id, None, None, None, None, 0)
+            return Lot(name, _id, None, None, None, None, 0, None)
         return lot
