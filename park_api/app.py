@@ -26,7 +26,7 @@ def get_meta():
         cities[city.id] = {
                 "name": city.name,
                 "coords": city.coords,
-                "source": city.source,
+                "source": city.public_source,
                 "url": city.url,
                 "active_support": city.active_support,
                 "attribution": city.attribution
