@@ -39,10 +39,7 @@ def parse_html(html):
             except:
                 pass
     else:
-        #TODO: implement alternative if another API is used.
-        data = {
-            "lots": [],
-            "last_updated": ""
-        }
-
+        #use this API
+        data = json.loads(html)
+        data.pop('last_downloaded')
     return data
