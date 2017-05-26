@@ -48,10 +48,7 @@ class GeoData:
                 self.private_data = json.load(p)
                 self._process_private(self.private_data)
         except FileNotFoundError:
-            if(os.path.isfile(private_path + ".def")):
-                self.private_data = {"source":"", "public":""} # Workaround to let travis check private data even though it is not available in GitHub
-            else:
-                self.private_data = None
+            self.private_data = None
 
     def _process_json(self, json):
         self.lots = {}
