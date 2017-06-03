@@ -6,7 +6,7 @@ from park_api import env
 from park_api.util import remove_special_chars
 
 
-lot_fields = ['name', 'id', 'type', 'lng', 'lat', 'address', 'total']
+lot_fields = ['name', 'id', 'type', 'lng', 'lat', 'address', 'total', 'aux']
 
 
 class Lot(namedtuple('Lot', lot_fields)):
@@ -16,7 +16,7 @@ class Lot(namedtuple('Lot', lot_fields)):
             return {'lng': self.lng, 'lat': self.lat}
         return None
 
-city_fields = ['name', 'id', 'lng', 'lat', 'url', 'source', 'active_support', 'attribution']
+city_fields = ['name', 'id', 'lng', 'lat', 'url', 'source', 'public_source', 'active_support', 'attribution']
 
 
 class City(namedtuple('City', city_fields)):
@@ -41,6 +41,14 @@ class GeoData:
                 self._process_json(json.load(f))
         except FileNotFoundError:
             self.lots = {}
+        private_file = city[:-3] + ".json"
+        private_path = os.path.join(env.APP_ROOT, "park_api", "cities", private_file)
+        try:
+            with open(private_path) as p:
+                self.private_data = json.load(p)
+                self._process_private(self.private_data)
+        except FileNotFoundError:
+            self.private_data = None
 
     def _process_json(self, json):
         self.lots = {}
@@ -54,7 +62,20 @@ class GeoData:
                              None,
                              None,
                              None,
+                             None,
                              None)
+
+    def _process_private(self, json):
+        if self.city:
+            self.city = City(self.city[0],
+                             self.city[1], 
+                             self.city[2],
+                             self.city[3],
+                             self.city[4],
+                             json["source"],
+                             json["public"],
+                             self.city[7],
+                             self.city[8])
 
     def _process_feature(self, feature):
         props = feature["properties"]
@@ -78,6 +99,7 @@ class GeoData:
                     lat,
                     url,
                     source,
+                    source,
                     active_support,
                     attribution)
 
@@ -85,8 +107,9 @@ class GeoData:
         address = props.get("address", None)
         total = props.get("total", 0)
         _type = props.get("type", None)
+        _aux = props.get("aux", None)
         _id = generate_id(self.city_name + name)
-        return Lot(name, _id, _type, lng, lat, address, total)
+        return Lot(name, _id, _type, lng, lat, address, total, _aux)
 
     def _coords(self, feature):
         geometry = feature.get("geometry", None)
@@ -100,5 +123,5 @@ class GeoData:
         lot = self.lots.get(name, None)
         if lot is None:
             _id = generate_id(self.city_name + name)
-            return Lot(name, _id, None, None, None, None, 0)
+            return Lot(name, _id, None, None, None, None, 0, None)
         return lot
