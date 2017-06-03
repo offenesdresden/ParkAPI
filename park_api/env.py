@@ -8,7 +8,7 @@ import subprocess
 import logging
 
 API_VERSION = '1.0'
-SERVER_VERSION = '0.2.0'
+SERVER_VERSION = '0.3.0'
 SOURCE_REPOSITORY = 'https://github.com/offenesdresden/ParkAPI'
 
 APP_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), ".."))
