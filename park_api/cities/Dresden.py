@@ -20,20 +20,23 @@ def parse_html(html):
         status = ['open', 'closed', 'unknown']
         id_lots = {geodata.lots[n].aux: geodata.lots[n] for n in geodata.lots}
         for dataset in api_data:
-            lot = id_lots[dataset['id']]
-            forecast = os.path.isfile("forecast_data/" + lot.id + ".csv")
-            data["lots"].append({
-                "coords": lot.coords,
-                "name": lot.name,
-                "total": lot.total,
-                "free": max(lot.total - dataset["belegung"], 0),
-                "state": status[dataset["status"] - 1],
-                "id": lot.id,
-                "lot_type": lot.type,
-                "address": lot.address,
-                "forecast": forecast,
-                "region": ""
-            })
+            try:
+                lot = id_lots[dataset['id']]
+                forecast = os.path.isfile("forecast_data/" + lot.id + ".csv")
+                data["lots"].append({
+                    "coords": lot.coords,
+                    "name": lot.name,
+                    "total": lot.total,
+                    "free": max(lot.total - dataset["belegung"], 0),
+                    "state": status[dataset["status"] - 1],
+                    "id": lot.id,
+                    "lot_type": lot.type,
+                    "address": lot.address,
+                    "forecast": forecast,
+                    "region": ""
+                })
+            except KeyError:
+                pass
     else:
         #use this API
         data = json.loads(html)
