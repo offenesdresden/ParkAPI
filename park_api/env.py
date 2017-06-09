@@ -95,7 +95,7 @@ def determine_server_version():
     try:
         proc = subprocess.Popen(["git", "rev-list", "--all", "--count"], stdout=subprocess.PIPE)
         rev = proc.stdout.read().decode('utf-8').strip()
-        SERVER_VERSION = '0.2.{0}'.format(rev)
+        SERVER_VERSION = '0.3.{0}'.format(rev)
     except (UnicodeDecodeError, OSError) as e:
         logging.warning("Could not determine server version correctly: {0}".format(str(e)))
 
