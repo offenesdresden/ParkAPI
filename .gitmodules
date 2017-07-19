@@ -1,0 +1,3 @@
+[submodule "/home/jkliemann/workspace/ParkenDD/ParkAPI/park_api/modules/parkapi_modules"]
+	path = /home/jkliemann/workspace/ParkenDD/ParkAPI/park_api/modules/parkapi_modules
+	url = https://github.com/offenesdresden/ParkApi_Modules
