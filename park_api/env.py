@@ -49,10 +49,13 @@ def load_cities():
     This list is used to stop requests trying to access files and output them which are not cities.
     """
     cities = {}
-    path = os.path.join(APP_ROOT, "park_api", "cities")
-    for file in filter(security.file_is_allowed, os.listdir(path)):
-        city = importlib.import_module("park_api.cities." + file.title()[:-3])
-        cities[file[:-3]] = city
+    path = os.path.join(APP_ROOT, "park_api", "modules")
+    for d in [_d for _d in os.listdir(path) if os.path.isdir(os.path.join(APP_ROOT, "park_api", "modules", _d))]:
+        modpath = os.path.join(path, d)
+        sys.path.append(modpath)
+        for file in filter(security.file_is_allowed, os.listdir(modpath)):
+            city = importlib.import_module("park_api.cities." + file.title()[:-3])
+            cities[file[:-3]] = city
     return cities
 
 

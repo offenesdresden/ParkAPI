@@ -35,16 +35,14 @@ class GeoData:
     def __init__(self, city):
         json_file = city[:-3] + ".geojson"
         self.city_name = os.path.basename(city[:-3])
-        json_path = os.path.join(env.APP_ROOT, "park_api", "cities", json_file)
         try:
-            with open(json_path) as f:
+            with open(json_file) as f:
                 self._process_json(json.load(f))
         except FileNotFoundError:
             self.lots = {}
         private_file = city[:-3] + ".json"
-        private_path = os.path.join(env.APP_ROOT, "park_api", "cities", private_file)
         try:
-            with open(private_path) as p:
+            with open(private_file) as p:
                 self.private_data = json.load(p)
                 self._process_private(self.private_data)
         except FileNotFoundError:
