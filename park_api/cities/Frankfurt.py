@@ -28,8 +28,8 @@ def parse_html(html):
     for tr in soup.select("parkingfacilitytablestatuspublication > parkingfacilitystatus"):
         node = tr.find("parkingfacilityreference")
         lot_id = tr.find("parkingfacilityreference")["id"]
-        lot_free = int(tr.find("totalnumberofoccupiedparkingspaces").text)
         lot_total = int(tr.find("totalparkingcapacityshorttermoverride").text)
+        lot_free = max(lot_total - int(tr.find("totalnumberofoccupiedparkingspaces").text), 0)
 
         # please be careful about the state only being allowed to contain either open, closed or nodata
         # should the page list other states, please map these into the three listed possibilities
