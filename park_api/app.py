@@ -9,6 +9,7 @@ from park_api.crossdomain import crossdomain
 
 app = Flask(__name__)
 
+cache = {}
 
 def user_agent(request):
     ua = request.headers.get("User-Agent")
@@ -68,13 +69,21 @@ def get_lots(city):
 
     if env.LIVE_SCRAPE:
         return jsonify(scraper._live(city_module))
-
+    
     try:
       with db.cursor() as cursor:
+          if city in cache:
+              sql = "SELECT timestamp_downloaded FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;"
+              cursor.execute(sql, (city,))
+              ts = cursor.fetchall()[0]["timestamp_downloaded"]
+              if cache[city][0] == ts:
+                  return cache[city][1]
           sql = "SELECT timestamp_updated, timestamp_downloaded, data" \
                   " FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;"
           cursor.execute(sql, (city,))
-          data = cursor.fetchall()[0]["data"]
+          raw = cursor.fetchall()[0]
+          data = raw["data"]
+          cache[city] = (raw["timestamp_downloaded"], jsonify(data))
     except (psycopg2.OperationalError, psycopg2.ProgrammingError) as e:
         app.logger.error("Unable to connect to database: " + str(e))
         abort(500)
