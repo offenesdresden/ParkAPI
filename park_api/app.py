@@ -84,6 +84,8 @@ def get_lots(city):
           raw = cursor.fetchall()[0]
           data = raw["data"]
           cache[city] = (raw["timestamp_downloaded"], jsonify(data))
+    except IndexError:
+        return ("There is currently no data available for " + city, 204)
     except (psycopg2.OperationalError, psycopg2.ProgrammingError) as e:
         app.logger.error("Unable to connect to database: " + str(e))
         abort(500)
