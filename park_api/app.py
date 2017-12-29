@@ -10,6 +10,11 @@ from park_api.crossdomain import crossdomain
 app = Flask(__name__)
 
 cache = {}
+empty = {
+        'last_downloaded': '1970-01-01T00:00:00',
+        'last_updated': '1970-01-01T00:00:00',
+        'lots':[]
+        }
 
 def user_agent(request):
     ua = request.headers.get("User-Agent")
@@ -85,7 +90,7 @@ def get_lots(city):
           data = raw["data"]
           cache[city] = (raw["timestamp_downloaded"], jsonify(data))
     except IndexError:
-        return ("Error 503: There is currently no data available for " + city + ".", 503)
+        return jsonify(empty)
     except (psycopg2.OperationalError, psycopg2.ProgrammingError) as e:
         app.logger.error("Unable to connect to database: " + str(e))
         abort(500)

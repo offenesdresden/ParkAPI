@@ -14,7 +14,7 @@
           "type": "city",
           "url": "https://www.odenseparkering.dk/",
           "source": "https://www.odenseparkering.dk/parkingrt/livetest.json",
-	      "active_support": true,
+	      "active_support": false,
           "attribution":{
             "contributor":"Manuel R. Ciosici",
             "url":"https://www.odenseparkering.dk/",
