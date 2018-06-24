@@ -1,0 +1,31 @@
+version: '3'
+services:
+  api:
+    build: .
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      - POSTGRES_PASSWORD=
+
+  scraper:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    environment:
+      - POSTGRES_PASSWORD=
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=park_api
+      - POSTGRES_PASSWORD=
+      - POSTGRES_DB=park_api
+    volumes:
+      - database:/var/lib/postgresql/data
+
+volumes:
+  database:
