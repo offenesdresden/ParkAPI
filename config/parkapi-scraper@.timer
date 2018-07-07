@@ -1,6 +1,0 @@
-[Timer]
-OnBootSec=10min
-OnUnitActiveSec=5min
-
-[Install]
-WantedBy=multi-user.target

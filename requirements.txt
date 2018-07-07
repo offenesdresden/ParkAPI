@@ -1,9 +1,0 @@
-beautifulsoup4==4.5.3
-Flask
-requests
-feedparser
-pytz
-psycopg2
-yoyo-migrations
-requests-mock
-utm
