@@ -1,0 +1,228 @@
+"id","name","address","region","city","country","latitude","longitude","type","has_forecast","detail_url","total_spaces","source_id","pricing","opening_hours","additional_info"
+1,"Altmarkt","Altmarkt 1, 01067 Dresden","Innere Altstadt","Dresden","DE",51.0506700789,13.741789104,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?3&id=431",400,1,,,"Einfahrt von Wilsdruffer Straße, Einfahrtshöhe max. 2,00 m, Kontakt: 03 51 / 481 02 74, servicecenter@q-park.de"
+2,"An der Frauenkirche","An der Frauenkirche 12a, 01067 Dresden","Innere Altstadt","Dresden","DE",51.051415072,13.7441934672,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?4&id=403",120,1,,,"Einfahrt von Schießgasse, Kontakt: 03 51 / 496 06 03, tiefgarage-frauenkirche.dresden@gmx.de"
+3,"Frauenkirche Neumarkt","Landhausstraße 2, 01067 Dresden","Innere Altstadt","Dresden","DE",51.0590019661,13.7308651039,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?5&id=422",250,1,,,"Einfahrtshöhe max. 2,0 m, Kontakt: 03 51 / 821 25 58, servicecenter@q-park.de"
+4,"Haus am Zwinger","Kleine Brüdergasse 3, 01067 Dresden","Innere Altstadt","Dresden","DE",51.0514142863,13.7357788973,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?6&id=402",171,1,,,"Einfahrtshöhe max. 2,0 m, Kontakt: 07 11 / 30 57 03 05, service@apcoa.de"
+5,"Schießgasse","Schießgasse, 01067 Dresden","Innere Altstadt","Dresden","DE",51.0504295976,13.7445053432,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?8&id=411",255,1,,,"Kontakt: 03 51 / 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+6,"Taschenbergpalais","Kleine Brüdergasse 3, 01067 Dresden","Innere Altstadt","Dresden","DE",51.0517691273,13.7353413756,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?9&id=401",98,1,,,"Einfahrtshöhe max. 2,0 m, Kontakt: 07 11 / 30 57 03 05, service@apcoa.de"
+7,"Kongresszentrum","Ostra-Ufer 2, 01067 Dresden","Ring West","Dresden","DE",51.0419707134,13.731187746,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?12&id=421",250,1,,,
+9,"Parkhaus Mitte","Magdeburger Str. 1, 01067 Dresden","Ring West","Dresden","DE",51.0581412221,13.726110154,"carpark",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?20&id=429",280,1,,,"Kontakt: 03 51 / 481 80 33, service@parkhaus-dresden.info"
+10,"Semperoper","Devrientstraße, 01067 Dresden","Ring West","Dresden","DE",51.0554397704,13.7339577336,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?24&id=408",400,1,,,"Einfahrtshöhe max. 1,95 m, Kontakt: 03 51 / 496 77 05"
+11,"World Trade Center","Ammonstraße 70, 01067 Dresden","Ring West","Dresden","DE",51.0493736241,13.721715643,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?25&id=407",220,1,,,"Einfahrt von Freiberger Straße, Einfahrtshöhe max. 2,0 m"
+12,"Altmarkt - Galerie","Webergasse 1, 01067 Dresden","Prager Straße","Dresden","DE",51.0467643184,13.7378780267,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?27&id=409",480,1,,,"Einfahrt von Marienstraße, Einfahrtshöhe max. 2,1 m, Kontakt: 03 51 / 48 20 40"
+14,"Centrum Galerie","Trompeterstraße 5, 01069 Dresden","Prager Straße","Dresden","DE",51.0453716211,13.7339469054,"carpark",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?29&id=438",1059,1,,,"Einfahrt von Reitbahnstraße, Kontakt: 05 41 / 33 12 50, parkinfo@opg-parking.de"
+15,"Ferdinandplatz","Ferdinandplatz 1, 01069 Dresden","Prager Straße","Dresden","DE",51.0458825653,13.7396371112,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?30&id=419",140,1,,,"Einfahrt von St. Petersburger Straße"
+16,"Karstadt","Prager Straße 12, 01069 Dresden","Prager Straße","Dresden","DE",51.0467643184,13.7380445253,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?31&id=404",265,1,,,"Einfahrt von Waisenhausstraße, Einfahrtshöhe max. 1,90 m"
+17,"Reitbahnstraße","Reitbahnstraße, 01069 Dresden","Prager Straße","Dresden","DE",51.0435681109,13.733425664,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?32&id=415",285,1,,,"Kontakt: 03 51 / 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+19,"Wöhrl - Florentinum","Prager Straße 8 - 10, 01069 Dresden","Prager Straße","Dresden","DE",51.0445161087,13.7379629908,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?37&id=405",264,1,,,"Einfahrt von St. Petersburger Straße"
+20,"City Center","Friedrich-List-Platz 2, 01069 Dresden","Ring Süd","Dresden","DE",51.0385960715,13.7308521429,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?41&id=406",350,1,,,"Einfahrt von Winckelmannstraße, Kontakt: 03 51 / 468 53 76"
+22,"Lindengasse","Lindengasse, 01069 Dresden","Ring Ost","Dresden","DE",51.0415005807,13.7417522269,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?45&id=413",75,1,,,"Kontakt: 03 51 / 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+24,"Pirnaischer Platz","Pirnaischer Platz / Ringstraße, 01067 Dresden","Ring Ost","Dresden","DE",51.0481722025,13.7435680797,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?48&id=412",156,1,,,"Einfahrt von Kreuzstraße, Kontakt: 03 51 / 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+25,"Terrassenufer","Terrassenufer, 01067 Dresden","Ring Ost","Dresden","DE",51.0531653563,13.7481396595,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?54&id=416",69,1,,,"Einfahrt unter Carolabrücke - Elbseite, Kontakt: 03 51 / 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+28,"Sarrasanistraße","Sarrasanistraße, 01097 Dresden","Neustadt","Dresden","DE",51.0576266063,13.7450239818,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?66&id=420",55,1,,,"Kontakt: 03 51 / 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+29,"Theresienstraße","Theresienstraße 15, 01097 Dresden","Neustadt","Dresden","DE",51.0631677006,13.7420210937,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?67&id=418",140,1,,,
+30,"Wiesentorstraße","Wiesentorstraße, 01097 Dresden","Neustadt","Dresden","DE",51.0567049614,13.742909341,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?71&id=417",120,1,,,"Einfahrt von Große Meißner Straße, Kontakt: 03 51 / 49 81 60, 01 70 / 71 87 643"
+31,"Flutrinne","Messering 6, 01067 Dresden","Sonstige","Dresden","DE",51.0674629065,13.7195055759,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?76&id=424",1200,1,,,"www.messe-dresden.de"
+34,"Kaditz","Washingtonstraße, 01139 Dresden","Park + Ride","Dresden","DE",51.0813055504,13.6910092371,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?90&id=427",190,1,,,"Autobahnabfahrt Dresden Neustadt"
+18,"Wiener Platz / Hauptbahnhof","Wiener Platz, 01069 Dresden","Prager Straße","Dresden","DE",51.0407758,13.7359932,"underground",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?36&id=410",200,1,,,"Einfahrt von Ammonstraße im Tunnel, Kontakt: 03 51 / 484 53 10"
+32,"Cossebaude","Bahnhofstraße Cossebaude, 01462 Dresden","Park + Ride","Dresden","DE",51.0856093,13.6305939,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?79&id=437",38,1,,,
+36,"Prohlis","Langer Weg, 01239 Dresden","Park + Ride","Dresden","DE",50.9994080211,13.7994473768,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?98&id=426",67,1,,,
+35,"Langebrück","Güterbahnhofstraße Langebrück, 01465 Dresden","Park + Ride","Dresden","DE",51.1275548,13.8435554,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?94&id=439",50,1,,,
+38,"Pirnaische Straße","Pirnaische Straße, 01069 Dresden","Ring Ost","Dresden","DE",51.0464944,13.748568,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?47&id=445",600,1,,,
+39,"Terrassenufer Bus","Terrassenufer, 01067 Dresden","Busparkplätze","Dresden","DE",51.0555316,13.7355332,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?110&id=430",22,1,,,"tiefbauamt-verkehrstechnik@dresden.de"
+242,"MuK",,"Travemünde","Lübeck","DE",53.869446,10.676412,"lot",FALSE,,347,17,,,
+40,"Bahnhof Neustadt","Schlesischer Platz, 01097 Dresden","Neustadt","Dresden","DE",51.0657645,13.7424993,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?59&id=447",40,1,,,"Kontakt:  (03 51) 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+68,"Congressgarage","Schloßlände 25",,"Ingolstadt","DE",48.76454144880872,11.433302164077759,"underground",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.3448.1",213,3,,,
+69,"Festplatz","Dreizehnerstraße",,"Ingolstadt","DE",48.7706936821076,11.423431634902954,"lot",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.2094.1",1437,3,,,
+70,"Hauptbahnhof West","Elisabethstraße 3",,"Ingolstadt","DE",48.74315480852817,11.437298655509947,"carpark",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.2102.1",812,3,,,
+71,"Reduit Tilly","Regimentstraße",,"Ingolstadt","DE",48.759930315491225,11.433484554290771,"underground",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.2098.1",436,3,,,
+41,"Reick","Lohrmannstraße, 01237 Dresden","Park + Ride","Dresden","DE",51.0211134,13.7907159,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?99&id=434",21,1,,,
+73,"Hauptbahnhof Ost","Martin-Hemm-Straße 8",,"Ingolstadt","DE",48.744905834783395,11.439857482910156,"carpark",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.3447.1",240,3,,,
+241,"Baggersand 2","Auf dem Baggersand, Alt-Travemünde / Rönnau, Travemünde, Teutendorf, Lübeck, Schleswig-Holstein, 23570, Deutschland","Lübeck","Lübeck","DE",53.9557036,10.8576545,"lot",FALSE,,0,17,,,
+77,"Nordbahnhof","Am Nordbahnhof 3",,"Ingolstadt","DE",48.77336648651627,11.431505084037779,"carpark",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.2780.1",252,3,,,
+105,"Sømandshjemmet","Østerbro 27",,"Aalborg","DK",57.04646,9.93556,"lot",FALSE,,78,4,,,
+82,"Münster","Bergbräustraße",,"Ingolstadt","DE",48.764354041367575,11.419150829315186,"underground",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.2097.1",384,3,,,
+83,"Südl. Ringstraße","Südliche Ringstraße",,"Ingolstadt","DE",48.75859357346676,11.437261104583738,"lot",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.2096.1",257,3,,,
+106,"Sauers Plads","Sauers Plads",,"Aalborg","DK",57.04419,9.92745,"lot",FALSE,,360,4,,,
+107,"Salling","Braskensgade",,"Aalborg","DK",57.04758,9.922735,"carpark",FALSE,,312,4,,,
+108,"Palads","Jomfru Anes Gård 5",,"Aalborg","DK",57.05014,9.920601,"carpark",FALSE,,475,4,,,
+90,"Theater-Ost","Schloßländle",,"Ingolstadt","DE",48.76376352655507,11.430437564849852,"underground",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.2508.1",682,3,,,
+109,"Musikkens Hus","Nyhavnsgade 53",,"Aalborg","DK",57.04737,9.93311,"underground",FALSE,,285,4,,,
+110,"Kongrescenter","Vesterbro 14",,"Aalborg","DK",57.04456,9.91458,"lot",FALSE,,700,4,,,
+93,"Hallenbad","Jahnstraße 9",,"Ingolstadt","DE",48.760856819513116,11.42030954360962,"lot",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.2095.1",836,3,,,
+94,"Schloss","Esplanade",,"Ingolstadt","DE",48.76627758638221,11.43128514289856,"underground",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.2099.1",435,3,,,
+95,"Theater-West","Schutterstraße",,"Ingolstadt","DE",48.76281232342508,11.427175998687744,"underground",FALSE,"https://www.ingolstadt.de/redirect.phtml?extlink=1&La=1&url_fid=465.2507.1",599,3,,,
+111,"Kennedy Arkaden","John F. Kennedys Plads 1U",,"Aalborg","DK",57.04178,9.918808,"carpark",FALSE,,350,4,,,
+112,"Gåsepigen","Stengade 1",,"Aalborg","DK",57.04751,9.91376,"lot",FALSE,,145,4,,,
+113,"Føtex","Fjordgade 6",,"Aalborg","DK",57.04754,9.924956,"carpark",FALSE,,150,4,,,
+114,"Friis","Nytorv 27",,"Aalborg","DK",57.04769,9.927327,"underground",FALSE,,731,4,,,
+115,"C W Obel","Badehusvej 14",,"Aalborg","DK",57.05243,9.910837,"carpark",FALSE,,376,4,,,
+116,"Budolfi Plads","Vingårdsgade 10",,"Aalborg","DK",57.0475,9.9183,"lot",FALSE,,157,4,,,
+122,"Kalkværksvej","Kalkværksvej",,"Aarhus","DK",56.14935,10.211539,"lot",FALSE,,210,5,,,
+123,"Salling","Østergade 25",,"Aarhus","DK",56.153909,10.207709,"carpark",FALSE,,700,5,,,
+124,"Navitas","Inge Lehmanns Gade",,"Aarhus","DK",56.159878,10.216824,"underground",FALSE,,449,5,,,
+117,"Nørreport","Nørreport 22",,"Aarhus","DK",56.161859,10.212737,"lot",FALSE,,65,5,,,
+126,"Bonner City Parkraum GmbH",,,"Bonn","DE",50.734121,7.101677,,FALSE,,,6,,,"Verwaltung, Am Hof 26a, 53113 Bonn, Tel. +49(0)228 96991-0, Fax +49(0)228 96991-21, Mail bcp@citypark-bonn.de, http://www.bcp-bonn.de"
+127,"Marktgarage","Stockenstraße",,"Bonn","DE",50.734559,7.103549000000001,,FALSE,,325,6,,,"Marktgarage Bonn, Einfahrt Stockenstraße, Tel. +49(0)228 88657580, Bonner City Parkraum GmbH, http://bcp-bonn.de"
+128,"Münsterplatzgarage","Budapester Straße",,"Bonn","DE",50.735764,7.096412,,FALSE,,319,6,,,"Münsterplatzgarage Bonn, Einfahrt Budapester Straße, Tel. +49(0)228 691348, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+129,"Friedensplatzgarage","Oxfordstraße",,"Bonn","DE",50.737056,7.096701,,FALSE,,822,6,,,"Friedensplatzgarage Bonn, Einfahrt Oxfordstraße, Tel. +49(0)228 655281, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+130,"Bahnhofgarage","Münsterstraße",,"Bonn","DE",50.733897,7.095905,,FALSE,,110,6,,,"Bahnhofgarage Bonn, Einfahrt Münsterstraße, Tel. +49(0)228 634328, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+131,"Stadthausgarage","Weiherstraße",,"Bonn","DE",50.737791,7.094,,FALSE,,300,6,,,"Stadthausgarage Bonn, Einfahrt Weiherstraße, Tel. +49(0)228 656085, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+132,"Beethoven-Parkhaus","Engeltalstraße",,"Bonn","DE",50.739629,7.103313,"carpark",FALSE,,426,6,,,"Beethoven-Parkhaus Bonn, Einfahrt Engeltalstraße, Tel. +49(0)228 3695635, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+133,"Parkplatz Beethovenhalle",,,"Bonn","DE",50.741206,7.10139,"lot",FALSE,,,6,,,"Parkplatz Beethovenhalle Bonn, Einfahrt Wachsbleiche, Tel. +49(0)228 3695635, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+118,"Scandinavian Center","Margrethepladsen 2",,"Aarhus","DK",56.151647,10.198423,"carpark",FALSE,,1240,5,,,
+119,"Bruuns Galleri","Værkmestergade 25",,"Aarhus","DK",56.149843,10.206229,"underground",FALSE,,967,5,,,
+120,"Busgadehuset","Telefonsmøgen 18",,"Aarhus","DK",56.155285,10.206103,"underground",FALSE,,105,5,,,
+80,"Parkhaus Messe Zürich AG","Andreasstrasse 65",,"Zürich","CH",47.413568,8.553929,"carpark",FALSE,"http://www.plszh.ch/parkhaus/messe.jsp?pid=messe",2000,2,,,
+121,"Magasin","Åboulevarden 80",,"Aarhus","DK",56.15669,10.204983,"carpark",FALSE,,383,5,,,
+84,"Parkhaus Nordhaus","Siewerdtstrasse 8",,"Zürich","CH",47.411839,8.547353,"carpark",FALSE,"http://www.plszh.ch/parkhaus/nordhaus.jsp?pid=nordhaus",175,2,,,
+232,"Maritim","Maritim, 2, Trelleborgallee, Alt-Travemünde / Rönnau, Travemünde, Priwall, Lübeck, Schleswig-Holstein, 23570, Deutschland","Lübeck","Lübeck","DE",53.9621668,10.8811160873854,"carpark",FALSE,,200,17,,,
+237,"Baggersand 1","1, Auf dem Baggersand, Alt-Travemünde / Rönnau, Travemünde, Priwall, Lübeck, Schleswig-Holstein, 23570, Deutschland","Lübeck","Lübeck","DE",53.9557789,10.8656450375,"lot",FALSE,,0,17,,,
+238,"Hüxstrasse","Hüxstraße, Innenstadt, Lübeck, Schleswig-Holstein, 23552, Deutschland","Lübeck","Lübeck","DE",53.8658174,10.6889789,"carpark",FALSE,,110,17,,,
+101,"Parkhaus Opéra","Schillerstrasse 5",,"Zürich","CH",47.3656987,8.5467886,"carpark",FALSE,"http://www.plszh.ch/parkhaus/opera.jsp?pid=opera",299,2,,,
+100,"Parkhaus Crowne Plaza","Badenerstrasse 420",,"Zürich","CH",47.38034775,8.506384177198,"carpark",FALSE,"http://www.plszh.ch/parkhaus/crowne_plaza.jsp?pid=crowne_plaza",520,2,,,
+85,"Parkhaus Octavo","Brown-Boveri-Strasse 2",,"Zürich","CH",47.413199,8.536066,"carpark",FALSE,"http://www.plszh.ch/parkhaus/octavo.jsp?pid=octavo",123,2,,,
+233,"Kanalstrasse 3",,"Lübeck","Lübeck","DE",53.868307,10.696196,"lot",FALSE,,0,17,,,
+234,"Kanalstrasse 2",,"Lübeck","Lübeck","DE",53.868307,10.696196,"lot",FALSE,,216,17,,,
+235,"Kanalstrasse 5",,"Lübeck","Lübeck","DE",53.868307,10.696196,"lot",FALSE,,45,17,,,
+236,"Kanalstrasse 4",,"Lübeck","Lübeck","DE",53.868307,10.696196,"lot",FALSE,,147,17,,,
+86,"Parkhaus P West","Förrlibuckstrasse 151",,"Zürich","CH",47.391929,8.511443,"carpark",FALSE,"http://www.plszh.ch/parkhaus/p_west.jsp?pid=p_west",1000,2,,,
+150,"Schwarzwald City",,"Altstadt","Freiburg","DE",47.99722128099989,7.851110338871799,,FALSE,"http://www.freiburg.de/pb/,Lde/231407.html",411,7,,,
+152,"Marktstätte",,"Zentrum","Konstanz","DE",47.659621142013435,9.17631447315216,"carpark",FALSE,"http://www.konstanz.de/tourismus/01759/01765/01768/index.html",268,16,,,
+157,"Döbele",,"Zentrum","Konstanz","DE",47.65779106680178,9.16858971118927,"lot",FALSE,"http://www.konstanz.de/tourismus/01759/01765/01771/index.html",335,16,,,
+176,"Haerder-Center",,"Travemünde","Lübeck","DE",53.86463773382536,10.678496360778807,"carpark",FALSE,,191,17,,,
+134,"Parkplatz Rheinaue",,,"Bonn","DE",50.718237,7.130245,"lot",FALSE,,,6,,,"Parkplatz Rheinaue Bonn, Einfahrt Charles-De-Gaulle-Straße, Tel. +49(0)228 656085, Bonner City Parkraum GmbH, http://www.bcp-bonn.de"
+155,"Augustiner / Karstadt",,"Zentrum","Konstanz","DE",47.65950913530439,9.173318445682526,"carpark",FALSE,"http://www.konstanz.de/tourismus/01759/01765/01769/index.html",284,16,,,
+156,"Fischmarkt",,"Zentrum","Konstanz","DE",47.66129940731421,9.176258146762848,"carpark",FALSE,"http://www.konstanz.de/tourismus/01759/01765/01770/index.html",158,16,,,
+181,"Am Leuchtturm",,"Lübeck","Lübeck","DE",53.960927,10.880637,"lot",FALSE,,,17,,,
+182,"Leuchtenfeld",,"Lübeck","Lübeck","DE",53.960965,10.877633,"lot",FALSE,,750,17,,,
+153,"Altstadt",,"Zentrum","Konstanz","DE",47.663019166809015,9.172049760818481,"carpark",FALSE,"http://www.konstanz.de/tourismus/01759/01765/01766/index.html",359,16,,,
+154,"Lago",,"Zentrum","Konstanz","DE",47.657483940292856,9.176606833934784,"carpark",FALSE,"http://www.konstanz.de/tourismus/01759/01765/01767/index.html",930,16,,,
+178,"Kowitzberg",,"Lübeck","Lübeck","DE",53.975518,10.877064,"lot",FALSE,,750,17,,,
+160,"Benediktiner",,"Petershausen","Konstanz","DE",47.66877236211362,9.178049862384796,"carpark",FALSE,"http://www.konstanz.de/tourismus/01759/01765/01773/index.html",118,16,,,
+161,"Seerheincenter",,"Petershausen","Konstanz","DE",47.67272065604162,9.183433055877686,"carpark",FALSE,"http://www.konstanz.de/tourismus/01759/01765/01772/index.html",280,16,,,
+179,"Backbord",,"Lübeck","Lübeck","DE",53.970161,10.880241,"lot",FALSE,,135,17,,,
+183,"Hafenbahnhof",,"Lübeck","Lübeck","DE",53.958396,10.863745,"lot",FALSE,,47,17,,,
+174,"Falkenstrasse",,"Lübeck","Lübeck","DE",53.870015,10.698406,"carpark",FALSE,,130,17,,,
+162,"Am Burgtor",,"Lübeck","Lübeck","DE",53.872994522821855,10.692285597324371,"carpark",FALSE,,0,17,,,
+239,"St. Marien-Centru",,"Lübeck","Lübeck","DE",53.868792,10.685576,"carpark",FALSE,,400,17,,,
+185,"PP Hörsterplatz",,,"Münster","DE",51.964237,7.632232,"lot",FALSE,,202,18,,,
+240,"Kanalstrasse 1",,"Lübeck","Lübeck","DE",53.868307,10.696196,"lot",FALSE,,,17,,,
+188,"PP Schlossplatz Nord",,,"Münster","DE",51.964472,7.617017,"lot",FALSE,,450,18,,,
+167,"Mitte",,"Lübeck","Lübeck","DE",53.865371629250554,10.683571100234985,"carpark",FALSE,,420,17,,,
+189,"PP Schlossplatz Süd",,,"Münster","DE",51.962386,7.6167,"lot",FALSE,,460,18,,,
+191,"PP Georgskommende",,,"Münster","DE",51.959491,7.619322,"lot",FALSE,,272,18,,,
+180,"Godewind",,"Lübeck","Lübeck","DE",53.966037,10.873723,"lot",FALSE,,,17,,,
+184,"PH Theater",,,"Münster","DE",51.965676,7.626454,"carpark",FALSE,,793,18,,,
+149,"Unterlinden",,"Altstadt","Freiburg","DE",47.997882818254276,7.848858803255791,,FALSE,"http://www.freiburg.de/pb/,Lde/231399.html",188,7,,,
+165,"Linden Arcaden",,"Travemünde","Lübeck","DE",53.866943767066466,10.672831535339355,"carpark",FALSE,,400,17,,,
+138,"Zähringer Tor",,"Altstadt","Freiburg","DE",47.99897306942212,7.85401373813563,,FALSE,"http://www.freiburg.de/pb/,Lde/231423.html",95,7,,,
+143,"Rotteck",,"Altstadt","Freiburg","DE",47.99581563822502,7.846289674197204,,FALSE,"http://www.freiburg.de/pb/,Lde/231415.html",302,7,,,
+171,"Lastadie P5",,"Travemünde","Lübeck","DE",53.871582,10.679384,"lot",FALSE,,251,17,,,
+144,"Bahnhofsgarage",,"Bahnhof","Freiburg","DE",47.99694656853075,7.84141154283007,,FALSE,"http://www.freiburg.de/pb/,Lde/231359.html",215,7,,,
+141,"Schwabentor",,"Altstadt","Freiburg","DE",47.99127875875355,7.856301436251751,,FALSE,"http://www.freiburg.de/pb/,Lde/231455.html",200,7,,,
+140,"Schlossberg",,"Altstadt","Freiburg","DE",47.99403157051466,7.855133809588589,,FALSE,"http://www.freiburg.de/pb/,Lde/231447.html",430,7,,,
+146,"Volksbank",,"Bahnhof","Freiburg","DE",47.99803589052632,7.843404280234661,,FALSE,"http://www.freiburg.de/pb/,Lde/231375.html",0,7,,,
+142,"Martinstor",,"Universität","Freiburg","DE",47.99252122643358,7.847355875603023,,FALSE,"http://www.freiburg.de/pb/,Lde/231463.html",91,7,,,
+173,"Radisson Hotel",,"Travemünde","Lübeck","DE",53.867886,10.677713,"carpark",FALSE,,57,17,,,
+187,"Busparkplatz",,,"Münster","DE",51.965429,7.616792,"lot",FALSE,,63,18,,,
+186,"PH Alter Steinweg",,,"Münster","DE",51.962245,7.632326,"carpark",FALSE,,350,18,,,
+190,"PH Aegidii",,,"Münster","DE",51.960839,7.622396,"carpark",FALSE,,780,18,,,
+192,"PH Münster Arkaden",,,"Münster","DE",51.959854,7.626499,"carpark",FALSE,,248,18,,,
+177,"Am Holstentor",,"Travemünde","Lübeck","DE",53.864537,10.678493,"carpark",FALSE,,387,17,,,
+170,"Lastadie P4",,"Travemünde","Lübeck","DE",53.871658,10.679092,"lot",FALSE,,16,17,,,
+169,"Lastadie P3",,"Travemünde","Lübeck","DE",53.871794,10.679573,"lot",FALSE,,33,17,,,
+135,"Beethoven-Parkplatz",,,"Bonn","DE",50.7339257,7.0936335,"lot",FALSE,,,6,,,
+136,"Parkplatz Charles-de-Gaulle-Straße",,,"Bonn","DE",50.7171669,7.1286246,"lot",FALSE,,,6,,,
+216,"P8 Klostervej","Klostervej 10",,"Odense","DK",55.397015,10.382108,,FALSE,,72,19,,,
+208,"P13 Klosterbakken (Q Park)","Klosterbakken 10",,"Odense","DK",55.39362,10.388736,,FALSE,,41,19,,,
+211,"P3 Skt. Anne Plads","Skt. Anne Plads 4",,"Odense","DK",55.393715,10.384666,,FALSE,,20,19,,,
+125,"Dokk1","Hack Kampmanns Plads 2",,"Aarhus","DK",56.152698,10.213976,"underground",FALSE,,973,5,,,
+213,"P5 Munkemolle","Klosterbakken 20A",,"Odense","DK",55.393307,10.388275,,FALSE,,13,19,,,
+200,"brandts_klaedefabrik_(euro_park)","Pantheons Passage 1",,"Odense","DK",55.39607,10.379879,,FALSE,,153,19,,,
+226,"Theaterwall",,,"Oldenburg","DE",53.1382987,8.2127383,"lot",FALSE,,,20,,,
+201,"filosoffen_q_park_(ski_data)","Filosofgangen 17B",,"Odense","DK",55.393475,10.381473,,FALSE,,218,19,,,
+222,"Pferdemarkt",,,"Oldenburg","DE",53.14727,8.21271,"lot",FALSE,,,20,,,
+207,"P12 Asylgade","Asylgade 7",,"Odense","DK",55.397152,10.387023,,FALSE,,40,19,,,
+202,"gronnegade_q_park","Grønnegade 21X",,"Odense","DK",55.396923,10.37975,,FALSE,,116,19,,,
+203,"magasin_q_park","Klingenberg 6",,"Odense","DK",55.395157,10.387138,,FALSE,,105,19,,,
+218,"Schlosshöfe",,,"Oldenburg","DE",53.1391841,8.2168988,"carpark",FALSE,,,20,,,
+219,"Waffenplatz",,,"Oldenburg","DE",53.14169,8.21115,"carpark",FALSE,,,20,,,
+220,"City",,,"Oldenburg","DE",53.14161,8.21514,"carpark",FALSE,,,20,,,
+205,"P10 Graabrodre","Store Gråbrødrestræde 12",,"Odense","DK",55.39636,10.384143,,FALSE,,300,19,,,
+221,"Galeria Kaufhof",,,"Oldenburg","DE",53.1396571,8.2161275,"carpark",FALSE,,,20,,,
+223,"CCO Parkdeck 1",,,"Oldenburg","DE",53.14406,8.21322,"carpark",FALSE,,,20,,,
+224,"CCO Parkdeck 2",,,"Oldenburg","DE",53.14406,8.21322,"carpark",FALSE,,,20,,,
+225,"Hbf/ZOB",,,"Oldenburg","DE",53.145681,8.2225073,"carpark",FALSE,,,20,,,
+227,"Theatergarage",,,"Oldenburg","DE",53.1382523,8.2096205,"carpark",FALSE,,,20,,,
+214,"P6 Kronprinsensgade","Kronprinsensgade 3T",,"Odense","DK",55.39475,10.392431,,FALSE,,40,19,,,
+228,"Heiligengeist-Höfe",,,"Oldenburg","DE",53.1391841,8.2168988,"carpark",FALSE,,,20,,,
+212,"P4 Klaregade","Klosterbakken 13",,"Odense","DK",55.393368,10.386967,,FALSE,,13,19,,,
+243,"Bodenseeforum",,"Bodenseeforum","Konstanz","DE",47.6722077,9.1627264,"lot",FALSE,"http://www.konstanz.de/tourismus/01759/01765/05512/index.html",500,16,,,
+193,"PH Karstadt",,,"Münster","DE",51.960783,7.629907,"carpark",FALSE,,183,18,,,
+194,"PH Stubengasse",,,"Münster","DE",51.959884,7.630287,"carpark",FALSE,,318,18,,,
+195,"PH Bremer Platz",,,"Münster","DE",51.957459,7.637701,"carpark",FALSE,,416,18,,,
+196,"PH Engelenschanze",,,"Münster","DE",51.955674,7.631493,"carpark",FALSE,,480,18,,,
+197,"PH Bahnhofstraße",,,"Münster","DE",51.955504,7.632764,"carpark",FALSE,,339,18,,,
+198,"PH Cineplex",,,"Münster","DE",51.949828,7.635975,"carpark",FALSE,,590,18,,,
+199,"PH Stadthaus 3",,,"Münster","DE",51.949385,7.641026,"carpark",FALSE,,372,18,,,
+217,"P9 Vinden","Vindegade 52",,"Odense","DK",55.39807,10.38314,,FALSE,,26,19,,,
+204,"P1 Kunsten","Filosofgangen 52",,"Odense","DK",55.392036,10.379949,,FALSE,,20,19,,,
+206,"P11 Slottet","Vindegade 14",,"Odense","DK",55.3985,10.386555,,FALSE,,31,19,,,
+215,"P7 Kongestien","Brandts Passage 31",,"Odense","DK",55.395294,10.382004,,FALSE,,36,19,,,
+209,"P18 Tbt Nord","Dannebrogsgade 2",,"Odense","DK",55.39949,10.390037,,FALSE,,509,19,,,
+13,"Parkgarage am Central","Seilergraben",,"Zürich","CH",47.376579,8.544743,"carpark",FALSE,"http://www.plszh.ch/parkhaus/central.jsp?pid=central",50,2,,,
+210,"P2 Filosofgangen","Filosofhaven 20",,"Odense","DK",55.39336,10.381905,,FALSE,,17,19,,,
+23,"Parkhaus Accu","Otto-Schütz-Weg",,"Zürich","CH",47.414848,8.540748,"carpark",FALSE,"http://www.plszh.ch/parkhaus/accu.jsp?pid=accu",194,2,,,
+8,"Parkhaus Albisriederplatz","Badenerstrasse 380",,"Zürich","CH",47.379458,8.509675,"carpark",FALSE,"http://www.plszh.ch/parkhaus/albisriederplatz.jsp?pid=albisriederplatz",66,2,,,
+21,"Parkhaus Bleicherweg","Beethovenstrasse 35",,"Zürich","CH",47.367417,8.535761,"carpark",FALSE,"http://www.plszh.ch/parkhaus/bleicherweg.jsp?pid=bleicherweg",275,2,,,
+26,"Parkhaus Center Eleven","Sophie-Täuber-Strasse 4",,"Zürich","CH",47.412805,8.540263,"carpark",FALSE,"http://www.plszh.ch/parkhaus/center_11.jsp?pid=center_11",342,2,,,
+27,"Parkhaus City Parking","Gessnerallee 14",,"Zürich","CH",47.374211,8.533806,"carpark",FALSE,"http://www.plszh.ch/parkhaus/cp.jsp?pid=cp",620,2,,,
+53,"Parkhaus Cityport","Affolternstrasse 56",,"Zürich","CH",47.410876,8.540662,"carpark",FALSE,"http://www.plszh.ch/parkhaus/cityport.jsp?pid=cityport",153,2,,,
+55,"Parkhaus Dorflinde","Schwamendingenstrasse 31",,"Zürich","CH",47.407194,8.550214,"carpark",FALSE,"http://www.plszh.ch/parkhaus/dorflinde.jsp?pid=dorflinde",98,2,,,
+37,"Parkhaus Feldegg","Riesbachstrasse 7",,"Zürich","CH",47.360644,8.55344,"carpark",FALSE,"http://www.plszh.ch/parkhaus/feldegg.jsp?pid=feldegg",346,2,,,
+54,"Parkhaus Globus","Löwenstrasse 50",,"Zürich","CH",47.375773,8.537618,"carpark",FALSE,"http://www.plszh.ch/parkhaus/globus.jsp?pid=globus",178,2,,,
+56,"Parkhaus Hardau II","Bullingerstrasse 73",,"Zürich","CH",47.380354,8.510323,"carpark",FALSE,"http://www.plszh.ch/parkhaus/hardau.jsp?pid=hardau",982,2,,,
+57,"Parkhaus Hauptbahnhof","Sihlquai 41",,"Zürich","CH",47.381218,8.537886,"carpark",FALSE,"http://www.plszh.ch/parkhaus/hb.jsp?pid=hb",176,2,,,
+58,"Parkhaus Hohe Promenade","Rämistrasse 22a",,"Zürich","CH",47.368666,8.547632,"carpark",FALSE,"http://www.plszh.ch/parkhaus/promenade.jsp?pid=promenade",556,2,,,
+72,"Parkhaus Jelmoli","Steinmühleplatz 1",,"Zürich","CH",47.373847,8.536227,"carpark",FALSE,"http://www.plszh.ch/parkhaus/jelmoli.jsp?pid=jelmoli",222,2,,,
+75,"Parkhaus Jungholz","Jungholzstrasse 19",,"Zürich","CH",47.413423,8.543973,"carpark",FALSE,"http://www.plszh.ch/parkhaus/jungholz.jsp?pid=jungholz",124,2,,,
+78,"Parkhaus Max-Bill-Platz","Armin-Bollinger-Weg",,"Zürich","CH",47.414062,8.539274,"carpark",FALSE,"http://www.plszh.ch/parkhaus/max_bill_platz.jsp?pid=max_bill_platz",59,2,,,
+87,"Parkhaus Park Hyatt","Beethovenstrasse 21",,"Zürich","CH",47.36586,8.536077,"carpark",FALSE,"http://www.plszh.ch/parkhaus/park_hyatt.jsp?pid=park_hyatt",267,2,,,
+88,"Parkhaus Parkside","Sophie-Täuber-Strasse 10",,"Zürich","CH",47.412654,8.539574,"carpark",FALSE,"http://www.plszh.ch/parkhaus/parkside.jsp?pid=parkside",38,2,,,
+89,"Parkhaus Pfingstweid","Pfingstweidstrasse 1",,"Zürich","CH",47.38715,8.51633,"carpark",FALSE,"http://www.plszh.ch/parkhaus/pfingstweid.jsp?pid=pfingstweid",276,2,,,
+67,"Parkhaus Stampfenbach","Niklausstrasse 1",,"Zürich","CH",47.38699,8.539633,"carpark",FALSE,"http://www.plszh.ch/parkhaus/stampfenbach.jsp?pid=stampfenbach",237,2,,,
+74,"Parkhaus Talgarten","Nüschelerstrasse 31",,"Zürich","CH",47.372177,8.535883,"carpark",FALSE,"http://www.plszh.ch/parkhaus/talgarten.jsp?pid=talgarten",110,2,,,
+76,"Parkhaus USZ Nord","Frauenklinikstrasse",,"Zürich","CH",47.37878088,8.54970217,"carpark",FALSE,"http://www.plszh.ch/parkhaus/unispital_nord.jsp?pid=unispital_nord",90,2,,,
+79,"Parkhaus Uni Irchel","Winterthurerstrasse 181",,"Zürich","CH",47.397478,8.547235,"carpark",FALSE,"http://www.plszh.ch/parkhaus/uni_irchel.jsp?pid=uni_irchel",1227,2,,,
+81,"Parkhaus Urania","Uraniastrasse 3",,"Zürich","CH",47.374112,8.540615,"carpark",FALSE,"http://www.plszh.ch/parkhaus/urania.jsp?pid=urania",607,2,,,
+91,"Parkhaus Utoquai","Färberstrasse 6",,"Zürich","CH",47.361727,8.547986,"carpark",FALSE,"http://www.plszh.ch/parkhaus/utoquai.jsp?pid=utoquai",175,2,,,
+92,"Parkhaus Züri 11 Shopping","Nansenstrasse 5/7",,"Zürich","CH",47.4105,8.545035,"carpark",FALSE,"http://www.plszh.ch/parkhaus/zueri11.jsp?pid=zueri11",60,2,,,
+96,"Parkhaus Zürichhorn","Dufourstrasse 142",,"Zürich","CH",47.356073,8.553629,"carpark",FALSE,"http://www.plszh.ch/parkhaus/zuerichhorn.jsp?pid=zuerichhorn",245,2,,,
+98,"Parkplatz Eisfeld","Thurgauerstrasse 54",,"Zürich","CH",47.415573,8.552577,"lot",FALSE,"http://www.plszh.ch/parkhaus/eisfeld.jsp?pid=eisfeld",240,2,,,
+99,"Parkplatz USZ Süd","Gloriastrasse",,"Zürich","CH",47.37479042,8.55141073,"lot",FALSE,"http://www.plszh.ch/parkhaus/unispital_sued.jsp?pid=unispital_sued",80,2,,,
+145,"Konzerthaus",,"Bahnhof","Freiburg","DE",47.99530427666567,7.840827649980254,,FALSE,"http://www.freiburg.de/pb/,Lde/231367.html",344,7,,,
+147,"Am Bahnhof",,"Bahnhof","Freiburg","DE",47.998985389852045,7.842908834987216,,FALSE,"http://www.freiburg.de/pb/,Lde/231383.html",149,7,,,
+139,"Landratsamt",,"Altstadt","Freiburg","DE",48.00007397051193,7.857073440394663,,FALSE,"http://www.freiburg.de/pb/,Lde/231439.html",0,7,,,
+151,"Karlsbau",,"Altstadt","Freiburg","DE",47.99746077629321,7.853839757759242,,FALSE,"http://www.freiburg.de/pb/,Lde/231431.html",656,7,,,
+33,"Gompitz","Gompitzer Höhe, 01156 Dresden","Park + Ride","Dresden","DE",51.04061,13.6321981,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?80&id=441",50,1,,,
+42,"Zinzendorfstraße","Zinzendorfstraße, 01069 Dresden","Ring Ost","Dresden","DE",51.0447065,13.744161,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?57&id=446",400,1,,,"Kontakt: 0180 / 377 18 81, OD@parkraumservice.de"
+43,"Kraftwerk Mitte","Löbtauer Straße 21, 01067 Dresden","Ring West","Dresden","DE",51.0528975,13.7174477,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?13&id=456",200,1,,,
+44,"SP1 Straßburger Platz","Straßburger Platz 1, 01307 Dresden","Ring Ost","Dresden","DE",51.0467436,13.7566759,"carpark",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?53&id=452",291,1,,,"Einfahrt von Güntzstraße/ Comeniusstraße, Einfahrtshöhe max. 2,1 m"
+45,"Pieschener Allee Bus","Pieschener Allee, 01067 Dresden","Busparkplätze","Dresden","DE",51.060324,13.7280762,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?107&id=454",94,1,,,"tiefbauamt-verkehrstechnik.de"
+46,"Freiberger Platz","Freiberger Platz, 01067 Dresden","Ring West","Dresden","DE",51.0502853,13.7251336,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?11&id=455",110,1,,,
+47,"Wigardstraße","Wigardstraße, 01097 Dresden","Neustadt","Dresden","DE",51.0572864,13.7467343,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?72&id=449",180,1,,,
+48,"Klotzsche","Zur Neuen Brücke, 01109 Dresden","Park + Ride","Dresden","DE",51.1141162,13.7834619,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?91&id=433",36,1,,,
+49,"Ammonstraße Bus","Ammonstraße, 01069 Dresden","Busparkplätze","Dresden","DE",51.04239,13.7309792,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?106&id=450",45,1,,,"tiefbauamt-verkehrstechnik@dresden.de"
+50,"Bühlau","Bautzner Landstraße,  Dresden","Park + Ride","Dresden","DE",51.0618256,13.8495185,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?78&id=462",17,1,,,"tiefbauamt-verkehrstechnik@dresden.de"
+51,"Budapester Straße","Budapester Straße, 01069 Dresden","Prager Straße","Dresden","DE",51.0464543,13.7332482,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?28&id=461",130,1,,,"tiefbauamt-verkehrstechnik@dresden.de"
+52,"Blüherstraße","Blüherstraße, 01069 Dresden","Ring Ost","Dresden","DE",51.0407372,13.7446426,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?44&id=443",130,1,,,"Kontakt: (03 51) 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+59,"Lingnerallee","Lingnerallee, 01069 Dresden","Ring Ost","Dresden","DE",51.0472439,13.7442002,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?46&id=444",350,1,,,"Kontakt: (03 51) 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+60,"Ostra-Allee","Ostra-Allee, 01067 Dresden","Innere Altstadt","Dresden","DE",51.054578,13.7302733,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?7&id=442",90,1,,,"Kontakt: (03 51) 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+61,"Weixdorf Bad","Platz des Friedens, 01108 Dresden","Park + Ride","Dresden","DE",51.1406849,13.801082,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?104&id=459",24,1,,,
+62,"Palaisplatz","Palaisplatz, 01097 Dresden","Neustadt","Dresden","DE",51.0617214,13.7383076,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?60&id=448",100,1,,,"Kontakt: (03 51) 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+63,"Weißig","Bautzner Landstraße, 01328 Dresden","Park + Ride","Dresden","DE",51.0641102,13.9504934,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?103&id=460",33,1,,,
+64,"Strehlener Straße","Strehlener Straße 27, 01069 Dresden","Ring Süd","Dresden","DE",51.0389261,13.7336289,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?42&id=453",235,1,,,"Kontakt: (03 51) 488 97 97, tiefbauamt-verkehrstechnik@dresden.de"
+65,"Ostra-Ufer","Ostra-Ufer, 01067 Dresden","Ring West","Dresden","DE",51.0584156,13.730793,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?19&id=464",141,1,,,"tiefbauamt-verkehrstechnik@dresden.de"
+66,"Pennrich","Oskar-Maune-Straße, 01156 Dresden","Park + Ride","Dresden","DE",51.0435554,13.6251427,"lot",FALSE,"https://www.dresden.de/apps_ext/ParkplatzApp/detail?95&id=436",50,1,,,
+102,"Parkplatz Theater 11","Thurgauerstrasse",,"Zürich","CH",47.4107196,8.549624,"lot",FALSE,"http://www.plszh.ch/parkhaus/theater_11.jsp?pid=theater_11",188,2,,,

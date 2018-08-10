@@ -1,0 +1,15 @@
+"id","name","attribution_contributor","attribution_license","attribution_url","url","source_url","latitude","longitude","has_active_support"
+1,"Dresden",,,,"https://www.dresden.de/parken","https://api.parkendd.de/Dresden",51.05089,13.73832,TRUE
+2,"Zürich","PLS Parkleitsystem Zürich AG","Creative-Commons-Null-Lizenz (CC-0)","http://www.plszh.ch/impressum.jsp","https://www.stadt-zuerich.ch/portal/de/index/ogd/daten/parkleitsystem.html","http://www.pls-zh.ch/plsFeed/rss",47.36667,8.55,TRUE
+3,"Ingolstadt",,,,"https://www.ingolstadt.de/parken","http://www.ingolstadt.mobi/parkplatzauskunft.cfm",48.76508,11.42372,TRUE
+12,"Frankfurt am Main","Stadt Frankfurt am Main","dl-de/by-2-0","http://daten.frankfurt.de/organization/strassenverkehrsamt","http://offenedaten.frankfurt.de","http://offenedaten.frankfurt.de/dataset/912fe0ab-8976-4837-b591-57dbf163d6e5/resource/48378186-5732-41f3-9823-9d1938f2695e/download/parkdatendyn.xml",50.116667,8.683333,TRUE
+4,"Aalborg","Manuel R. Ciosici","","http://www.aalborgcity.dk/live-parkering.aspx","http://www.aalborgcity.dk/live-parkering.aspx","http://plcinfo.mintrafik.dk/gadget/getParkPlacesAreaMarkers.aspx",57.050031,9.924623,TRUE
+14,"Hamburg",,,,"http://www.geoportal-hamburg.de/Geoportal/geo-online/index.html","https://geodienste.hamburg.de/HH_WFS_Verkehr_opendata?service=WFS&request=GetFeature&VERSION=1.1.0&typename=verkehr_parkhaeuser",53.5558,9.9957,TRUE
+5,"Aarhus","Manuel R. Ciosici","Aarhus License – https://www.odaa.dk/base/image/Vilkår%20for%20brug%20af%20danske%20offentlige%20data%20-%20Aarhus%20Kommune.%20docx.pdf","https://www.odaa.dk/dataset/parkeringshuse-i-aarhus","https://www.aarhus.dk","http://www.odaa.dk/api/action/datastore_search?resource_id=2a82a145-0195-4081-a13c-b0e587e9b89c",56.153005,10.203201,TRUE
+16,"Konstanz",,,,"http://www.konstanz.de/tourismus/01759/01765/","http://www.konstanz.de/tourismus/01759/01765/",47.66033,9.17582,FALSE
+6,"Bonn",,,,"http://www.bcp-bonn.de","http://bcp-bonn.de/stellplatz/bcpext.xml",50.73438,7.09548,FALSE
+17,"Lübeck",,,,"http://www.kwl-luebeck.de/parken/aktuelle-parkplatzbelegung/","http://kwlpls.adiwidjaja.info",53.86893,10.68729,FALSE
+7,"Freiburg","Stadt Freiburg","dl-de/by-2-0","http://www.freiburg.de/pb/,Lde/231355.html","http://www.freiburg.de/pb/,Lde/231355.html","http://stadtplan.freiburg.de/wfs/gdm_pls/gdm_plslive?request=getfeature&service=wfs&version=1.1.0&typename=pls&outputformat=geojson&srsname=epsg:4326",47.9946843,7.8474426,TRUE
+18,"Münster",,,,"http://www.stadt-muenster.de/tiefbauamt/parkleitsystem","http://www.stadt-muenster.de/tiefbauamt/parkleitsystem",51.96236,7.62571,FALSE
+19,"Odense","Manuel R. Ciosici","","https://www.odenseparkering.dk/","https://www.odenseparkering.dk/","https://www.odenseparkering.dk/parkingrt/livetest.json",55.401,10.387269,FALSE
+20,"Oldenburg",,,,"http://www.oldenburg.de/microsites/verkehr/parken/parkplaetzeparkleitsystem/parkplaetze.html","http://oldenburg-service.de/pls2.php",53.14118,8.21467,FALSE
