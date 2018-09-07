@@ -1,0 +1,14 @@
+.idea
+venv
+cities/__pycache__
+config.ini
+__pycache__
+cache
+*.pyc
+log/*.log
+ParkAPI.egg-info
+.tox
+.dockerignore
+.gitignore
+Dockerfile
+Jenkinsfile
