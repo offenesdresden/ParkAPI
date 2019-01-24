@@ -1,5 +1,6 @@
 import feedparser
 from park_api.geodata import GeoData
+from park_api.util import utc_now
 
 
 # Falls das hier jemals einer von den Menschen
@@ -10,7 +11,11 @@ geodata = GeoData(__file__)
 def parse_html(xml_data):
     feed = feedparser.parse(xml_data)
 
-    last_updated = feed["entries"][0]["updated"]
+    try:
+        last_updated = feed["entries"][0]["updated"]
+    except KeyError:
+        last_updated = utc_now()
+
     data = {
         "lots": [],
         # remove trailing timezone for consensistency
