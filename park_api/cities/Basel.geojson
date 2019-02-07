@@ -29,7 +29,15 @@
     },
     "properties": {
       "name": "Parkhaus Bad. Bahnhof",
-      "total": 300 
+      "total": 300, 
+      "totalByWeekday": {
+        "Monday": 300, 
+        "Tuesday": 300, 
+        "Wednesday": 300, 
+        "Friday": 300, 
+        "Saturday": 750,
+        "Sunday": 750
+      }
     }
   }, {
     "type": "Feature",
@@ -69,7 +77,15 @@
     },
     "properties": {
       "name": "Parkhaus Claramatte",
-      "total": 100
+      "total": 100,
+      "totalByWeekday": {
+        "Monday": 100, 
+        "Tuesday": 100, 
+        "Wednesday": 100, 
+        "Friday": 100, 
+        "Saturday": 170,
+        "Sunday": 170
+      }
     }
   }, {
     "type": "Feature",
