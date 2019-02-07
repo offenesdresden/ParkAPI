@@ -1,4 +1,5 @@
 import feedparser
+import html
 from datetime import datetime
 from park_api.geodata import GeoData
 from park_api.util import utc_now
@@ -26,13 +27,13 @@ def parse_html(xml_data):
         summary = parse_summary(entry["summary"])
         title_elements = parse_title(entry["title"])
 
-        lot_identifier = (title_elements[2] + " " + title_elements[0]).strip()
+        lot_identifier = html.unescape((title_elements[2] + " " + title_elements[0]).strip())
         lot = geodata.lot(lot_identifier)
 
         data["lots"].append({
-            "name": title_elements[0],
-            "address": title_elements[1],
-            "id": lot.id,
+            "name": html.unescape(title_elements[0]),
+            "address": lot.address,
+            "id": html.unescape(lot.id),
             "state": "open",
             "free": summary[1],
             "total": lot.total,
