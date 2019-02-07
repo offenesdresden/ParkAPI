@@ -2,9 +2,6 @@ import feedparser
 from park_api.geodata import GeoData
 from park_api.util import utc_now
 
-
-# Falls das hier jemals einer von den Menschen
-# hinter OpenDataZürich lesen sollte: Ihr seid so toll <3
 geodata = GeoData(__file__)
 
 
@@ -45,7 +42,7 @@ def parse_html(xml_data):
 
 
 def parse_summary(summary):
-    """Parse a string from the format 'open /   41' into both its params"""
+    """Parse a string from the format 'Anzahl freie Parkpl&auml;tze: 179' into both its params"""
     summary = summary.split(":")
 
     summary[0] = summary[0].strip()
@@ -61,8 +58,7 @@ def parse_summary(summary):
 
 def parse_title(title):
     """
-    Parse a string from the format 'Parkgarage am Central / Seilergraben'
-    into both its params
+    Parse a string from the format 'Parkhaus Bad. Bahnhof'
     """
     types = ["Parkhaus", "Parkplatz"]
 
