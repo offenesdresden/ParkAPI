@@ -1,4 +1,5 @@
 import feedparser
+from datetime import datetime
 from park_api.geodata import GeoData
 from park_api.util import utc_now
 
@@ -10,13 +11,15 @@ def parse_html(xml_data):
 
     try:
         last_updated = feed["entries"][0]["updated"]
+        last_updated = datetime.strptime(last_updated[5:25], "%d %b %Y %H:%M:%S").isoformat()
     except KeyError:
         last_updated = utc_now()
 
+
+
     data = {
         "lots": [],
-        # remove trailing timezone for consensistency
-        "last_updated": last_updated.replace("Z", "")
+        "last_updated": last_updated
     }
 
     for entry in feed["entries"]:
@@ -30,14 +33,13 @@ def parse_html(xml_data):
             "name": title_elements[0],
             "address": title_elements[1],
             "id": lot.id,
-            "state": summary[0],
+            "state": "open",
             "free": summary[1],
             "total": lot.total,
             "coords": lot.coords,
             "forecast": False,
             "lot_type": title_elements[2]
         })
-
     return data
 
 
