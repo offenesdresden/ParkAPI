@@ -12,8 +12,8 @@
       "properties": {
           "name": "Basel",
           "type": "city",
-          "url": "https://opendata.swiss/de/dataset/parkleitsystem-basel-rss-feed",
-          "source": "http://www.parkleitsystem-basel.ch/status.php",
+          "url": "http://www.parkleitsystem-basel.ch/status.php",
+          "source": "http://www.parkleitsystem-basel.ch/rss_feed.php",
 	  "active_support": true,
           "attribution":{
             "contributor":"Immobilien Basel-Stadt",
@@ -30,11 +30,7 @@
     "properties": {
       "name": "Parkhaus Bad. Bahnhof",
       "total": 300, 
-      "totalByWeekday": {
-        "Monday": 300, 
-        "Tuesday": 300, 
-        "Wednesday": 300, 
-        "Friday": 300, 
+      "total_by_weekday": {
         "Saturday": 750,
         "Sunday": 750
       }
@@ -78,11 +74,7 @@
     "properties": {
       "name": "Parkhaus Claramatte",
       "total": 100,
-      "totalByWeekday": {
-        "Monday": 100, 
-        "Tuesday": 100, 
-        "Wednesday": 100, 
-        "Friday": 100, 
+      "total_by_weekday": {
         "Saturday": 170,
         "Sunday": 170
       }
