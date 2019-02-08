@@ -1,0 +1,30 @@
+version: '3'
+volumes:
+  database_data:
+    driver: local
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - database_data:/var/lib/postgresql/data
+    environment: 
+      - POSTGRES_DB=parkapi
+      - POSTGRES_USER=parkapi
+      - POSTGRES_PASSWORD=parkapi
+  api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    expose:
+      - 5000
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/usr/src/app/
+    links:
+      - db
+    environment:
+      - PGHOST=db
+      - PGDATABASE=parkapi
+      - PGUSER=parkapi
+      - PGPASS=parkapi
