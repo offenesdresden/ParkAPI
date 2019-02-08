@@ -1,10 +1,9 @@
 import feedparser
+import html
+from datetime import datetime
 from park_api.geodata import GeoData
 from park_api.util import utc_now
 
-
-# Falls das hier jemals einer von den Menschen
-# hinter OpenDataZürich lesen sollte: Ihr seid so toll <3
 geodata = GeoData(__file__)
 
 
@@ -13,40 +12,41 @@ def parse_html(xml_data):
 
     try:
         last_updated = feed["entries"][0]["updated"]
+        last_updated = datetime.strptime(last_updated[5:25], "%d %b %Y %H:%M:%S").isoformat()
     except KeyError:
         last_updated = utc_now()
 
+
+
     data = {
         "lots": [],
-        # remove trailing timezone for consensistency
-        "last_updated": last_updated.replace("Z", "")
+        "last_updated": last_updated
     }
 
     for entry in feed["entries"]:
         summary = parse_summary(entry["summary"])
         title_elements = parse_title(entry["title"])
 
-        lot_identifier = (title_elements[2] + " " + title_elements[0]).strip()
+        lot_identifier = html.unescape((title_elements[2] + " " + title_elements[0]).strip())
         lot = geodata.lot(lot_identifier)
 
         data["lots"].append({
-            "name": title_elements[0],
-            "address": title_elements[1],
-            "id": lot.id,
-            "state": summary[0],
+            "name": html.unescape(title_elements[0]),
+            "address": lot.address,
+            "id": html.unescape(lot.id),
+            "state": "open",
             "free": summary[1],
             "total": lot.total,
             "coords": lot.coords,
             "forecast": False,
             "lot_type": title_elements[2]
         })
-
     return data
 
 
 def parse_summary(summary):
-    """Parse a string from the format 'open /   41' into both its params"""
-    summary = summary.split("/")
+    """Parse a string from the format 'Anzahl freie Parkpl&auml;tze: 179' into both its params"""
+    summary = summary.split(":")
 
     summary[0] = summary[0].strip()
     if "?" in summary[0]:
@@ -61,13 +61,12 @@ def parse_summary(summary):
 
 def parse_title(title):
     """
-    Parse a string from the format 'Parkgarage am Central / Seilergraben'
-    into both its params
+    Parse a string from the format 'Parkhaus Bad. Bahnhof'
     """
     types = ["Parkhaus", "Parkplatz"]
 
-    name = title.split(" / ")[0]
-    address = title.split(" / ")[1]
+    name = title
+    address = ''
     type = ""
     if name.split(" ")[0] in types:
         type = name.split(" ")[0]
