@@ -25,7 +25,7 @@ def parse_html(html):
             h3 = column.find_all("h3")
             if not h3[0].a is None and len(h3) > 1:
                 name = h3[0].a.string
-                free = "unbekannt"
+                free = 0
                 for heading in h3:
                     for heading_element in heading.find_all("span"):
                         if heading_element.find("strong") is not None:
