@@ -26,31 +26,41 @@ def parse_html(html):
 
     data = {
         # convert_date is a utility function you can use to turn this date into the correct string format
-        "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M Uhr"),     # TODO
+        "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M"),
         # URL for the page where the scraper can gather the data
         "lots": []
     }
 
     table=soup.select('table')
-    td = table[2].find_all("td")
-    i=0
-    while i < len(td):
-        # please be careful about the state only being allowed to contain either open, closed or nodata
-        # should the page list other states, please map these into the three listed possibilities
-        state = tr.find("td", {"class": "lot_state"}).text    # TODO
+    td = table[2].find_all('td')
+    i = 0
+    while i < len(td)-4 :
+        j = i     # simplifies error-handling
+        i += 5    # next parking-lot
+        parking_name = td[j+1].text.strip()
+        lot = geodata.lot(parking_name)
+        try:
+            parking_state = 'open'
+            parking_free  = 0
+            parking_total = 0
+            if ( 'geschlossen' in td[j+2].text ) : 
+                parking_state = 'closed'
+            else :
+                parking_free = int(td[j+2].text.split()[0])
+                parking_total = int(td[j+2].text.split()[2])
+        except:
+            parking_state = 'nodata'
 
-        lot = geodata.lot(td[i+1].text.strip())
         data["lots"].append({
-            "name": td[i+1].text.strip(),
-            "free": int(td[i+2].text.split()[0]),
-            "total": int(td[i+2].text.split()[2]),
-            "address": lot.address,
-            "coords": lot.coords,
-            "state": state,                  # TODO
-            "lot_type": lot.type,           
-            "id": lot.id,                    # TODO
+            "name":     parking_name,
+            "free":     parking_free,
+            "total":    parking_total,
+            "address":  lot.address,
+            "coords":   lot.coords,
+            "state":    parking_state,
+            "lot_type": lot.type,
+            "id":       lot.id,
             "forecast": False,
         })
-        i += 5
 
     return data
