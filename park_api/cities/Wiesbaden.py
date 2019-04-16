@@ -35,19 +35,17 @@ def parse_html(html):
     td = table[2].find_all('td')
     i = 0
     while i < len(td)-4 :
-        j = i     # simplifies error-handling
-        i += 5    # next parking-lot
-        parking_name = td[j+1].text.strip()
+        parking_name = td[i+1].text.strip()
         lot = geodata.lot(parking_name)
         try:
             parking_state = 'open'
             parking_free  = 0
             parking_total = 0
-            if ( 'geschlossen' in td[j+2].text ) : 
+            if ( 'geschlossen' in td[i+2].text ) : 
                 parking_state = 'closed'
             else :
-                parking_free = int(td[j+2].text.split()[0])
-                parking_total = int(td[j+2].text.split()[2])
+                parking_free = int(td[i+2].text.split()[0])
+                parking_total = int(td[i+2].text.split()[2])
         except:
             parking_state = 'nodata'
 
@@ -62,5 +60,6 @@ def parse_html(html):
             "id":       lot.id,
             "forecast": False,
         })
+        i += 5    # next parking-lot
 
     return data
