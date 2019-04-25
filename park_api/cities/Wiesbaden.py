@@ -30,7 +30,7 @@ def parse_html(html):
     #          so we look in this for name and values
     td = table[2].find_all('td')
     i = 0
-    while i < len(td)-4 :        
+    while i < len(td)-4 :
         # for each row
         #    td[0] contains an image
         #    td[1] contains the name of the parking-lot
