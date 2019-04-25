@@ -31,11 +31,23 @@ def parse_html(html):
         "lots": []
     }
 
+    # everything is in table-objects
     table=soup.select('table')
+    # table[0] is a big table-object around everything
+    # table[1] contains some headers
+    # table[2] contains column-headers and one row for each parking-lot
+    #          so we look in this for name and values
     td = table[2].find_all('td')
     i = 0
-    while i < len(td)-4 :
+    while i < len(td)-4 :        
+        # for each row
+        #    td[0] contains an image
+        #    td[1] contains the name of the parking-lot
+        #    td[2] contains the text 'geschlossen' or the values in the form xxx / xxx
         parking_name = td[i+1].text.strip()
+        # work-around for the sz-problem: Coulinstraße
+        if ( 'Coulinstr' in parking_name ) : parking_name = 'Coulinstraße'
+        # get the data
         lot = geodata.lot(parking_name)
         try:
             parking_state = 'open'
