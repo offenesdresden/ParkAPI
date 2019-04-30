@@ -51,6 +51,8 @@ def parse_html(html):
         for table in soup.find_all("table"):
             if table["summary"] != "":
                 region = table["summary"]
+                if region == "Busparkplätze":
+                    continue
 
                 for lot_row in table.find_all("tr"):
                     if lot_row.find("th") is not None:
