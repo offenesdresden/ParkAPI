@@ -12,15 +12,17 @@
       "properties": {
           "name": "Konstanz",
           "type": "city",
-          "url": "http://www.konstanz.de/tourismus/01759/01765/",
-          "source": "http://www.konstanz.de/tourismus/01759/01765/",
+          "url": "http://www.konstanz.de",
+          "source": "https://www.konstanz.de/start/leben+in+konstanz/parkleitsystem.html",
 	  "active_support": false
       }
   }, {
       "type": "Feature",
       "properties": {
         "name": "Marktstätte",
-        "total": 268
+        "total": 282,
+        "address": "Dammgasse 3",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -33,7 +35,9 @@
       "type": "Feature",
       "properties": {
         "name": "Altstadt",
-        "total": 359
+        "total": 359,
+        "address": "Untere Laube 26",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -47,7 +51,9 @@
       "type": "Feature",
       "properties": {
         "name": "Lago",
-        "total": 930
+        "total": 936,
+        "address": "Hafenstraße 31",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -61,7 +67,9 @@
       "type": "Feature",
       "properties": {
         "name": "Augustiner / Karstadt",
-        "total": 284
+        "total": 284,
+        "address": "Bruderturmgasse",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -75,7 +83,9 @@
       "type": "Feature",
       "properties": {
         "name": "Fischmarkt",
-        "total": 158
+        "total": 158,
+        "address": "Salmannsweilergasse 1",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -89,7 +99,9 @@
       "type": "Feature",
       "properties": {
         "name": "Döbele",
-        "total": 335
+        "total": 335,
+        "address": "über Kreisverkehr Grenzbachstraße",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -102,8 +114,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Am Seerhein",
-        "total": 500
+        "name": "Bodenseeforum",
+        "total": 500,
+        "type": "Parkplatz"
       },
       "geometry": {
         "type": "Point",
@@ -117,7 +130,9 @@
       "type": "Feature",
       "properties": {
         "name": "Byk Gulden Str.",
-        "total": 100
+        "total": 0,
+        "address": "Byk Gulden Str.",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -131,7 +146,9 @@
       "type": "Feature",
       "properties": {
         "name": "Benediktiner",
-        "total": 118
+        "total": 143,
+        "address": "Benediktinerplatz 8",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -145,8 +162,10 @@
       "type": "Feature",
       "properties": {
         "name": "Seerheincenter",
-        "total": 280
-      },
+        "total": 280,
+         "address": "Steinstraße 2",
+        "type": "Parkhaus"
+     },
       "geometry": {
         "type": "Point",
         "coordinates": [
