@@ -27,7 +27,7 @@ def parse_html(html):
     data = {
         # convert_date is a utility function
         # you can use to turn this date into the correct string format
-        "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M Uhr"),
+        "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M"),
         "lots": []
     }
 
