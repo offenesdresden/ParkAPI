@@ -15,7 +15,7 @@ def parse_html(html):
     now = datetime.datetime.now()
 
     data = {
-        "last_updated": now.strftime("%Y-%m-%d %H:%M"),
+        "last_updated": now.strftime("%d-%m-%Y %H:%M"),
         "lots": []
     }
 
