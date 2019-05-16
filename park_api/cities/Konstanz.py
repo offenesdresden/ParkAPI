@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from park_api.util import convert_date
+from park_api.util import convert_date, utc_now
 from park_api.geodata import GeoData
 import datetime
 
@@ -12,10 +12,8 @@ def parse_html(html):
     # last update time (UTC)
     # Konstanz does not support the last_updated yet. I hope they will inform me when it's added
     # as the data seems accurate I will return the current time and date
-    now = datetime.datetime.now()
-
     data = {
-        "last_updated": now.strftime("%d-%m-%Y %H:%M"),
+        "last_updated": utc_now(),
         "lots": []
     }
 
