@@ -28,8 +28,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.69184,
-          49.40965
+          8.691773,
+          49.409747
         ]
       }
     },
@@ -38,14 +38,14 @@
       "properties": {
         "name": "P1 Poststraße",
         "total": 592,
-        "address": "Poststraße",
+        "address": "Poststraße 7",
         "type": "Tiefgarage"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.69056,
-          49.407795
+          8.689482,
+          49.407583
         ]
       }
     },
@@ -61,7 +61,7 @@
         "type": "Point",
         "coordinates": [
            8.68903,
-           49.40617 
+           49.40617
         ]
       }
     },
@@ -84,7 +84,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P4 Darmstädter Hof",
+        "name": "P4 Darmstädter Hof ",
         "total": 700,
         "address": "Sofienstraße",
         "type": "Parkhaus"
@@ -92,6 +92,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+           8.69468,
+           49.4103
         ]
       }
     },
@@ -106,6 +108,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+           8.6949,
+           49.4077
         ]
       }
     },
@@ -120,6 +124,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+            8.693071,
+            49.410613
         ]
       }
     },
@@ -134,6 +140,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+           8.696997,
+           49.408959
         ]
       }
     },
@@ -148,6 +156,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+            8.700012,
+            49.412046
         ]
       }
     },
@@ -162,6 +172,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+            8.702936,
+            49.408948
         ]
       }
     },
@@ -176,6 +188,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+            8.698470,
+            49.408407
         ]
       }
     },
@@ -190,13 +204,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+            8.704992,
+            49.410561
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "P12 Kornmarkt/Schloss",
+        "name": "P12 Kornmarkt / Schloss",
         "total": 158,
         "address": "Neue Schlossstraße",
         "type": "Parkhaus"
@@ -204,13 +220,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+            8.712184,
+            49.410957
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "P13 Karlsplatz/Rathaus",
+        "name": "P13 Karlsplatz / Rathaus",
         "total": 279,
         "address": "Karlsplatz",
         "type": "Parkhaus"
@@ -218,6 +236,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+           8.713111,
+           49.412573
         ]
       }
   },
@@ -232,6 +252,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+           8.691672,
+           49.410126
         ]
       }
   },
@@ -246,6 +268,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+           8.687257,
+           49.409763
         ]
       }
   },
@@ -260,6 +284,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+            8.692531,
+            49.413378
         ]
       }
   },
@@ -274,6 +300,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+           8.686234,
+           49.407330
         ]
       }
   },
@@ -288,6 +316,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+            8.674988,
+            49.405666
         ]
       }
   },
@@ -302,6 +332,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+            8.675042,
+            49.418319
         ]
       }
   }
