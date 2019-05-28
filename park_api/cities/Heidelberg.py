@@ -4,7 +4,7 @@ from park_api.geodata import GeoData
 import datetime
 import json
 import urllib
-import random
+# import random
 from park_api import util, env, db 
 
 # This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
@@ -19,8 +19,8 @@ def parse_html(html):
     # soup = BeautifulSoup(html, "html.parser")
 
     # read the JSON-file:
-    #      URL + no caching
-    urlHD = "http://parken.heidelberg.de/api-v1/parking-location?api_key=H5WaIyR4lgn6wzo7rJf8u4ubecgpX0Q8&nc="+str(random.random())
+    #      URL (removed: + no caching)
+    urlHD = "http://parken.heidelberg.de/api-v1/parking-location?api_key=H5WaIyR4lgn6wzo7rJf8u4ubecgpX0Q8" #"&nc="+str(random.random())
     headerHD={'Accept': 'application/json; charset=utf-8', 
               'User-Agent': 'ParkAPI v%s - Info: %s' %(env.SERVER_VERSION, env.SOURCE_REPOSITORY) }
     req = urllib.request.Request(url=urlHD, headers=headerHD)
