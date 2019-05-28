@@ -48,10 +48,11 @@ def parse_html(html):
 
         parking_state = 'open'
         parking_free = 0
-        if ( parking_lot['parkingupdate']['status'] == 'closed' ) :
-            parking_state = 'closed'
-        else :
-            parking_free = int(parking_lot['parkingupdate']['total']) - int(parking_lot['parkingupdate']['current'])
+        try :
+            if ( parking_lot['parkingupdate']['status'] == 'closed' ) :
+                parking_state = 'closed'
+            else :
+                parking_free = int(parking_lot['parkingupdate']['total']) - int(parking_lot['parkingupdate']['current'])
         except :
             parking_state = 'nodata'
 
