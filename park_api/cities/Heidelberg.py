@@ -26,7 +26,7 @@ def parse_html(html):
     req = urllib.request.Request(url=urlHD, headers=headerHD)
     webURL = urllib.request.urlopen(req)
     data=webURL.read()
-    dataJSON=json.loads(data)
+    dataJSON=json.loads(data.decode('utf-8'))
 
     data = {
         # convert_date is a utility function you can use to turn this date into the correct string format
