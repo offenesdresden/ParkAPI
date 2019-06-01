@@ -5,7 +5,7 @@ import datetime
 import json
 import urllib
 # import random
-from park_api import util, env, db 
+from park_api import env
 
 # This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
 # No need to remove this if there's no geodata (yet), everything will still work.
@@ -21,20 +21,16 @@ def parse_html(html):
     # read the JSON-file:
     #      URL (removed: + no caching)
     urlHD = "http://parken.heidelberg.de/api-v1/parking-location?api_key=H5WaIyR4lgn6wzo7rJf8u4ubecgpX0Q8" #"&nc="+str(random.random())
-    headerHD={'Accept': 'application/json; charset=utf-8', 
+    headerHD={'Accept': 'application/json; charset=utf-8',
               'User-Agent': 'ParkAPI v%s - Info: %s' %(env.SERVER_VERSION, env.SOURCE_REPOSITORY) }
     req = urllib.request.Request(url=urlHD, headers=headerHD)
     webURL = urllib.request.urlopen(req)
     data=webURL.read()
     dataJSON=json.loads(data)
 
-    # last_updated is the date when the data on the page was last updated, it should be listed on most pages
-    date_time_temp = dataJSON['data']['updated']
-    last_updated   = datetime.datetime.strptime(date_time_temp, '%a, %d %b %Y %H:%M:%S %z')
-    
     data = {
         # convert_date is a utility function you can use to turn this date into the correct string format
-        "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M Uhr"),
+        "last_updated": convert_date(dataJSON['data']['updated'].split("+")[0][:-1], '%a, %d %b %Y %H:%M:%S'),
         # URL for the page where the scraper can gather the data
         "lots": []
     }
