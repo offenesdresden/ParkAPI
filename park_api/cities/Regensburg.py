@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from park_api.util import convert_date
 from park_api.geodata import GeoData
+import datetime
 
 # This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
 # No need to remove this if there's no geodata (yet), everything will still work.
