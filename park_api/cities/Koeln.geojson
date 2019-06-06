@@ -9,7 +9,7 @@
                 "type": "Point"
             },
             "properties": {
-                "active_support": "false",
+                "active_support": false,
                 "name": "Köln",
                 "source": "https://www.stadt-koeln.de/externe-dienste/open-data/parking-ts.php",
                 "type": "city",
