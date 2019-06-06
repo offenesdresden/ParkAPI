@@ -20,8 +20,7 @@ def parse_html(html):
     last_updated = datetime.datetime.strptime(updated.text, 'zuletzt aktualisiert: %d.%m.%Y %H.%M Uhr')
 
     data = {
-        # convert_date is a utility function you can use to turn this date into the correct string format
-        "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M Uhr"),
+        "last_updated": last_updated,
         # URL for the page where the scraper can gather the data
         "lots": []
     }
