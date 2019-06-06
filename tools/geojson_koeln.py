@@ -22,7 +22,7 @@ if __name__ == "__main__":
                    "type":"city",
                    "url":"https://offenedaten-koeln.de/dataset/parkhausbelegung",
                    "source":"https://www.stadt-koeln.de/externe-dienste/open-data/parking-ts.php",
-                   "active_support":"true"
+                   "active_support":"false"
                 }
             }
         ]
@@ -35,7 +35,7 @@ if __name__ == "__main__":
             "type":"Feature",
             "properties":{
                 "name":data[k]["title"].replace(" (*)", ""),
-                "total":data[k]["capacity"],
+                "total":int(data[k]["capacity"]),
                 "address":data[k]["street"] + " " + data[k]["housenumber"],
                 "type":"Parkhaus",
                 "aux":json.dumps(aux)
@@ -43,8 +43,8 @@ if __name__ == "__main__":
             "geometry":{
                 "type":"Point",
                 "coordinates":[
-                    data[k]["lng"],
-                    data[k]["lat"]
+                    float(data[k]["lng"]),
+                    float(data[k]["lat"])
                 ]
             }
         })

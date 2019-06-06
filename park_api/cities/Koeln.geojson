@@ -20,8 +20,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95976000",
-                    "50.94035000"
+                    6.95976,
+                    50.94035
                 ],
                 "type": "Point"
             },
@@ -29,7 +29,7 @@
                 "address": "Kurt Hackenberg Platz 2",
                 "aux": "{\"identifier\": \"PH02\", \"open\": true}",
                 "name": "Dom",
-                "total": "420",
+                "total": 420,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -37,8 +37,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95592037",
-                    "50.93522197"
+                    6.95592037,
+                    50.93522197
                 ],
                 "type": "Point"
             },
@@ -46,7 +46,7 @@
                 "address": "Cäcilienstraße 0",
                 "aux": "{\"identifier\": \"PH11\", \"open\": false}",
                 "name": "Kaufhof",
-                "total": "860",
+                "total": 860,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -54,8 +54,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.96019000",
-                    "50.93979000"
+                    6.96019,
+                    50.93979
                 ],
                 "type": "Point"
             },
@@ -63,7 +63,7 @@
                 "address": "Große Neugasse 4",
                 "aux": "{\"identifier\": \"PH03\", \"open\": true}",
                 "name": "Groß St. Martin",
-                "total": "143",
+                "total": 143,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -71,8 +71,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95810000",
-                    "50.93839000"
+                    6.9581,
+                    50.93839
                 ],
                 "type": "Point"
             },
@@ -80,7 +80,7 @@
                 "address": "Laurenzplatz 4",
                 "aux": "{\"identifier\": \"PH31\", \"open\": true}",
                 "name": "An Farina",
-                "total": "170",
+                "total": 170,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -88,8 +88,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95987931",
-                    "50.94366606"
+                    6.95987931,
+                    50.94366606
                 ],
                 "type": "Point"
             },
@@ -97,7 +97,7 @@
                 "address": "Breslauer Platz 1",
                 "aux": "{\"identifier\": \"PH01\", \"open\": true}",
                 "name": "Hauptbahnhof",
-                "total": "395",
+                "total": 395,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -105,8 +105,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.96137062",
-                    "50.94049548"
+                    6.96137062,
+                    50.94049548
                 ],
                 "type": "Point"
             },
@@ -114,7 +114,7 @@
                 "address": "Bischofsgartenstraße 0",
                 "aux": "{\"identifier\": \"PH09\", \"open\": true}",
                 "name": "Philharmonie",
-                "total": "247",
+                "total": 247,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -122,8 +122,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.93787000",
-                    "50.93844000"
+                    6.93787,
+                    50.93844
                 ],
                 "type": "Point"
             },
@@ -131,7 +131,7 @@
                 "address": "Maastrichter Str. 10",
                 "aux": "{\"identifier\": \"PH06\", \"open\": false}",
                 "name": "Maastrichter Strasse",
-                "total": "445",
+                "total": 445,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -139,8 +139,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94199000",
-                    "50.94369000"
+                    6.94199,
+                    50.94369
                 ],
                 "type": "Point"
             },
@@ -148,7 +148,7 @@
                 "address": "Kaiser-Wilhelm-Ring 26",
                 "aux": "{\"identifier\": \"PH29\", \"open\": true}",
                 "name": "Kaiser-Wilhelm-Ring",
-                "total": "580",
+                "total": 580,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -156,8 +156,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.93792000",
-                    "50.93599000"
+                    6.93792,
+                    50.93599
                 ],
                 "type": "Point"
             },
@@ -165,7 +165,7 @@
                 "address": "Habsburgerring 9",
                 "aux": "{\"identifier\": \"PH30\", \"open\": true}",
                 "name": "Rudolfplatz",
-                "total": "320",
+                "total": 320,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -173,8 +173,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94040940",
-                    "50.93477380"
+                    6.9404094,
+                    50.9347738
                 ],
                 "type": "Point"
             },
@@ -182,7 +182,7 @@
                 "address": "Schaafenstraße 56",
                 "aux": "{\"identifier\": \"PH27\", \"open\": false}",
                 "name": "Sparkasse / Schaafenstr.",
-                "total": "159",
+                "total": 159,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -190,8 +190,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.98351494",
-                    "50.93927181"
+                    6.98351494,
+                    50.93927181
                 ],
                 "type": "Point"
             },
@@ -199,7 +199,7 @@
                 "address": "Willy-Brandt-Platz 3",
                 "aux": "{\"identifier\": \"D_P001\", \"open\": true}",
                 "name": "Lanxess-Arena P1",
-                "total": "1748",
+                "total": 1748,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -207,8 +207,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.97960964",
-                    "50.93897434"
+                    6.97960964,
+                    50.93897434
                 ],
                 "type": "Point"
             },
@@ -216,7 +216,7 @@
                 "address": "Willy-Brandt-Platz 3",
                 "aux": "{\"identifier\": \"D_P002\", \"open\": true}",
                 "name": "Lanxess-Arena P2",
-                "total": "266",
+                "total": 266,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -224,8 +224,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.97960964",
-                    "50.93897434"
+                    6.97960964,
+                    50.93897434
                 ],
                 "type": "Point"
             },
@@ -233,7 +233,7 @@
                 "address": "Willy-Brandt-Platz 3",
                 "aux": "{\"identifier\": \"D_P003\", \"open\": false}",
                 "name": "Lanxess-Arena P3",
-                "total": "634",
+                "total": 634,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -241,8 +241,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.98591819",
-                    "50.93921773"
+                    6.98591819,
+                    50.93921773
                 ],
                 "type": "Point"
             },
@@ -250,7 +250,7 @@
                 "address": "Willy-Brandt-Platz 3",
                 "aux": "{\"identifier\": \"D_P004\", \"open\": true}",
                 "name": "Lanxess-Arena P4",
-                "total": "309",
+                "total": 309,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -258,8 +258,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95482000",
-                    "50.93750000"
+                    6.95482,
+                    50.9375
                 ],
                 "type": "Point"
             },
@@ -267,7 +267,7 @@
                 "address": "Ludwigstraße 1",
                 "aux": "{\"identifier\": \"PH04\", \"open\": true}",
                 "name": "Brückenstraße",
-                "total": "500",
+                "total": 500,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -275,8 +275,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "7.08506400",
-                    "50.94134300"
+                    7.085064,
+                    50.941343
                 ],
                 "type": "Point"
             },
@@ -284,7 +284,7 @@
                 "address": "Brücker Mauspfad 0",
                 "aux": "{\"identifier\": \"PH34\", \"open\": false}",
                 "name": "Brück/Mauspfad",
-                "total": "334",
+                "total": 334,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -292,8 +292,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94720000",
-                    "50.93490000"
+                    6.9472,
+                    50.9349
                 ],
                 "type": "Point"
             },
@@ -301,7 +301,7 @@
                 "address": "Lungengasse 35",
                 "aux": "{\"identifier\": \"PH17\", \"open\": false}",
                 "name": "Am Neumarkt",
-                "total": "300",
+                "total": 300,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -309,8 +309,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.97609000",
-                    "50.95830000"
+                    6.97609,
+                    50.9583
                 ],
                 "type": "Point"
             },
@@ -318,7 +318,7 @@
                 "address": "Riehler Str. 190",
                 "aux": "{\"identifier\": \"PH32\", \"open\": false}",
                 "name": "Zoo",
-                "total": "272",
+                "total": 272,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -326,8 +326,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95801249",
-                    "50.93702820"
+                    6.95801249,
+                    50.9370282
                 ],
                 "type": "Point"
             },
@@ -335,7 +335,7 @@
                 "address": "Quatermarkt 5",
                 "aux": "{\"identifier\": \"PH19\", \"open\": false}",
                 "name": "Gürzenich",
-                "total": "213",
+                "total": 213,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -343,8 +343,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94505000",
-                    "50.94736000"
+                    6.94505,
+                    50.94736
                 ],
                 "type": "Point"
             },
@@ -352,7 +352,7 @@
                 "address": "Maybachstraße 1",
                 "aux": "{\"identifier\": \"PH33\", \"open\": true}",
                 "name": "Mediapark",
-                "total": "310",
+                "total": 310,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -360,8 +360,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.99790000",
-                    "50.93791000"
+                    6.9979,
+                    50.93791
                 ],
                 "type": "Point"
             },
@@ -369,7 +369,7 @@
                 "address": "Kalker Hauptstraße 55",
                 "aux": "{\"identifier\": \"D_P006\", \"open\": false}",
                 "name": "Köln Arcaden",
-                "total": "1800",
+                "total": 1800,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -377,8 +377,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95237190",
-                    "50.93868420"
+                    6.9523719,
+                    50.9386842
                 ],
                 "type": "Point"
             },
@@ -386,7 +386,7 @@
                 "address": "Schwertnergasse 1",
                 "aux": "{\"identifier\": \"PH15\", \"open\": true}",
                 "name": "Opern Passagen",
-                "total": "500",
+                "total": 500,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -394,8 +394,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.86854473",
-                    "50.92378721"
+                    6.86854473,
+                    50.92378721
                 ],
                 "type": "Point"
             },
@@ -403,7 +403,7 @@
                 "address": "Salzburger Weg 0",
                 "aux": "{\"identifier\": \"W_P08o\", \"open\": false}",
                 "name": "Stadion P8 Bus",
-                "total": "40",
+                "total": 40,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -411,8 +411,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95695000",
-                    "50.93909000"
+                    6.95695,
+                    50.93909
                 ],
                 "type": "Point"
             },
@@ -420,7 +420,7 @@
                 "address": "Marspfortengasse 10",
                 "aux": "{\"identifier\": \"PH12\", \"open\": false}",
                 "name": "Hohe Straße",
-                "total": "227",
+                "total": 227,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -428,8 +428,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94686040",
-                    "50.93788970"
+                    6.9468604,
+                    50.9378897
                 ],
                 "type": "Point"
             },
@@ -437,7 +437,7 @@
                 "address": "Wolfsstraße 6",
                 "aux": "{\"identifier\": \"PH24\", \"open\": true}",
                 "name": "Wolfsstraße",
-                "total": "330",
+                "total": 330,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -445,8 +445,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95053710",
-                    "50.93930760"
+                    6.9505371,
+                    50.9393076
                 ],
                 "type": "Point"
             },
@@ -454,7 +454,7 @@
                 "address": "Neven-DuMont Straße 80",
                 "aux": "{\"identifier\": \"PH26\", \"open\": false}",
                 "name": "DuMont Carré",
-                "total": "588",
+                "total": 588,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -462,8 +462,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94263000",
-                    "50.93990000"
+                    6.94263,
+                    50.9399
                 ],
                 "type": "Point"
             },
@@ -471,7 +471,7 @@
                 "address": "Alte Wallgasse 31",
                 "aux": "{\"identifier\": \"PH18\", \"open\": true}",
                 "name": "Alte Wallgasse",
-                "total": "230",
+                "total": 230,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -479,8 +479,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94595000",
-                    "50.93502000"
+                    6.94595,
+                    50.93502
                 ],
                 "type": "Point"
             },
@@ -488,7 +488,7 @@
                 "address": "Lungengasse ",
                 "aux": "{\"identifier\": \"PH23\", \"open\": false}",
                 "name": "BP Lungengasse",
-                "total": "170",
+                "total": 170,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -496,8 +496,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.96225290",
-                    "50.93671080"
+                    6.9622529,
+                    50.9367108
                 ],
                 "type": "Point"
             },
@@ -505,7 +505,7 @@
                 "address": "Markmannsgasse 3",
                 "aux": "{\"identifier\": \"PH22\", \"open\": true}",
                 "name": "Heumarkt",
-                "total": "300",
+                "total": 300,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -513,8 +513,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95113531",
-                    "50.93486362"
+                    6.95113531,
+                    50.93486362
                 ],
                 "type": "Point"
             },
@@ -522,7 +522,7 @@
                 "address": "Cäcilienstraße 29",
                 "aux": "{\"identifier\": \"PH10\", \"open\": false}",
                 "name": "Cäcilienstraße",
-                "total": "189",
+                "total": 189,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -530,8 +530,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95102000",
-                    "50.93559000"
+                    6.95102,
+                    50.93559
                 ],
                 "type": "Point"
             },
@@ -539,7 +539,7 @@
                 "address": "Cäcilienstraße 32",
                 "aux": "{\"identifier\": \"PH13\", \"open\": false}",
                 "name": "Schildergasse",
-                "total": "359",
+                "total": 359,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -547,8 +547,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94327000",
-                    "50.94161000"
+                    6.94327,
+                    50.94161
                 ],
                 "type": "Point"
             },
@@ -556,7 +556,7 @@
                 "address": "Im Klapperhof 13",
                 "aux": "{\"identifier\": \"PH07\", \"open\": false}",
                 "name": "Im Klapperhof",
-                "total": "280",
+                "total": 280,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -564,8 +564,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94454000",
-                    "50.94475000"
+                    6.94454,
+                    50.94475
                 ],
                 "type": "Point"
             },
@@ -573,7 +573,7 @@
                 "address": "Von-Werth-Straße 24",
                 "aux": "{\"identifier\": \"PH08\", \"open\": false}",
                 "name": "Von-Werth-Straße",
-                "total": "0",
+                "total": 0,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -581,8 +581,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94092146",
-                    "50.94139462"
+                    6.94092146,
+                    50.94139462
                 ],
                 "type": "Point"
             },
@@ -590,7 +590,7 @@
                 "address": "Im Klapperhof 49",
                 "aux": "{\"identifier\": \"PH35\", \"open\": true}",
                 "name": "Ringkarree",
-                "total": "440",
+                "total": 440,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -598,8 +598,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95000000",
-                    "50.93679000"
+                    6.95,
+                    50.93679
                 ],
                 "type": "Point"
             },
@@ -607,7 +607,7 @@
                 "address": "Krebsgasse 1",
                 "aux": "{\"identifier\": \"PH14\", \"open\": false}",
                 "name": "Theater/ Krebsgasse",
-                "total": "415",
+                "total": 415,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -615,8 +615,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94783083",
-                    "50.93840643"
+                    6.94783083,
+                    50.93840643
                 ],
                 "type": "Point"
             },
@@ -624,7 +624,7 @@
                 "address": "Richmodstraße 0",
                 "aux": "{\"identifier\": \"PH20\", \"open\": false}",
                 "name": "Karstadt",
-                "total": "386",
+                "total": 386,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -632,8 +632,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.96168175",
-                    "50.93512730"
+                    6.96168175,
+                    50.9351273
                 ],
                 "type": "Point"
             },
@@ -641,7 +641,7 @@
                 "address": "Heumarkt 20",
                 "aux": "{\"identifier\": \"PH16\", \"open\": true}",
                 "name": "Maritim",
-                "total": "525",
+                "total": 525,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -649,8 +649,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94396000",
-                    "50.93759000"
+                    6.94396,
+                    50.93759
                 ],
                 "type": "Point"
             },
@@ -658,7 +658,7 @@
                 "address": "Große Brinkgasse 5+11",
                 "aux": "{\"identifier\": \"PH25\", \"open\": false}",
                 "name": "Bazaar de Cologne",
-                "total": "144",
+                "total": 144,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -666,8 +666,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.94761625",
-                    "50.93704072"
+                    6.94761625,
+                    50.93704072
                 ],
                 "type": "Point"
             },
@@ -675,7 +675,7 @@
                 "address": "Richmodstr 13",
                 "aux": "{\"identifier\": \"PH21\", \"open\": false}",
                 "name": "KSK/ Richmodstr",
-                "total": "233",
+                "total": 233,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -683,8 +683,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.85067560",
-                    "50.91805130"
+                    6.8506756,
+                    50.9180513
                 ],
                 "type": "Point"
             },
@@ -692,7 +692,7 @@
                 "address": "Emmy-Noether-Str 0",
                 "aux": "{\"identifier\": \"PH36\", \"open\": true}",
                 "name": "Marsdorf P+R",
-                "total": "621",
+                "total": 621,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -700,8 +700,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.88433757",
-                    "50.93970450"
+                    6.88433757,
+                    50.9397045
                 ],
                 "type": "Point"
             },
@@ -709,7 +709,7 @@
                 "address": "Alter Militärring 0",
                 "aux": "{\"identifier\": \"W_P001\", \"open\": false}",
                 "name": "Stadion P1",
-                "total": "550",
+                "total": 550,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -717,8 +717,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.86697832",
-                    "50.93854166"
+                    6.86697832,
+                    50.93854166
                 ],
                 "type": "Point"
             },
@@ -726,7 +726,7 @@
                 "address": "Willi-Schwarz-Weg 0",
                 "aux": "{\"identifier\": \"W_P003\", \"open\": false}",
                 "name": "Stadion P3",
-                "total": "1000",
+                "total": 1000,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -734,8 +734,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.86760059",
-                    "50.92722267"
+                    6.86760059,
+                    50.92722267
                 ],
                 "type": "Point"
             },
@@ -743,7 +743,7 @@
                 "address": "Salzburger Weg 0",
                 "aux": "{\"identifier\": \"W_P006\", \"open\": false}",
                 "name": "Stadion P6",
-                "total": "950",
+                "total": 950,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -751,8 +751,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.86798683",
-                    "50.92554555"
+                    6.86798683,
+                    50.92554555
                 ],
                 "type": "Point"
             },
@@ -760,7 +760,7 @@
                 "address": "Salzburger Weg 0",
                 "aux": "{\"identifier\": \"W_P007\", \"open\": false}",
                 "name": "Stadion P7",
-                "total": "1000",
+                "total": 1000,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -768,8 +768,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.86661354",
-                    "50.92338143"
+                    6.86661354,
+                    50.92338143
                 ],
                 "type": "Point"
             },
@@ -777,7 +777,7 @@
                 "address": "Salzburger Weg 0",
                 "aux": "{\"identifier\": \"W_P08w\", \"open\": false}",
                 "name": "Stadion P8 PKW",
-                "total": "650",
+                "total": 650,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -785,8 +785,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.87300793",
-                    "50.93904195"
+                    6.87300793,
+                    50.93904195
                 ],
                 "type": "Point"
             },
@@ -794,7 +794,7 @@
                 "address": "Walter-Binder-Weg 0",
                 "aux": "{\"identifier\": \"W_P004\", \"open\": false}",
                 "name": "Stadion P4",
-                "total": "450",
+                "total": 450,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -802,8 +802,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.96255079",
-                    "50.94454487"
+                    6.96255079,
+                    50.94454487
                 ],
                 "type": "Point"
             },
@@ -811,7 +811,7 @@
                 "address": "Am Alten Ufer 35",
                 "aux": "{\"identifier\": \"PH38\", \"open\": false}",
                 "name": "Rhein Triadem",
-                "total": "264",
+                "total": 264,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -819,8 +819,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.87457434",
-                    "50.93760865"
+                    6.87457434,
+                    50.93760865
                 ],
                 "type": "Point"
             },
@@ -828,7 +828,7 @@
                 "address": "Aachener Str 1003",
                 "aux": "{\"identifier\": \"PH28\", \"open\": false}",
                 "name": "P+R Stadion (P2)",
-                "total": "580",
+                "total": 580,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -836,8 +836,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.96539000",
-                    "50.92534000"
+                    6.96539,
+                    50.92534
                 ],
                 "type": "Point"
             },
@@ -845,7 +845,7 @@
                 "address": "Bayenstraße 2",
                 "aux": "{\"identifier\": \"PH37-1\", \"open\": false}",
                 "name": "Rheinauhafen",
-                "total": "800",
+                "total": 800,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -853,8 +853,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.96394554",
-                    "50.92716850"
+                    6.96394554,
+                    50.9271685
                 ],
                 "type": "Point"
             },
@@ -862,7 +862,7 @@
                 "address": "Harry-Blum-Platz 2",
                 "aux": "{\"identifier\": \"PH37-2\", \"open\": false}",
                 "name": "Rheinauhafen  Einfahrt Nord/Bayenturm",
-                "total": "500",
+                "total": 500,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -870,8 +870,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.96883014",
-                    "50.92074378"
+                    6.96883014,
+                    50.92074378
                 ],
                 "type": "Point"
             },
@@ -879,7 +879,7 @@
                 "address": " 0",
                 "aux": "{\"identifier\": \"PH37-3\", \"open\": false}",
                 "name": "Rheinauhafen Einfahrt Süd/Oberländer Wall",
-                "total": "500",
+                "total": 500,
                 "type": "Parkhaus"
             },
             "type": "Feature"
@@ -887,8 +887,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    "6.95689000",
-                    "50.93560000"
+                    6.95689,
+                    50.9356
                 ],
                 "type": "Point"
             },
@@ -896,7 +896,7 @@
                 "address": "Hohe Str. 30a",
                 "aux": "{\"identifier\": \"PH05\", \"open\": true}",
                 "name": "REWE City",
-                "total": "216",
+                "total": 216,
                 "type": "Parkhaus"
             },
             "type": "Feature"
