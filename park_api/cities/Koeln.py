@@ -15,17 +15,28 @@ def parse_html(html):
             "lots":[],
             "last_updated":None
             }
-    id_lots = {geodata.lots[n].aux: geodata.lots[n] for n in geodata.lots}
+    id_lots = {}
+    for l in geodata.lots:
+        aux = json.loads(geodata.lots[l].aux)
+        id_lots[aux["identifier"]] = {"lot":geodata.lots[l],
+                                      "open":aux["open"]}
     timestamps = []
     for feature in data["features"]:
         try:
-            lot = id_lots[feature["attributes"]["IDENTIFIER"]]
+            if id_lots[feature["attributes"]["IDENTIFIER"]]["open"]:
+                state = "open"
+            else:
+                if feature["attributes"]["KAPAZITAET"] == -1:
+                    state = "nodata"
+                else:
+                    state = "unknown"
+            lot = id_lots[feature["attributes"]["IDENTIFIER"]]["lot"]
             lots["lots"].append({
                 "coords":lot.coords,
                 "name":lot.name,
                 "total":lot.total,
                 "free":feature["attributes"]["KAPAZITAET"],
-                "state":"nodata" if feature["attributes"]["KAPAZITAET"] == -1 else "open",
+                "state":state,
                 "id":lot.id,
                 "lot_type":lot.type,
                 "address":lot.address,

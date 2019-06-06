@@ -29,6 +29,8 @@ if __name__ == "__main__":
     }
 
     for k in data.keys():
+        aux = {"identifier":k,
+               "open":data[k]["open"] == "durchgehend"}
         geo["features"].append({
             "type":"Feature",
             "properties":{
@@ -36,7 +38,7 @@ if __name__ == "__main__":
                 "total":data[k]["capacity"],
                 "address":data[k]["street"] + " " + data[k]["housenumber"],
                 "type":"Parkhaus",
-                "identifier":k
+                "aux":json.dumps(aux)
             },
             "geometry":{
                 "type":"Point",
