@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 from park_api.util import convert_date
 from park_api.geodata import GeoData
-import datetime
 
 # This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
 # No need to remove this if there's no geodata (yet), everything will still work.
@@ -17,7 +16,7 @@ def parse_html(html):
     # last_updated is the date when the data on the page was last updated, it should be listed on most pages
     #   suche: <p class="updateinfo">zuletzt aktualisiert: 28.05.2019 15.30 Uhr</p>
     updated = soup.find( "p", class_="updateinfo")
-    last_updated = datetime.datetime.strptime(updated.text, 'zuletzt aktualisiert: %d.%m.%Y %H.%M Uhr')
+    last_updated = convert_date(updated.text, 'zuletzt aktualisiert: %d.%m.%Y %H.%M Uhr')
 
     data = {
         "last_updated": last_updated,
