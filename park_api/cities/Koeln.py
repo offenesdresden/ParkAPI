@@ -34,8 +34,8 @@ def parse_html(html):
             lots["lots"].append({
                 "coords":lot.coords,
                 "name":lot.name,
-                "total":lot.total,
-                "free":feature["attributes"]["KAPAZITAET"],
+                "total":int(lot.total),
+                "free":int(feature["attributes"]["KAPAZITAET"]),
                 "state":state,
                 "id":lot.id,
                 "lot_type":lot.type,
@@ -44,7 +44,7 @@ def parse_html(html):
                 "region":""
             })
             timestamps.append(convert_date(feature["attributes"]["TIMESTAMP"], "%Y-%m-%d %H:%M:%S"))
-        except KeyError:
+        except (KeyError, ValueError):
             pass
     timestamps.sort()
     timestamps.reverse()
