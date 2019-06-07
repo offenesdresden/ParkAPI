@@ -1,0 +1,358 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+             8.404425,
+            49.013774
+         ]
+      },
+      "properties": {
+          "name": "Karlsruhe",
+          "type": "city",
+          "url": "https://www.karlsruhe.de/",
+          "source": "https://web1.karlsruhe.de/service/Parken/",
+	  "active_support":true
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "Kongresszentrum PH2",
+        "total": 410,
+        "address": "Beiertheimer Allee 9",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.400994,
+          49.004216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kongresszentrum PH1",
+        "total": 390,
+        "address": "Hermann-Billing-Straße 1",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.400777,
+          49.003899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Luisenstraße",
+        "total": 340,
+        "address": "Luisenstraße 2F",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.403570,
+           49.000674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Am Staatstheater",
+        "total": 327,
+        "address": " Baumeisterstraße 11",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.405123,
+           49.004435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Passagehof",
+        "total": 372,
+        "address": "Passagehof 11",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.397809,
+           49.011202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Herrenstraße/Zirkel",
+        "total": 432,
+        "address": "Herrenstraße 9",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.400492,
+          49.010615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zirkel (P&C)",
+        "total": 105,
+        "address": "Im Zirkel 25",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.402008,
+          49.010431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Schlossplatz",
+        "total": 756,
+        "address": "Schloßpl. 21",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.404532,
+           49.010730
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kreuzstraße (C&A)",
+        "total": 52,
+        "address": "Kreuzstraße 5",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.405249,
+          49.009938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kronenplatz",
+        "total": 0,
+        "address": "Fritz-Erler-Straße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.410286,
+           49.007415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Landesbibliothek",
+        "total": 83,
+        "address": "Ritterstraße 20",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.399441,
+           49.007317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Friedrichsplatz",
+        "total": 240,
+        "address": "Friedrichsplatz 7",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.400977,
+           49.008497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Karstadt",
+        "total": 260,
+        "address": "Zähringerstraße 69",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.401900,
+          49.009030
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Industrie und Handelskammer",
+        "total": 115,
+        "address": "Erbprinzenstraße 1",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.402927,
+          49.007147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marktplatz",
+        "total": 250,
+        "address": "Kreuzstraße 13a",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.405585,
+          49.008191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mendelssohnplatz (Scheck-In)",
+        "total": 400,
+        "address": "Rüppurrer Straße 1",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.412368,
+          49.005801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ettlinger Tor",
+        "total": 802,
+        "address": "Kriegsstraße 122",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.401754,
+          49.005657
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stephanplatz",
+        "total": 370,
+        "address": "Amalienstraße 33",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.392950,
+          49.008396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akademiestraße",
+        "total": 109,
+        "address": "Akademiestraße 51",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.394768,
+          49.010753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Post Galerie",
+        "total": 230,
+        "address": "Amalienstraße 16",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.393615,
+          49.008325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ludwigsplatz",
+        "total": 250,
+        "address": "Amalienstraße 10",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.395820,
+          49.007526
+        ]
+      }
+    }
+  ]
+}
+
