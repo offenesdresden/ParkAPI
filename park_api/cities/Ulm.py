@@ -31,7 +31,7 @@ def parse_html(html):
         lot = geodata.lot(parking_name)
         try :
             parking_state = 'open'
-            parking_free  = int(int(data[2].text))
+            parking_free  = int(data[2].text)
         except :
             parking_free  = 0
             parking_state = 'nodata'
