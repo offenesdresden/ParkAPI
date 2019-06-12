@@ -36,7 +36,7 @@ def parse_html(html):
             parking_free  = 0
             parking_state = 'nodata'
 
-            data["lots"].append({
+        data["lots"].append({
                 "name":     parking_name,
                 "free":     parking_free,
                 "total":    lot.total,
