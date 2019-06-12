@@ -26,12 +26,12 @@ def parse_html(html):
     table2 = table.find('table', width='790')
     rows = table2.find_all('tr')
     for row in rows[3:12] :
-        data = row.find_all('td') 
-        parking_name  = data[0].text
+        parking_data = row.find_all('td') 
+        parking_name  = parking_data[0].text
         lot = geodata.lot(parking_name)
         try :
             parking_state = 'open'
-            parking_free  = int(data[2].text)
+            parking_free  = int(parking_data[2].text)
         except :
             parking_free  = 0
             parking_state = 'nodata'
