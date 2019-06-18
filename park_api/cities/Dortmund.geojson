@@ -1,0 +1,324 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              7.465229,
+             51.511480
+          ]
+      },
+      "properties": {
+          "name": "Dortmund",
+          "type": "city",
+          "url": "https://www.dortmund.de/",
+          "source": "http://geoweb1.digistadtdo.de/OWSServiceProxy/client/parken.jsp",
+	  "active_support":false
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "Dietr.-Keuning-Haus",
+        "total": 90,
+        "address": "Leopoldstraße 50",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.461971,
+           51.521872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cinestar",
+        "total": 750,
+        "address": "Steinstraße 48",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.460994,
+           51.519965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alte Post",
+        "total": 89,
+        "address": "Königswall 14",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.462727,
+           51.517399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Konzerthaus/Burgwall",
+        "total": 276,
+        "address": "Burgwall 8",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.467558,
+           51.517317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hauptbahnhof",
+        "total": 536,
+        "address": "Königswall 15",
+        "type": "Parkplatz/Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             7.456147,
+            51.516555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Freistuhl/Bibliothek",
+        "total": 300,
+        "address": "Freistuhl 5",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.461872,
+           51.515912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kuckelke",
+        "total": 315,
+        "address": "Kuckelke 3",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.469432,
+           51.516827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bissenkamp",
+        "total": 127,
+        "address": "Gerberstraße 8",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.465260,
+           51.515916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Commerzbank",
+        "total": 140,
+        "address": "Schmiedingstraße 11",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.458498,
+           51.515509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dortmunder U",
+        "total": 467,
+        "address": "Brinkhoffstraße",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.454036,
+           51.515653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Westentor",
+        "total": 360,
+        "address": "Schmiedingstraße 25",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.456669,
+           51.515276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaufhof",
+        "total": 419,
+        "address": "Kolpingstraße 2",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.461495,
+           51.513147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hansaplatz/Karstadt",
+        "total": 580,
+        "address": "Hansaplatz 2",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.463708,
+           51.512228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Thier-Galerie",
+        "total": 724,
+        "address": "Hövelstraße 2",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.460783,
+           51.512706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Theater",
+        "total": 393,
+        "address": "Kuhstraße 12",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           7.462652,
+          51.511708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rathaus/Stadtgarten",
+        "total": 584,
+        "address": "Hansastraße 99",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             7.463667,
+            51.511377
+         ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "Friedensplatz",
+        "total": 2580,
+        "address": "Südwall 2",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.466557,
+           51.509942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "HDI/Südbad",
+        "total": 584,
+        "address": "Saarlandstraße 14",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             7.471240,
+            51.506276
+         ]
+       }
+   },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klinikum DO",
+        "total": 520,
+        "address": "Hohe Straße 31",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             7.460256,
+            51.507092
+         ]
+       }
+   }]
+}
