@@ -26,7 +26,7 @@ def parse_html(html):
 
     # find all entries
     all_parking_lots = soup.find_all('dl')
-    for parking_lot in all_aprking_lots : 
+    for parking_lot in all_parking_lots : 
         parking_name = parking_lot.find('dt').text
         lot = geodata.lot(parking_name)
 
