@@ -2,7 +2,7 @@ import copy
 import datetime
 import json
 import re
-from urllib import error, request
+from urllib import request
 
 from park_api.util import convert_date
 from park_api.geodata import GeoData
@@ -11,42 +11,33 @@ from park_api.geodata import GeoData
 # No need to remove this if there's no geodata (yet), everything will still work.
 geodata = GeoData(__file__)
 
-GEOMETRY_TEMPLATE = {"type": "Point",
-                     "coordinates": [
-                         0.0,
-                         0.0
-                     ]
-                     }
+GEOMETRY_TEMPLATE = {"type": "Point", "coordinates": [0.0, 0.0]}
 
-PROPERTIES_TEMPLATE = {"name": "Parking Lot 1",
-                       "total": 0,
-                       "address": "Musterstraße 1",
-                       "type": "Parkhaus"
-                       }
+PROPERTIES_TEMPLATE = {
+    "name": "Parking Lot 1",
+    "total": 0,
+    "address": "Musterstraße 1",
+    "type": "Parkhaus",
+}
 
 
 def generate_geojson(html):
     parking_ramps, _ = get_general_info(html)
 
-    osnabrueck = {"type": "Feature",
-                  "geometry": {
-                      "type": "Point",
-                      "coordinates": [
-                          8.05,
-                          52.283333
-                      ]
-                  },
-                  "properties": {
-                      "name": "Osnabrueck",
-                      "type": "city",
-                      "url": "https://www.parken-osnabrueck.de/",
-                      "source": "https://www.parken-osnabrueck.de/",
-                      "active_support": False
-                  }
-                  }
+    osnabrueck = {
+        "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [8.05, 52.283333]},
+        "properties": {
+            "name": "Osnabrueck",
+            "type": "city",
+            "url": "https://www.parken-osnabrueck.de/",
+            "source": "https://www.parken-osnabrueck.de/",
+            "active_support": False,
+        },
+    }
 
     geojson = dict()
-    geojson['type'] = 'FeatureCollection'
+    geojson["type"] = "FeatureCollection"
     features = list()
 
     features.append(osnabrueck)
@@ -55,79 +46,32 @@ def generate_geojson(html):
         properties = copy.deepcopy(PROPERTIES_TEMPLATE)
         geometry = copy.deepcopy(GEOMETRY_TEMPLATE)
 
-        properties['name'] = ramp['name']
-        properties['total'] = ramp['utilization']['total_capacity']
-        properties['address'] = ramp['street']
-        properties['type'] = 'unknown'
+        properties["name"] = ramp["name"]
+        properties["total"] = ramp["utilization"]["total_capacity"]
+        properties["address"] = ramp["street"]
+        properties["type"] = "unknown"
 
-        geometry['coordinates'] = [float(ramp['longitude']),
-                                   float(ramp['latitude'])]
+        geometry["coordinates"] = [float(ramp["longitude"]), float(ramp["latitude"])]
 
-        feature = {'type': 'Feature',
-                   'properties': properties,
-                   'geometry': geometry}
+        feature = {"type": "Feature", "properties": properties, "geometry": geometry}
 
         features.append(feature)
 
-    geojson['features'] = features
+    geojson["features"] = features
 
-    with open('Osnabrueck.geojson', 'w') as fid:
+    with open("Osnabrueck.geojson", "w") as fid:
         json.dump(geojson, fid)
-
-
-def raise_for_status(response):
-    """Raises stored :class:`HTTPError`, if one occurred.
-
-    Taken from requests library.
-    See: https://2.python-requests.org/en/master/_modules/requests/models/#Response.raise_for_status
-    """
-
-    http_error_msg = ""
-    if isinstance(response.reason, bytes):
-        # We attempt to decode utf-8 first because some servers
-        # choose to localize their reason strings. If the string
-        # isn't utf-8, we fall back to iso-8859-1 for all other
-        # encodings. (See PR #3538)
-        try:
-            reason = response.reason.decode("utf-8")
-        except UnicodeDecodeError:
-            reason = response.reason.decode("iso-8859-1")
-    else:
-        reason = response.reason
-
-    if 400 <= response.status < 500:
-        http_error_msg = u"%s Client Error: %s for url: %s" % (
-            response.status,
-            reason,
-            response.url,
-        )
-
-    elif 500 <= response.status < 600:
-        http_error_msg = u"%s Server Error: %s for url: %s" % (
-            response.status,
-            reason,
-            response.url,
-        )
-
-    if http_error_msg:
-        raise error.HTTPError(
-            url=response.geturl(),
-            code=response.getcode(),
-            msg=http_error_msg,
-            hdrs=response.info(),
-            fp=None,
-        )
 
 
 def get_details(url=None):
     with request.urlopen(url) as response:
-        raise_for_status(response)
         page_source = response.read().decode()
 
     utilization = json.loads(page_source)
 
-    utilization["access_time"] = convert_date(datetime.datetime.now(),
-                                              "%d.%m.%Y %H:%M Uhr")
+    utilization["access_time"] = convert_date(
+        datetime.datetime.now(), "%d.%m.%Y %H:%M Uhr"
+    )
 
     return utilization
 
@@ -167,29 +111,31 @@ def parse_html(html):
         # convert_date is a utility function you can use to turn this date into the correct string format
         "last_updated": access_time,
         # URL for the page where the scraper can gather the data
-        "lots": []
+        "lots": [],
     }
 
     for ramp in parking_ramps:
-        lot_name = ramp['name']
-        lot_free = ramp['utilization']['free_capacity']
-        lot_total = ramp['utilization']['total_capacity']
+        lot_name = ramp["name"]
+        lot_free = ramp["utilization"]["free_capacity"]
+        lot_total = ramp["utilization"]["total_capacity"]
 
         # please be careful about the state only being allowed to contain either open, closed or nodata
         # should the page list other states, please map these into the three listed possibilities
-        state = 'nodata'
+        state = "nodata"
 
         lot = geodata.lot(lot_name)
-        data["lots"].append({
-            "name": lot.name,
-            "free": lot_free,
-            "total": lot_total,
-            "address": lot.address,
-            "coords": lot.coords,
-            "state": state,
-            "lot_type": lot.type,
-            "id": lot.id,
-            "forecast": False,
-        })
+        data["lots"].append(
+            {
+                "name": lot.name,
+                "free": lot_free,
+                "total": lot_total,
+                "address": lot.address,
+                "coords": lot.coords,
+                "state": state,
+                "lot_type": lot.type,
+                "id": lot.id,
+                "forecast": False,
+            }
+        )
 
     return data
