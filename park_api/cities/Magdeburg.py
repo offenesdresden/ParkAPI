@@ -95,6 +95,6 @@ def parse_html(html):
     # finaly we set the last_updated field
     #   <font color="grey" face="Arial" size="1">Letzte Aktualisierung vom 12.06.2019 11:22 Uhr</font>
     current_date = rows[10].text.split()
-    data["last_updated"] = convert_date(current_date[12]+' '+current_date[13], '%d.%m.%Y %H:%M'))
+    data["last_updated"] = convert_date(current_date[12]+' '+current_date[13], '%d.%m.%Y %H:%M')
 
     return data
