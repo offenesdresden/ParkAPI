@@ -43,11 +43,13 @@ def generate_geojson(html):
                       "source": "https://www.parken-osnabrueck.de/",
                       "active_support": False
                   }
-                  },
+                  }
 
-    geojson = {}
+    geojson = dict()
     geojson['type'] = 'FeatureCollection'
-    features = [osnabrueck,]
+    features = list()
+
+    features.append(osnabrueck)
 
     for ramp in parking_ramps.values():
         properties = copy.deepcopy(PROPERTIES_TEMPLATE)
@@ -58,8 +60,8 @@ def generate_geojson(html):
         properties['address'] = ramp['street']
         properties['type'] = 'unknown'
 
-        geometry['coordinates'] = [ramp['longitude'],
-                                   ramp['latitude']]
+        geometry['coordinates'] = [float(ramp['longitude']),
+                                   float(ramp['latitude'])]
 
         feature = {'type': 'Feature',
                    'properties': properties,
@@ -69,8 +71,8 @@ def generate_geojson(html):
 
     geojson['features'] = features
 
-    json.dump(geojson,
-              'Osnabrueck.geojson')
+    with open('Osnabrueck.geojson', 'w') as fid:
+        json.dump(geojson, fid)
 
 
 def raise_for_status(response):
