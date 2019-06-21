@@ -1,4 +1,6 @@
 import os
+from datetime import date
+import calendar
 
 import json
 from collections import namedtuple
@@ -106,6 +108,10 @@ class GeoData:
     def _lot_from_props(self, name, lng, lat, props):
         address = props.get("address", None)
         total = props.get("total", 0)
+        if "total_by_weekday" in props.keys():
+            weekday = calendar.day_name[date.today().weekday()]
+            if weekday in props.get("total_by_weekday"):
+                total = props.get("total_by_weekday").get(weekday)
         _type = props.get("type", None)
         _aux = props.get("aux", None)
         _id = generate_id(self.city_name + name)

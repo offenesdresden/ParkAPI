@@ -1,0 +1,276 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              12.094527,
+              49.020282
+          ]
+      },
+      "properties": {
+          "name": "Regensburg",
+          "type": "city",
+          "url": "https://www.regensburg.de/",
+          "source": "https://www.einkaufen-regensburg.de/service/parken-amp-anfahrt.html",
+	  "active_support":false
+      }
+  }, {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus an der St.Hedwigs-Klinik",
+        "total": 0,
+        "address": " Prüfeninger Str. 25, 93049 Regensburg",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           12.078917,
+           49.017323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kurzzeitparkplätze",
+        "total": 0,
+        "address": "Gesamte Altstadt & Umgebung",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.098442,
+          49.019525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Park & Ride - Parken an der Continental Arena",
+        "total": 540,
+        "address": "Franz-Josef-Strauss-Allee 22",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.107190,
+          48.990729
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Dachauplatz",
+        "total": 700,
+        "address": "D.-Martin-Luther-Str. 2",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.101358,
+          49.017045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus St.-Peters-Weg",
+        "total": 560,
+        "address": "St.-Peters-Weg 15",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.097170,
+          49.015205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Regensburg Arcaden",
+        "total": 1548,
+        "address": "Friedenstraße 23",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.101428,
+          49.010127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiefgarage Arnulfsplatz",
+        "total": 160,
+        "address": "Arnulfsplatz 4a",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.089572,
+          49.019799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiefgarage am Theater/Bismarckplatz",
+        "total": 355,
+        "address": "Bismarckplatz 10",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.089365,
+          49.018718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiefgarage Castra Regina Center",
+        "total": 409,
+        "address": "Bahnhofstraße 24",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.102033,
+          49.012920
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Park & Ride-Parkplatz West",
+        "total": 335,
+        "address": "Kuglerplatz",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.064749,
+          49.015429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Donau-Einkaufszentrum",
+        "total": 1200,
+        "address": "Weichser Weg 5",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.1164300,
+          49.0265900
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Dultplatz",
+        "total": 2400,
+        "address": "Am Protzenweiher",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.090572,
+          49.025467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Protzenweiher",
+        "total": 200,
+        "address": "Am Protzenweiher 1",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.093540,
+          49.026326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Park & Ride - Parkplatz Unterer Wöhrd",
+        "total": 507,
+        "address": "Wöhrdstraße 62",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.109358,
+          49.020964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Wöhrdstraße",
+        "total": 200,
+        "address": "Wöhrdstraße 18",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.103114,
+          49.022061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Landesamt für Finanzen",
+        "total": 100,
+        "address": "Bahnhofstraße 7",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.096526622772217,
+          49.01266090091584
+        ]
+      }
+    }
+    ]
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Karlsruhe, Parkleitsystem - Aktuelle Parkhausbelegung, Parken, Parkhaus, Parkleitsystem" />
+    <title>Karlsruhe: Parkleitsystem - Aktuelle Parkhausbelegung</title>
+    <link rel="SHORTCUT ICON" href="/chromes10/favicon.ico" />
+    <link rel="copyright" href="https://www.karlsruhe.de/impressum.de" title="Impressum" />
+    <link rel="help" href="https://www.karlsruhe.de/impressum/hilfe.de" title="Hilfe" />
+    <link rel="start" href="https://www.karlsruhe.de/" title="Startseite" />
+<!-- bootstrap v3.3.7 CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://www.karlsruhe.de/MethodsFs/bootstrap-custom/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.karlsruhe.de/MethodsFs/css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.karlsruhe.de/MethodsFs/css/rubrik.css" />
+<!-- -->
+    <!-- link rel="stylesheet" type="text/css" href="etc/rubrik.css" -->
+    <link rel="stylesheet" type="text/css" href="https://www.karlsruhe.de/MethodsFs/css/styles.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="https://www.karlsruhe.de/MethodsFs/css/print.css" />
+<!-- Suche2.karlsruhe.de  lib/jquery  -->
+    <link rel="stylesheet" type="text/css" href="/chromes10/suche/suche2_autocomplete.css" />
+    <script src="https://www.karlsruhe.de/MethodsFs/jquery-1.9.1.min.js"></script>
+    <script src="https://www.karlsruhe.de/MethodsFs/bootstrap-custom/js/bootstrap.min.js"></script>
+    <script src="/chromes10/suche/suche2_jquery-1.7.2.min.js"></script>
+    <script src="/chromes10/suche/suche2_jquery_autocomplete.js"></script>
+    <script>
+        var jSuche = jQuery.noConflict(true);
+        $(document).ready(function() {
+            $("#unternavigation>ul>li>ul>li").clone().appendTo( "#seitennavigation" );
+            if($("div.kalender").length) {
+                $("div.kalender").clone().appendTo( "#kalender-content");
+                $( "#kalender-block").show();
+            }
+        });
+        jSuche(document).ready(function(){
+          jSuche("#q").autocomplete('https://suche2.karlsruhe.de/solr/suche2.karlsruhe.de/suggest', {
+                 extraParams:{
+                 'wt': 'velocity',
+                 'v.template': 'suggest'
+               }
+             }
+          ).keydown(function(e){
+            if (e.keyCode === 13){
+              jSuche("#query-form").trigger('submit');
+            }
+          });
+        });
+    </script>
+<!-- Ende Suche   -->
+<style>#add-block { display: none; } @media (min-width: 661px) { #kopf {background-image:url(https://www.karlsruhe.de/Chromes/Redesign/header-image.jpg);} }</style>
+</head>
+<body class="b3 ">
+<p class="unsichtbar2">
+    <a title="zur Navigation springen" href="#navigation" tabindex="1">Sprung zur Navigation</a>.
+    <a title="skip link" href="#hauptcontent" tabindex="2">Sprung zum Inhalt</a>.
+</p>
+<div id="content">
+  <header>
+<!--  Kopfleiste   -->
+   <div id="kopf"> 
+      <ul id="kopfleiste">
+    <li class="show-md"><a id="karlsruhe-links" href="#" title="Stadtplan, Wetter, Verkehr">Lokales</a>&nbsp;
+            <ul id="linkblock">
+                <li><a href="https://geodaten.karlsruhe.de/stadtplan" tabindex="4" accesskey="s" title="Stadtplan [s]" class="stadtplan">Stadtplan</a></li>
+                <li><a href="https://www.karlsruhe.de/b3/wetter" accesskey="w" title="Wetter [w]" class="wetter" tabindex="5">Wetter</a></li>
+                <li><a href="https://vmz.karlsruhe.de/portal.html?city=Karlsruhe" accesskey="v" title="Verkehrslage [v]" class="verkehr" tabindex="6">Verkehrslage</a></li>
+            </ul>
+            <script>
+                $("a#karlsruhe-links").click(function (e) { $('#linkblock').toggle(); e.preventDefault(); });
+            </script></li>
+
+            <li class="hide-small"><a href="https://geodaten.karlsruhe.de/stadtplan" tabindex="4" accesskey="s" title="Stadtplan [s]" class="stadtplan">Stadtplan</a></li>
+            <li class="hide-small"><a href="https://www.karlsruhe.de/b3/wetter" accesskey="w" title="Wetter [w]" class="wetter" tabindex="5">Wetter</a></li>
+            <li class="hide-small"><a href="https://vmz.karlsruhe.de/portal.html?city=Karlsruhe" accesskey="v" title="Verkehrslage [v]" class="verkehr" tabindex="6">Verkehrslage</a></li>
+            </ul>
+            <a title="Stadt Karlsruhe - zur Startseite" id="logo" href="https://www.karlsruhe.de/de"></a>
+        </div>
+    </header>
+    <nav id="navigation">
+        <ul>
+            <li class="kultur"><a tabindex="7"     href="https://www.karlsruhe.de/b1.de">Kultur &amp; Tourismus</a></li>
+            <li class="wirtschaft"><a tabindex="8" href="https://www.karlsruhe.de/b2.de">Wirtschaft &amp; Wissenschaft</a></li>
+            <li class="leben"><a tabindex="9"      href="https://www.karlsruhe.de/b3.de">Leben &amp; Arbeiten</a></li>
+            <li class="rathaus"><a tabindex="10"   href="https://www.karlsruhe.de/b4.de">Stadt &amp; Verwaltung</a></li>
+        </ul>
+        <br class="clearBoth">
+    </nav>
+    <div id="navigation-klein">
+        <div class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Navigation ein/aus</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false" href="https://www.karlsruhe.de/b2.de#">Wirtschaft &amp; Wissenschaft</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <div class="row">
+                <div class="col-md-12">
+                <ul class="nav navbar-nav" id="seitennavigation">
+                </ul>
+                <hr>
+                <ul class="nav navbar-nav" id="bereichsnavigation">
+                    <li class="kultur"><a tabindex="7"     href="https://www.karlsruhe.de/b1.de">Kultur &amp; Tourismus</a></li>
+                    <li class="wirtschaft"><a tabindex="8" href="https://www.karlsruhe.de/b2.de">Wirtschaft &amp; Wissenschaft</a></li>
+                    <li class="leben"><a tabindex="9"      href="https://www.karlsruhe.de/b3.de">Leben &amp; Arbeiten</a></li>
+                    <li class="rathaus"><a tabindex="10"   href="https://www.karlsruhe.de/b4.de">Stadt &amp; Verwaltung</a></li>
+                </ul>
+                <form action="">
+                    <label class="sr-only" for="phrase">Suchbegriff</label>
+                    <input type="text" class="" id="phrase" placeholder="Suchbegriff">
+                    <button type="submit" class="btn btn-default">Suche</button>
+                </form>
+                </div>
+                </div>
+            </div>
+        </div>
+  </div>
+ <div id="breadcrumb">
+    <p>Sie sind hier: <span><a href="http://www.karlsruhe.de/de" accesskey="a" title="Startseite [a]">Startseite</a> / 
+      <a href="http://www.karlsruhe.de/b3" accesskey="0" title="Eine Ebene höher [0]">Leben und Arbeiten</a>  / 
+        <a href="http://www.karlsruhe.de/b3/verkehr/" accesskey="1" title="Eine Ebene höher [1]">Verkehr</a> /
+        <a href="http://www.karlsruhe.de/b3/verkehr/automobil/" accesskey="1" title="Eine Ebene höher [2]">Autoverkehr</a>
+    </p>
+</div>
+
+ <div id="inhalt">
+   <nav id="unternavigation">
+        <ul>
+          <li><span><a href="https://www.karlsruhe.de/b3.de">Leben &amp; Arbeiten</a></span></li>
+          <ul>
+            <li><a href="/service/Parken/" title="Aktuelle Parkhausbelegung" >Aktuelle Parkhausbelegung</a>
+            </li>
+            <li><a href="/service/Parken/infos.php" title="Weitere Infos" >Infos zur Parkhausbelegung</a>
+            </li>
+            <li><a href="/service/Parken/parken.php" title="Weitere Parkplätze" >Weitere Parkplätze</a>
+            </li>
+            <li><a href="http://mobilitaet.trk.de/portal.html?city=Karlsruhe" title="Verkehrslage" >Mobilitätsportal</a>
+            </li>
+        </ul>
+      </ul>
+</nav>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css"
+        href=parken.css" /><div id="hauptcontent">
+<!-- Inhalt -->
+      <article>
+      <h1>Karlsruhe: Leben und Arbeiten</h1>
+      <h2>Parkleitsystem: Aktuelle Parkhausbelegung</h2>
+        <p>Die Parkhäuser im Zentrum von Karlsruhe im Überblick. <br />
+<br />
+</p>
+<!-- <p><a href="jahreswechsel.php">Bitte beachten Sie die besonderen Öffnungszeiten für 28. November 2009 bis 6. Januar 2010</a></p> -->
+	<!-- div -->
+<section class="boxhalb">
+<br /><div class="K" >
+	          &nbsp;K&nbsp;&nbsp;&nbsp;Kongresszentrum
+</div>
+            <div class="klein">Kriegsstr. &middot; Ettlinger Str. &middot; Festplatz &middot;
+         Landratsamt &middot; Staatstheater &middot; Stadtgarten/Zoo &middot;
+         Konzerthaus &middot; Stephanienbad &middot; Vierordtbad &middot;
+         Garten- Nancy- Schwarzwald- und Stadthalle</div>  <div class="parkhaus"><br /><div class="fuellstand">281<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=K01">Kongresszentrum PH2</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 410 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">268<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=K02">Kongresszentrum PH1</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 390 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">158<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=K03">Luisenstraße</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 210 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="geschlossen"><img src="verbot2.gif" width="30" height="30" alt="Geschlossen"
+	              align="middle" vspace="5"/></div><strong><a href="detail.php?id=K04">Am Staatstheater</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>(z.Z. geschlossen)<br /><br /></div>
+<br /><div class="N" >
+	          &nbsp;N&nbsp;&nbsp;&nbsp;Zentrum-Nord
+</div>
+            <div class="klein">Zirkel &middot; Fußgängerzone &middot; Schloß
+         &middot; Landesmuseum &middot; Kunsthalle &middot; BVG &middot;
+         Päd.Hochschule &middot; Fachhochschule &middot;Land- und
+         Amtsgericht &middot; Regierungspräsidium</div>  <div class="parkhaus"><br /><div class="fuellstand">218<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=N02">Passagehof</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 372 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">000<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=N03">Herrenstraße/Zirkel</a></strong><br />
+<img src="stau2.gif" width="34" height="30" alt="Achtung" align="left" vspace="2"/>Insgesamt 260 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">024<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=N04">Zirkel (P&C)</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 65 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">093<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=N05">Schlossplatz</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 336 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">007<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=N06">Kreuzstraße (C&A)</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 52 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="offline">Keine<br />
+		       Daten</div><strong><a href="detail.php?id=N07">Kronenplatz</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 0 Parkplätze.</div>
+<!--  /div>
+<div class="rechtespalte" align="left"  -->
+       </section>
+
+      <section class='boxhalb'>
+<br /><div class="S" >
+	          &nbsp;S&nbsp;&nbsp;&nbsp;Zentrum-Süd
+</div>
+            <div class="klein">Fußgängerzone &middot; Marktplatz &middot;
+         Ständehaus &middot; IHK &middot; Rathaus &middot; Stadtkirche
+         &middot; Landesbibliothek &middot; Naturkundemuseum</div>  <div class="parkhaus"><br /><div class="fuellstand">002<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=S01">Landesbibliothek</a></strong><br />
+<img src="stau2.gif" width="34" height="30" alt="Achtung" align="left" vspace="2"/>Insgesamt 60 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">122<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=S02">Friedrichsplatz</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 240 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">148<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=S03">Karstadt</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 260 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">000<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=S04">Industrie und Handelskammer</a></strong><br />
+<img src="stau2.gif" width="34" height="30" alt="Achtung" align="left" vspace="2"/>Insgesamt 115 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">170<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=S05">Marktplatz</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 230 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="offline">Keine<br />
+		       Daten</div><strong><a href="detail.php?id=S06">Mendelssohnplatz (Scheck-In)</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 0 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">315<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=S07">Ettlinger Tor</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 778 Parkplätze.</div>
+<br /><div class="W" >
+	          &nbsp;W&nbsp;&nbsp;&nbsp;Zentrum-West
+</div>
+            <div class="klein">Europaplatz &middot; Ludwigsplatz &middot; Karlstor &middot;
+         Prinz-Max-Palais &middot; Postgalerie &middot; BGH</div>  <div class="parkhaus"><br /><div class="fuellstand">094<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=W01">Stephanplatz</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 370 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">066<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=W02">Akademiestraße</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 109 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">049<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=W03">Post Galerie</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 230 Parkplätze.</div>
+<div class="parkhaus"><br /><div class="fuellstand">065<br />
+                <span style="font-size:x-small; ">frei<br /></span>
+                </div><strong><a href="detail.php?id=W04">Ludwigsplatz</a></strong><br />
+<img src="pix-leer.gif" width="30" height="30" title="Parkhaus mit freien Plätzen" align="left" vspace="2"/>Insgesamt 250 Parkplätze.</div>
+  </section>
+   <div>&nbsp;</div>
+<!-- /Inhalt -->
+</article> 
+</div>
+ <!-- Ende I n h a l t -->
+ </div>
+
+  <aside class="zusatzinfo">  
+    <!-- rechte Spalte -->
+    <h2>Zusatzinformationen</h2>
+ <section class="suchform">
+   <h3>Suche</h3>
+   <!--div class="query-box" -->
+  <form id="query-form" action="https://suche2.karlsruhe.de/browse" method="get" name="suche auf karlsruhe.de">
+    <div class="inputs">
+      <p>
+        <input type="search" id="q" name="q" maxlength="256" class="suchfeld" value="" placeholder="Suchbegriff eingeben" style="width:200px;" /><br />
+        <input type="submit" id="querySubmit" class="suchbutton" value="Suche starten" title="Suche starten" style="margin-top:3px;" />
+      </p>
+  </div>
+  </form>
+</section>   
+  <section>
+    <h3>Verkehrssicherheit</h3>
+    <p>
+   <a class="link-intern"
+       <a class="link-intern" href="https://www.karlsruhe.de/b2/schulen/schulen_ka/schulwegplaene" target="_self">Schulwegpläne</a>
+    </p>
+    <p>
+    <a class="link-intern" href="https://www.karlsruhe.de/b4/buergerdienste/verkehr/3-messungen" target="_self">Radarkontrollen</a>
+   <p>
+    <a class="link-extern" href="http://www.polizei-karlsruhe.de/" target="_self">Verkehrspolizei</a>
+    </p>
+    <p>
+    <a class="link-extern" href="http://www.verkehrswacht-karlsruhe.de/" target="_self">Verkehrswacht</a>
+    </p>
+    </section>
+    <section>
+    <h3>Hinweis zu den Parkhausdaten</h3>
+    <p>
+   Die Preise, Öffnungszeiten und sonstige Informationen sind ohne Gewähr.
+    </p>
+    </section>
+</aside>
+<!-- Ende zweite Spalte --> 
+<!-- Ende I n h a l t -->  <div class="clearBoth">&nbsp;</div>
+      <footer>
+        <div class="clearBoth">&nbsp;</div>
+        <p class="nachoben"><a href="#" accesskey="b" title="Nach oben zum Seitenbeginn [b]" class="link-top">nach oben</a>
+        <a href="#" onclick="window.print();return false;" accesskey="p" title="Druckversion [p]" class="link-top">Seite drucken</a></p>
+        <ul id="abschluss"> 
+          <li><a accesskey="d" class="link-intern" title="Hinweise zu Datenschutz und Datensicherheit [d]" href="https://www.karlsruhe.de/impressum/datenschutz.de">Datenschutz</a></li>
+          <li><a href="https://www.karlsruhe.de/impressum.de" accesskey="i" class="link-intern" title="Impressum [i]">Impressum</a></li>
+          <li><a accesskey="h" class="link-intern"  title="Hilfe [h]" href="https://www.karlsruhe.de/impressum/hilfe.de">Hilfe</a></li>
+     </ul>
+     <div class="clearBoth">&nbsp;</div>
+      </footer>
+  </div><!-- Ende content -->
+<!-- Piwik Code -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+     var u="//dienste.karlsruhe.de/piwik/";
+     _paq.push(['setTrackerUrl', u+'piwik.php']);
+     _paq.push(['setSiteId', 11]);
+     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+     g.type='text/javascript';
+     g.async=true;
+     g.defer=true;
+     g.src=u+'piwik.js';
+     s.parentNode.insertBefore(g,s);
+   })();
+</script>
+<!-- End Piwik Code -->
+</body>
+</html>
+

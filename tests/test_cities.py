@@ -1,20 +1,32 @@
 import os
 import unittest
+import ddt
 import helpers
 import importlib
 from datetime import datetime
-from park_api import db
+from park_api import db, env
 
 
-def scrape_city(city, extension=".html"):
-    path = os.path.join(helpers.TEST_ROOT,
-                        "fixtures",
-                        city.lower() + extension)
+def scrape_city(city):
+    allowed_extensions = [".html", ".json", ".xml"]
+    for extension in allowed_extensions:
+        path = os.path.join(helpers.TEST_ROOT,
+                            "fixtures",
+                            city.lower() + extension)
+        if os.path.isfile(path):
+            break
     with open(path, 'rb') as f:
         city = importlib.import_module("park_api.cities." + city)
         return city.parse_html(f.read().decode('utf-8', 'replace'))
 
+def get_tests():
+    modpath = os.path.join(env.APP_ROOT, "park_api", "cities")
+    is_py = lambda name: name.endswith(".py") and name != "__init__.py"
+    strip_py = lambda name: ".".join(name.split(".")[:-1])
+    for (dirpath, dirnames, filenames) in os.walk(modpath):
+        return tuple(map(strip_py, filter(is_py, filenames)))
 
+@ddt.ddt
 class CityTestCase(unittest.TestCase):
     def setUp(self):
         db.setup()
@@ -53,67 +65,7 @@ class CityTestCase(unittest.TestCase):
                 self.assertIn("lat", lot["coords"])
                 self.assertIn("lng", lot["coords"])
 
-    def test_dresden(self):
-        city_name = "Dresden"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_ingolstadt(self):
-        city_name = "Ingolstadt"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_konstanz(self):
-        city_name = "Konstanz"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_luebeck(self):
-        city_name = "Luebeck"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_zuerich(self):
-        city_name = "Zuerich"
-        self.sanity_check(city_name, scrape_city(city_name, ".xml"))
-
-    def test_muenster(self):
-        city_name = "Muenster"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_bonn(self):
-        city_name = "Bonn"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_oldenburg(self):
-        city_name = "Oldenburg"
-        self.sanity_check(city_name, scrape_city(city_name))
-    
-    def test_hamburg(self):
-        city_name = "Hamburg"
-        self.sanity_check(city_name, scrape_city(city_name, ".xml"))
-
-    def test_frankfurt(self):
-        city_name = "Frankfurt"
-        self.sanity_check(city_name, scrape_city(city_name, ".xml"))
-
-    def test_freiburg(self):
-        city_name = "Freiburg"
-        self.sanity_check(city_name, scrape_city(city_name, ".json"))
-
-    def test_aarhus(self):
-        city_name = "Aarhus"
-        self.sanity_check(city_name, scrape_city(city_name, ".json"))
-
-    def test_odense(self):
-        city_name = "Odense"
-        self.sanity_check(city_name, scrape_city(city_name, ".json"))
-
-    def test_aalborg(self):
-        city_name = "Aalborg"
-        self.sanity_check(city_name, scrape_city(city_name, ".json"))
-
-    def test_osnabrueck(self):
-        city_name = "Osnabrueck"
-        self.sanity_check(city_name, scrape_city(city_name))
-
-    def test_sample(self):
-        city_name = "Sample_City"
+    @ddt.data(*get_tests())
+    def test_city(self, city_name):
         self.sanity_check(city_name, scrape_city(city_name))
 

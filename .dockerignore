@@ -8,4 +8,7 @@ cache
 log/*.log
 ParkAPI.egg-info
 .tox
-.k8s
+.dockerignore
+.gitignore
+Dockerfile
+Jenkinsfile
