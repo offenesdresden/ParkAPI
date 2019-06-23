@@ -14,7 +14,12 @@
           "type": "city",
           "url": "https://www.nuernberg.de/internet/stadtportal/index.html",
           "source": "http://www.tiefbauamt.nuernberg.de/site/parken/parkhausbelegung/parkhaus_belegung.html",
-	  "active_support":true
+	  "active_support": true,
+          "attribution": {
+              "contributor": "Stadt Nürnberg",
+              "license": "custom",
+              "url": "http://www.nuernberg.de/"
+          }
       }
   }, {
       "type": "Feature",
