@@ -35,6 +35,8 @@ def parse_html(html):
             parking_belegung=one_lot.find("div", class_="belegung")
             if (parking_belegung != None ) :
                 parking_free=int(parking_belegung.find("strong").text)
+            else :
+                parking_state = 'nodata'
         except :
             parking_state='nodata'
 
