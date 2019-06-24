@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
-from park_api.util import convert_date
+from park_api.util import convert_date, utc_now
 from park_api.geodata import GeoData
+import datetime
 
 geodata = GeoData(__file__)
 
@@ -9,50 +10,43 @@ def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
 
     # last update time (UTC)
-    try:
-        date_col = soup.select('p > strong')[-1].text
-        update_time = convert_date(date_col, "Stand: %d.%m.%Y - %H:%M:%S")
-    except ValueError:
-        date_col = soup.select('p > strong')[-2].text
-        update_time = convert_date(date_col, "Stand: %d.%m.%Y - %H:%M:%S")
-
+    # Konstanz does not support the last_updated yet. I hope they will inform me when it's added
+    # as the data seems accurate I will return the current time and date
     data = {
-        "last_updated": update_time,
+        "last_updated": utc_now(),
         "lots": []
     }
 
     # get all tables with lots
-    raw_lot_list = soup.find_all("div", {"class": "listing"})
+    parken = soup.find_all( "table", class_="parken")
 
     # get all lots
-    for lot_list in raw_lot_list:
-        raw_lots = lot_list.select('tr + tr')
+    for park_lot in parken :
+        td = park_lot.find_all("td")
+        parking_name = td[1].text.strip()
+        # work-around for the Umlaute-problem: ugly but working
+        if ( 'Marktst' in parking_name) : parking_name = 'Marktstätte'
+        elif ( 'bele' in parking_name) : parking_name = 'Döbele'
+        # get the data
+        lot = geodata.lot(parking_name)
+        # look for free lots
+        parking_state = 'open'
+        parking_free  = 0
+        try:
+            parking_free = int(td[2].text)
+        except:
+            parking_state = 'nodata'
 
-        for lot in raw_lots:
-            lot_name = lot.select('a')[0].text
-
-            try:
-                lot_free = int(lot.select('td + td')[0].text)
-            except ValueError:
-                lot_free = 0
-
-            try:
-                if "green" in str(lot.select("td + td")[0]):
-                    lot_state = "open"
-                else:
-                    lot_state = "closed"
-            except ValueError:
-                lot_state = "nodata"
-
-            lot = geodata.lot(lot_name)
-            data["lots"].append({
-                "name": lot_name,
-                "free": lot_free,
-                "total": lot.total,
-                "coords": lot.coords,
-                "state": lot_state,
-                "id": lot.id,
-                "forecast": False
-            })
+        data["lots"].append({
+            "name":     parking_name,
+            "free":     parking_free,
+            "total":    lot.total,
+            "address":  lot.address,
+            "coords":   lot.coords,
+            "state":    parking_state,
+            "lot_type": lot.type,
+            "id":       lot.id,
+            "forecast": False
+        })
 
     return data
