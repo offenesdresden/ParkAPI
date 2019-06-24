@@ -1,0 +1,258 @@
+
+    
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html lang="de">
+
+<head>
+<title>Parkleitsystem Dortmund</title>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	<meta name="description" content="Parkleitsystem Dortmund">
+	
+	<link rel="stylesheet" type="text/css" href="baustellen_do4u.css">
+	
+	<link rel="stylesheet" type="text/css" href="pls.css">
+	
+    <script src='../openlayers28/OpenLayers.js' type="text/javascript">
+    </script>
+    <script defer="defer" type="text/javascript">
+       var map;
+	   var stadtplan;
+       var parken;
+       var baustellen;
+	   var popup = new Array();
+	   var mark = new Array();
+	   var markers;
+	   function goin(myid) {
+	    myElement = document.getElementById(myid+"_l");
+        myElement.style.backgroundColor = "#aaaaaa";
+	   }
+	   function goout(myid) {
+	    myElement = document.getElementById(myid+"_l");
+        myElement.style.backgroundColor = "";
+	   }
+       function setHTML(response) { 
+        OpenLayers.Util.getElement('nodelist').innerHTML = response.responseText;
+       };
+       function insertMarker(id, punkt, info) {
+       		var size   = new OpenLayers.Size(30,30);
+	        var offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
+	        var icon   = new OpenLayers.Icon('images/leer.png',size,offset);
+            punkt.lon  = punkt.lon + 10.;
+            punkt.lat  = punkt.lat - 10.;
+	    	mark[id]  = new OpenLayers.Marker(punkt,icon.clone());
+	   	   	// Popup
+	   		popup[id] = new OpenLayers.Popup(id,  punkt, new OpenLayers.Size(200 ,70), "<div class='info' >"+ info + "</div>", false);
+	   		popup[id].setBackgroundColor("#FFFFFF");
+	   		popup[id].setBorder("2px solid #aaaaaa");
+	   		popup[id].setOpacity(0.9);
+	   		  // Ereignisbehandlung
+	   		mark[id].events.register('mouseover', mark[id], function(evt) { map.addPopup(popup[id],true); goin(id); Event.stop(evt); });
+	   	    mark[id].events.register('mouseout', mark[id], function(evt) { map.removePopup(popup[id]); goout(id);Event.stop(evt);  });
+	   		mark[id].events.register('click', mark[id], function(evt) { jump(id);Event.stop(evt);  });
+            markers.addMarker(mark[id]);
+       }
+       function jump(parkanlage) {
+             document.location = "parkhaus.jsp?parkid="+parkanlage;
+       }
+       function init(){
+	//Karte Erzeugen
+	
+	
+          map = new OpenLayers.Map('map', {controls:[], 'projection': 'EPSG:25832', 'units':'m', 'scales':[50000, 20000, 15000, 10000, 7500, 5000, 2500, 1000], 'numZoomLevels': 8  }); 
+          OpenLayers.IMAGE_RELOAD_ATTEMPTS = 5;
+          
+		  //Grenzen bestimmen
+		  var bounds = new OpenLayers.Bounds(392000.0,5706500.,395000.,5709500.);
+    // Ebenen definieren
+		  //Stadtplan (Basiskarte)
+		  // Ebenen definieren http://geodaten.metropoleruhr.de/spw/spw_web?
+           
+          stadtplan = new OpenLayers.Layer.WMS.Untiled(
+            "Stadtplan", "/OWSServiceProxy/geobasis_rvr.ows",
+            {
+              layers: 'RVR_SPW,DGK5',
+              styles: '',
+              height: '550',
+              width: '402',
+              srs: 'EPSG:25832',
+              format: 'image/png'
+            },
+            {maxExtent: bounds, maxZoom: 100000, projection: "EPSG:25832"} 
+          );
+		  stadtplan.ratio=1;
+		  stadtplan.setIsBaseLayer(true);
+          stadtplan.setVisibility(false, false);
+          stadtplan.transitionEffect="resize";
+		  // Baustellen
+          baustellen = new OpenLayers.Layer.WMS.Untiled(
+            "Baustellen", "http://asgeow02.stadtdo.de/owsserver/baustellen.php",
+            {
+              layers: 'Baustellenp_01,Baustellenp_02,Baustellenp_03',
+              styles: '',
+              height: '550',
+              width: '402',
+              srs: 'EPSG:25832',
+              format: 'image/png',
+			  transparent: 'true'
+            },
+            {maxExtent: bounds, maxZoom: 100000, projection: "EPSG:25832"} 
+          );
+		  baustellen.ratio=1;
+		  baustellen.setIsBaseLayer(false);
+		  baustellen.setVisibility(false, false);
+		  //Parkhäuser http://127.0.0.1:8080/OWSServiceProxy/parken.ows http://asgeow01.stadtdo.de:9080/geoserver/wms
+          //http://asgeow02.stadtdo.de/mapserver5/mapserv.exe?map=/GDI_Programme/UMNMapserver/Dienste/parken/wmsclient.map
+          // "Parkh&auml;user", "/OWSServiceProxy/parken.ows",
+          parken = new OpenLayers.Layer.WMS.Untiled(
+            "Parkh&auml;user", "http://geoweb1.digistadtdo.de/doris_gdi/gisserver/parken?Service=WMS",
+            {
+              layers: 'Parkhaus',
+              styles: '',
+              height: '550',
+              width: '402',
+              srs: 'EPSG:25832',
+              format: 'image/png',
+		      transparent: 'true'
+            },
+            {maxExtent: bounds, maxZoom: 100000, projection: "EPSG:25832"} 
+          );
+          parken.ratio=1;
+		  parken.setIsBaseLayer(false);
+		  parken.setOpacity(50);
+          parken.setVisibility(true, false);
+		  
+		  //Popups
+		  var options = {maxExtent: bounds, maxZoom: 100000, projection: "EPSG:25832", displayInLayerSwitcher: false}
+		  markers = new OpenLayers.Layer.Markers( "Markers", options );
+
+		  // für alle Objekte
+		  var punkt;
+		  punkt = new OpenLayers.LonLat(393263.3414816329,5708970.558540203);insertMarker('P30',punkt,'<ol id="maus"><li>Dietr.-Keuning-Haus<br /><strong>62</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(392955.0372076332,5708435.890567901);insertMarker('P12',punkt,'<ol id="maus"><li>Hauptbahnhof<br /><strong>104</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393867.1831810073,5707308.83395276);insertMarker('P01',punkt,'<ol id="maus"><li>HDI/Südbad<br /><strong>148</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393674.7759497594,5708447.972178944);insertMarker('P11',punkt,'<ol id="maus"><li>Konzerthaus/Burgwall<br /><strong>163</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393349.43631469243,5708539.0840936825);insertMarker('P14',punkt,'<ol id="maus"><li>Alte Post<br /><strong>50</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393315.54175139347,5707817.479919019);insertMarker('P03',punkt,'<ol id="maus"><li>Theater<br /><strong>258</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393303.34677866776,5708416.448981351);insertMarker('P13',punkt,'<ol id="maus"><li>Freistuhl/Bibliothek<br /><strong>125</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393448.11080611416,5707801.617062074);insertMarker('P02',punkt,'<ol id="maus"><li>Rathaus/Stadtgarten<br /><strong>374</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393249.14684222965,5708704.801147257);insertMarker('P16',punkt,'<ol id="maus"><li>Cinestar<br />Status: <strong>keine Angaben</strong></li></ol>');punkt = new OpenLayers.LonLat(393220.4621804245,5708041.43914919);insertMarker('P05',punkt,'<ol id="maus"><li>Kaufhof<br /><strong>43</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393462.3580116431,5707960.404062393);insertMarker('P04',punkt,'<ol id="maus"><li>Hansaplatz/Karstadt<br /><strong>241</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393678.93383951916,5707682.349275192);insertMarker('P15',punkt,'<ol id="maus"><li>Friedensplatz<br /><strong>195</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393469.666191082,5708244.881930808);insertMarker('P07',punkt,'<ol id="maus"><li>Bissenkamp<br /><strong>20</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(392705.288672622,5708250.898114489);insertMarker('P18',punkt,'<ol id="maus"><li>Dortmunder U<br /><strong>384</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393796.4014390633,5708366.548374403);insertMarker('P06',punkt,'<ol id="maus"><li>Kuckelke<br /><strong>133</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393087.99231479253,5707333.980706397);insertMarker('P17',punkt,'<ol id="maus"><li>Klinikum DO<br />Status: <strong>keine Angaben</strong></li></ol>');punkt = new OpenLayers.LonLat(392896.17740976193,5708210.232341288);insertMarker('P09',punkt,'<ol id="maus"><li>Westentor<br /><strong>0</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393047.9489780768,5708238.841836602);insertMarker('P08',punkt,'<ol id="maus"><li>Commerzbank<br /><strong>0</strong> freie Pl&auml;tze</li></ol>');punkt = new OpenLayers.LonLat(393123.94325616816,5707969.60450229);insertMarker('P19',punkt,'<ol id="maus"><li>Thier-Galerie<br /><strong>378</strong> freie Pl&auml;tze</li></ol>'); 
+		  
+	     
+	//Karte mit Ebenen füllen
+	      
+	      map.addLayer(stadtplan);
+		  map.addLayer(parken);
+		  //map.addLayer(baustellen);
+		  map.addLayer(markers);
+			  
+    // Steuerelemente einfügen
+	      map.addControl(new OpenLayers.Control.PanZoomBar({div:$('nav')}));
+          map.addControl(new OpenLayers.Control.MouseDefaults());
+          
+          //map.addControl(new OpenLayers.Control.MousePosition({element: $('Position')}));
+          map.addControl(new OpenLayers.Control.OverviewMap());
+          //map.addControl(new OpenLayers.Control.LayerSwitcher());
+		  //map.addControl(new OpenLayers.Control.Permalink());
+
+    // Zoomen
+          punkt = new OpenLayers.LonLat(393300.0,5708200.0);
+          map.setCenter(punkt, 3,true);
+		  //map.zoomToExtent(bounds);
+		  //map.setCenter(punkt, 3,true);
+		 
+		  //map.addControl(new OpenLayers.Control.Scale($('massstab')));
+		  map.addControl(new OpenLayers.Control.ScaleLine()); //Funktioniert nicht
+		  
+          
+		  //alert("OK");
+ }
+     </script>
+ </head>
+  
+  <body onload="init()">
+    <div id="unserBody">
+    <div id="wrapper">
+    <!--
+	<div id="header">
+		<a href="http://www.dortmund.de" title="zum Stadtportal dortmund.de"><img src="adler.gif" alt="dortmund.de"></a>
+		<div class="floatright">Info f&uuml;r unterwegs: <a href="http://www.mobil.dortmund.de" target="_blank" title="Neues Fenster: mobil.dortmund.de"><span class="hide">Neues Fenster: </span>mobil.dortmund.de</a></div>
+		<h1>City-Parkleitsystem online</h1>
+		<h2>Hier finden Sie freie Parkpl&auml;tze in Dortmund</h2>
+	</div>
+	-->
+	<div id="kopf">
+	  <h1 class="hidden">dortmund.de - Startseite</h1>
+		<a href="http://www.dortmund.de" title="zum Stadtportal dortmund.de"><img src="images/wappendortmund.gif" alt="dortmund.de"></a>
+		
+	 	<div id='clear'></div>
+		<div class="floatright">
+		<h3 class="grau">Wir bewegen viel und sorgen für Mobilität - Verkehrsinfos für Dortmund&nbsp;  </h3>
+		</div>
+			<div id='menue'>
+		<ul id='hauptMenu'>
+			
+			<li id='hauptMenu_lebenInDortmund'  >
+				<a href="baustellen.jsp?ansicht=aktuell">Baustellen aktuell</a>
+			</li>
+			<li id='hauptMenu_freizeitUndKultur' >
+				<a href="baustellen.jsp?ansicht=geplant">Baustellen geplant</a>
+			</li>
+			<li id='hauptMenu_wirtschaft' >
+				<a href="http://www.dortmund.de/de/leben_in_dortmund/planen_bauen_wohnen/tiefbauamt/start_kfv/index.html">Veranstaltungen</a>
+			</li>
+			<li id='hauptMenu_tourismus' class="selected" >
+				<a href="parken.jsp">Parkleitsystem</a>
+			</li>
+			<li id='hauptMenu_buergerserviceUndRathaus' >
+			   <a href="information.jsp">Information & Kontakt</a>
+			
+			</li>
+			<!-- 
+			<li><a href="#">Folder 1</a>
+  				<ul>
+  					<li><a href="#">Sub Item 1.1</a></li>
+  					<li><a href="#">Sub Item 1.2</a></li>
+  				</ul>
+			</li>
+			 -->
+		</ul>
+	</div>	
+	</div>
+	
+	
+	<!--  %@ include file="menue.jsp" % -->	
+	
+	<div id=karte>
+		<div id="map"></div>
+		<div id="massstab"></div>
+	</div>
+	
+    <div id="infos"><a href="parken_app.html">Zur mobilen Version</a><br> <h2>Stand: 18.06.2019 17:07 Uhr</h2><h3>Alle Anlagen auf einen Blick</h3><h3>Bereich <span id='p_nord'>&nbsp;Zentrum Nord&nbsp;</span></h3><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P30' onmouseover='map.addPopup(popup["P30"],true);' onmouseout='map.removePopup(popup["P30"])' title='Detailinformationen zur Anlage: Dietr.-Keuning-Haus' id='P30_l'><img src='images/yellow.gif' alt='Status der Anlage: fast besetzt'>Dietr.-Keuning-Haus</a></dt><dd class='plaetze'><strong>62</strong> Pl&auml;tze von <strong>90</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P16' onmouseover='map.addPopup(popup["P16"],true);' onmouseout='map.removePopup(popup["P16"])' title='Detailinformationen zur Anlage: Cinestar' id='P16_l'><img src='images/grau.gif' alt='Status der Anlage: keine Angaben'>Cinestar</a></dt><dd class='plaetze'><strong>keine Angaben</strong></dd><dd class='tendenz'><img src='images/leer.png' alt=Tendenz: unbekannt>Tendenz: unbekannt</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P14' onmouseover='map.addPopup(popup["P14"],true);' onmouseout='map.removePopup(popup["P14"])' title='Detailinformationen zur Anlage: Alte Post' id='P14_l'><img src='images/yellow.gif' alt='Status der Anlage: fast besetzt'>Alte Post</a></dt><dd class='plaetze'><strong>50</strong> Pl&auml;tze von <strong>89</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P11' onmouseover='map.addPopup(popup["P11"],true);' onmouseout='map.removePopup(popup["P11"])' title='Detailinformationen zur Anlage: Konzerthaus/Burgwall' id='P11_l'><img src='images/green.gif' alt='Status der Anlage: frei'>Konzerthaus/Burgwall</a></dt><dd class='plaetze'><strong>163</strong> Pl&auml;tze von <strong>274</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P12' onmouseover='map.addPopup(popup["P12"],true);' onmouseout='map.removePopup(popup["P12"])' title='Detailinformationen zur Anlage: Hauptbahnhof' id='P12_l'><img src='images/green.gif' alt='Status der Anlage: frei'>Hauptbahnhof</a></dt><dd class='plaetze'><strong>104</strong> Pl&auml;tze von <strong>536</strong> frei</dd><dd class='tendenz'><img src='images/runter.gif' alt=Tendenz: weniger freie Pl&auml;tze>Tendenz: weniger freie Pl&auml;tze</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P13' onmouseover='map.addPopup(popup["P13"],true);' onmouseout='map.removePopup(popup["P13"])' title='Detailinformationen zur Anlage: Freistuhl/Bibliothek' id='P13_l'><img src='images/green.gif' alt='Status der Anlage: frei'>Freistuhl/Bibliothek</a></dt><dd class='plaetze'><strong>125</strong> Pl&auml;tze von <strong>300</strong> frei</dd><dd class='tendenz'><img src='images/runter.gif' alt=Tendenz: weniger freie Pl&auml;tze>Tendenz: weniger freie Pl&auml;tze</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P06' onmouseover='map.addPopup(popup["P06"],true);' onmouseout='map.removePopup(popup["P06"])' title='Detailinformationen zur Anlage: Kuckelke' id='P06_l'><img src='images/green.gif' alt='Status der Anlage: frei'>Kuckelke</a></dt><dd class='plaetze'><strong>133</strong> Pl&auml;tze von <strong>315</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P07' onmouseover='map.addPopup(popup["P07"],true);' onmouseout='map.removePopup(popup["P07"])' title='Detailinformationen zur Anlage: Bissenkamp' id='P07_l'><img src='images/red.gif' alt='Status der Anlage: besetzt'>Bissenkamp</a></dt><dd class='plaetze'><strong>20</strong> Pl&auml;tze von <strong>127</strong> frei</dd><dd class='tendenz'><img src='images/rauf.gif' alt=Tendenz: mehr freie Pl&auml;tze>Tendenz: mehr freie Pl&auml;tze</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P08' onmouseover='map.addPopup(popup["P08"],true);' onmouseout='map.removePopup(popup["P08"])' title='Detailinformationen zur Anlage: Commerzbank' id='P08_l'><img src='images/red.gif' alt='Status der Anlage: besetzt'>Commerzbank</a></dt><dd class='plaetze'><strong>0</strong> Pl&auml;tze von <strong>-1</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P18' onmouseover='map.addPopup(popup["P18"],true);' onmouseout='map.removePopup(popup["P18"])' title='Detailinformationen zur Anlage: Dortmunder U' id='P18_l'><img src='images/green.gif' alt='Status der Anlage: frei'>Dortmunder U</a></dt><dd class='plaetze'><strong>384</strong> Pl&auml;tze von <strong>467</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P09' onmouseover='map.addPopup(popup["P09"],true);' onmouseout='map.removePopup(popup["P09"])' title='Detailinformationen zur Anlage: Westentor' id='P09_l'><img src='images/red.gif' alt='Status der Anlage: besetzt'>Westentor</a></dt><dd class='plaetze'><strong>0</strong> Pl&auml;tze von <strong>-1</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><h3>Bereich <span id='p_sued'>&nbsp;Zentrum S&uuml;d&nbsp;</span></h3></span><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P05' onmouseover='map.addPopup(popup["P05"],true);' onmouseout='map.removePopup(popup["P05"])' title='Detailinformationen zur Anlage: Kaufhof' id='P05_l'><img src='images/yellow.gif' alt='Status der Anlage: fast besetzt'>Kaufhof</a></dt><dd class='plaetze'><strong>43</strong> Pl&auml;tze von <strong>120</strong> frei</dd><dd class='tendenz'><img src='images/rauf.gif' alt=Tendenz: mehr freie Pl&auml;tze>Tendenz: mehr freie Pl&auml;tze</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P04' onmouseover='map.addPopup(popup["P04"],true);' onmouseout='map.removePopup(popup["P04"])' title='Detailinformationen zur Anlage: Hansaplatz/Karstadt' id='P04_l'><img src='images/green.gif' alt='Status der Anlage: frei'>Hansaplatz/Karstadt</a></dt><dd class='plaetze'><strong>241</strong> Pl&auml;tze von <strong>580</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P19' onmouseover='map.addPopup(popup["P19"],true);' onmouseout='map.removePopup(popup["P19"])' title='Detailinformationen zur Anlage: Thier-Galerie' id='P19_l'><img src='images/green.gif' alt='Status der Anlage: frei'>Thier-Galerie</a></dt><dd class='plaetze'><strong>378</strong> Pl&auml;tze von <strong>724</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P03' onmouseover='map.addPopup(popup["P03"],true);' onmouseout='map.removePopup(popup["P03"])' title='Detailinformationen zur Anlage: Theater' id='P03_l'><img src='images/green.gif' alt='Status der Anlage: frei'>Theater</a></dt><dd class='plaetze'><strong>258</strong> Pl&auml;tze von <strong>393</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P02' onmouseover='map.addPopup(popup["P02"],true);' onmouseout='map.removePopup(popup["P02"])' title='Detailinformationen zur Anlage: Rathaus/Stadtgarten' id='P02_l'><img src='images/green.gif' alt='Status der Anlage: frei'>Rathaus/Stadtgarten</a></dt><dd class='plaetze'><strong>374</strong> Pl&auml;tze von <strong>584</strong> frei</dd><dd class='tendenz'><img src='images/runter.gif' alt=Tendenz: weniger freie Pl&auml;tze>Tendenz: weniger freie Pl&auml;tze</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P15' onmouseover='map.addPopup(popup["P15"],true);' onmouseout='map.removePopup(popup["P15"])' title='Detailinformationen zur Anlage: Friedensplatz' id='P15_l'><img src='images/green.gif' alt='Status der Anlage: frei'>Friedensplatz</a></dt><dd class='plaetze'><strong>195</strong> Pl&auml;tze von <strong>448</strong> frei</dd><dd class='tendenz'><img src='images/normal.gif' alt=Tendenz: gleichbleibend>Tendenz: gleichbleibend</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P01' onmouseover='map.addPopup(popup["P01"],true);' onmouseout='map.removePopup(popup["P01"])' title='Detailinformationen zur Anlage: HDI/Südbad' id='P01_l'><img src='images/green.gif' alt='Status der Anlage: frei'>HDI/Südbad</a></dt><dd class='plaetze'><strong>148</strong> Pl&auml;tze von <strong>190</strong> frei</dd><dd class='tendenz'><img src='images/rauf.gif' alt=Tendenz: mehr freie Pl&auml;tze>Tendenz: mehr freie Pl&auml;tze</dd></dl><!--Zeile / Anlage Anfang--><dl><dt><a href='parkhaus.jsp?parkid=P17' onmouseover='map.addPopup(popup["P17"],true);' onmouseout='map.removePopup(popup["P17"])' title='Detailinformationen zur Anlage: Klinikum DO' id='P17_l'><img src='images/grau.gif' alt='Status der Anlage: keine Angaben'>Klinikum DO</a></dt><dd class='plaetze'><strong>keine Angaben</strong></dd><dd class='tendenz'><img src='images/leer.png' alt=Tendenz: unbekannt>Tendenz: unbekannt</dd></dl><p>Nicht aufgef&uuml;hrte Anlagen sind nicht an das City-Parkleitsystem angeschlossen.</p></div>
+    <br clear="all">
+
+	<div id="parklegende">
+		<h2>Legende:</h2>
+		<p>
+			<img src="images/green.gif"  alt="Status der Anlage: frei">
+			<img src="images/yellow.gif" alt="Status der Anlage: fast besetzt">
+			<img src="images/red.gif"    alt="Status der Anlage: besetzt"> <strong>Status der Anlage</strong>: frei / fast besetzt / besetzt
+		</p>
+		<p>
+			<img src="images/rauf.gif"   alt="Tendenz: mehr freie Pl&auml;tze">
+			<img src="images/normal.gif" alt="Tendenz: gleichbleibend">
+			<img src="images/runter.gif" alt="Tendenz: weniger freie Pl&auml;tze"> <strong>Tendenz</strong>: mehr freie Pl&auml;tze / gleichbleibend / weniger freie Pl&auml;tze
+		</p>
+		<h4>Hinweis: </h4>
+        <p>
+		Damit diese Anwendung funktioniert, müssen sie <b>JavaScript</b> und <b>Popups</b> für diese Seite zulassen.<br>
+		- Wenn Sie im Kartenausschnitt die linke Maustaste gedrückt halten und die Maus verschieben, verschiebt sich der Kartenausschnitt.<br />
+		- Mit Shift+linke Maustaste können Sie in der Karte einen Rahmen aufziehen, um den Ausschnitt zu vergrössern.<br/>
+	</p>
+	</div>
+	 <hr>
+    <div id="footer"> <p>&copy Copyright: 2008 <a href="http://www.dortmunder-systemhaus.de" target="_blank" title="Neues Fenster: Dortmunder Systemhaus"><span class="hide">Neues Fenster: </span>Dortmunder Systemhaus</a><br>Im Auftrag der Stadt Dortmund - <a href="http://tiefbauamt.dortmund.de" target="_blank" title="Neues Fenster: Tiefbauamt"><span class="hide">Neues Fenster: </span>Tiefbauamt</a> und der <a href="http://www.dortmund.de/agentur" target="_blank" title="Neues Fenster: Dortmund-Agentur"><span class="hide">Neues Fenster: </span>Dortmund-Agentur</a><br>Kartografic: <a href="http://vermessungsundkatasteramt.dortmund.de" target="_blank" title="Neues Fenster: Vermessungs- und Katasteramt"><span class="hide">Neues Fenster: </span>Vermessungs- und Katasteramt</a> der Stadt Dortmund</p></div>
+
+</div>
+   
+  </div>
+  </body>
+  
+</html>

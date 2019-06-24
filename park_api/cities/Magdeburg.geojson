@@ -1,0 +1,277 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              11.639001,
+              52.131692
+          ]
+      },
+      "properties": {
+          "name": "Magdeburg",
+          "type": "city",
+          "url": "https://www.magdeburg.de/",
+          "source": "http://www.movi.de/parkinfo/uebersicht.shtml",
+	  "active_support":false
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "Karstadt",
+        "total": 0,
+        "address": "Julius-Bremer-Straße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.636233,
+            52.133110
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Listemannstrasse",
+        "total": 184,
+        "address": "Listemannstraße",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.643561,
+            52.137891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Universitätsplatz",
+        "total": 120,
+        "address": "Am Krökentor",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.637294,
+           52.137514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Allee Center",
+        "total": 1300,
+        "address": "Schleinufer 5",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.641694,
+            52.129007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hotel Ratswaage",
+        "total": 139,
+        "address": "Ratswaageplatz 1-4",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.638355,
+            52.133099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Petriförder Ost",
+        "total": 120,
+        "address": "Schleinufer",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.647603,
+            52.133571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Petriförder West",
+        "total": 50,
+        "address": "Schleinufer",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.646294,
+           52.132814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "City Carré",
+        "total": 1200,
+        "address": "Kantstraße 3",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.628706,
+           11.628706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ulrichshaus",
+        "total": 360,
+        "address": "Ulrichplatz 1",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.634959,
+            52.131069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hotel Maritim",
+        "total": 440,
+        "address": "Otto-von-Guericke-Straße 87",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.631327,
+           52.129395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Domviertel",
+        "total": 75,
+        "address": "Arthur-Ruppin-Straße",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.634177,
+           52.126461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Friedensplatz",
+        "total": 90,
+        "address": "Behringstraße",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.629653,
+            52.123135
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Elbauenpark",
+        "total": 1400,
+        "address": "Tessenowstraße",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.668728,
+           52.134087
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Endstelle Diesdorf",
+        "total": 21,
+        "address": "Am Thie",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.566717,
+            52.129270
+
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Milchhof",
+        "total": 75,
+        "address": "Ebendorfer Chaussee",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.612881,
+            52.166627
+        ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "Lange Lake",
+        "total": 2580,
+        "address": "Ebendorfer Chaussee",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.665213,
+            52.154410
+        ]
+      }
+  }]
+}

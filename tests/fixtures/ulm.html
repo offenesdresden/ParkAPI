@@ -1,0 +1,456 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<meta name="description" content="Die Ulmer Parkbetriebs-Gesellschaft ist ein Dienstleistungsunternehmen der Stadt Ulm und betreibt in der Ulmer City 8 Parkhäuser und Tiefgaragen mit rund 3000 Stellplätzen.">
+<meta name="keywords" content="parken, parkplätze, parkhäuser, theater, salzstadel, frauenstrasse, kornhaus, sedelhof, deutschhaus, rathaus, fischerviertel, ulm, parken in ulm, parkplätze in ulm, city, strassen und plätze, parkbetriebe, stadt, congress centrum">
+<meta name="author" content="rrooaarr">
+<meta name="publisher" content="Ulmer Parkbetriebs-GmbH">
+<meta name="copyright" content="rrooaarr">
+<meta name="language" content="de">
+<meta name="date" content="11/21/2006">
+<meta name="robots" content="index,follow">
+<meta name="audience" content="Alle">
+<meta name="page-type" content="all">
+<meta name="page-topic" content="all">
+<meta name="revisit-after" content="30">
+
+<meta name="DC.Title" content="Seitentitel">
+<meta name="DC.Creator" content="rrooaarr">
+<meta name="DC.Subject" content="all">
+<meta name="DC.Type" content="all">
+<meta name="DC.Publisher" content="Ulmer Parkbetriebs-GmbH">
+<meta name="DC.Contributor" content="Ulmer Parkbetriebs-GmbH">
+<meta name="DC.Description" content="Die Ulmer Parkbetriebs-Gesellschaft ist ein Dienstleistungsunternehmen der Stadt Ulm und betreibt in der Ulmer City 8 Parkhäuser und Tiefgaragen mit rund 3000 Stellplätzen.">
+<meta name="DC.Date" content="11/21/2006">
+<meta name="DC.Language" content="de">
+<meta name="robots" content="index,follow">
+<meta name="DC.Keywords" content="parken, parkplätze, parkhäuser, theater, salzstadel, frauenstrasse, kornhaus, sedelhof, deutschhaus, rathaus, fischerviertel, ulm, parken in ulm, parkplätze in ulm, city, strassen und plätze, parkbetriebe, stadt, congress centrum">
+
+<meta http-equiv="imagetoolbar" content="false" />
+<title>Parken in Ulm - Die Ulmer Parkbetriebe</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="thickbox.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+<!--[if IE 6]>
+	<style type="text/css">@import url(ie6.css);</style>
+<![endif]-->
+<!--[if IE 7]>
+	<style type="text/css">@import url(ie7.css);</style>
+<![endif]-->
+<!--[if IE 8]>
+	<style type="text/css">@import url(ie8.css);</style>
+<![endif]-->
+
+<script type="text/javascript">
+schliesstext = "Schliessen ";
+schliesstext2 = "";//"oder ESC";
+</script>
+
+<script language="JavaScript" type="text/javascript" src="incfiles/loader.js"></script>
+<script language="JavaScript" type="text/javascript" src="incfiles/script.js"></script>
+<script language="JavaScript" type="text/javascript" src="incfiles/jquery/jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="incfiles/jquery/thickbox.js"></script>
+
+</head>
+
+<body>
+<div id="popupinfo"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+	<tr>
+		<td align="center" valign="middle">
+		<table id="haupttabelle" border="0" cellpadding="0" cellspacing="0" width="985" bgcolor="#F0F0F0">
+			<tr>
+				<td width="185" rowspan="2" align="left" valign="top" background="_img/nav_bg.gif">
+				<!-- Tabelle für Inhalt (links) -->
+				<table border="0" cellpadding="0" cellspacing="0" width="185">
+					<tr>
+						<td align="left" valign="top" height="150"><img id="wechselbild" src="_img/wechselbilder/bild_0.jpg" width="185" height="150"></td>
+					</tr>
+					<tr>
+						<td height="30"></td>
+					</tr>
+					<tr>
+						<td align="left" valign="top" height="50"><img src="_img/header_parken.gif" width="185" height="50"></td>
+					</tr>
+					<tr>
+						<td align="center" valign="top">
+						<!-- Tabelle für die Dropdownfelder -->
+						<table border="0" cellpadding="0" cellspacing="0" width="175">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td align="left" style="color:#333333;"><strong>Parkhausempfehlung f&uuml;r: </strong></td>
+							</tr>
+							<tr>
+								<td height="10"></td>
+							</tr>
+							<tr>
+								<td align="left">
+								<select id="strassen" name="strassen" class="start_dropfeld" onChange="javascript:fenster(this.value)">
+								  <option value="0" selected>Strassen und Pl&auml;tze</option>
+								  <optgroup label="B" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/bahnhofstrasse">Bahnhofstra&szlig;e</option>
+								  <option value="strassen/basteistrasse">Basteistra&szlig;e</option>
+								  <option value="strassen/breite_gasse">Breite Gasse</option>
+								  <option value="strassen/buechsengasse">B&uuml;chsengasse</option>
+								  <optgroup label="D" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/donaustrasse">Donaustra&szlig;e</option>
+								  <option value="strassen/dreikoenigsgasse">Dreik&ouml;nigsgasse</option>
+								  <optgroup label="E" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/engelgasse">Engelgasse</option>
+								  <optgroup label="F" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/fischergasse">Fischergasse</option>
+								  <option value="strassen/frauengraben">Frauengraben</option>
+								  <option value="strassen/friedrich_ebert_strasse">Friedrich-Ebert-Stra&szlig;e</option>
+								  <optgroup label="G" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/gerbergasse">Gerbergasse</option>
+								  <option value="strassen/gloecklerstrasse">Gl&ouml;cklerstrasse</option>
+								  <option value="strassen/gresenhofgasse">Gresenshofgasse</option>
+								  <optgroup label="H" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/hafenbad">Hafenbad</option>
+								  <option value="strassen/hafengasse">Hafengasse</option>
+								  <option value="strassen/haempfergasse">H&auml;mpfergasse</option>
+								  <option value="strassen/henkersgraben">Henkersgraben</option>
+								  <option value="strassen/herdbruckerstrasse">Herdbruckerstra&szlig;e</option>
+								  <option value="strassen/herrenkellergasse">Herrenkellergasse</option>
+								  <option value="strassen/hirschstrasse">Hirschstra&szlig;e</option>
+								  <optgroup label="K" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/keltergasse">Keltergasse</option>
+								  <option value="strassen/kohlgasse">Kohlgasse</option>
+								  <option value="strassen/kornhausgasse">Kornhausgasse</option>
+								  <option value="strassen/kramgasse">Kramgasse</option>
+								  <option value="strassen/kronengasse">Kronengasse</option>
+								  <option value="strassen/kuefergasse">K&uuml;fergasse</option>
+								  <optgroup label="M" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/muenchner_strasse">M&uuml;nchner Strasse</option>
+								  <optgroup label="N" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/neue_strasse">Neue Stra&szlig;e</option>
+								  <option value="strassen/neuer_graben">Neuer Graben</option>
+								  <optgroup label="P" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/pfauengasse">Pfauengasse</option>
+								  <option value="strassen/platzgasse">Platzgasse</option>
+								  <option value="strassen/promenade">Promenade</option>
+								  <optgroup label="R" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/rabengasse">Rabengasse</option>
+								  <option value="strassen/rosengasse">Rosengasse</option>
+								  <optgroup label="S" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/sattlergasse">Sattlergasse</option>
+								  <option value="strassen/schuhhausgasse">Schuhhausgasse</option>
+								  <option value="strassen/schwambergerstrasse">Schwamberger Strasse</option>
+								  <option value="strassen/schwilmengasse">Schwilmengasse</option>
+								  <option value="strassen/schwoerhausgasse">Schw&ouml;rhausgasse</option>
+								  <option value="strassen/sterngasse">Sterngasse</option>
+								  <optgroup label="U" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/ulmergasse">Ulmer Gasse</option>
+								  <option value="strassen/unter_der_metzig">Unter der Metzig</option>
+								  <optgroup label="W" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/walfischgasse">Walfischgasse</option>
+								  <option value="strassen/weinhofberg">Weinhofberg</option>
+								  <option value="strassen/wichernstrasse">Wichernstrasse</option>
+								  <optgroup label="Z" style="background:#D9D8D8;"></optgroup>
+								  <option value="strassen/zeughausgasse">Zeughausgasse</option>
+								</select>								</td>
+							</tr>
+							<tr>
+								<td height="5"></td>
+							</tr>
+							<tr>
+								<td align="left">
+								<select id="ziele" name="ziele" class="start_dropfeld" onChange="javascript:fenster(this.value)">
+								  <option value="0" selected>City-Ziele</option>
+								  <optgroup label="A" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/amtsgericht">Amtsgericht</option>
+								  <option value="ziele/aok">AOK</option>
+								  <option value="ziele/arbeitsamt">Agentur f&uuml;r Arbeit</option>
+								  <option value="ziele/arbeitsgericht">Arbeitsgericht</option>
+								  <optgroup label="B" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/bibliothek">Bibliothek</option>
+								  <option value="ziele/buergerdienste">B&uuml;rgerdienste</option>
+								  <optgroup label="C" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/congress_centrum">Congress Centrum</option>
+								  <optgroup label="D" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/donau">Donau</option>
+								  <optgroup label="E" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/entsorgungsbetriebe">Entsorgungsbetriebe</option>
+								  <optgroup label="F" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/familiengericht">Familiengericht</option>
+								  <option value="ziele/fischerviertel">Fischerviertel</option>
+								  <optgroup label="H" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/handwerkskammer">Handwerkskammer</option>
+								  <option value="ziele/hauptbahnhof">Hauptbahnhof</option>
+								  <option value="ziele/haus_der_begegnung">Haus der Begegnung</option>
+								  <optgroup label="I" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/ihk">IHK</option>
+								  <optgroup label="J" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/judenhof">Judenhof</option>
+								  <optgroup label="K" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/kornhaus">Kornhaus</option>
+								  <option value="ziele/weishaupt">Kunsthalle Weishaupt</option>
+								  <optgroup label="L" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/landgericht">Landgericht</option>
+								  <optgroup label="M" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/marktplatz">Marktplatz</option>
+								  <option value="ziele/metzgerturm">Metzgerturm</option>
+								  <option value="ziele/muenster">M&uuml;nster</option>
+								  <option value="ziele/muensterplatz">M&uuml;nsterplatz</option>
+								  <option value="ziele/museum">Museum</option>
+								  <option value="ziele/museum_der_brotkultur">Museum der Brotkultur</option>
+								  <optgroup label="P" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/polizei">Polizeidirektion</option>
+								  <optgroup label="R" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/rathaus">Rathaus</option>
+								  <optgroup label="S" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/schwoerhaus">Schw&ouml;rhaus</option>
+								  <option value="ziele/sozialgericht">Sozialgericht</option>
+								  <option value="ziele/stadthaus">Stadthaus</option>
+								  <optgroup label="T" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/theater">Theater</option>
+								  <option value="ziele/touristikbuero">Touristikb&uuml;ro</option>
+								  <optgroup label="V" style="background:#D9D8D8;"></optgroup>
+								  <option value="ziele/versorgungsamt">Versorgungsamt</option>
+								  <option value="ziele/volkshochschule">Volkshochschule</option>
+								</select>								</td>
+							</tr>
+						</table>
+						<!-- /Tabelle für die Dropdownfelder -->						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="top" background="_img/nav_bg.gif">
+						<!-- Tabelle für die Navigation -->
+						<table border="0" cellpadding="0" cellspacing="0" width="175">
+							<tr>
+								<td height="15"></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle"><a href="#" class="navigation" onClick="javascript:fenster('kissandride')">KISS &amp; RIDE</a></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle"><a href="https://www.ulm.de/leben-in-ulm/verkehr-und-mobilitaet/individualverkehr/park-und-ride" target="_blank" class="navigation">Park and Ride  </a></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle"><a href="https://www.ulm.de/leben-in-ulm/verkehr-und-mobilitaet/individualverkehr/park-und-ride" target="_blank" class="navigation">Wohnmobile </a></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle"><a href="#" class="navigation" onClick="javascript:fenster('radwanderer')">Radwanderer </a></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle"><a href="#" class="navigation" onClick="javascript:fenster('bahnreisende')">Bahnreisende </a></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle"><img src="/_img/sonstige/stecker.jpg" width="21" height="15" align="absmiddle"><a href="https://www.swu.de/privatkunden/produkte-leistungen/elektromobilitaet/oeffentliche-ladestellen/" target="_blank" class="navigation">&nbsp;Strom tanken</a></td>
+							</tr>
+							<tr>
+								<td height="20"></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle"><a href="http://www.ulm.de/" target="_blank" class="navigation">Stadt Ulm</a></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle"><a href="http://tourismus.ulm.de/" target="_blank" class="navigation">Tourist-Information</a></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle"><a href="http://www.stadthaus.ulm.de/" target="_blank" class="navigation">Stadthaus Ulm</a></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle"><a href="http://ulm-messe.de/" target="_blank" class="navigation">Ulm Messe</a></td>
+							</tr>
+							<tr>
+								<td height="10"></td>
+							</tr>
+							<tr>
+								<td height="10" align="left" valign="middle"><img src="_img/sonstige/appicon.png" width="15" height="15" align="absmiddle">&nbsp;<a href="#" class="navigation" onClick="javascript:fenster('ulmapp')">ulmapp</a>&nbsp;<img src="_img/sonstige/parkicon.jpg" width="15" height="15" align="absmiddle"></td>
+							</tr>
+							<tr>
+								<td height="10"></td>
+							</tr>
+							<tr>
+								<td height="10" align="left" valign="middle"><a href="#" class="navigation" onClick="javascript:fenster('kontakt')">Kontakt</a></td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle">
+								<script language="JavaScript">
+								document.write ("<a href=\"#\" class=\"navigation\" onClick=\"javascript:fenster('impressum')\">Impressum</a>");
+								</script>
+								<noscript>
+								<a href="impressum.php" target="_blank" class="navigation">Impressum</a>
+								</noscript>
+                                </td>
+							</tr>
+							<tr>
+								<td height="15" align="left" valign="middle">
+								<script language="JavaScript">
+								document.write ("<a href=\"#\" class=\"navigation\" onClick=\"javascript:fenster('datenschutz')\">Datenschutz</a>");
+								</script>
+								<noscript>
+								<a href="datenschutz.php" target="_blank" class="navigation">Datenschutz</a>
+								</noscript>
+                                </td>
+							</tr>
+							<tr>
+								<td height="15"></td>
+							</tr>
+							<tr>
+                                <td height="15" align="left" valign="middle">
+                                <form id="aktuellform" name="aktuellform" action="index.php" method="post">
+                                	<input type="submit" name="reload" class="aktuell_button" value="Daten aktualisieren" onClick="this.style.display='none'">
+                                </form>
+                                </td>
+							</tr>
+						</table>
+						<!-- /Tabelle für die Navigation -->					  </td>
+					</tr>
+				</table>
+				<!-- /Tabelle für Inhalt (links) -->
+			  </td>
+				<td width="800" height="400" align="left" valign="top">
+				<!-- Tabelle für Inhalt (oben) -->
+				<table border="0" cellpadding="0" cellspacing="0" width="800" height="400">
+					<tr>
+						<td height="100" align="left" valign="top"><img src="_img/karten/karte_01.jpg" width="800" height="100" border="0"></td>
+				  </tr>
+					<tr>
+						<td height="100" align="left" valign="top"><img src="_img/karten/karte_02.jpg" width="800" height="100" border="0" usemap="#Map"></td>
+					</tr>
+					<tr>
+						<td height="100" align="left" valign="top"><img src="_img/karten/karte_03.jpg" width="800" height="100" border="0" usemap="#Map2"></td>
+					</tr>
+					<tr>
+						<td height="100" align="left" valign="top"><img src="_img/karten/karte_04.jpg" width="800" height="100" border="0"></td>
+					</tr>
+				</table>
+				<!-- /Tabelle für Inhalt (oben) -->
+				</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" bgcolor="#C8C8C8">
+				<!-- Tabelle für Inhalt (unten) -->
+				<table border="0" cellpadding="0" cellspacing="0" width="800">
+					<tr>
+						<td width="5"></td>
+						<td width="790" align="left" valign="top">
+						<table border="0" cellpadding="0" cellspacing="0" width="790">
+							<tr>
+								<td width="340" height="10"></td>
+								<td width="80"></td>
+                                <td width="70"></td>
+								<td width="300"></td>
+							</tr>
+							<tr>
+								<td align="left" class="tabellenueberschrift"><span style="padding-left:5px;">Parkhaus</span></td>
+								<td align="left" class="tabellenueberschrift">Pl&auml;tze</td>
+								<td align="left" class="tabellenueberschrift">Frei</td>
+								<td align="left" class="tabellenueberschrift">&Ouml;ffnungszeiten</td>
+							</tr>
+							<tr>
+								<td colspan="3" height="5"></td>
+							</tr>
+							<tr id="ze6" onMouseOver="this.style.background='#F0F0F0'" onMouseOut="this.style.background=''" onClick="fenster('parkhaeuser/rathaus')" style="cursor:pointer;">
+								<td height="17" align="left" valign="middle"><span style="padding-left:5px;"><a href="#" class="sitelink" onClick="fenster('parkhaeuser/rathaus')">Am Rathaus</a></span></td>
+								<td align="left" valign="middle">558</td>
+								<td align="left" valign="middle">46</td>
+								<td align="left" valign="middle">t&auml;glich durchgehend 24 Stunden</td>
+							</tr>
+							<tr id="ze2" onMouseOver="this.style.background='#F0F0F0'" onMouseOut="this.style.background=''" onClick="fenster('parkhaeuser/deutschhaus')" style="cursor:pointer;">
+								<td height="17" align="left" valign="middle"><span style="padding-left:5px;"><a href="#" class="sitelink" onClick="fenster('parkhaeuser/deutschhaus')">Deutschhaus</a></span></td>
+								<td align="left" valign="middle">594</td>
+								<td align="left" valign="middle">127</td>
+								<td align="left" valign="middle">t&auml;glich durchgehend 24 Stunden</td>
+							</tr>
+							<tr id="ze3" onMouseOver="this.style.background='#F0F0F0'" onMouseOut="this.style.background=''" onClick="fenster('parkhaeuser/fischerviertel')" style="cursor:pointer;">
+								<td height="17" align="left" valign="middle"><span style="padding-left:5px;"><a href="#" class="sitelink" onClick="fenster('parkhaeuser/fischerviertel')">Fischerviertel</a></span></td>
+								<td align="left" valign="middle">395</td>
+								<td align="left" valign="middle">160</td>
+								<td align="left" valign="middle">t&auml;glich durchgehend 24 Stunden</td>
+							</tr>
+							<tr id="ze7" onMouseOver="this.style.background='#F0F0F0'" onMouseOut="this.style.background=''" onClick="fenster('parkhaeuser/salzstadel')" style="cursor:pointer;">
+								<td height="17" align="left" valign="middle"><span style="padding-left:5px;"><a href="#" class="sitelink" onClick="fenster('parkhaeuser/salzstadel')">Salzstadel</a></span></td>
+								<td align="left" valign="middle">530</td>
+								<td align="left" valign="middle">194</td>
+								<td align="left" valign="middle">t&auml;glich durchgehend 24 Stunden</td>
+							</tr>
+														<tr id="ze4" onMouseOver="this.style.background='#F0F0F0'" onMouseOut="this.style.background=''" onClick="fenster('parkhaeuser/frauenstrasse')" style="cursor:pointer;">
+								<td height="17" align="left" valign="middle"><span style="padding-left:5px;"><a href="#" class="sitelink" onClick="fenster('parkhaeuser/frauenstrasse')">Frauenstra&szlig;e</a></span></td>
+								<td align="left" valign="middle">770</td>
+								<td align="left" valign="middle">412</td>
+								<td align="left" valign="middle">t&auml;glich durchgehend 24 Stunden</td>
+							</tr>
+							<tr id="ze1" onMouseOver="this.style.background='#F0F0F0'" onMouseOut="this.style.background=''" onClick="fenster('parkhaeuser/congress_nord')" style="cursor:pointer;">
+								<td height="17" align="left" valign="middle"><span style="padding-left:5px;"><a href="#" class="sitelink" onClick="fenster('parkhaeuser/congress_nord')">Congress Centrum Nord / Basteicenter</a></span></td>
+								<td align="left" valign="middle">420</td>
+								<td align="left" valign="middle">296</td>
+								<td align="left" valign="middle">mo - fr 6.30 - 21 Uhr, sa 8.30 - 17 Uhr </td>
+							</tr>
+							<tr id="ze5" onMouseOver="this.style.background='#F0F0F0'" onMouseOut="this.style.background=''" onClick="fenster('parkhaeuser/congress_sued')" style="cursor:pointer;">
+								<td height="17" align="left" valign="middle"><span style="padding-left:5px;"><a href="#" class="sitelink" onClick="fenster('parkhaeuser/congress_sued')">Congress Centrum S&uuml;d / Maritim Hotel</a></span></td>
+								<td align="left" valign="middle">235</td>
+								<td align="left" valign="middle">162</td>
+								<td align="left" valign="middle">t&auml;glich durchgehend 24 Stunden</td>
+							</tr>
+							<tr id="ze9" onMouseOver="this.style.background='#F0F0F0'" onMouseOut="this.style.background=''" onClick="fenster('parkhaeuser/kornhaus')" style="cursor:pointer;">
+								<td height="17" align="left" valign="middle"><span style="padding-left:5px;"><a href="#" class="sitelink" onClick="fenster('parkhaeuser/kornhaus')">Kornhaus</a></span></td>
+								<td align="left" valign="middle">135</td>
+								<td align="left" valign="middle">&nbsp;</td>
+								<td align="left" valign="middle">mo - fr 10.30 - 24 Uhr, sa und so 6.30 - 24 Uhr </td>
+							</tr>
+							<tr id="ze10" onMouseOver="this.style.background='#F0F0F0'" onMouseOut="this.style.background=''" onClick="fenster('parkhaeuser/theater')" style="cursor:pointer;">
+								<td height="17" align="left" valign="top"><span style="padding-left:5px;"><a href="#" class="sitelink" onClick="fenster('parkhaeuser/theater')">Theater</a></span></td>
+								<td align="left" valign="top">&#160;&#160;83</td>
+								<td align="left" valign="top">0</td>
+								<td align="left" valign="middle">mo - fr 18.30 - 2 Uhr, sa und so 6.30 - 2 Uhr</td>
+						  </tr>
+							<tr>
+								<td colspan="5" height="5"></td>
+							</tr>
+						</table>
+							<ul style="list-style-type: none;">
+							<li><a href="/_dokumente/Hbf-Aenderungen_2019-02.PDF" target="_blank" class="openinfo">Baustellenbedingte Verkehrsänderungen</a></li>
+                            </ul>
+						</td>
+						<td width="5"></td>
+					</tr>
+				</table>
+				<!-- /Tabelle für Inhalt (unten) -->
+			  </td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<map name="Map">
+<area shape="rect" coords="316,40,335,60" href="#" onClick="fenster('parkhaeuser/theater'),hide('11')" onMouseOver="show('Theater','10')" onMouseOut="hide('10')">
+<area shape="rect" coords="402,44,423,65" href="#" onClick="fenster('parkhaeuser/salzstadel'),hide('7')" onMouseOver="show('Salzstadel','7')" onMouseOut="hide('7')">
+<area shape="rect" coords="466,34,486,54" href="#" onClick="fenster('parkhaeuser/frauenstrasse'),hide('4')" onMouseOver="show('Frauenstra&szlig;e','4')" onMouseOut="hide('4')">
+<area shape="rect" coords="455,58,475,78" href="#" onClick="fenster('parkhaeuser/kornhaus'),hide('9')" onMouseOver="show('Kornhaus','9')" onMouseOut="hide('9')">
+<area shape="rect" coords="568,19,588,40" href="#" onClick="fenster('parkhaeuser/congress_nord'),hide('1')" onMouseOver="show('Congress Centrum Nord<br>Basteicenter','1')" onMouseOut="hide('1')">
+<area shape="rect" coords="597,53,617,74" href="#" onClick="fenster('parkhaeuser/congress_sued'),hide('5')" onMouseOver="show('Congress Centrum S&uuml;d<br>Maritim Hotel Ulm','5')" onMouseOut="hide('5')">
+</map>
+<map name="Map2">
+<area shape="rect" coords="323,17,343,38" href="#" onClick="fenster('parkhaeuser/deutschhaus'),hide('2')" onMouseOver="show('Deutschhaus','2')" onMouseOut="hide('2')">
+<area shape="rect" coords="435,22,456,43" href="#" onClick="fenster('parkhaeuser/rathaus'),hide('6')" onMouseOver="show('Am Rathaus','6')" onMouseOut="hide('6')">
+<area shape="rect" coords="351,50,372,72" href="#" onClick="fenster('parkhaeuser/fischerviertel'),hide('3')" onMouseOver="show('Fischerviertel','3')" onMouseOut="hide('3')">
+<area shape="rect" coords="300,22,318,50" href="http://www.swu.de/privatkunden/energie-wasser/elektromobilitaet.html" target="_blank">
+<area shape="rect" coords="411,28,429,56" href="http://www.swu.de/privatkunden/energie-wasser/elektromobilitaet.html" target="_blank">
+</map>
+<script type="text/javascript">
+$(document).ready(function() {
+	/*$('a.openinfo').click(function(){
+		tb_show('', 'info.php?height=650&width=785', 'false');
+	});*/
+	//tb_show('', 'info.php?height=650&width=785', 'false');
+});
+</script>
+
+</body>
+</html>
