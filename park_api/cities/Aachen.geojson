@@ -1,0 +1,245 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              6.083899,
+             50.774842
+          ]
+      },
+      "properties": {
+          "name": "Aachen",
+          "type": "city",
+          "url": "http://www.aachen.de/",
+          "source": "https://www.apag.de/parken-in-aachen",
+	  "active_support":false
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Büchel",
+        "total": 356,
+        "address": "Büchel 39",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.0865,
+           50.775875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Rathaus",
+        "total": 366,
+        "address": "Mostardstraße 5",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.084305,
+           50.777266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Adalbertstraße",
+        "total": 195,
+        "address": "Blondelstraße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.090755,
+           50.775886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Couvenstraße",
+        "total": 526,
+        "address": "Couvenstraße 4",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.089694,
+           50.777325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Galeria Kaufhof/City",
+        "total": 1002,
+        "address": "Wirichsbongardstr. 47",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.089889,
+           50.772661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Hauptbahnhof",
+        "total": 710,
+        "address": "Lagerhausstraße 20",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+              6.089309,
+             50.767971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Adalbertsteinweg",
+        "total": 605,
+        "address": "Adalbertsteinweg 34",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.099715,
+           50.774352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Eurogress",
+        "total": 600,
+        "address": "Monheimsallee 44",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.09267,
+           50.780654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Luisenhospital",
+        "total": 355,
+        "address": "Weberstraße 2",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           6.07804,
+          50.767855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Luisenhospital",
+        "total": 72,
+        "address": "Boxgraben 99",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.076306,
+           50.767823
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Ludwig Forum",
+        "total": 75,
+        "address": "Lombardenstraße 4",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.101984,
+           50.78184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Tivoli",
+        "total": 1240,
+        "address": "Krefelderstraße 205",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.096725,
+           50.794143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Pontstraße",
+        "total": 54,
+        "address": "Wittekindstraße",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.0797,
+           50.781642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Uniklinik",
+        "total": 0,
+        "address": "Pauwelsstraße / Kullenhofstraße",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.045195,
+           50.774804
+        ]
+      }
+   }]
+}
+
