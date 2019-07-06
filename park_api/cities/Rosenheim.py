@@ -4,6 +4,7 @@ from park_api.geodata import GeoData
 from park_api.util import utc_now
 from park_api import env
 import urllib
+import json
 
 # This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
 # No need to remove this if there's no geodata (yet), everything will still work.
