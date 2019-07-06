@@ -1,0 +1,199 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              12.128548,
+              47.856756
+          ]
+      },
+      "properties": {
+          "name": "Rosenheim",
+          "type": "city",
+          "url": "https://www.rosenheim.de/",
+          "source": "https://www.rosenheim.de/index.php?eID=jwParkingGetParkings",
+	  "active_support":false
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "P1 Zentrum",
+        "total": 247,
+        "address": "Hammerweg 1",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           12.127189,
+           47.852263
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P2 KU'KO",
+        "total": 138,
+        "address": "Kufsteiner Str. 4",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           12.125916,
+           47.853270
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P3 Rathaus",
+        "total": 31,
+        "address": "Königstraße 20",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.129512,
+            47.853999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P4 Mitte",
+        "total": 270,
+        "address": "Frühlingstraße 5",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.124568,
+            47.856551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P6 Salinplatz",
+        "total": 232,
+        "address": "Salinstraße 8A",
+        "type": "Parkplatz/Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.123202,
+            47.852729
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P7 Altstadt-Ost",
+        "total": 82,
+        "address": "Mühlbachbogen",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           12.131591,
+           47.857572
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P8 Beilhack-Citydome",
+        "total": 165,
+        "address": "Am Hammer 7A",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.126049,
+            47.850794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P9 Am Klinikum",
+        "total": 421,
+        "address": "In Der Schmucken 7",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.132828,
+            47.858294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P10 Stadtcenter",
+        "total": 56,
+        "address": "Brixstraße 3",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.127718,
+            47.853439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P11 Beilhack-Gießereistr.",
+        "total": 150,
+        "address": "Gießereistraße 2",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.126827,
+            47.849683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P12 Bahnhof Nord",
+        "total": 9899,
+        "address": "Eduard-Rüber-Straße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.113999,
+            47.852733
+        ]
+      }
+   }]
+}
+
+
