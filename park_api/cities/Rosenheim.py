@@ -29,8 +29,8 @@ def parse_html(html):
                'User-Agent': 'ParkAPI v%s - Info: %s' %(env.SERVER_VERSION, env.SOURCE_REPOSITORY) }
     req = urllib.request.Request(url=urlHD, headers=headerHD)
     webURL = urllib.request.urlopen(req)
-    data=webURL.read()
-    dataJSON=json.loads(data)
+    dataRO=webURL.read()
+    dataJSON=json.loads(dataRO)
     # over all parking-lots
     for parking_lot in dataJSON :
         parking_name = parking_lot['title']
