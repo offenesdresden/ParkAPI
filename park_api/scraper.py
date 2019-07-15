@@ -14,7 +14,7 @@ HEADERS = {
 
 def get_html(city):
     """Download html data for a given city"""
-    r = requests.get(city.source, headers=HEADERS)
+    r = requests.get(city.source, headers={**HEADERS, **city.headers})
 
     # Requests fails to correctly check the encoding for every site,
     # we're going to have to get that manually (in some cases). This sucks.
