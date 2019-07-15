@@ -1,7 +1,7 @@
 sudo: false
 language: python
 python:
-  - "3.4"
+  - "3.5"
   - "nightly"
 addons:
   postgresql: "9.4"
