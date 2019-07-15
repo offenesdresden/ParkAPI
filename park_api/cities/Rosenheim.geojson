@@ -14,6 +14,7 @@
           "type": "city",
           "url": "https://www.rosenheim.de/",
           "source": "https://www.rosenheim.de/index.php?eID=jwParkingGetParkings",
+          "headers" : {"Accept" : "application/json; charset=utf-8"},
 	  "active_support":false
       }
   }, 
@@ -21,7 +22,6 @@
       "type": "Feature",
       "properties": {
         "name": "P1 Zentrum",
-        "total": 247,
         "address": "Hammerweg 1",
         "type": "Parkhaus"
       },
@@ -37,7 +37,6 @@
       "type": "Feature",
       "properties": {
         "name": "P2 KU'KO",
-        "total": 138,
         "address": "Kufsteiner Str. 4",
         "type": "Parkhaus"
       },
@@ -53,7 +52,6 @@
       "type": "Feature",
       "properties": {
         "name": "P3 Rathaus",
-        "total": 31,
         "address": "Königstraße 20",
         "type": "Parkplatz"
       },
@@ -69,7 +67,6 @@
       "type": "Feature",
       "properties": {
         "name": "P4 Mitte",
-        "total": 270,
         "address": "Frühlingstraße 5",
         "type": "Parkhaus"
       },
@@ -85,7 +82,6 @@
       "type": "Feature",
       "properties": {
         "name": "P6 Salinplatz",
-        "total": 232,
         "address": "Salinstraße 8A",
         "type": "Parkplatz/Tiefgarage"
       },
@@ -101,7 +97,6 @@
       "type": "Feature",
       "properties": {
         "name": "P7 Altstadt-Ost",
-        "total": 82,
         "address": "Mühlbachbogen",
         "type": "Tiefgarage"
       },
@@ -118,7 +113,6 @@
       "type": "Feature",
       "properties": {
         "name": "P8 Beilhack-Citydome",
-        "total": 165,
         "address": "Am Hammer 7A",
         "type": "Parkplatz"
       },
@@ -134,7 +128,6 @@
       "type": "Feature",
       "properties": {
         "name": "P9 Am Klinikum",
-        "total": 421,
         "address": "In Der Schmucken 7",
         "type": "Parkhaus"
       },
@@ -150,7 +143,6 @@
       "type": "Feature",
       "properties": {
         "name": "P10 Stadtcenter",
-        "total": 56,
         "address": "Brixstraße 3",
         "type": "Parkhaus"
       },
@@ -166,7 +158,6 @@
       "type": "Feature",
       "properties": {
         "name": "P11 Beilhack-Gießereistr.",
-        "total": 150,
         "address": "Gießereistraße 2",
         "type": "Parkplatz"
       },
@@ -182,7 +173,6 @@
       "type": "Feature",
       "properties": {
         "name": "P12 Bahnhof Nord",
-        "total": 9899,
         "address": "Eduard-Rüber-Straße",
         "type": "Parkhaus"
       },
