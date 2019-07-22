@@ -35,7 +35,7 @@ def parse_html(html):
         parking_free = 0
         parking_state = 'open'
         try :
-            parking_free = int(div_level3[count+2])
+            parking_free = int(div_level3[count+2].text)
         except :
             parking_state = 'nodata'
         count += 3
