@@ -28,6 +28,7 @@ def parse_html(html):
     except :
         # if the service is unavailable (did happen in one of my tests):
         return data
+    data["last_updated"] = last_updated
 
     parking_lots = parking_data.find_all('div', class_='well')
     for one_parking_lot in parking_lots :
