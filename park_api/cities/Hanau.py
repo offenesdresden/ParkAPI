@@ -25,10 +25,11 @@ def parse_html(html):
         parking_data = soup.find( 'div', class_='container-fluid')
         # Letzte Aktualisierung: 04.07.2019 11:03:00
         last_updated = convert_date( parking_data.find('h5').text, 'Letzte Aktualisierung: %d.%m.%Y %H:%M:%S') 
+        data["last_updated"] = last_updated
     except :
         # if the service is unavailable (did happen in one of my tests):
+        data["last_updated"] = utc_now()
         return data
-    data["last_updated"] = last_updated
 
     parking_lots = parking_data.find_all('div', class_='well')
     for one_parking_lot in parking_lots :
