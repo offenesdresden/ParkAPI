@@ -1,0 +1,231 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+               8.917053,
+              50.133739
+          ]
+      },
+      "properties": {
+          "name": "Hanau",
+          "type": "city",
+          "url": "https://www.hanau.de/", 
+          "source": "http://www.hanau-neu-erleben.de/reise/parken/072752/index.html",
+	  "active_support":false
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiefgarage Am Markt",
+        "total": 185,
+        "address": "Am Markt",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.916543,
+           50.132449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Am Forum",
+        "total": 560,
+        "address": "Am Frankfurter Tor 10",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.913654,
+           50.134264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Nürnberger Straße",
+        "total": 348,
+        "address": "Nürnberger Str. 16",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.920955,
+            50.132298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Kinopolis 2",
+        "total": 430,
+        "address": "Steinheimer Str.",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.914273,
+            50.129825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Klinikum",
+        "total": 68,
+        "address": "Leimenstraße",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.922359,
+            50.133315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Congress Park",
+        "total": 331,
+        "address": "Eugen-Kaiser-Straße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.916136,
+            50.139814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiefgarage Congress Park",
+        "total": 63,
+        "address": "Heinrich-Bott-Straße",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.918148,
+            50.138479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiefgarage Forum",
+        "total": 471,
+        "address": "Im Forum 5",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.916190,
+            50.135262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Kinopolis",
+        "total": 186,
+        "address": "Am Steinheimer Tor 17",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+              8.915746,
+             50.129269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus City Center",
+        "total": 526,
+        "address": "Kurt-Blaum-Platz 8",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.922597,
+            50.131280
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiefgarage Klinikum Süd",
+        "total": 75,
+        "address": "Röderstraße 1",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.923727,
+            50.131262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Gloria Palais",
+        "total": 280,
+        "address": "Am Steinheimer Tor 1a",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.908575,
+            50.132539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Main-Kinzig-Halle",
+        "total": 96,
+        "address": "Eberhardstraße",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+              8.921375,
+             50.137234
+        ]
+      }
+    }
+]
+}
+
+
