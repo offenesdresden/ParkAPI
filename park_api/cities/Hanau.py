@@ -29,7 +29,7 @@ def parse_html(html):
     except :
         # if the service is unavailable (did happen in one of my tests):
         data["last_updated"] = utc_now()
-        return data
+        # return data
 
     parking_lots = parking_data.find_all('div', class_='well')
     for one_parking_lot in parking_lots :
