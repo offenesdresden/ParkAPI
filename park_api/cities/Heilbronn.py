@@ -38,7 +38,7 @@ def parse_html(html):
             # text: Freie Parkplätze: 195
             parking_free_temp = one_parking_lot.find('div', class_='col-sm-5').text.split()
             # parking_free_temp: ['Freie', 'Parkplätze:', '195']
-            parking_free = parking_free_temp[2]
+            parking_free = int(parking_free_temp[2])
         except :
             parking_state = 'nodata'
 
