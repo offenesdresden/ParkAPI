@@ -1,0 +1,150 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+               9.218716,
+               49.142525
+          ]
+      },
+      "properties": {
+          "name": "Heilbronn",
+          "type": "city",
+          "url": "https://www.heilbronn.de/startseite.html",
+          "source": "https://www.heilbronn.de/allgemeine-inhalte/ajax-parkhausbelegung.html?type=1496993343",
+	  "active_support":false
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "Am Bollwerksturm",
+        "total": 304,
+        "address": "Mannheimer Str. 25",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           9.216159,
+          49.146106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "City-Parkhaus Experimenta",
+        "total": 500,
+        "address": "Bahnhofstraße 6",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            9.213191,
+           49.143647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harmonie",
+        "total": 435,
+        "address": "Allee 28",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            9.225386,
+           49.142295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kiliansplatz",
+        "total": 230,
+        "address": "Kiliansstr. 11",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             9.220854,
+            49.14117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Käthchenhof",
+        "total": 67,
+        "address": "Gerberstraße",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            9.21755,
+           49.143207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stadtgalerie",
+        "total": 660,
+        "address": "Allerheiligenstraße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           9.216804,
+          49.140119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Theaterforum K3",
+        "total": 460,
+        "address": "Berliner Platz 12",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            9.220796,
+           49.145997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wollhaus",
+        "total": 450,
+        "address": "Am Wollhaus",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             9.220889,
+            49.139792
+        ]
+      }
+   }]
+}
+
+
