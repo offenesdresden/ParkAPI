@@ -24,7 +24,7 @@ def parse_html(html):
         # <div class="container-fluid"
         parking_data = soup.find( 'div', class_='container-fluid')
         # Letzte Aktualisierung: 04.07.2019 11:03:00
-        last_updated = convert_date( parking_data.find('h5').text, 'Letzte Aktualisierung: %d.%m.%Y %H:%M:%S') 
+        last_updated = convert_date( parking_data.find('h5').text, 'Letzte Aktualisierung: %d.%m.%Y %H:%M:%S')
         data["last_updated"] = last_updated
     except :
         # if the service is unavailable (did happen in one of my tests):
