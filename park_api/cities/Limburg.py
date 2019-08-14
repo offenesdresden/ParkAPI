@@ -31,9 +31,10 @@ def parse_html(html):
         parking_name = one_entry_data[0].text
         lot = geodata.lot(parking_name)
 
-        parking_total = one_entry_data[1].text
+        parking_free = 0
+        parking_total = 0
         try :
-            parking_free = 0
+            parking_total = int(one_entry_data[1].text)
             if ( one_entry_data[5].text.__eq__('Offen') ) : 
                 parking_status = 'open'
                 parking_free = int(one_entry_data[3].text)
