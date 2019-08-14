@@ -20,7 +20,6 @@ def parse_html(html):
         "lots": []
     }
 
-    try :
     #                                                       <b>Stand: 13.08.2019 16:40:00 Uhr</b> (Aktualisierung alle 60 Sekunden)<br>
     data['last_updated'] = convert_date( soup.find('b').text, 'Stand: %d.%m.%Y %H:%M:%S Uhr') 
 
