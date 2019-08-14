@@ -1,0 +1,658 @@
+<html>
+<head>
+
+<meta http-equiv='refresh' content='60; URL=http://p127393.mittwaldserver.info/LM/_pls/pls.php'>
+
+<style>
+.Altstadt{
+ position:absolute;
+ left:715px; top:172px; 
+ color:#ffffff;
+ font-weight:bold;
+ font-family:arial;
+ font-size:10pt;
+}
+
+.Bahnhof{
+ position:absolute;
+ left:890px; top:718px; 
+ color:#ffffff;
+ font-weight:bold;
+ font-family:arial;
+ font-size:10pt;
+}
+
+
+.City{
+ position:absolute;
+ left:980px; top:590px; 
+ color:#ffffff;
+ font-weight:bold;
+ font-family:arial;
+ font-size:10pt;
+}
+
+.Karstadt{
+ position:absolute;
+ left:535px; top:502px; 
+ color:#ffffff;
+ font-weight:bold;
+ font-family:arial;
+ font-size:10pt;
+}
+
+.Neumarkt{
+ position:absolute;
+ left:792px; top:548px; 
+ color:#ffffff;
+ font-weight:bold;
+ font-family:arial;
+ font-size:10pt;
+}
+
+.PH-Mitte{
+ position:absolute;
+ left:620px; top:245px; 
+ color:#ffffff;
+ font-weight:bold;
+ font-family:arial;
+ font-size:10pt;
+}
+
+.Sparkasse{
+ position:absolute;
+ left:450px; top:385px; 
+ color:#ffffff;
+ font-weight:bold;
+ font-family:arial;
+ font-size:10pt;
+}
+
+.Stadthalle{
+ position:absolute;
+ left:625px; top:444px; 
+ color:#ffffff;
+ font-weight:bold;
+ font-family:arial;
+ font-size:10pt;
+}
+
+.Werkstadt{
+ position:absolute;
+ left:391px; top:632px; 
+ color:#ffffff;
+ font-weight:bold;
+ font-family:arial;
+ font-size:10pt;
+}
+
+.karte{
+ position:absolute;
+ left:0px; top:0px; 
+ color:#ffffff;
+ font-weight:bold;
+}
+
+
+.tabelle{
+ position:absolute;
+ left:10px; top:10px; 
+ font-weight:normal;
+ font-family:arial;
+ font-size:10pt;
+}
+
+.tabellenformat{
+ font-family:arial;
+ font-size:10pt;
+ background-image: url(img/halbtransparent.png);
+ background-repeat:repeat;
+}
+
+
+.ueberschrift{
+ color:#000000;
+ font-family:arial;
+ font-size:14pt;
+ font-weight:bold;
+}
+
+.Altstadt_info{
+ border-style:dotted;
+ border-color:#0099FF;
+ padding:4px;
+ color:#000000;
+ font-family:arial;
+ font-size:10pt;
+ font-weight:normal;
+ background-color:#CCFF00;
+ visibility: hidden;
+ position:absolute;
+ left:777px; top:20px; 
+}
+
+.Bahnhof_info{
+ border-style:dotted;
+ border-color:#0099FF;
+ padding:4px;
+ color:#000000;
+ font-family:arial;
+ font-size:10pt;
+ font-weight:normal;
+ background-color:#CCFF00;
+ visibility: hidden;
+ position:absolute;
+ left:955px; top:490px; 
+}
+
+.City_info{
+ border-style:dotted;
+ border-color:#0099FF;
+ padding:4px;
+ color:#000000;
+ font-family:arial;
+ font-size:10pt;
+ font-weight:normal;
+ background-color:#CCFF00;
+ visibility: hidden;
+ position:absolute;
+ left:1046px; top:465px; 
+}
+
+.Karstadt_info{
+ border-style:dotted;
+ border-color:#0099FF;
+ padding:4px;
+ color:#000000;
+ font-family:arial;
+ font-size:10pt;
+ font-weight:normal;
+ background-color:#CCFF00;
+ visibility: hidden;
+ position:absolute;
+ left:601px; top:275px; 
+}
+
+.Neumarkt_info{
+ border-style:dotted;
+ border-color:#0099FF;
+ padding:4px;
+ color:#000000;
+ font-family:arial;
+ font-size:10pt;
+ font-weight:normal;
+ background-color:#CCFF00;
+ visibility: hidden;
+ position:absolute;
+ left:859px; top:300px; 
+}
+
+.PH-Mitte_info{
+ border-style:dotted;
+ border-color:#0099FF;
+ padding:4px;
+ color:#000000;
+ font-family:arial;
+ font-size:10pt;
+ font-weight:normal;
+ background-color:#CCFF00;
+ visibility: hidden;
+ position:absolute;
+ left:685px; top:100px; 
+}
+
+.Sparkasse_info{
+ border-style:dotted;
+ border-color:#0099FF;
+ padding:4px;
+ color:#000000;
+ font-family:arial;
+ font-size:10pt;
+ font-weight:normal;
+ background-color:#CCFF00;
+ visibility: hidden;
+ position:absolute;
+ left:519px; top:90px; 
+}
+
+.Stadthalle_info{
+ border-style:dotted;
+ border-color:#0099FF;
+ padding:4px;
+ color:#000000;
+ font-family:arial;
+ font-size:10pt;
+ font-weight:normal;
+ background-color:#CCFF00;
+ visibility: hidden;
+ position:absolute;
+ left:694px; top:180px; 
+}
+
+.WERKStadt_info{
+ border-style:dotted;
+ border-color:#0099FF;
+ padding:4px;
+ color:#000000;
+ font-family:arial;
+ font-size:10pt;
+ font-weight:normal;
+ background-color:#CCFF00;
+ visibility: hidden;
+ position:absolute;
+ left:467px; top:515px; 
+}
+
+
+
+</style>
+
+
+<script>
+  function show(id) {
+    document.getElementById(id).style.visibility = "visible";
+  }
+  function hide(id) {
+    document.getElementById(id).style.visibility = "hidden";
+  }
+</script>
+
+
+</head>
+<body>
+
+<div class=karte><img src='img/parkhaeuser.jpg'></div>
+
+
+<div class=Altstadt onMouseOver=show('Altstadt_info') onMouseOut=hide('Altstadt_info')><font color=#99FF00>91</font><!-- 91 -->/295<br>Altstadt</div>
+<div class=Bahnhof onMouseOver=show('Bahnhof_info') onMouseOut=hide('Bahnhof_info')><font color=#99FF00>66</font><!-- 66 -->/180<br>Bahnhof</div>
+<div class=City onMouseOver=show('City_info') onMouseOut=hide('City_info')><font color=#99FF00>62</font><!-- 62 -->/163<br>City</div>
+<div class=Karstadt onMouseOver=show('Karstadt_info') onMouseOut=hide('Karstadt_info')><font color=#99FF00>230</font><!-- 230 -->/313<br>Karstadt</div>
+<div class=Neumarkt onMouseOver=show('Neumarkt_info') onMouseOut=hide('Neumarkt_info')><font color=#ff0000>0<!-- 0 -->/48<br>Neumarkt</font></div>
+<div class=PH-Mitte onMouseOver=show('PH-Mitte_info') onMouseOut=hide('PH-Mitte_info')><font color=#99FF00>13</font><!-- 13 -->/110<br>PH-Mitte</div>
+<div class=Sparkasse onMouseOver=show('Sparkasse_info') onMouseOut=hide('Sparkasse_info')><font color=#99FF00>42</font><!-- 42 -->/75<br>Sparkasse</div>
+<div class=Stadthalle onMouseOver=show('Stadthalle_info') onMouseOut=hide('Stadthalle_info')><font color=#ff0000>0<!-- 95 -->/95<br>Stadthalle</font></div>
+<div class=WERKStadt onMouseOver=show('WERKStadt_info') onMouseOut=hide('WERKStadt_info')><font color=#99FF00>106</font><!-- 106 -->/403<br>WERKStadt</div>
+<div class=tabelle>
+<div class=ueberschrift>Parkleitsystem Limburg</div>
+<b>Stand: 14.08.2019 15:48:00 Uhr</b> (Aktualisierung alle 60 Sekunden)<br>
+<table class=tabellenformat border=1 cellspacing=0 cellpadding=5>
+<tr><td>Parkhaus/Parkplatz</td><td>gesamt</td><td>belegt</td><td>frei</td><td>Diagramm (<font color=red>belegt</font> - <font color=#009966>frei</font>)</td><td>Status</td></tr>
+<tr>
+<td><div onMouseOver=show('Altstadt_info') onMouseOut=hide('Altstadt_info')>Altstadt</div></td>
+<td>295</td>
+<td><font color=#ff0000><b>204</b></font><!-- 204 --></td>
+<td><font color=#009966><b>91</b></font><!-- 91 --></td>
+<td><img src='img/bar_red.gif' width='81.6' height='10'><img src='img/bar_green.gif' width='36.4' height='10'></td>
+<td><font color=#000000>Offen</font></td>
+</tr>
+<tr>
+<td><div onMouseOver=show('Bahnhof_info') onMouseOut=hide('Bahnhof_info')>Bahnhof</div></td>
+<td>180</td>
+<td><font color=#ff0000><b>114</b></font><!-- 114 --></td>
+<td><font color=#009966><b>66</b></font><!-- 66 --></td>
+<td><img src='img/bar_red.gif' width='45.6' height='10'><img src='img/bar_green.gif' width='26.4' height='10'></td>
+<td><font color=#000000>Offen</font></td>
+</tr>
+<tr>
+<td><div onMouseOver=show('City_info') onMouseOut=hide('City_info')>City</div></td>
+<td>163</td>
+<td><font color=#ff0000><b>101</b></font><!-- 101 --></td>
+<td><font color=#009966><b>62</b></font><!-- 62 --></td>
+<td><img src='img/bar_red.gif' width='40.4' height='10'><img src='img/bar_green.gif' width='24.8' height='10'></td>
+<td><font color=#000000>Offen</font></td>
+</tr>
+<tr>
+<td><div onMouseOver=show('Karstadt_info') onMouseOut=hide('Karstadt_info')>Karstadt</div></td>
+<td>313</td>
+<td><font color=#ff0000><b>83</b></font><!-- 83 --></td>
+<td><font color=#009966><b>230</b></font><!-- 230 --></td>
+<td><img src='img/bar_red.gif' width='33.2' height='10'><img src='img/bar_green.gif' width='92' height='10'></td>
+<td><font color=#000000>Offen</font></td>
+</tr>
+<tr>
+<td><div onMouseOver=show('Neumarkt_info') onMouseOut=hide('Neumarkt_info')>Neumarkt</div></td>
+<td>48</td>
+<td><font color=#ff0000><b>0</b></font><!-- 0 --></td>
+<td><font color=#009966><b>0</b></font><!-- 0 --></td>
+<td>&nbsp;</td>
+<td><font color=#ff0000>Geschlossen</font></td>
+</tr>
+<tr>
+<td><div onMouseOver=show('PH-Mitte_info') onMouseOut=hide('PH-Mitte_info')>PH-Mitte</div></td>
+<td>110</td>
+<td><font color=#ff0000><b>97</b></font><!-- 97 --></td>
+<td><font color=#009966><b>13</b></font><!-- 13 --></td>
+<td><img src='img/bar_red.gif' width='38.8' height='10'><img src='img/bar_green.gif' width='5.2' height='10'></td>
+<td><font color=#000000>Offen</font></td>
+</tr>
+<tr>
+<td><div onMouseOver=show('Sparkasse_info') onMouseOut=hide('Sparkasse_info')>Sparkasse</div></td>
+<td>75</td>
+<td><font color=#ff0000><b>33</b></font><!-- 33 --></td>
+<td><font color=#009966><b>42</b></font><!-- 42 --></td>
+<td><img src='img/bar_red.gif' width='13.2' height='10'><img src='img/bar_green.gif' width='16.8' height='10'></td>
+<td><font color=#000000>Offen</font></td>
+</tr>
+<tr>
+<td><div onMouseOver=show('Stadthalle_info') onMouseOut=hide('Stadthalle_info')>Stadthalle</div></td>
+<td>95</td>
+<td><font color=#ff0000><b>0</b></font><!-- 0 --></td>
+<td><font color=#009966><b>0</b></font><!-- 95 --></td>
+<td>&nbsp;</td>
+<td><font color=#ff0000>Geschlossen</font></td>
+</tr>
+<tr>
+<td><div onMouseOver=show('WERKStadt_info') onMouseOut=hide('WERKStadt_info')>WERKStadt</div></td>
+<td>403</td>
+<td><font color=#ff0000><b>297</b></font><!-- 297 --></td>
+<td><font color=#009966><b>106</b></font><!-- 106 --></td>
+<td><img src='img/bar_red.gif' width='118.8' height='10'><img src='img/bar_green.gif' width='42.4' height='10'></td>
+<td><font color=#000000>Offen</font></td>
+</tr>
+</table>
+<br>Weitere Informationen (<b>&Ouml;ffnungszeiten, Tarife, Ansprechpartner</b>) <br>
+ erhalten Sie beim Zeigen auf die Parkhaus-/Parkplatz-Grafiken<br>
+ des &Uuml;bersichtsplans.
+</div>
+
+
+
+
+
+<div class="Altstadt_info" id="Altstadt_info">
+<b>Altstadt</b><br>
+<br>
+<u>Kontakt:</u><br>
+Stadt Limburg<br>
+Dennis Lehnhausen<br>
+dennis.lehnhausen@stadt.limburg.de<br>
+Tel: 06431/203-371<br>
+<br>
+
+<u>&Ouml;ffnungszeiten:</u><br>
+24 Std. t&auml;glich,<br>
+auch sonn-und feiertags<br>
+<br>
+<u>Tarife:</u><br>
+je angefangene Stunde<br>
+1,00 &#8364; <br><br>
+Tagesh&ouml;chstsatz<br>
+5,00 &#8364;<br>
+<br> 
+<u>
+Ziel-Adresse f&uuml;rs Navi:<br>
+</u>
+<b>
+Sackgasse<br>
+65549 Limburg
+</b>
+<br><br>
+</div>
+
+
+<div class="Bahnhof_info" id="Bahnhof_info">
+<b>Bahnhof</b><br>
+<br>
+<u>Kontakt:</u><br>
+Stadt Limburg<br>
+Dennis Lehnhausen<br>
+dennis.lehnhausen@stadt.limburg.de<br>
+Tel: 06431/203-371<br>
+<br>
+<u>&Ouml;ffnungszeiten:</u><br>
+24 Std. t&auml;glich,<br>
+auch sonn-und feiertags<br>
+<br>
+<u>Tarife:</u><br>
+je angefangene Stunde<br>
+1,00 &#8364;<br><br>
+Tagesh&ouml;chstsatz<br>
+5,00 &#8364;<br>
+<br>
+<u>
+Ziel-Adresse f&uuml;rs Navi:<br>
+</u>
+<b>
+Graupfortstraße 7<br>
+65549 Limburg
+</b>
+<br><br>
+</div>
+
+
+<div class="City_info" id="City_info">
+<b>City</b><br>
+<br>
+<u>Kontakt:</u><br>
+Contipark<br>
+Tel: 030/250097-0<br>
+<br>
+<u>&Ouml;ffnungszeiten:</u><br>
+24 Std. t&auml;glich,<br>
+auch sonn-und feiertags<br>
+<br>
+<u>Tarife:</u><br>
+werktags, sonn- und feiertags<br>
+1,00 &#8364; je Std.<br>
+5,00 &#8364; Tagesh&ouml;chstsatz<br> 
+70,00 &#8364; Monatsgeb&uuml;r 
+<br>
+<br>
+<u>
+Ziel-Adresse f&uuml;rs Navi:<br>
+</u>
+<b>
+Frankfurter Straße 12<br>
+65549 Limburg
+</b>
+<br><br>
+
+</div>
+
+
+<div class="Karstadt_info" id="Karstadt_info">
+<b>Karstadt</b><br>
+<br>
+<u>Kontakt:</u><br>
+Parkhausgesellschaft W&uuml;rzburg<br>
+Tel: 0931/361408<br>
+<br>
+<u>&Ouml;ffnungszeiten:</u><br>
+Mo-Fr 7.00-19.20 Uhr<br>
+Sa 7.00-18.20 Uhr<br>
+<br>
+<u>Tarife:</u><br>
+1,50 &#8364; f&uuml;r die 1. Std.<br>
+2,00 &#8364; ab der 2. Std.<br>
+7,00 &#8364; Tagesh&ouml;chstsatz<br>
+<br>
+sonn- und feiertags<br>
+geschlossen<br>
+<br>
+<u>
+Ziel-Adresse f&uuml;rs Navi:<br>
+</u>
+<b>
+Werner-Senger-Straße 15<br>
+65549 Limburg
+</b>
+<br><br>
+</div>
+
+
+
+<div class="Neumarkt_info" id="Neumarkt_info">
+<b>Neumarkt</b><br>
+<br>
+<u>Kontakt:</u><br>
+Stadt Limburg<br>
+Dennis Lehnhausen<br>
+dennis.lehnhausen@stadt.limburg.de<br>
+Tel: 06431/203-371<br>
+<br>
+<u>&Ouml;ffnungszeiten:</u><br>
+mittwochs und samstags<br>
+von 05.00-15.00 Uhr gesperrt<br>
+sonst 24 Std. t&auml;glich,<br>
+auch sonn-und feiertags<br>
+au&szlig;er bei Sonderveranstaltungen<br>
+<br>
+<u>Tarife:</u><br>
+werktags von 8.00-19.00 Uhr<br>
+1,00 &#8364; je Std.<br>
+<br>
+werktags von 19.00-8.00 Uhr<br>
+0,50 &#8364; je Std.<br>
+<br>
+sonn- und feiertags<br>
+0,50 &#8364; je Std.<br>
+<br>
+<u>
+Ziel-Adresse f&uuml;rs Navi:<br>
+</u>
+<b>
+Neumarkt<br>
+65549 Limburg
+</b>
+<br><br>
+</div>
+
+
+
+<div class="PH-Mitte_info" id="PH-Mitte_info">
+<b>PH-Mitte</b><br>
+<br>
+<u>Kontakt:</u><br>
+Parkhaus Mitte GmbH<br>
+Sascha Bender<br>
+Roland Bender<br>
+-@-.de<br>
+Tel: -<br>
+<br>
+<u>&Ouml;ffnungszeiten:</u><br>
+24 Std. t&auml;glich,<br>
+auch sonn-und feiertags<br>
+<br>
+<u>Tarife:</u><br>
+1,00 &#8364; je Std.<br>
+5,00 &#8364; Tageshöchstsatz (24 Std.)<br>
+<br>
+<u>
+Ziel-Adresse f&uuml;rs Navi:<br>
+</u>
+<b>
+Grabenstraße 26<br>
+65549 Limburg
+</b>
+<br><br>
+</div>
+
+
+<div class="Sparkasse_info" id="Sparkasse_info">
+<b>Sparkasse</b><br>
+<br>
+<u>Kontakt:</u><br>
+Kreissparkasse Limburg<br>
+Tel: 06431/202-0<br>
+<br>
+<u>&Ouml;ffnungszeiten:</u><br>
+24 Std. t&auml;glich,<br>
+auch sonn-und feiertags<br>
+Vorweihnachts-Samstage 7.00-19.45 Uhr<br>
+<br>
+<u>Tarife:</u><br>
+f&uuml;r Kunden mit EC- oder <br>
+der Sparkassenkarte der KSK Limburg<br>
+15 Min. kostenfrei<br>
+danach 0,50 &#8364; je 30 Min.<br>
+<br>
+f&uuml;r Nichtkunden<br>
+(Barzahler oder Karten fremder Institute)<br>
+15 Min. kostenfrei<br>
+danach 0,50 &#8364; je 30 Min.<br>
+<br>
+sonn- und feiertags<br>
+Tarife wie werktags<br>
+<br>
+<u>
+Ziel-Adresse f&uuml;rs Navi:<br>
+</u>
+<b>
+Schiede 41<br>
+65549 Limburg
+</b>
+<br><br>
+</div>
+
+
+<div class="Stadthalle_info" id="Stadthalle_info">
+<b>Stadthalle</b><br>
+<br>
+<u>Kontakt:</u><br>
+Stadt Limburg<br>
+Dennis Lehnhausen<br>
+dennis.lehnhausen@stadt.limburg.de<br>
+Tel: 06431/203-371<br>
+<br>
+<u>&Ouml;ffnungszeiten:</u><br>
+24 Std. t&auml;glich,<br>
+auch sonn-und feiertags<br>
+<br>
+<u>Tarife:</u><br>
+werktags von 8.00-19.00 Uhr<br>
+1,00 &#8364; je Std.<br>
+<br>
+werktags von 19.00-22.00 Uhr<br>
+0,50 &#8364; je Std.<br>
+<br>
+werktags von 22.00-8.00 Uhr<br>
+kostenfrei<br>
+<br>
+sonn- und feiertags<br>
+Tarife wie werktags<br>
+<br>
+
+<u>
+Ziel-Adresse f&uuml;rs Navi:<br>
+</u>
+<b>
+Diezer Straße 17<br>
+65549 Limburg
+</b>
+<br><br>
+</div>
+
+
+
+<div class="WERKStadt_info" id="WERKStadt_info">
+<b>WERKStadt</b><br>
+<br>
+<u>Kontakt:</u><br>
+feuer-werk. immobilien GmbH<br>
+Iris Pawlowsky<br>
+Tel: 0175/2437262<br>
+<br>
+<u>&Ouml;ffnungszeiten:</u><br>
+24 Std. t&auml;glich,<br>
+auch sonn-und feiertags<br>
+<br>
+<u>Tarife:</u><br>
+1,50 &#8364; je angefangene Std.<br>
+WERKStadt-Kunden 90 Minuten kostenlos<br>
+<br>
+<u>
+Ziel-Adresse f&uuml;rs Navi:<br>
+</u>
+<b>
+Joseph-Schneider-Straße 1<br>
+65549 Limburg
+</b>
+<br><br>
+</div>
+
+
+
+
+</body>
+</html>
