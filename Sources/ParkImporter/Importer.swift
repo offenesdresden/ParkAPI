@@ -87,3 +87,16 @@ extension HtmlImporter {
         }
     }
 }
+
+// MARK: - RSS Importer
+
+public protocol RssImporter: BaseImporter {
+    func parse(rss: Data, response: URLResponse) throws -> LotInformation
+}
+
+extension RssImporter {
+    public func fetch(session: URLSession = .shared,
+                      completion: @escaping (Result<LotInformation, ParkError>) -> Void) {
+        // TODO
+    }
+}
