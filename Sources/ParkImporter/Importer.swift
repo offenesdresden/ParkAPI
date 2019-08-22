@@ -33,7 +33,7 @@ extension BaseImporter {
     }
 
     fileprivate func fetchData(_ session: URLSession = .shared,
-                   completion: @escaping (Result<(Data, URLResponse), Error>) -> Void) {
+                               completion: @escaping (Result<(Data, URLResponse), Error>) -> Void) {
         var baseRequest = URLRequest(url: self.sourceURL)
         baseRequest.addValue("User-Agent", forHTTPHeaderField: "ParkImporter VERSION - Info: https://github.com/offenesdresden/ParkAPI")
         let request = prepare(request: baseRequest)
