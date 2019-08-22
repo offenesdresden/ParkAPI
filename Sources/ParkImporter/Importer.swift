@@ -1,12 +1,14 @@
 import Foundation
 
 public enum ParkImporter {
-    public static var importers: [Importer] = [
+    public static var importers: [BaseImporter] = [
         Dresden()
     ]
 }
 
-public protocol Importer {
+// MARK: - Base Importer
+
+public protocol BaseImporter {
     var name: String { get }
     var slug: String { get }
 
@@ -21,7 +23,7 @@ public protocol Importer {
                completion: @escaping (Result<LotInformation, ParkError>) -> Void)
 }
 
-extension Importer {
+extension BaseImporter {
     public var slug: String {
         return self.name.slug
     }
@@ -51,7 +53,9 @@ extension Importer {
     }
 }
 
-public protocol HtmlImporter: Importer {
+// MARK: - HTML Importer
+
+public protocol HtmlImporter: BaseImporter {
     var htmlEncoding: String.Encoding { get }
 
     func parse(html: String, response: URLResponse) throws -> LotInformation
