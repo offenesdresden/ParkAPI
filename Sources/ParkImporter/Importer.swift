@@ -67,7 +67,7 @@ extension HtmlImporter {
     }
 
     public func fetch(session: URLSession = .shared,
-               completion: @escaping (Result<LotInformation, ParkError>) -> Void) {
+                      completion: @escaping (Result<LotInformation, ParkError>) -> Void) {
         self.fetchData(session) { result in
             switch result {
             case .failure(let error):
