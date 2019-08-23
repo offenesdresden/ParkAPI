@@ -1,11 +1,16 @@
 GEOJSON=swift run geojson
 
-build:
+read-geojson:
 	$(GEOJSON)
+
+build: read-geojson
 	swift build
 
-test:
-	$(GEOJSON)
-	swift test --parallel
+test: read-geojson
+	swift test
 
-.PHONY: build, test
+test-live: read-geojson
+	export TEST_LIVE=1;\
+	swift test
+
+.PHONY: read-geojson, build, test, test-live
