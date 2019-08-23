@@ -2,5 +2,5 @@
 // Run `swift run geojson` instead.
 
 let geoData = [
-    GeoData(sourceName: "Dresden")
+    SourceGeoData(name: "Dresden")
 ]

@@ -11,7 +11,7 @@ func readGeoData() throws -> [GeoJson] {
 }
 
 func write(geoData: [GeoJson]) throws {
-    let geoData = [GeoData(sourceName: "Dresden")]
+    let geoData = [SourceGeoData(name: "Dresden")]
     let fileContent = """
     // This file is auto-generated, do not edit.
     // Run `swift run geojson` instead.
