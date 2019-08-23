@@ -35,6 +35,7 @@ final class ParkImporterTests: XCTestCase {
                     XCTFail("Failed with error: \(error)")
                     e.fulfill()
                 case .success(let dataPoint):
+                    XCTAssert(!dataPoint.lots.isEmpty)
                     e.fulfill()
                 }
             }
