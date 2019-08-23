@@ -19,6 +19,7 @@ func write(geoData: [GeoJson]) throws {
     let geoData = [
         \(geoData.map { $0.sourceRepr }.joined(separator: ",\n"))
     ]
+
     """
     try File(path: "Sources/ParkImporter/Geo.swift").write(string: fileContent)
 }
