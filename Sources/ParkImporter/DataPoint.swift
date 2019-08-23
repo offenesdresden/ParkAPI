@@ -1,6 +1,6 @@
 import Foundation
 
-public struct LotInformation {
+public struct DataPoint {
     public let dateDownloaded: Date
     public let dateSource: Date
     public let lots: [Lot]

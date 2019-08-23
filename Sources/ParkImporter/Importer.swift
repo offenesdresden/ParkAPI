@@ -20,7 +20,7 @@ public protocol BaseImporter {
     func prepare(request: URLRequest) -> URLRequest
 
     func fetch(session: URLSession,
-               completion: @escaping (Result<LotInformation, ParkError>) -> Void)
+               completion: @escaping (Result<DataPoint, ParkError>) -> Void)
 }
 
 extension BaseImporter {
@@ -58,7 +58,7 @@ extension BaseImporter {
 public protocol HtmlImporter: BaseImporter {
     var htmlEncoding: String.Encoding { get }
 
-    func parse(html: String, response: URLResponse) throws -> LotInformation
+    func parse(html: String, response: URLResponse) throws -> DataPoint
 }
 
 extension HtmlImporter {
@@ -67,7 +67,7 @@ extension HtmlImporter {
     }
 
     public func fetch(session: URLSession = .shared,
-                      completion: @escaping (Result<LotInformation, ParkError>) -> Void) {
+                      completion: @escaping (Result<DataPoint, ParkError>) -> Void) {
         self.fetchData(session) { result in
             switch result {
             case .failure(let error):
@@ -91,12 +91,12 @@ extension HtmlImporter {
 // MARK: - RSS Importer
 
 public protocol RssImporter: BaseImporter {
-    func parse(rss: Data, response: URLResponse) throws -> LotInformation
+    func parse(rss: Data, response: URLResponse) throws -> DataPoint
 }
 
 extension RssImporter {
     public func fetch(session: URLSession = .shared,
-                      completion: @escaping (Result<LotInformation, ParkError>) -> Void) {
+                      completion: @escaping (Result<DataPoint, ParkError>) -> Void) {
         // TODO
     }
 }

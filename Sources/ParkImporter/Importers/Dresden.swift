@@ -8,10 +8,10 @@ public class Dresden: HtmlImporter {
 
     internal init() {}
 
-    public func parse(html: String, response: URLResponse) throws -> LotInformation {
+    public func parse(html: String, response: URLResponse) throws -> DataPoint {
         let doc: Document = try SwiftSoup.parse(html)
         print(try doc.text())
 
-        return LotInformation(dateSource: Date(), lots: [])
+        return DataPoint(dateSource: Date(), lots: [])
     }
 }
