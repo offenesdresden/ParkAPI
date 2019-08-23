@@ -21,6 +21,11 @@ final class ParkImporterTests: XCTestCase {
     }
 
     func testLiveData() {
+        guard !(ProcessInfo.processInfo.environment["TEST_LIVE"]?.isEmpty ?? true) else {
+            print("Skipping live tests, set TEST_LIVE environment variable to enable.")
+            return
+        }
+
         for importer in ParkImporter.importers {
             let e = expectation(description: "Receive data")
 
