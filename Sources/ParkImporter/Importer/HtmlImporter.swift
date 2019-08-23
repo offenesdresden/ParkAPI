@@ -23,8 +23,8 @@ extension HtmlImporter {
                     return
                 }
                 do {
-                    let lotInfo = try self.parse(html: html, response: response)
-                    completion(.success(lotInfo))
+                    let dataPoint = try self.parse(html: html, response: response)
+                    completion(.success(dataPoint))
                 } catch {
                     completion(.failure(.other(error)))
                 }

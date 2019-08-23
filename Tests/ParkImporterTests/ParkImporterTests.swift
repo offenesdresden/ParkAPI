@@ -20,7 +20,7 @@ final class ParkImporterTests: XCTestCase {
                 case .failure(let error):
                     XCTFail("Failed with error: \(error)")
                     e.fulfill()
-                case .success(let lotInfo):
+                case .success(let dataPoint):
                     e.fulfill()
                 }
             }
