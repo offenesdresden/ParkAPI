@@ -3,6 +3,7 @@ public struct Lot {
     public let coordinates: Coordinates
     public let address: String?
     public let free: Int
+    public let total: Int? // TODO: Possibly rename to capacity?
     public let state: State
     public let type: Type?
     public let additionalInformation: [String: Any]?
@@ -11,6 +12,7 @@ public struct Lot {
                 coordinates: Coordinates,
                 address: String?,
                 free: Int,
+                total: Int?,
                 state: Lot.State,
                 type: Lot.`Type`?,
                 additionalInformation: [String : Any]? = nil) {
@@ -18,6 +20,7 @@ public struct Lot {
         self.coordinates = coordinates
         self.address = address
         self.free = free
+        self.total = total
         self.state = state
         self.type = type
         self.additionalInformation = additionalInformation

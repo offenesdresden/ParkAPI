@@ -7,3 +7,15 @@ extension Element {
         return formatter.date(from: text)
     }
 }
+
+extension Elements {
+    func int() throws -> Int? {
+        let text = (try? self.text()) ?? ""
+        return Int(text)
+    }
+
+    func int(else: Int) throws -> Int {
+        let text = (try? self.text()) ?? ""
+        return Int(text) ?? `else`
+    }
+}
