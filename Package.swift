@@ -17,6 +17,9 @@ let package = Package(
         .target(
             name: "ParkImporter",
             dependencies: ["SwiftSoup", "FeedKit"]),
+        .target(
+            name: "geojson",
+            dependencies: []),
         .testTarget(
             name: "ParkImporterTests",
             dependencies: ["ParkImporter"]),
