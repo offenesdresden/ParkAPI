@@ -8,8 +8,7 @@ public class Dresden: HtmlImporter {
 
     public func parse(html: String, response: URLResponse) throws -> DataPoint {
         let doc: Document = try SwiftSoup.parse(html)
-        let dateSourceString = try doc.getElementById("P1_LAST_UPDATE")?.text() ?? ""
-        let dateSource = DateFormatter.dMy_Hms.date(from: dateSourceString)
+        let dateSource = try doc.getElementById("P1_LAST_UPDATE")?.date(using: .dMy_Hms)
 
         return DataPoint(dateSource: dateSource, lots: [])
     }
