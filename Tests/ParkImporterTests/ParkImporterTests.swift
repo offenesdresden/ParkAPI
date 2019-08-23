@@ -2,6 +2,11 @@ import XCTest
 @testable import ParkImporter
 
 final class ParkImporterTests: XCTestCase {
+    func testGetSpecificImporter() {
+        let dresden = ParkImporter.importer(forSourceWithName: "Dresden")
+        XCTAssertEqual(dresden?.url.absoluteString, "https://www.dresden.de/parken")
+    }
+
     func testStaticData() {
         for importer in ParkImporter.importers {
             XCTAssert(!importer.name.isEmpty)
@@ -30,6 +35,7 @@ final class ParkImporterTests: XCTestCase {
     }
 
     static var allTests = [
+        ("testGetSpecificImporter", testGetSpecificImporter),
         ("testStaticData", testStaticData),
         ("testLiveData", testLiveData),
     ]
