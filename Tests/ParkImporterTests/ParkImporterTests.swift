@@ -46,6 +46,7 @@ final class ParkImporterTests: XCTestCase {
 
     static var allTests = [
         ("testGetSpecificImporter", testGetSpecificImporter),
+        ("testSupportedSources", testSupportedSources),
         ("testStaticData", testStaticData),
         ("testLiveData", testLiveData),
     ]
