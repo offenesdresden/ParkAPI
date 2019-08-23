@@ -1,19 +1,27 @@
-sudo: false
-language: python
-python:
-  - "3.5"
-  - "nightly"
-addons:
-  postgresql: "9.4"
+# sudo: false
+# language: python
+# python:
+#   - "3.5"
+#   - "nightly"
+# addons:
+#   postgresql: "9.4"
+# matrix:
+#   allow_failures:
+#     - python: "nightly"
+# cache: pip
+# before_script:
+#   - psql -c 'create database park_api;' -U postgres
+#   - pip install -e .
+#   - cp config_travis.ini config.ini
+#   - python bin/parkapi-setupdb
+# script:
+#   - python tests/validate-geojson.py park_api/cities/*.geojson
+#   - python -m unittest discover tests
+
 matrix:
-  allow_failures:
-    - python: "nightly"
-cache: pip
-before_script:
-  - psql -c 'create database park_api;' -U postgres
-  - pip install -e .
-  - cp config_travis.ini config.ini
-  - python bin/parkapi-setupdb
+  include:
+    - os: osx
+      osx_image: xcode11
+
 script:
-  - python tests/validate-geojson.py park_api/cities/*.geojson
-  - python -m unittest discover tests
+  - make test-live
