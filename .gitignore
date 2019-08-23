@@ -6,3 +6,4 @@ __pycache__
 .vscode
 _old
 .swiftpm
+.build
