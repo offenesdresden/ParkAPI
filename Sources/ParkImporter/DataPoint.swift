@@ -18,6 +18,7 @@ public struct Lot {
     public let address: String?
     public let free: Int
     public let state: State
+    public let type: Type?
     public let additionalInformation: [String: Any]?
 
     public init(name: String,
@@ -25,25 +26,29 @@ public struct Lot {
                 address: String?,
                 free: Int,
                 state: Lot.State,
+                type: Lot.`Type`?,
                 additionalInformation: [String : Any]? = nil) {
         self.name = name
         self.coordinates = coordinates
         self.address = address
         self.free = free
         self.state = state
+        self.type = type
         self.additionalInformation = additionalInformation
     }
 }
 
 extension Lot {
-    public enum State {
-        case open
-        case closed
-        case noData
-    }
-
     public struct Coordinates {
         public let latitude: Double
         public let longitude: Double
+    }
+
+    public enum State {
+        case open, closed, noData
+    }
+
+    public enum `Type` {
+        case lot, structure, underground
     }
 }
