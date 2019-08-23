@@ -7,6 +7,10 @@ final class ParkImporterTests: XCTestCase {
         XCTAssertEqual(dresden?.url.absoluteString, "https://www.dresden.de/parken")
     }
 
+    func testSupportedSources() {
+        XCTAssertEqual(ParkImporter.supportedSources.count, 1)
+    }
+
     func testStaticData() {
         for importer in ParkImporter.importers {
             XCTAssert(!importer.name.isEmpty)

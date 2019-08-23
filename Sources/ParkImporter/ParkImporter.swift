@@ -4,6 +4,10 @@ public enum ParkImporter {
     ]
 
     public static func importer(forSourceWithName name: String) -> BaseImporter? {
-        return ParkImporter.importers.first { $0.name == name }
+        importers.first { $0.name == name }
+    }
+
+    public static var supportedSources: [String] {
+        importers.map { $0.name }
     }
 }
