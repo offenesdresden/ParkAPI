@@ -3,7 +3,7 @@ import Files
 import CarPark
 
 func readGeoData() throws -> [GeoJson] {
-    let geojsonFiles = try Folder(path: "Sources/CarPark/Sources").files
+    let geojsonFiles = try Folder(path: "Sources/CarPark/DataSources").files
         .filter { $0.name.contains("geojson") }
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase
