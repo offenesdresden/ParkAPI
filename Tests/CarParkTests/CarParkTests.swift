@@ -11,7 +11,7 @@ final class CarParkTests: XCTestCase {
         XCTAssertEqual(CarPark.supportedSources.count, 1)
     }
 
-    func testStaticData() {
+    func testDataSourceProperties() {
         for importer in CarPark.importers {
             XCTAssert(!importer.name.isEmpty)
             XCTAssert(!importer.slug.isEmpty)
@@ -47,7 +47,7 @@ final class CarParkTests: XCTestCase {
     static var allTests = [
         ("testGetSpecificImporter", testGetSpecificImporter),
         ("testSupportedSources", testSupportedSources),
-        ("testStaticData", testStaticData),
+        ("testDataSourceProperties", testDataSourceProperties),
         ("testLiveData", testLiveData),
     ]
 }
