@@ -3,7 +3,7 @@ import XCTest
 
 final class CarParkTests: XCTestCase {
     func testGetSpecificDataSource() {
-        let dresden = CarPark.importer(forSourceWithName: "Dresden")
+        let dresden = CarPark.dataSource(forSourceWithName: "Dresden")
         XCTAssertEqual(dresden?.url.absoluteString, "https://www.dresden.de/parken")
     }
 
@@ -12,11 +12,11 @@ final class CarParkTests: XCTestCase {
     }
 
     func testDataSourceProperties() {
-        for importer in CarPark.importers {
-            XCTAssert(!importer.name.isEmpty)
-            XCTAssert(!importer.slug.isEmpty)
-            XCTAssert(!importer.url.absoluteString.isEmpty)
-            XCTAssert(!importer.sourceURL.absoluteString.isEmpty)
+        for dataSource in CarPark.dataSources {
+            XCTAssert(!dataSource.name.isEmpty)
+            XCTAssert(!dataSource.slug.isEmpty)
+            XCTAssert(!dataSource.url.absoluteString.isEmpty)
+            XCTAssert(!dataSource.sourceURL.absoluteString.isEmpty)
         }
     }
 
@@ -26,10 +26,10 @@ final class CarParkTests: XCTestCase {
             return
         }
 
-        for importer in CarPark.importers {
-            let e = expectation(description: "Receive data for \(importer.name).")
+        for dataSource in CarPark.dataSources {
+            let e = expectation(description: "Receive data for \(dataSource.name).")
 
-            importer.fetch(session: .shared) { result in
+            dataSource.fetch(session: .shared) { result in
                 switch result {
                 case .failure(let error):
                     XCTFail("Failed with error: \(error)")
