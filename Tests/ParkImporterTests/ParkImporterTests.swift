@@ -27,7 +27,7 @@ final class ParkImporterTests: XCTestCase {
         }
 
         for importer in ParkImporter.importers {
-            let e = expectation(description: "Receive data")
+            let e = expectation(description: "Receive data for \(importer.name).")
 
             importer.fetch(session: .shared) { result in
                 switch result {
