@@ -1,9 +1,9 @@
 public enum ParkImporter {
-    public static var importers: [BaseImporter] = [
+    public static var importers: [BaseDataSource] = [
         Dresden()
     ]
 
-    public static func importer(forSourceWithName name: String) -> BaseImporter? {
+    public static func importer(forSourceWithName name: String) -> BaseDataSource? {
         importers.first { $0.name == name }
     }
 

@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol BaseImporter {
+public protocol BaseDataSource {
     var name: String { get }
     var slug: String { get }
 
@@ -15,7 +15,7 @@ public protocol BaseImporter {
                completion: @escaping (Result<DataPoint, ParkError>) -> Void)
 }
 
-extension BaseImporter {
+extension BaseDataSource {
     public var slug: String {
         return self.name.slug
     }

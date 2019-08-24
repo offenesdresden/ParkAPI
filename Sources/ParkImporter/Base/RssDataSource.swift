@@ -1,10 +1,10 @@
 import Foundation
 
-public protocol RssImporter: BaseImporter {
+public protocol RssDataSource: BaseDataSource {
     func parse(rss: Data, response: URLResponse) throws -> DataPoint
 }
 
-extension RssImporter {
+extension RssDataSource {
     public func fetch(session: URLSession = .shared,
                       completion: @escaping (Result<DataPoint, ParkError>) -> Void) {
         // TODO

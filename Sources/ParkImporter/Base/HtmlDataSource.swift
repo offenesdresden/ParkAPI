@@ -1,12 +1,12 @@
 import Foundation
 
-public protocol HtmlImporter: BaseImporter {
+public protocol HtmlDataSource: BaseDataSource {
     var htmlEncoding: String.Encoding { get }
 
     func parse(html: String, response: URLResponse) throws -> DataPoint
 }
 
-extension HtmlImporter {
+extension HtmlDataSource {
     public var htmlEncoding: String.Encoding {
         return .utf8
     }
