@@ -2,7 +2,7 @@ import XCTest
 @testable import CarPark
 
 final class CarParkTests: XCTestCase {
-    func testGetSpecificImporter() {
+    func testGetSpecificDataSource() {
         let dresden = CarPark.importer(forSourceWithName: "Dresden")
         XCTAssertEqual(dresden?.url.absoluteString, "https://www.dresden.de/parken")
     }
@@ -45,7 +45,7 @@ final class CarParkTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testGetSpecificImporter", testGetSpecificImporter),
+        ("testGetSpecificDataSource", testGetSpecificDataSource),
         ("testSupportedSources", testSupportedSources),
         ("testDataSourceProperties", testDataSourceProperties),
         ("testLiveData", testLiveData),
