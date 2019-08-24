@@ -1,18 +1,18 @@
 import XCTest
-@testable import ParkImporter
+@testable import CarPark
 
-final class ParkImporterTests: XCTestCase {
+final class CarParkTests: XCTestCase {
     func testGetSpecificImporter() {
-        let dresden = ParkImporter.importer(forSourceWithName: "Dresden")
+        let dresden = CarPark.importer(forSourceWithName: "Dresden")
         XCTAssertEqual(dresden?.url.absoluteString, "https://www.dresden.de/parken")
     }
 
     func testSupportedSources() {
-        XCTAssertEqual(ParkImporter.supportedSources.count, 1)
+        XCTAssertEqual(CarPark.supportedSources.count, 1)
     }
 
     func testStaticData() {
-        for importer in ParkImporter.importers {
+        for importer in CarPark.importers {
             XCTAssert(!importer.name.isEmpty)
             XCTAssert(!importer.slug.isEmpty)
             XCTAssert(!importer.url.absoluteString.isEmpty)
@@ -26,7 +26,7 @@ final class ParkImporterTests: XCTestCase {
             return
         }
 
-        for importer in ParkImporter.importers {
+        for importer in CarPark.importers {
             let e = expectation(description: "Receive data for \(importer.name).")
 
             importer.fetch(session: .shared) { result in

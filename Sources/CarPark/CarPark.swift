@@ -1,4 +1,4 @@
-public enum ParkImporter {
+public enum CarPark {
     public static var importers: [BaseDataSource] = [
         Dresden()
     ]

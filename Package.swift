@@ -3,11 +3,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "ParkImporter",
+    name: "CarPark",
     products: [
         .library(
-            name: "ParkImporter",
-            targets: ["ParkImporter"]),
+            name: "CarPark",
+            targets: ["CarPark"]),
     ],
     dependencies: [
         .package(url: "https://github.com/scinfu/SwiftSoup", from: "2.2.0"),
@@ -16,13 +16,13 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ParkImporter",
+            name: "CarPark",
             dependencies: ["SwiftSoup", "FeedKit"]),
         .target(
             name: "geojson",
-            dependencies: ["Files", "ParkImporter"]),
+            dependencies: ["Files", "CarPark"]),
         .testTarget(
-            name: "ParkImporterTests",
-            dependencies: ["ParkImporter"]),
+            name: "CarParkTests",
+            dependencies: ["CarPark"]),
     ]
 )

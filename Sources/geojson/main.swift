@@ -1,9 +1,9 @@
 import Foundation
 import Files
-import ParkImporter
+import CarPark
 
 func readGeoData() throws -> [GeoJson] {
-    let geojsonFiles = try Folder(path: "Sources/ParkImporter/Sources").files
+    let geojsonFiles = try Folder(path: "Sources/CarPark/Sources").files
         .filter { $0.name.contains("geojson") }
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -21,7 +21,7 @@ func write(geoData: [GeoJson]) throws {
     ]
 
     """
-    try File(path: "Sources/ParkImporter/Geo.swift").write(string: fileContent)
+    try File(path: "Sources/CarPark/Geo.swift").write(string: fileContent)
 }
 
 let geoData = try readGeoData()

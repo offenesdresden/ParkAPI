@@ -27,7 +27,7 @@ extension BaseDataSource {
     internal func fetchData(_ session: URLSession = .shared,
                                completion: @escaping (Result<(Data, URLResponse), Error>) -> Void) {
         var baseRequest = URLRequest(url: self.sourceURL)
-        baseRequest.addValue("User-Agent", forHTTPHeaderField: "ParkImporter VERSION - Info: https://github.com/offenesdresden/ParkAPI")
+        baseRequest.addValue("User-Agent", forHTTPHeaderField: "CarPark VERSION - Info: https://github.com/offenesdresden/ParkAPI")
         let request = prepare(request: baseRequest)
 
         let task = session.dataTask(with: request) { data, response, error in

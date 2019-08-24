@@ -1,7 +1,7 @@
 import XCTest
 
-import ParkImporterTests
+import CarParkTests
 
 var tests = [XCTestCaseEntry]()
-tests += ParkImporterTests.allTests()
+tests += CarParkTests.allTests()
 XCTMain(tests)

@@ -1,5 +1,5 @@
 import XCTest
-@testable import ParkImporter
+@testable import CarPark
 
 final class SlugTests: XCTestCase {
     func testSlug() {
