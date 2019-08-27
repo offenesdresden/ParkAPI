@@ -4,7 +4,7 @@ from os import getloadavg
 from flask import Flask, jsonify, abort, request
 import psycopg2
 from park_api import scraper, util, env, db
-from park_api.forecast import find_forecast
+from park_api.timespan import timespan
 from park_api.crossdomain import crossdomain
 
 app = Flask(__name__)
@@ -104,16 +104,22 @@ def get_longtime_forecast(city, lot_id):
     app.logger.info("GET /%s/%s/timespan %s" %
                     (city, lot_id, user_agent(request)))
 
+    date_from = request.args['from']
+    date_to = request.args['to']
+
     try:
-        datetime.strptime(request.args["from"], '%Y-%m-%dT%H:%M:%S')
-        datetime.strptime(request.args["to"], '%Y-%m-%dT%H:%M:%S')
+        datetime.strptime(date_from, '%Y-%m-%dT%H:%M:%S')
+        datetime.strptime(date_to, '%Y-%m-%dT%H:%M:%S')
     except ValueError:
         return ("Error 400: from and/or to URL params "
                 "are not in ISO format, e.g. 2015-06-26T18:00:00", 400)
 
-    data = find_forecast(lot_id, request.args["from"], request.args["to"])
+    data = timespan(city, lot_id, date_from, date_to)
     if data is not None:
-        return jsonify(data)
+        return {
+            'version': 1.0,
+            'data': data
+        }
     else:
         abort(404)
 
