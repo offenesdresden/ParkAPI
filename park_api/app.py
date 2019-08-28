@@ -116,10 +116,10 @@ def get_longtime_forecast(city, lot_id):
 
     data = timespan(city, lot_id, date_from, date_to)
     if data is not None:
-        return {
+        return jsonify({
             'version': 1.0,
             'data': data
-        }
+        })
     else:
         abort(404)
 
