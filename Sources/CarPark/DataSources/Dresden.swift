@@ -6,7 +6,7 @@ public class Dresden: HtmlDataSource {
     public let url = URL(string: "https://www.dresden.de/parken")!
     public let sourceURL = URL(string: "https://apps.dresden.de/ords/f?p=1110")!
 
-    public func parse(html: String, response: URLResponse) throws -> DataPoint {
+    public func parse(html: String, response: HTTPURLResponse) throws -> DataPoint {
         let doc = try SwiftSoup.parse(html)
         let dateSource = try doc.getElementById("P1_LAST_UPDATE")?.date(using: .dMy_Hms)
 

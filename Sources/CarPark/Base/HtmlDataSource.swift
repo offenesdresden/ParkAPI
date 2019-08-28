@@ -3,7 +3,7 @@ import Foundation
 public protocol HtmlDataSource: BaseDataSource {
     var htmlEncoding: String.Encoding { get }
 
-    func parse(html: String, response: URLResponse) throws -> DataPoint
+    func parse(html: String, response: HTTPURLResponse) throws -> DataPoint
 }
 
 extension HtmlDataSource {
@@ -23,7 +23,7 @@ extension HtmlDataSource {
                     return
                 }
                 do {
-                    let dataPoint = try self.parse(html: html, response: response)
+                    let dataPoint = try self.parse(html: html, response: response as! HTTPURLResponse)
                     completion(.success(dataPoint))
                 } catch {
                     completion(.failure(.other(error)))
