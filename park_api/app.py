@@ -148,6 +148,8 @@ def get_longtime_forecast(city, lot_id):
             data = {}
         elif version == "1.1":
             data = []
+    except KeyError:
+        data = None
     if data is not None:
         return jsonify({
             'version': version,
