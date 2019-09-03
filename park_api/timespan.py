@@ -10,10 +10,8 @@ def timespan(city, lot_id, total, date_from, date_to, version):
     if date_from > now or version == 1.0:
         data = forecast(lot_id, total, date_from, date_to, version)
     elif date_to < now:
-        print("timespan")
         data = known_timespan_data(city, lot_id, date_from, date_to, version)
     else:
-        print("both")
         data = known_timespan_data(city, lot_id, date_from, now, version)
         data.extend(forecast(lot_id, total, now, date_to, version))
     return data
