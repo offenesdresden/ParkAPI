@@ -156,7 +156,6 @@ def get_longtime_forecast(city, lot_id):
             'data': data
         })
     else:
-        print(data)
         abort(404)
 
 
