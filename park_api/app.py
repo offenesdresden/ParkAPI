@@ -9,6 +9,7 @@ from park_api.crossdomain import crossdomain
 
 app = Flask(__name__)
 
+static = {}
 cache = {}
 empty = {
         'last_downloaded': '1970-01-01T00:00:00',
@@ -20,6 +21,39 @@ def user_agent(request):
     ua = request.headers.get("User-Agent")
     return "no user-agent" if ua is None else ua
 
+@app.before_first_request
+def init_static():
+    global cache
+    global static
+    for city in env.supported_cities().keys():
+        try:
+            static[city]= {}
+            with db.cursor() as cursor:
+                sql = "SELECT data" \
+                      " FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;"
+                cursor.execute(sql, (city,))
+                raw = cursor.fetchall()[0]
+                data = raw["data"]
+                for lot in data["lots"]:
+                    static[city][lot["id"]] = {"total": lot["total"]}
+        except IndexError:
+            app.logger.warning("Failed to get static data for " + city)
+
+def update_cache(city):
+    global cache
+    with db.cursor() as cursor:
+      if city in cache:
+          sql = "SELECT timestamp_downloaded FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;"
+          cursor.execute(sql, (city,))
+          ts = cursor.fetchall()[0]["timestamp_downloaded"]
+          if cache[city][0] == ts:
+              return
+      sql = "SELECT timestamp_updated, timestamp_downloaded, data" \
+              " FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;"
+      cursor.execute(sql, (city,))
+      raw = cursor.fetchall()[0]
+      data = raw["data"]
+      cache[city] = (raw["timestamp_downloaded"], jsonify(data))
 
 @app.route("/")
 @crossdomain("*")
@@ -59,6 +93,7 @@ def get_api_status():
 @app.route("/<city>")
 @crossdomain("*")
 def get_lots(city):
+    global cache
     if city == "favicon.ico" or city == "robots.txt":
         abort(404)
 
@@ -74,29 +109,14 @@ def get_lots(city):
 
     if env.LIVE_SCRAPE:
         return jsonify(scraper._live(city_module))
-    
     try:
-      with db.cursor() as cursor:
-          if city in cache:
-              sql = "SELECT timestamp_downloaded FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;"
-              cursor.execute(sql, (city,))
-              ts = cursor.fetchall()[0]["timestamp_downloaded"]
-              if cache[city][0] == ts:
-                  return cache[city][1]
-          sql = "SELECT timestamp_updated, timestamp_downloaded, data" \
-                  " FROM parkapi WHERE city=%s ORDER BY timestamp_downloaded DESC LIMIT 1;"
-          cursor.execute(sql, (city,))
-          raw = cursor.fetchall()[0]
-          data = raw["data"]
-          cache[city] = (raw["timestamp_downloaded"], jsonify(data))
+        update_cache(city)
+        return cache[city][1]
     except IndexError:
         return jsonify(empty)
     except (psycopg2.OperationalError, psycopg2.ProgrammingError) as e:
         app.logger.error("Unable to connect to database: " + str(e))
         abort(500)
-
-    return jsonify(data)
-
 
 @app.route("/<city>/<lot_id>/timespan")
 @crossdomain("*")
@@ -106,6 +126,13 @@ def get_longtime_forecast(city, lot_id):
 
     date_from = request.args['from']
     date_to = request.args['to']
+    try:
+        version = request.args['version']
+    except KeyError:
+        version = 1.0 # For legacy reasons this must be a float
+
+    if version not in [1.0, "1.1"]:
+        return ("Error 400: invalid API version", 400)
 
     try:
         datetime.strptime(date_from, '%Y-%m-%dT%H:%M:%S')
@@ -114,13 +141,20 @@ def get_longtime_forecast(city, lot_id):
         return ("Error 400: from and/or to URL params "
                 "are not in ISO format, e.g. 2015-06-26T18:00:00", 400)
 
-    data = timespan(city, lot_id, date_from, date_to)
+    try:
+        data = timespan(city, lot_id, static[city][lot_id]["total"], date_from, date_to, version)
+    except IndexError:
+        if version == 1.0:
+            data = {}
+        elif version == "1.1":
+            data = []
     if data is not None:
         return jsonify({
-            'version': 1.0,
+            'version': version,
             'data': data
         })
     else:
+        print(data)
         abort(404)
 
 
