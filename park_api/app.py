@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from os import getloadavg
 
 from flask import Flask, jsonify, abort, request
@@ -135,8 +135,10 @@ def get_longtime_forecast(city, lot_id):
         return ("Error 400: invalid API version", 400)
 
     try:
-        datetime.strptime(date_from, '%Y-%m-%dT%H:%M:%S')
-        datetime.strptime(date_to, '%Y-%m-%dT%H:%M:%S')
+        delta = datetime.strptime(date_to, '%Y-%m-%dT%H:%M:%S') - datetime.strptime(date_from, '%Y-%m-%dT%H:%M:%S')
+        if delta > timedelta(days=7):
+            return ("Error 400: Time ranges cannot be greater than 7 days. "
+                    "To retrieve more data check out the <a href=\"https://parkendd.de/dumps\">dumps</a>.", 400)
     except ValueError:
         return ("Error 400: from and/or to URL params "
                 "are not in ISO format, e.g. 2015-06-26T18:00:00", 400)
