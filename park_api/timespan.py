@@ -8,7 +8,6 @@ from park_api import db, env
 def timespan(city, lot_id, total, date_from, date_to, version):
     now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S")
     if date_from > now or version == 1.0:
-        print("forecast")
         data = forecast(lot_id, total, date_from, date_to, version)
     elif date_to < now:
         print("timespan")
