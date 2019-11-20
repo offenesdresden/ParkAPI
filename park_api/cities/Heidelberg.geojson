@@ -13,8 +13,8 @@
           "name": "Heidelberg",
           "type": "city",
           "url": "https://www.heidelberg.de",
-          "source": "http://parken.heidelberg.de/api-v1/parking-location?api_key=H5WaIyR4lgn6wzo7rJf8u4ubecgpX0Q8",
-          "headers": {"Accept" : "application/json; charset=utf-8"},
+          "source": "http://parken.heidelberg.de/v1/parking-location?key=3wU8F-5QycD-ZbaW9-R6uvj-xm1MG-X07ne",
+          "headers": {"Accept" : "application/json; charset=utf-8", "Referer" : "http://parken.heidelberg.de/"},
 	  "active_support":true
       }
   }, 
