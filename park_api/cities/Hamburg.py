@@ -44,7 +44,7 @@ def parse_html(xml):
                 address = member.find('app:strasse').string
                 try:
                     address += " " + member.find('app:hausnr').string
-                except AttributeError:
+                except (AttributeError, TypeError):
                     pass
             except AttributeError:
                 pass
