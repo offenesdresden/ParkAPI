@@ -272,11 +272,11 @@
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [13.85426, 51.06065]
+      "coordinates": [13.8454591, 51.0614832]
     },
     "properties": {
       "name": "Bühlau",
-      "address": "Quohrener Straße",
+      "address": "Bautzner Landstraße 118",
       "type": "Parkplatz",
       "total": 1,
       "aux": 358
