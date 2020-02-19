@@ -13,7 +13,7 @@ if [ -z $debug ]; then
 fi
 
 if [ -z $live_scrape ]; then
-  live_scrape="true"
+  live_scrape="false"
 fi
 
 if [ -z $database_uri ]; then

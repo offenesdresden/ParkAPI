@@ -1,4 +1,4 @@
-beautifulsoup4==4.5.3
+beautifulsoup4
 Flask
 requests
 feedparser
@@ -7,3 +7,4 @@ psycopg2
 yoyo-migrations
 requests-mock
 utm
+ddt

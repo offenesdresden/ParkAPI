@@ -1,0 +1,342 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              8.71064,
+              49.41212
+          ]
+      },
+      "properties": {
+          "name": "Heidelberg",
+          "type": "city",
+          "url": "https://www.heidelberg.de",
+          "source": "http://parken.heidelberg.de/v1/parking-location?key=3wU8F-5QycD-ZbaW9-R6uvj-xm1MG-X07ne",
+          "headers": {"Accept" : "application/json; charset=utf-8", "Referer" : "http://parken.heidelberg.de/"},
+	  "active_support":true
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "P0 Am Bismarckplatz",
+        "total": 52,
+        "address": "Schneidmühlstraße 5",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.691773,
+          49.409747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P1 Poststraße",
+        "total": 592,
+        "address": "Poststraße 7",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.689482,
+          49.407583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P2 Bauhaus",
+        "total": 300,
+        "address": "Bahnhofstraße 4",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.68903,
+           49.40617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P3 Crowne Plaza",
+        "total": 133,
+        "address": "Kurfürstenanlage 1",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.69173,
+           49.40624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P4 Darmstädter Hof ",
+        "total": 700,
+        "address": "Sofienstraße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.69468,
+           49.4103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P5 Europäischer Hof",
+        "total": 150,
+        "address": "Friedrich-Ebert-Anlage 1",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.6949,
+           49.4077
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P6 Kraus",
+        "total": 175,
+        "address": "Untere Neckarstraße 2",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.693071,
+            49.410613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P7 Kaufhof",
+        "total": 358,
+        "address": "Plöck 31 - 41",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.696997,
+           49.408959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P8 Kongresshaus",
+        "total": 315,
+        "address": "Untere Neckarstraße 44",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.700012,
+            49.412046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P9 Am Theater",
+        "total": 300,
+        "address": "Friedrich-Ebert-Anlage 51c",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.702936,
+            49.408948
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P10 Fr.-Ebert-Platz",
+        "total": 174,
+        "address": "Friedrich-Ebert-Platz",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.698470,
+            49.408407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P11 Unibibliothek",
+        "total": 110,
+        "address": "Graben-/Sandgasse",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.704992,
+            49.410561
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P12 Kornmarkt / Schloss",
+        "total": 158,
+        "address": "Neue Schlossstraße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.712184,
+            49.410957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P13 Karlsplatz / Rathaus",
+        "total": 279,
+        "address": "Karlsplatz",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.713111,
+           49.412573
+        ]
+      }
+  },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P14 ATOS-Klinik",
+        "total": 190,
+        "address": "Luisenstraße 7",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.691672,
+           49.410126
+        ]
+      }
+  },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P15 Klinikum Bergheim",
+        "total": 240,
+        "address": "Thibautstr. 1A",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.687257,
+           49.409763
+        ]
+      }
+  },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P16 Nordbrückenkopf",
+        "total": 103,
+        "address": "Uferstraße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.692531,
+            49.413378
+        ]
+      }
+  },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P17 Stadtbücherei",
+        "total": 34,
+        "address": "Poststraße 15",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.686234,
+           49.407330
+        ]
+      }
+  },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P18 BG RCI",
+        "total": 80,
+        "address": "Kurfürsten-Anlage 62",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.674988,
+            49.405666
+        ]
+      }
+  },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P25 Mathematikon",
+        "total": 167,
+        "address": "Berliner Straße 41-49",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.675042,
+            49.418319
+        ]
+      }
+  }
+ ]
+}

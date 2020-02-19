@@ -5,229 +5,227 @@
       "geometry": {
           "type": "Point",
           "coordinates": [
-              9.924623,
-              57.050031
+               8.917053,
+              50.133739
           ]
       },
       "properties": {
-          "name": "Aalborg",
+          "name": "Hanau",
           "type": "city",
-          "url": "http://www.aalborgcity.dk/live-parkering.aspx",
-          "source": "http://plcinfo.mintrafik.dk/",
-	  "active_support": false,
-          "attribution":{
-            "contributor":"Manuel R. Ciosici",
-            "url":"http://www.aalborgcity.dk/live-parkering.aspx",
-            "license":""
-          }
+          "url": "https://www.hanau.de/", 
+          "source": "http://www.hanau-neu-erleben.de/reise/parken/072752/index.html",
+	  "active_support":false
       }
-  }, {
+  }, 
+  {
       "type": "Feature",
       "properties": {
-        "name": "Parking Lot 1",
-        "total": 200,
-        "address": "Musterstraße 1",
-        "type": "Parkhaus"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          8.2168988,
-          53.1391841
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Sømandshjemmet",
-        "total": 78,
-        "address": "Østerbro 27",
-        "type": "Parkplatz"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.93556,
-          57.04646
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Sauers Plads",
-        "total": 360,
-        "address": "Sauers Plads",
-        "type": "Parkplatz"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.92745,
-          57.04419
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Salling",
-        "total": 312,
-        "address": "Braskensgade",
-        "type": "Parkhaus"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.922735,
-          57.04758
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Palads",
-        "total": 475,
-        "address": "Jomfru Anes Gård 5",
-        "type": "Parkhaus"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.920601,
-          57.05014
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Musikkens Hus",
-        "total": 285,
-        "address": "Nyhavnsgade 53",
+        "name": "Tiefgarage Am Markt",
+        "total": 185,
+        "address": "Am Markt",
         "type": "Tiefgarage"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.93311,
-          57.04737
+            8.916543,
+           50.132449
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Kongrescenter",
-        "total": 700,
-        "address": "Vesterbro 14",
-        "type": "Parkplatz"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.91458,
-          57.04456
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Kennedy Arkaden",
-        "total": 350,
-        "address": "John F. Kennedys Plads 1U",
+        "name": "Parkhaus Am Forum",
+        "total": 560,
+        "address": "Am Frankfurter Tor 10",
         "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.918808,
-          57.04178
+            8.913654,
+           50.134264
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Gåsepigen",
-        "total": 145,
-        "address": "Stengade 1",
-        "type": "Parkplatz"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.91376,
-          57.04751
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Føtex",
-        "total": 150,
-        "address": "Fjordgade 6",
+        "name": "Parkhaus Nürnberger Straße",
+        "total": 348,
+        "address": "Nürnberger Str. 16",
         "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.924956,
-          57.04754
+             8.920955,
+            50.132298
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Friis",
-        "total": 731,
-        "address": "Nytorv 27",
+        "name": "Parkhaus Kinopolis 2",
+        "total": 430,
+        "address": "Steinheimer Str.",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.914273,
+            50.129825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Klinikum",
+        "total": 68,
+        "address": "Leimenstraße",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.922359,
+            50.133315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Congress Park",
+        "total": 331,
+        "address": "Eugen-Kaiser-Straße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.916136,
+            50.139814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiefgarage Congress Park",
+        "total": 63,
+        "address": "Heinrich-Bott-Straße",
         "type": "Tiefgarage"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.927327,
-          57.04769
+             8.918148,
+            50.138479
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "C W Obel",
-        "total": 376,
-        "address": "Badehusvej 14",
+        "name": "Tiefgarage Forum",
+        "total": 471,
+        "address": "Im Forum 5",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.916190,
+            50.135262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Kinopolis",
+        "total": 186,
+        "address": "Am Steinheimer Tor 17",
         "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.910837,
-          57.05243
+              8.915746,
+             50.129269
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Budolfi Plads",
-        "total": 157,
-        "address": "Vingårdsgade 10",
+        "name": "Parkhaus City Center",
+        "total": 526,
+        "address": "Kurt-Blaum-Platz 8",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.922597,
+            50.131280
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiefgarage Klinikum Süd",
+        "total": 75,
+        "address": "Röderstraße 1",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.923727,
+            50.131262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Gloria Palais",
+        "total": 280,
+        "address": "Am Steinheimer Tor 1a",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.908575,
+            50.132539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Main-Kinzig-Halle",
+        "total": 96,
+        "address": "Eberhardstraße",
         "type": "Parkplatz"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.9183,
-          57.0475
+              8.921375,
+             50.137234
         ]
       }
     }
-    ]
+]
 }
+
+

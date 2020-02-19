@@ -18,7 +18,7 @@ class Lot(namedtuple('Lot', lot_fields)):
             return {'lng': self.lng, 'lat': self.lat}
         return None
 
-city_fields = ['name', 'id', 'lng', 'lat', 'url', 'source', 'public_source', 'active_support', 'attribution']
+city_fields = ['name', 'id', 'lng', 'lat', 'url', 'source', 'headers', 'public_source', 'active_support', 'attribution']
 
 
 class City(namedtuple('City', city_fields)):
@@ -93,6 +93,7 @@ class GeoData:
     def _city_from_props(self, name, lng, lat, props):
         url = props.get("url", None)
         source = props.get("source", None)
+        headers = props.get("headers", {})
         active_support = props.get("active_support", None)
         attribution = props.get("attribution", None)
         return City(name,
@@ -101,6 +102,7 @@ class GeoData:
                     lat,
                     url,
                     source,
+                    headers,
                     source,
                     active_support,
                     attribution)

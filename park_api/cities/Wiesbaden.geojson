@@ -1,0 +1,244 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              8.24175,
+              50.082
+          ]
+      },
+      "properties": {
+          "name": "Wiesbaden",
+          "type": "city",
+          "url": "https://www.wiesbaden.de/",
+          "source": "https://wi.memo-rheinmain.de/wiesbaden/parkliste.phtml?order=carparks",
+	  "active_support":true
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "City I",
+        "total": 165,
+        "address": "Schwalbacher Str. 41-43",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.23637,
+          50.08121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "City II",
+        "total": 240,
+        "address": "Schwalbacher Str. 38-42",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.23592,
+          50.0819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Coulinstraße",
+        "total": 343,
+        "address": "Coulinstraße 5",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.23771,
+          50.08324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Galeria Kaufhof",
+        "total": 238,
+        "address": "Luisenstraße 4",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.23752,
+          50.07899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Karstadt",
+        "total": 355,
+        "address": "Neugasse 5",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.23962,
+          50.08114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kurhaus/Casino",
+        "total": 386,
+        "address": "Wilhelmstraße 49",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.24443,
+          50.08537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Luisenforum",
+        "total": 800,
+        "address": "Karlstraße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.23508,
+          50.07839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Luisenplatz",
+        "total": 292,
+        "address": "Rheinstrasse/Luisenplatz",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.24067,
+          50.07787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Markt",
+        "total": 540,
+        "address": "Schillerplatz 2",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.24214,
+          50.08006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mauritius-Parkhaus",
+        "total": 563,
+        "address": "Schwalbacher Str. 53",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.23621,
+          50.08228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PH Liliencarree",
+        "total": 150,
+        "address": "Klingholzstraße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.24156,
+          50.07005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "RheinMain CongressCenter (RMCC)",
+        "total": 700,
+        "address": "Friedrich-Ebert-Allee 1",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.24516,
+          50.07635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "TG Liliencarree",
+        "total": 530,
+        "address": "Bahnhofsplatz 3",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.24177,
+          50.07134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Theater",
+        "total": 320,
+        "address": "Thelemannstraße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.24816,
+          50.08309
+        ]
+      }
+  }]
+}

@@ -6,15 +6,15 @@ geodata = GeoData(__file__)
 
 def parse_html(xml):
     soup = BeautifulSoup(xml, "html.parser")
-    
+
     data = {
         "lots": [],
         "last_updated": soup.find('wfs:featurecollection')["timestamp"][:-1]
     }
-        
+
     region = "Hamburg"
     forecast = False
-    
+
     for member in soup.find('wfs:featurecollection').find_all('gml:featuremember'):
         name = member.find('app:name').string
         count = 0
@@ -24,7 +24,8 @@ def parse_html(xml):
             pass
         free = 0
         state = "nodata"
-        if member.find('app:situation').string != "keine Auslastungsdaten":
+        situation = member.find('app:situation')
+        if situation and situation.string != "keine Auslastungsdaten":
             free = int(member.find('app:frei').string)
             status = member.find('app:status').string
             if status == "frei" or status == "besetzt":
@@ -43,16 +44,21 @@ def parse_html(xml):
                 address = member.find('app:strasse').string
                 try:
                     address += " " + member.find('app:hausnr').string
-                except AttributeError:
+                except (AttributeError, TypeError):
                     pass
             except AttributeError:
                 pass
-        coord_string = member.find('gml:pos').string.split()
-        latlon = utm.to_latlon(float(coord_string[0]), float(coord_string[1]), 32, 'U')
-        coords = {
-            "lat": latlon[0],
-            "lng": latlon[1]
-        }
+
+        coord_member = member.find('gml:pos')
+        if coord_member:
+            coord_string = coord_member.string.split()
+            latlon = utm.to_latlon(float(coord_string[0]), float(coord_string[1]), 32, 'U')
+            coords = {
+                "lat": latlon[0],
+                "lng": latlon[1]
+            }
+        else:
+            coords = None
         data['lots'].append({
            "coords":coords,
            "name":name,
@@ -65,5 +71,5 @@ def parse_html(xml):
            "forecast":forecast,
            "address":address
         })
-       
+
     return data

@@ -5,174 +5,185 @@
       "geometry": {
           "type": "Point",
           "coordinates": [
-              9.1758200,
-              47.6603300
+              12.128548,
+              47.856756
           ]
       },
       "properties": {
-          "name": "Konstanz",
+          "name": "Rosenheim",
           "type": "city",
-          "url": "http://www.konstanz.de",
-          "source": "https://www.konstanz.de/start/leben+in+konstanz/parkleitsystem.html",
-	  "active_support": false
+          "url": "https://www.rosenheim.de/",
+          "source": "https://www.rosenheim.de/index.php?eID=jwParkingGetParkings",
+          "headers" : {"Accept" : "application/json; charset=utf-8"},
+	  "active_support":false
       }
-  }, {
+  }, 
+  {
       "type": "Feature",
       "properties": {
-        "name": "Marktstätte",
-        "total": 282,
-        "address": "Dammgasse 3",
+        "name": "P1 Zentrum",
+        "address": "Hammerweg 1",
         "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.17631447315216,
-          47.659621142013435
-        ]
-      }
-    },{
-      "type": "Feature",
-      "properties": {
-        "name": "Altstadt",
-        "total": 359,
-        "address": "Untere Laube 26",
-        "type": "Parkhaus"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.172049760818481,
-          47.663019166809015
+           12.127189,
+           47.852263
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Lago",
-        "total": 936,
-        "address": "Hafenstraße 31",
+        "name": "P2 KU'KO",
+        "address": "Kufsteiner Str. 4",
         "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.176606833934784,
-          47.657483940292856
+           12.125916,
+           47.853270
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Augustiner / Karstadt",
-        "total": 284,
-        "address": "Bruderturmgasse",
-        "type": "Parkhaus"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.173318445682526,
-          47.65950913530439
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Fischmarkt",
-        "total": 158,
-        "address": "Salmannsweilergasse 1",
-        "type": "Parkhaus"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.176258146762848,
-          47.66129940731421
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Döbele",
-        "total": 335,
-        "address": "über Kreisverkehr Grenzbachstraße",
-        "type": "Parkhaus"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          9.16858971118927,
-          47.65779106680178
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Bodenseeforum",
-        "total": 500,
+        "name": "P3 Rathaus",
+        "address": "Königstraße 20",
         "type": "Parkplatz"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.164448380470276,
-          47.67286153200742
+            12.129512,
+            47.853999
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Byk Gulden Str.",
-        "total": 0,
-        "address": "Byk Gulden Str.",
+        "name": "P4 Mitte",
+        "address": "Frühlingstraße 5",
         "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.140249490737915,
-          47.68337197354464
+            12.124568,
+            47.856551
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Benediktiner",
-        "total": 143,
-        "address": "Benediktinerplatz 8",
+        "name": "P6 Salinplatz",
+        "address": "Salinstraße 8A",
+        "type": "Parkplatz/Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.123202,
+            47.852729
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P7 Altstadt-Ost",
+        "address": "Mühlbachbogen",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           12.131591,
+           47.857572
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P8 Beilhack-Citydome",
+        "address": "Am Hammer 7A",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.126049,
+            47.850794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P9 Am Klinikum",
+        "address": "In Der Schmucken 7",
         "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.178049862384796,
-          47.66877236211362
+            12.132828,
+            47.858294
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Seerheincenter",
-        "total": 280,
-         "address": "Steinstraße 2",
+        "name": "P10 Stadtcenter",
+        "address": "Brixstraße 3",
         "type": "Parkhaus"
-     },
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.183433055877686,
-          47.67272065604162
+            12.127718,
+            47.853439
         ]
       }
-    }
-  ]
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P11 Beilhack-Gießereistr.",
+        "address": "Gießereistraße 2",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.126827,
+            47.849683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P12 Bahnhof Nord",
+        "address": "Eduard-Rüber-Straße",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            12.113999,
+            47.852733
+        ]
+      }
+   }]
 }
+
+

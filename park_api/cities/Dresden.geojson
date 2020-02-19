@@ -13,7 +13,7 @@
           "name": "Dresden",
           "type": "city",
           "url": "https://www.dresden.de/parken",
-          "source": "https://api.parkendd.de/Dresden",
+          "source": "https://apps.dresden.de/ords/f?p=1110",
 	  "active_support": true
       }
   }, {
@@ -73,11 +73,37 @@
       "coordinates": [13.73368, 51.04547]
     },
     "properties": {
+      "name": "Centrum - Galerie",
+      "address": "Reitbahnstraße",
+      "type": "Parkhaus",
+      "total": 1059,
+      "aux": 301
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [13.73368, 51.04547]
+    },
+    "properties": {
       "name": "Centrum Galerie",
       "address": "Reitbahnstraße",
       "type": "Parkhaus",
       "total": 1059,
       "aux": 301
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [13.73772, 51.04449]
+    },
+    "properties": {
+      "name": "Wöhrl / Florentinum",
+      "address": "Prager Straße 8 - 10",
+      "type": "Tiefgarage",
+      "total": 264,
+      "aux": 297
     }
   }, {
     "type": "Feature",
@@ -246,11 +272,11 @@
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [13.85426, 51.06065]
+      "coordinates": [13.8454591, 51.0614832]
     },
     "properties": {
       "name": "Bühlau",
-      "address": "Quohrener Straße",
+      "address": "Bautzner Landstraße 118",
       "type": "Parkplatz",
       "total": 1,
       "aux": 358
@@ -332,6 +358,17 @@
   }, {
     "type": "Feature",
     "geometry": {
+        "type": "Point",
+        "coordinates": [13.7285211, 51.0608587]
+    },
+    "properties": {
+        "name": "Ostra-Ufer",
+        "address": "Ostra-Ufer",
+        "type": "Parkplatz"
+    }
+  },{
+    "type": "Feature",
+    "geometry": {
       "type": "Point",
       "coordinates": [13.75035, 51.04379]
     },
@@ -378,6 +415,19 @@
       "type": "Parkplatz",
       "total": 55,
       "aux": 932
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [13.74174, 51.05082]
+    },
+    "properties": {
+      "name": "Frauenkirche / Neumarkt",
+      "address": "Landhausstraße 2",
+      "type": "Tiefgarage",
+      "total": 250,
+      "aux": 490
     }
   }, {
     "type": "Feature",
@@ -625,6 +675,50 @@
       "name": "SP1 Straßburger Platz",
       "type": "Parkhaus",
       "address": "Straßburger Platz 1"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [13.7190763, 51.0530993]
+    },
+    "properties": {
+        "name": "Kraftwerk Mitte",
+        "type": "Parkplatz",
+        "address": "Löbtauer Straße 21"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [13.7302697, 51.0459106]
+    },
+    "properties": {
+        "name": "Budapester Straße",
+        "type": "Parkplatz",
+        "address": "Budapester Straße"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [13.8012814, 51.1401712]
+    },
+    "properties": {
+        "name": "Weixdorf Bad",
+        "type": "Parkplatz",
+        "address": "Platz des Friedens"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [13.8852734, 51.0612682]
+    },
+    "properties": {
+        "name": "Weißig",
+        "type": "Parkplatz",
+        "address": "Bautzner Landstraße"
     }
   }]
 }

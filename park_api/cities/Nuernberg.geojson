@@ -1,0 +1,330 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+               11.077134,
+               49.455277
+          ]
+      },
+      "properties": {
+          "name": "Nürnberg",
+          "type": "city",
+          "url": "https://www.nuernberg.de/internet/stadtportal/index.html",
+          "source": "http://www.tiefbauamt.nuernberg.de/site/parken/parkhausbelegung/parkhaus_belegung.html",
+	  "active_support": true,
+          "attribution": {
+              "contributor": "Stadt Nürnberg",
+              "license": "custom",
+              "url": "http://www.nuernberg.de/"
+          }
+      }
+  }, {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Hauptmarkt",
+        "total": 525,
+        "address": "Schustergasse 3",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.075423,
+            49.454809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Hans-Sachs-Platz",
+        "total": 65,
+        "address": "Hans-Sachs-Platz 1",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.079661,
+           49.453363
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Sebalder-Höfe",
+        "total": 250,
+        "address": "Laufertormauer",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.088265,
+           49.456701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Karstadt",
+        "total": 365,
+        "address": " Vordere Insel Schütt 3",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.081179,
+            49.452936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Katharinenhof",
+        "total": 370,
+        "address": "Katharinengasse",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.081971,
+           49.451208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiefgarage Findelgasse",
+        "total": 146,
+        "address": "Findelgasse 4",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.078696,
+            49.451921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PH Nürnberger Akademie",
+        "total": 301,
+        "address": "Gewerbemuseumsplatz",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.084272,
+            49.451163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Adlerstraße",
+        "total": 260,
+        "address": "Adlerstraße 4-8",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.077065,
+           49.451875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Wöhrl",
+        "total": 441,
+        "address": "Karl-Grillenberger-Straße 1B",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.070468,
+           49.452004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Jakobsmarkt",
+        "total": 452,
+        "address": "Zirkelschmiedsgasse 9",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.070822,
+           49.448745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Maximum",
+        "total": 100,
+        "address": "",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.074649,
+            49.449509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Galeria Kaufhof",
+        "total": 220,
+        "address": "Frauengasse 12",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.075827,
+            49.449360
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus City-Point",
+        "total": 200,
+        "address": "Frauengasse 6",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.076548,
+           49.449306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Sterntor",
+        "total": 476,
+        "address": "Grasersgasse 25",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.077293,
+           49.447264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Erler-Klinik",
+        "total": 200,
+        "address": "Kontumazgarten 4-18",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           11.068138,
+           49.453049
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Theater",
+        "total": 180,
+        "address": "Karl-Pschigode-Platz",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.076076,
+            49.445175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Hauptbahnhof",
+        "total": 486,
+        "address": "Bahnhofspl. 5",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.083080,
+            49.446659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus ADCOM-Center",
+        "total": 92,
+        "address": "Willy-Brandt-Platz 15",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.086910,
+            49.448020
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus City-Park-Center",
+        "total": 400,
+        "address": "Sandstraße 24A",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.072199,
+            49.445693
+        ]
+      }
+    }
+
+    ]
+}

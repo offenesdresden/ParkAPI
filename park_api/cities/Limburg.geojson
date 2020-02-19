@@ -1,0 +1,167 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              8.063907,
+             50.388856
+          ]
+      },
+      "properties": {
+          "name": "Limburg",
+          "type": "city",
+          "url": "https://www.limburg.de/",
+          "source": "http://p127393.mittwaldserver.info/LM/_pls/pls.php",
+	  "active_support":false
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "Altstadt",
+        "total": 0,
+        "address": "Sackgasse 11",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.063018,
+           50.388892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bahnhof",
+        "total": 0,
+        "address": "Graupfortstraße 7",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.064100,
+           50.385133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "City",
+        "total": 0,
+        "address": "Frankfurter Straße 12",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.066296,
+            50.386418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Karstadt",
+        "total": 0,
+        "address": "Werner-Senger-Straße 15",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+              8.060811,
+             50.386820
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Neumarkt",
+        "total": 0,
+        "address": "Neumarkt",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.063834,
+            50.385931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PH-Mitte",
+        "total": 0,
+        "address": "Grabenstraße 26",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.062045,
+            50.388618
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sparkasse",
+        "total": 0,
+        "address": "Schiede 41",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.059188,
+            50.387296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stadthalle",
+        "total": 0,
+        "address": "Diezer Straße 17",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.061152,
+            50.387457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "WERKStadt",
+        "total": 0,
+        "address": "Joseph-Schneider-Straße 1",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+              8.056576,
+             50.384046
+        ]
+      }
+    }
+  ]
+}
+
+

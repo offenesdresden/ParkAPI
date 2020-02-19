@@ -12,14 +12,17 @@
       "properties": {
           "name": "Oldenburg",
           "type": "city",
-          "url": "http://www.oldenburg.de/microsites/verkehr/parken/parkplaetzeparkleitsystem/parkplaetze.html",
+          "url": "http://www.oldenburg.de",
           "source": "http://oldenburg-service.de/pls2.php",
 	  "active_support": false
       }
   }, {
       "type": "Feature",
       "properties": {
-        "name": "Schlosshöfe"
+        "name": "Schlosshöfe",
+        "total": 430,
+        "address": "Mühlenstraße",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -32,7 +35,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Waffenplatz"
+        "name": "Waffenplatz",
+        "total": 650,
+        "address": "Waffenplatz 3",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -45,7 +51,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "City"
+        "name": "City",
+        "total": 440,
+        "address": "Staulinie 10",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -58,7 +67,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Galeria Kaufhof"
+        "name": "Galeria Kaufhof",
+        "total": 326,
+        "address": "Ritterstraße",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -71,7 +83,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pferdemarkt"
+        "name": "Pferdemarkt",
+        "total": 401,
+        "address": "Pferdemarkt 13",
+        "type": "Parkplatz"
       },
       "geometry": {
         "type": "Point",
@@ -84,7 +99,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "CCO Parkdeck 1"
+        "name": "CCO Parkdeck 1",
+        "total": 190,
+        "address": "Heiligengeiststraße 4",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -97,7 +115,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "CCO Parkdeck 2"
+        "name": "CCO Parkdeck 2",
+        "total": 230,
+        "address": "Heiligengeiststraße 4",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -110,7 +131,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hbf/ZOB"
+        "name": "Hbf/ZOB",
+        "total": 358,
+        "address": "Karlstraße",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -123,7 +147,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Theaterwall"
+        "name": "Theaterwall",
+        "total": 125,
+        "address": "Theaterwall 4",
+        "type": "Parkplatz"
       },
       "geometry": {
         "type": "Point",
@@ -136,7 +163,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Theatergarage"
+        "name": "Theatergarage",
+        "total": 107,
+        "address": "Roonstraße",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",
@@ -149,7 +179,26 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Heiligengeist-Höfe"
+        "name": "Cinemaxx",
+        "total": 0,
+        "address": "Stau 79-85",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.226060,
+          53.141114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Heiligengeist-Höfe",
+        "total": 275,
+        "address": "Georgstraße",
+        "type": "Parkhaus"
       },
       "geometry": {
         "type": "Point",

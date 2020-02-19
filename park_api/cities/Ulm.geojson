@@ -1,0 +1,164 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              9.99109,
+             48.39851
+          ]
+      },
+      "properties": {
+          "name": "Ulm",
+          "type": "city",
+          "url": "https://neuulm.ulm.de/stadt-ulm",
+          "source": "https://www.parken-in-ulm.de/",
+	  "active_support":true
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "Am Rathaus",
+        "total": 558,
+        "address": "Neue Str. 113",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            9.993047,
+           48.397305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Deutschhaus",
+        "total": 594,
+        "address": "Friedrich-Ebert-Straße 8",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            9.984545,
+           48.397917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fischerviertel",
+        "total": 395,
+        "address": "Schwilmengasse",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           9.988355,
+          48.396583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salzstadel",
+        "total": 530,
+        "address": "Salzstadelgasse 14",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            9.990002,
+           48.401160
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Frauenstraße",
+        "total": 770,
+        "address": "Rosengasse 19",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            9.996022,
+           48.400979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Congress Centrum Nord / Basteicenter",
+        "total": 420,
+        "address": "Wichernstraße",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            10.001591,
+            48.401814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Congress Centrum Süd / Maritim Hotel",
+        "total": 56,
+        "address": "Basteistraße 46",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            10.004385,
+            48.401223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kornhaus",
+        "total": 135,
+        "address": "Rosengasse 9",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           9.99491,
+          48.40093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Theater",
+        "total": 83,
+        "address": "Olgastraße 63",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           9.98559,
+          48.40062
+        ]
+      }
+  }]
+}

@@ -1,0 +1,437 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+               8.462498,
+              49.489781
+          ]
+      },
+      "properties": {
+          "name": "Mannheim",
+          "type": "city",
+          "url": "https://www.mannheim.de/de",
+          "source": "https://www.parken-mannheim.de/",
+	  "active_support":false
+      }
+  }, 
+  {
+      "type": "Feature",
+      "properties": {
+        "name": "Dietr.-Keuning-Haus",
+        "total": 90,
+        "address": "Leopoldstraße 50",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            7.461971,
+           51.521872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "C1 Hauptverwaltung MPB, Parkhaus",
+        "total": 211,
+        "address": "C1,13-15",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.464307,
+          49.486913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Collini-Center, Tiefgarage",
+        "total": 650,
+        "address": "Collini-Str. 1",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.475982,
+           49.490755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Collini-Center Mulde, Parkplatz",
+        "total": 213,
+        "address": "Cahn-Garnier-Ufer",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.478208,
+            49.491140
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "D3, Tiefgarage",
+        "total": 378,
+        "address": "D3, 5",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.463539,
+           49.487788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "D5 Reiß-Museum, Tiefgarage",
+        "total": 365,
+        "address": "Freistuhl 5",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             8.462011,
+            49.488409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "G1 Marktplatz, Tiefgarage",
+        "total": 337,
+        "address": "D5",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.467301,
+           49.490179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "H6, Tiefgarage",
+        "total": 271,
+        "address": "H6 (Swanseaplatz)",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.463997,
+          49.492566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hauptbahnhof P1 , Tiefgarage",
+        "total": 327,
+        "address": "Willy-Brandt-Platz 5",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.471006,
+           49.480934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hauptbahnhof P2, Parkhaus",
+        "total": 326,
+        "address": "Heinrich-von-Stephan-Str. 6",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.473586,
+           49.477885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hauptbahnhof P3/P4, Parkhaus",
+        "total": 264,
+        "address": "Kepler-Str. 21-25",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.474669,
+           49.479520
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hauptbahnhof P5, Parkhaus",
+        "total": 584,
+        "address": "Kolpingstraße 2",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.469407,
+           49.477216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klinikum, Tiefgarage",
+        "total": 509,
+        "address": "Theodor-Kutzer-Ufer",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           8.490109,
+          49.490103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kunsthalle, Tiefgarage",
+        "total": 406,
+        "address": "Friedrichsplatz 5a",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.476060,
+           49.484652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klinikum P3",
+        "total": 313,
+        "address": "Theodor-Kutzer-Ufer",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.488518,
+           49.490220
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rathaus/Stadtgarten",
+        "total": 584,
+        "address": "Hansastraße 99",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+             7.463667,
+            51.511377
+         ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "M4a, Parkplatz",
+        "total": 68,
+        "address": "M4a",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.466736,
+           49.484467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "N1/N2 Stadthaus, Parkhaus",
+        "total": 441,
+        "address": "N1,3",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.464604,
+           49.485872
+         ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "N6 Komforthaus",
+        "total": 201,
+        "address": "N6, 3",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.470224,
+           49.484761
+         ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "N6 Standardhaus",
+        "total": 298,
+        "address": "N6, 3",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.469266,
+           49.484904
+         ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "Nationaltheater",
+        "total": 160,
+        "address": "Hebelstraße",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.479093,
+           49.488723
+         ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "U2, Tiefgarage",
+        "total": 190,
+        "address": "U2 (Herschelplatz)",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.471876,
+           49.491568
+         ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "SAP Arena P1, Parkhaus",
+        "total": 348,
+        "address": "Xaver-Fuhr-Straße 152",
+        "type": "Parkfläche"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.516387,
+           49.461899
+         ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "SAP Arena P2, Parkhaus",
+        "total": 815,
+        "address": "Xaver-Fuhr-Straße 152",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.517009,
+           49.461795
+         ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "SAP Arena P3, Parkhaus",
+        "total": 850,
+        "address": "Xaver-Fuhr-Straße 152",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.520929,
+           49.465213
+         ]
+       }
+   },
+   {
+      "type": "Feature",
+      "properties": {
+        "name": "SAP Arena P6-P8, Parkplatz",
+        "total": 1520,
+        "address": "Xaver-Fuhr-Straße 152",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            8.523256,
+           49.471022
+         ]
+       }
+   }]
+}
+
