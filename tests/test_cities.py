@@ -4,7 +4,7 @@ import ddt
 import helpers
 import importlib
 from datetime import datetime
-from park_api import db, env
+from park_api import db, env, security
 
 
 def scrape_city(city):
@@ -21,10 +21,9 @@ def scrape_city(city):
 
 def get_tests():
     modpath = os.path.join(env.APP_ROOT, "park_api", "cities")
-    is_py = lambda name: name.endswith(".py") and name != "__init__.py"
     strip_py = lambda name: ".".join(name.split(".")[:-1])
     for (dirpath, dirnames, filenames) in os.walk(modpath):
-        return tuple(map(strip_py, filter(is_py, filenames)))
+        return tuple(map(strip_py, filter(security.file_is_allowed, filenames)))
 
 @ddt.ddt
 class CityTestCase(unittest.TestCase):
