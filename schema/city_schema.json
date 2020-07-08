@@ -44,6 +44,18 @@
 						"forecast":{
 							"description":"shows if forecast is available for this spot",
 							"type":"boolean"
+						},
+						"url":{
+							"description":"A URL of a web resource where more information can be viewed",
+							"type":"string"
+						},
+						"opening_hours":{
+							"description":"Opening hours of this lot in OpenStreetMap format (https://wiki.openstreetmap.org/wiki/Key:opening_hours)",
+							"type":"string"
+						},
+						"fee_hours":{
+							"description":"Hours during which usage of this lot incurrs fees in OpenStreetMap format (https://wiki.openstreetmap.org/wiki/Key:opening_hours). It is implied that outside those hours usage is free.",
+							"type":"string"
 						}
 					},
 					"required":["name", "count", "state", "forecast"]
