@@ -20,7 +20,7 @@ def parse_html(html):
     }
 
     # suche: <div id="parkhausliste-ct">
-    div_level1 = soup.find('div', id='parkhausliste-ct')
+    div_level1 = soup.find_all('div', id='parkhausliste-ct')[-1]
     # <p style="color: #7a7a7b; padding: 18px 0 8px 0">zuletzt aktualisiert am 19.06.2019, 15:27 Uhr</p>
     date_time = div_level1.find('p')
     data['last_updated'] = convert_date(date_time.text, 'zuletzt aktualisiert am %d.%m.%Y, %H:%M Uhr')
