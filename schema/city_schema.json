@@ -1,67 +1,128 @@
 {
-	"$schema":"http://jkliemann.de/parkendd/media/city_schema.json",
-	"title":"ParkenDD JSON API",
-	"description":"JSON required by ParkenDD app to show parking lots",
-	"type":"array",
-	"items":{
-		"type":"object",
-		"properties":{
-			"name":{
-				"description":"Name of parking lot category",
-				"type":"string"
-			},
-			"lots":{
-				"description":"Parking lots in this category",
-				"type":"array",
-				"items":{
-					"type":"object",
-					"properties":{
-						"name":{
-							"description":"Name of parking lot",
-							"type":"string"
-						},
-						"count":{
-							"description":"Count of available parking lots",
-							"type":"integer"
-						},
-						"free":{
-							"description":"Count of free parking lots",
-							"type":"integer"
-						},
-						"state":{
-							"description":"State of the parking lot",
-							"type":"string",
-							"enum":["nodata","closed","many","few","full"]
-						},
-						"lat":{
-							"description":"latitude of the parking lot",
-							"type":"string"
-						},
-						"lon":{
-							"description":"longitude of the parking lot",
-							"type":"string"
-						},
-						"forecast":{
-							"description":"shows if forecast is available for this spot",
-							"type":"boolean"
-						},
-						"url":{
-							"description":"A URL of a web resource where more information can be viewed",
-							"type":"string"
-						},
-						"opening_hours":{
-							"description":"Opening hours of this lot in OpenStreetMap format (https://wiki.openstreetmap.org/wiki/Key:opening_hours)",
-							"type":"string"
-						},
-						"fee_hours":{
-							"description":"Hours during which usage of this lot incurrs fees in OpenStreetMap format (https://wiki.openstreetmap.org/wiki/Key:opening_hours). It is implied that outside those hours usage is free.",
-							"type":"string"
-						}
-					},
-					"required":["name", "count", "state", "forecast"]
-				}
-			}
-		},
-			"required":["name", "lots"]
-	}
+  "$schema": "http://jkliemann.de/parkendd/media/city_schema.json",
+  "title": "ParkenDD JSON API",
+  "description": "JSON required by ParkenDD app to show parking lots",
+  "type": "object",
+  "properties": {
+    "last_downloaded": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "coords": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "lat": {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90
+                  },
+                  "lng": {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "forecast": {
+            "type": "boolean"
+          },
+          "free": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "id": {
+            "type": "string"
+          },
+          "lot_type": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "region": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "state": {
+            "enum": [
+              "open",
+              "nodata",
+              "closed",
+              "many",
+              "few",
+              "full"
+            ]
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "opening_hours": {
+            "type": "string"
+          },
+          "fee_hours": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "forecast",
+          "free",
+          "id",
+          "name",
+          "state",
+          "total"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "last_downloaded",
+    "last_updated",
+    "lots"
+  ],
+  "additionalProperties": false
 }
