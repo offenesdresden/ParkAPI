@@ -19,8 +19,8 @@ def parse_html(html):
 
     data = {
         # convert_date is a utility function you can use to turn this date into the correct string format
-        #                                            'Stand: 05.06.2019, 14:40:20'
-        "last_updated": convert_date(date_time_text, 'Stand: %d.%m.%Y, %H:%M:%S'),
+        #                                            'Stand vom 05.06.2019, 14:40:20'
+        "last_updated": convert_date(date_time_text, 'Stand vom %d.%m.%Y, %H:%M:%S'),
         # URL for the page where the scraper can gather the data
         "lots": []
     }
