@@ -87,9 +87,7 @@
               "open",
               "nodata",
               "closed",
-              "many",
-              "few",
-              "full"
+              "unknown"
             ]
           },
           "total": {
@@ -109,7 +107,6 @@
         },
         "required": [
           "forecast",
-          "free",
           "id",
           "name",
           "state",
