@@ -1,7 +1,7 @@
 beautifulsoup4
 Flask
 requests
-feedparser==5.2.1
+feedparser
 pytz
 psycopg2
 yoyo-migrations
