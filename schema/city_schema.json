@@ -112,7 +112,7 @@
           "state",
           "total"
         ],
-        "additionalProperties": false
+        "additionalProperties": true
       }
     }
   },
@@ -121,5 +121,5 @@
     "last_updated",
     "lots"
   ],
-  "additionalProperties": false
+  "additionalProperties": true
 }
