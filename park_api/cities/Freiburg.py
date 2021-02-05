@@ -26,8 +26,9 @@ def parse_html(source_json):
         lot_free = int(feature['properties']['obs_free'])
         lot_total = int(feature['properties']['obs_max'])
 
-        if last_updated < feature['properties']['obs_ts']:
-            last_updated = feature['properties']['obs_ts']
+        obs_ts = feature['properties']['obs_ts'].split('.')[0]
+        if last_updated < obs_ts:
+            last_updated = obs_ts
 
         # please be careful about the state only being allowed to contain either open, closed or nodata
         # should the page list other states, please map these into the three listed possibilities
