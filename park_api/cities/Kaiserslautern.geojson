@@ -1,0 +1,198 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.7664756774902335,
+          49.44435650387989
+        ]
+      },
+      "properties": {
+        "name": "Kaiserslautern",
+        "type": "city",
+        "url": "https://www.kaiserslautern.de/live_tools/pls/pls.xml",
+        "source": "https://www.kaiserslautern.de/live_tools/pls/pls.xml",
+        "active_support": true
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PH Lutrinastraße",
+        "address": "Badstraße 3",
+        "type": "Parkhaus",
+        "total": 67
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.772792279720306,
+          49.44166030571838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.77245968580246,
+          49.44463553274022
+        ]
+      },
+      "properties": {
+        "name": "PH Stiftsplatz",
+        "address": "Stiftsplatz",
+        "type": "Parkhaus",
+        "total": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.763890027999877,
+          49.44643523073805
+        ]
+      },
+      "properties": {
+        "name": "PH Meuthstraße Besucher",
+        "address": "Meuthstraße",
+        "type": "Parkplatz",
+        "total": 79
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.764085829257964,
+          49.44693746024965
+        ]
+      },
+      "properties": {
+        "name": "PH Meuthstraße Angestellte",
+        "address": "Meuthstraße",
+        "type": "Parkplatz",
+        "total": 249
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.769994735717773,
+          49.446316648019256
+        ]
+      },
+      "properties": {
+        "name": "PH Pfalztheater",
+        "address": "Martin-Luther-Straße",
+        "type": "Parkhaus",
+        "total": 178
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.7724650502204895,
+          49.446974080950305
+        ]
+      },
+      "properties": {
+        "name": "PH Altstadt",
+        "address": "Rittersberg 2",
+        "type": "Parkhaus",
+        "total": 258
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.768429666757583,
+          49.444547464427664
+        ]
+      },
+      "properties": {
+        "name": "PH Kreissparkasse",
+        "address": "Am Altenhof 8",
+        "type": "Parkhaus",
+        "total": 162
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.764659821987151,
+          49.443631021411605
+        ]
+      },
+      "properties": {
+        "name": "PH K in Lautern",
+        "address": "Fackelrondell 1",
+        "type": "Parkhaus",
+        "total": 460
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.766937017440797,
+          49.442239320669785
+        ]
+      },
+      "properties": {
+        "name": "PH Central",
+        "address": "Rosenstraße 12",
+        "type": "Parkhaus",
+        "total": 70
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.767012119293212,
+          49.44309736639787
+        ]
+      },
+      "properties": {
+        "name": "PH City",
+        "address": "Löwenstraße 5",
+        "type": "Parkhaus",
+        "total": 240
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.770386338233947,
+          49.43580175486678
+        ]
+      },
+      "properties": {
+        "name": "PH Hauptbahnhof",
+        "address": "Zollamtstraße 6",
+        "type": "Parkhaus",
+        "total": 259
+      }
+    }
+  ]
+}
