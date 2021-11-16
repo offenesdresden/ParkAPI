@@ -93,6 +93,18 @@ Also please note that this is not valid JSON. Just an example for how the output
         $ sudo -u postgres createuser -P -d park_api  
         $ sudo -u postgres createdb -O park_api park_api
 
+ - Configure ParkAPI:
+ 
+   Copy the [config_example.ini](config_example.ini) to `config.ini` and 
+   adjust the settings. 
+
+ - Run the database migrations
+        
+        $ yoyo apply --database postgresql://park_api:park_api@localhost/parkapi_testing schema/db/
+        
+   (Run this for each database that is configured in the `config.ini`, 
+   e.g. `parkapi_testing`, `parkapi_development`, aso.. 
+
  - Run the server:
 
         $ bin/parkapi-server

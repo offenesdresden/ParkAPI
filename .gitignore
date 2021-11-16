@@ -1,8 +1,8 @@
-.idea
-venv
-cities/__pycache__
+.idea/
+venv/
+env/
 config.ini
-__pycache__
+__pycache__/
 cache
 *.pyc
 log/*.log
