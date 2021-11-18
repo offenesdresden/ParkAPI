@@ -108,20 +108,20 @@ Also please note that this is not valid JSON. Just an example for how the output
    
  - Run the database migrations once for development
         
-        (venv) $ PYTHONPATH=. python park_api/setupdb.py
+        (venv) $ ./bin/parkapi-setupdb
         
    And once for testing
    
-        (venv) $ PYTHONPATH=. env=testing python park_api/setupdb.py     
+        (venv) $ env=testing ./bin/parkapi-setupdb     
         
  - Run the server:
 
-        (venv) $ bin/parkapi-server
+        (venv) $ ./bin/parkapi-server
 
  - Run the tests:
 
         (venv) $ python -m unittest discover tests
-        
+
 Throwing errors? Sure you installed the requirements and are using Python 3.x? Still nothing? Please [tell us](https://github.com/offenesdresden/ParkAPI/issues/new) about it.
 
 ### Adding support for a new city
