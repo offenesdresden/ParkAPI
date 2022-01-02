@@ -23,7 +23,9 @@ def parse_html(html):
     # get all lots
     for park_lot in parken :
         td = park_lot.find_all("td")
-        parking_name = td[1].text.strip()
+        parking_name = td[0].text.strip()
+        if parking_name == "Parkmöglichkeit":
+            continue
         # work-around for the Umlaute-problem: ugly but working
         if ( 'Marktst' in parking_name) : parking_name = 'Marktstätte'
         elif ( 'bele' in parking_name) : parking_name = 'Döbele'
@@ -33,7 +35,7 @@ def parse_html(html):
         parking_state = 'open'
         parking_free  = 0
         try:
-            parking_free = int(td[2].text)
+            parking_free = int(td[1].text)
         except:
             parking_state = 'nodata'
 
