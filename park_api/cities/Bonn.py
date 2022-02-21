@@ -46,7 +46,7 @@ def parse_html(html):
                     "forecast": False
                 })
 
-            else:
+            elif h3[0].string:
                 name = h3[0].string
                 ltype = None
                 if "Parkhaus" in name:

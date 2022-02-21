@@ -13,7 +13,7 @@
           "name": "Dresden",
           "type": "city",
           "url": "https://www.dresden.de/parken",
-          "source": "https://apps.dresden.de/ords/f?p=1110",
+          "source": "https://www.dresden.de/apps_ext/ParkplatzApp/",
 	  "active_support": true
       }
   }, {
@@ -375,7 +375,7 @@
     "properties": {
       "name": "Lingnerallee",
       "address": "Lingnerallee",
-      "Lingnerallee": "Parkplatz"
+      "type": "Parkplatz"
     }
   }, {
     "type": "Feature",
@@ -464,6 +464,19 @@
     "properties": {
       "name": "Karstadt",
       "address": "Prager Straße 12",
+      "type": "Tiefgarage",
+      "total": 265,
+      "aux": 296
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [13.7380445253, 51.0467643184]
+    },
+    "properties": {
+      "name": "GALERIA Karstadt Kaufhof",
+      "address": "Waisenhausstraße",
       "type": "Tiefgarage",
       "total": 265,
       "aux": 296
@@ -719,6 +732,28 @@
         "name": "Weißig",
         "type": "Parkplatz",
         "address": "Bautzner Landstraße"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [13.814142, 51.052804]
+    },
+    "properties": {
+        "name": "Fidelio-F.-Finke-Straße",
+        "type": "Parkplatz",
+        "address": "Fidelio-F.-Finke-Straße"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [13.776568, 51.127956]
+    },
+    "properties": {
+        "name": "Grenzstraße",
+        "type": "Parkplatz",
+        "address": "Grenzstraße 3"
     }
   }]
 }
