@@ -16,34 +16,34 @@ def parse_html(xml):
     forecast = False
 
     for member in soup.find('wfs:featurecollection').find_all('gml:featuremember'):
-        name = member.find('app:name').string
+        name = member.find('de.hh.up:name').string
         count = 0
         try:
-            count = int(member.find('app:stellplaetze_gesamt').string)
+            count = int(member.find('de.hh.up:stellplaetze_gesamt').string)
         except AttributeError:
             pass
         free = 0
         state = "nodata"
-        situation = member.find('app:situation')
+        situation = member.find('de.hh.up:situation')
         if situation and situation.string != "keine Auslastungsdaten":
-            free = int(member.find('app:frei').string)
-            status = member.find('app:status').string
+            free = int(member.find('de.hh.up:frei').string)
+            status = member.find('de.hh.up:status').string
             if status == "frei" or status == "besetzt":
                 state = "open"
             else:
                 state = "closed"
-        lot_type = member.find('app:art').string
+        lot_type = member.find('de.hh.up:art').string
         if lot_type == "Straßenrand":
             lot_type = "Parkplatz"
-        lot_id = member.find('app:id').string
+        lot_id = member.find('de.hh.up:id').string
         address = ""
         try:
-            address = member.find('app:einfahrt').string
+            address = member.find('de.hh.up:einfahrt').string
         except AttributeError:
             try:
-                address = member.find('app:strasse').string
+                address = member.find('de.hh.up:strasse').string
                 try:
-                    address += " " + member.find('app:hausnr').string
+                    address += " " + member.find('de.hh.up:hausnr').string
                 except (AttributeError, TypeError):
                     pass
             except AttributeError:
