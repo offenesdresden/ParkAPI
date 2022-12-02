@@ -19,11 +19,11 @@ def parse_html(html):
     # suche die Zahlen zu den Parkhaeusern:
     html_table = soup.select("table")
     table_rows = html_table[0].select( "tr")
-    for lot_ in table_rows[1:] :
-        lot_data = lot.select("td")
+    for parking_lot in table_rows[1:] :
+        lot_data = parking_lot.select("td")
         parking_name = lot_data[0].text
         # get the data from JSON-file:
-        lot_ = geodata.lot(parking_name)
+        lot = geodata.lot(parking_name)
 
         try :
             if ( lot_data[3].text.strip() == "OK" ):
@@ -36,7 +36,6 @@ def parse_html(html):
                 parking_free = 0
                 parking_total = 0
         except :
-            parking_state = "nodata"
             parking_state = "nodata"
             parking_free = 0
             parking_total = 0
