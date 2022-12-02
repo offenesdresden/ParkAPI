@@ -13,7 +13,7 @@
           "name": "Wiesbaden",
           "type": "city",
           "url": "https://www.wiesbaden.de/",
-          "source": "https://wi.memo-rheinmain.de/wiesbaden/parkliste.phtml?order=carparks",
+          "source": "https://geoportal.wiesbaden.de/parkleitsystem/parkhaeuser.php",
 	  "active_support":true
       }
   }, 
@@ -36,7 +36,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "City II",
+        "name": "PH City 2",
         "total": 240,
         "address": "Schwalbacher Str. 38-42",
         "type": "Parkhaus"
@@ -52,7 +52,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Coulinstraße",
+        "name": "PH Coulinstrasse",
         "total": 343,
         "address": "Coulinstraße 5",
         "type": "Parkhaus"
@@ -68,7 +68,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Galeria Kaufhof",
+        "name": "PH Galeria Kaufhof",
         "total": 238,
         "address": "Luisenstraße 4",
         "type": "Parkhaus"
@@ -84,7 +84,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Karstadt",
+        "name": "PH Karstadt",
         "total": 355,
         "address": "Neugasse 5",
         "type": "Parkhaus"
@@ -100,7 +100,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Kurhaus/Casino",
+        "name": "TG Kurhaus/Casino",
         "total": 386,
         "address": "Wilhelmstraße 49",
         "type": "Tiefgarage"
@@ -116,7 +116,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Luisenforum",
+        "name": "PH Luisenforum",
         "total": 800,
         "address": "Karlstraße",
         "type": "Parkhaus"
@@ -132,7 +132,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Luisenplatz",
+        "name": "TG Luisenplatz",
         "total": 292,
         "address": "Rheinstrasse/Luisenplatz",
         "type": "Tiefgarage"
@@ -148,7 +148,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Markt",
+        "name": "TG Markt",
         "total": 540,
         "address": "Schillerplatz 2",
         "type": "Tiefgarage"
@@ -164,7 +164,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mauritius-Parkhaus",
+        "name": "PH Mauritius Galerie",
         "total": 563,
         "address": "Schwalbacher Str. 53",
         "type": "Parkhaus"
@@ -180,8 +180,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "PH Liliencarree",
-        "total": 150,
+        "name": "PH Lili",
+        "total": 370,
         "address": "Klingholzstraße",
         "type": "Parkhaus"
       },
@@ -196,10 +196,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "RheinMain CongressCenter (RMCC)",
+        "name": "TG RMCC",
         "total": 700,
         "address": "Friedrich-Ebert-Allee 1",
-        "type": "Parkhaus"
+        "type": "Tiefgarage"
       },
       "geometry": {
         "type": "Point",
@@ -212,8 +212,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "TG Liliencarree",
-        "total": 530,
+        "name": "TG Lili",
+        "total": 150,
         "address": "Bahnhofsplatz 3",
         "type": "Tiefgarage"
       },
@@ -228,7 +228,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Theater",
+        "name": "PH Theater",
         "total": 320,
         "address": "Thelemannstraße",
         "type": "Parkhaus"
