@@ -25,6 +25,10 @@ def parse_html(source_json):
         lot_name = feature['properties']['park_name']
         lot_free = int(feature['properties']['obs_free'])
         lot_total = int(feature['properties']['obs_max'])
+        lot_coords = {"lat": feature['geometry']['coordinates'][1],
+                      "lng": feature['geometry']['coordinates'][0]
+                     }
+        lot_address = feature['properties']['park_id']
 
         obs_ts = feature['properties']['obs_ts'].split('.')[0]
         if last_updated < obs_ts:
@@ -41,11 +45,11 @@ def parse_html(source_json):
 
         lot = geodata.lot(lot_name)
         data["lots"].append({
-            "name": lot.name,
+            "name": lot_name,
             "free": lot_free,
             "total": lot_total,
-            "address": lot.address,
-            "coords": lot.coords,
+            "address": lot_address,
+            "coords": lot_coords,
             "state": state,
             "lot_type": lot.type,
             "id": lot.id,
