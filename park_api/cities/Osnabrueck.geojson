@@ -1,0 +1,342 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.05,
+          52.283333
+        ]
+      },
+      "properties": {
+        "name": "Osnabrueck",
+        "type": "city",
+        "url": "https://www.parken-osnabrueck.de/",
+        "source": "https://www.parken-osnabrueck.de/",
+        "active_support": false
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Altstadtgarage",
+        "total": "136",
+        "address": "Lohstra\u00dfe 11",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.041294,
+          52.278756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Bahnhofsgarage",
+        "total": "665",
+        "address": "Bahnhofs-Garage, Theodor-Heuss-Platz",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.059938,
+          52.271701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Kollegienwall-Garage",
+        "total": "556",
+        "address": "Am Landgericht 2",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.051323,
+          52.271952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Ledenhof-Garage",
+        "total": "587",
+        "address": "Ledenhof-Garage, Alte M\u00fcnze 18",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.04474,
+          52.272644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Lotter Stra\u00dfe",
+        "total": "170",
+        "address": "Parkhaus Lotter Stra\u00dfe, Am Kirchenkamp 3",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.028403,
+          52.274112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Neustadt-Carr\u00e9",
+        "total": "119",
+        "address": "Neustadt Carr\u00e9, Kommenderiestra\u00dfe",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.050286,
+          52.268042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Nikolai-Garage",
+        "total": "477",
+        "address": "Nikolai-Garage, Hakenstra\u00dfe 5",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.042839,
+          52.274962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Salzmarkt-Garage",
+        "total": "425",
+        "address": "Salzmarkt-Garage, Holtstra\u00dfe 37",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.055086,
+          52.268722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Sparkasse",
+        "total": "93",
+        "address": "Schillerstra\u00dfe 21",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.05045,
+          52.275491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Stadthaus-Garage",
+        "total": "294",
+        "address": "Stadthaus-Garage, Natruper-Tor-Wall 2",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.037697,
+          52.278044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Stadthaus",
+        "total": "52",
+        "address": "Stadthaus-Garage, Natruper-Tor-Wall 2",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.037495,
+          52.278156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkhaus Vitihof-Garage",
+        "total": "260",
+        "address": "Vitihof-Garage, Gerberhof 10",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.042148,
+          52.280237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Berliner Platz",
+        "total": "147",
+        "address": "Parkplatz Berliner Platz, Kleiststra\u00dfe",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.053614,
+          52.276016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Haarmannsbrunnen",
+        "total": "120",
+        "address": "Haarmannsbrunnen, Herrenteichswall 2",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.048747,
+          52.276018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Heinrich-Heine-Stra\u00dfe",
+        "total": "21",
+        "address": "Heinrich-Heine-Stra\u00dfe",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.056268,
+          52.272313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Karl-B\u00fccher-Stra\u00dfe",
+        "total": "21",
+        "address": "Karl-B\u00fccher-Stra\u00dfe",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.055333,
+          52.270644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Kinderhospital am Sch\u00f6lerberg",
+        "total": "200",
+        "address": "Kinderhospital Osnabr\u00fcck, Iburger Str. 187",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.062869,
+          52.251954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Kunsthalle Dominikanerkirche",
+        "total": "70",
+        "address": "Parkplatz, Hasemauer 3",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.040564,
+          52.279661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz Schlosswallhalle",
+        "total": "48",
+        "address": "Stellplatz Osnabr\u00fcck City, Schnatgang 6",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.040123,
+          52.270871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkplatz St\u00fcvestra\u00dfe",
+        "total": "43",
+        "address": "St\u00fcvestra\u00dfe 34",
+        "type": "unknown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.038284,
+          52.283763
+        ]
+      }
+    }
+  ]
+}
