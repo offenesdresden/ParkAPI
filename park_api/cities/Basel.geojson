@@ -124,7 +124,7 @@
       "coordinates": [7.5824076, 47.561101]
     },
     "properties": {
-      "name": "Parkhaus City-USB",
+      "name": "Parkhaus City",
       "address": "Schanzenstrasse 48",
       "total": 1114
     }
@@ -193,6 +193,17 @@
       "name": "Parkhaus Bahnhof Süd",
       "address": "Güterstrasse 115",
       "total": 100
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [7.5927014, 47.5545146]
+    },
+    "properties": {
+      "name": "Parkhaus Kunstmuseum",
+      "address": "St. Alban-Graben 3",
+      "total": 350
     }
   }]
 }

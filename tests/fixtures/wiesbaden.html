@@ -1,502 +1,148 @@
-<!--a name="reg">de[Parkeinrichtung]</a-->
-<table style="margin-top: 15px;" summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tbody><tr>
-    <td class="parkenbg" align="left">
-        PARKANGEBOTE    </td>
-    <td class="parkenbg" align="right">
-	<span style="font-weight: normal; letter-spacing: 0px;">
-		Stand: 18.04.2019 16:49        </span>
-	<!--a href="stadtplan?setmode=parken" title="Diese Seite mit allen Daten aktualisieren"></a-->
-        <img class="clickimage" src="img/refresh.gif" alt="" width="15" border="0" height="15" onclick="doUpdate('liste','parkliste.phtml?order=carparks');">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" class="parkenbg" align="left">
-    <table class="register" border="0" cellpadding="0" cellspacing="0">
-      <tbody><tr>
-        <td class="registershown" onclick="switchInnerParking('carparks',$('parkencarparks'));">Parkhäuser</td><td class="registerhidden" onclick="switchInnerParking('parkregions',$('parkenparkregions'));">Parkbereiche</td><td class="registerhidden" onclick="switchInnerParking('legend',$('parkenlegend'));">Legende</td>      </tr>
-    </tbody></table>
-    </td>
-  </tr>
-		  
-  <tr>
-    <td colspan="2" class="contentnoborder" valign="top" width="100%">
 
-<div style="height:100%;overflow:auto">
-    <table summary="" width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tbody><tr>
-        <th class="resultheader" style="text-align: left; padding-left: 8px;">&nbsp;</th>
-        <th class="resultheader" align="left">Parkeinrichtung</th>
-        <th class="resultheader" align="center">Stellplätze (frei/gesamt)</th>
-        <th class="resultheader" align="center">Auslastung</th>
-        <!--th class="resultheader" style="padding-right: 8px;" align="center">Karte</th-->
-        <th class="resultheader" align="center">Details</th>
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="odd">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 City I		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				134			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				165			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_fallend_20.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				18% fallend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('5',3445428,5549717,'City I','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445428,5549717)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="even">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 City II		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				88			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				240			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_fallend_60.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				63% fallend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('6',3445340,5549820,'City II','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445340,5549820)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="odd">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 Coulinstraße		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				245			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				343			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_gleichbleibend_30.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				28% gleichbleibend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('8',3445567,5549951,'Coulinstraße','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445567,5549951)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="even">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 Galeria Kaufhof		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				165			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				238			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_fallend_30.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				30% fallend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('4',3445494,5549520,'Galeria Kaufhof','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445494,5549520)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="odd">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 Karstadt		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				172			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				355			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_fallend_50.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				51% fallend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('9',3445618,5549717,'Karstadt','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445618,5549717)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="even">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 Kurhaus/Casino		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				113			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				386			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_fallend_70.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				70% fallend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('12',3446164,5550161,'Kurhaus/Casino','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3446164,5550161)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="odd">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 Luisenforum		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				345			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				800			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_fallend_60.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				56% fallend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('3',3445386,5549420,'Luisenforum','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445386,5549420)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="even">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 Luisenplatz		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				144			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				292			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_steigend_50.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				50% steigend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('2',3445662,5549418,'Luisenplatz','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445662,5549418)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="odd">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 Markt		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				248			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				540			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_gleichbleibend_50.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				54% gleichbleibend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('10',3445874,5549688,'Markt','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445874,5549688)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="even">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 Mauritius-Parkhaus		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				476			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				563			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_gleichbleibend_20.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				15% gleichbleibend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('7',3445450,5549842,'Mauritius-Parkhaus','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445450,5549842)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="odd">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 PH Liliencarree		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				84			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				150			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_gleichbleibend_40.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				44% gleichbleibend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('14',3445718,5548496,'PH Liliencarree','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445718,5548496)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="even">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 RheinMain CongressCenter (RMCC)		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				645			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				700			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_fallend_10.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				7% fallend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('1',3445994.03125,5549064.9375,'RheinMain CongressCenter (RMCC)','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445994.03125,5549064.9375)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="odd">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 TG Liliencarree		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				363			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				530			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_steigend_30.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				31% steigend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('13',3445833,5548584,'TG Liliencarree','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3445833,5548584)">
-                                
-			</a>
-		</td-->
-      </tr>
-        <!--th class="resultheader" align="center">Details</th-->
-                <tr class="even">
-				                <td style="padding: 4px 8px;" align="left" width="22">
-				  <img src="img/parkhaus.gif" alt="Parkhaus" width="22" border="0" height="22">
-                                        
-		
-				</td>
-					        <td style="padding: 4px 8px;" align="left">
-			 Theater		</td>
-		<td align="center">
-						<span title="Freie Stellplätze">
-				165			</span> /
-			<span title="Gesamtzahl der Stellplätze">
-				320			</span>
-					</td>
-		<td align="left">
-						
-		
-							<img src="img/parken/auslastung_gleichbleibend_50.gif" alt="" width="10" border="0" height="22" style="float:left; margin-right: 5px;">
-				48% gleichbleibend		        </td>
-				<td align="center" width="60">
-				<img src="img/info.png" class="clickimage" alt="Details" width="22" border="0" height="22" onclick="markinmap('11',3446246,5549937,'Theater','carparksnormal')">
-							  
-				
-			<!--/a-->
-		</td>
-		<!--td style="padding-right: 12px;" align="center" width="60">
-			<a href="http://stadtplan.braunschweig.de/stadtplan/stadtplan?setmark_id=6" title="Markieren und im Kartenausschnitt anzeigen">
-				<img src="img/show.png" alt="Karte" width="22" border="0" height="22" onclick="markinmap(3446246,5549937)">
-                                
-			</a>
-		</td-->
-      </tr>
-     </tbody></table>
-</div>
-
-      </td>
-</tr>
-</tbody></table>
+<h3 style='width:100%; color: #FFFFFF; background-color: #1c87c9; border: 2px solid #1c87c9;; text-align: right;'>  Stand : 09.12.2022 12:22:00</h3>   
+  
+<!DOCTYPE html>
+<html>
+       <head>
+	   <meta http-equiv="refresh" content="60" >
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	        <title>
+                 Parkhäuser
+            </title>
+	   </head>
+  <body>
+      <table  summary style="width:100%"  border="0" cellpadding="0" cellpadding="0">
+		     <!--<tr>
+		         <th colspan="5"> <h2> Parkhäuser </h2> </th>
+			 </tr>-->
+	       <tr>	            
+			     <td ><h4> Parkeinrichtung</h4> </td>
+			     <td  style="padding: 4px 8px; align="center" width="20"><h4>Stellplätze(frei/gesamt)</h4> </td>
+				   <td  align="center"><h4>Auslastung</h4></td>	
+				    <td style="padding: 4px 20px;  align="left"><h4>Status</h4></td>
+				    <td style=" align="left"><h4>E-Ladepunkte</h4></td>		     
+		     </tr>
+        	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> PH Lili</td>
+			     <td style="padding: 8px 50px; align="center"> 234 / 370</td>
+			     <td  align="center"> 36%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 0</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> TG Luisenplatz</td>
+			     <td style="padding: 8px 50px; align="center"> 147 / 292</td>
+			     <td  align="center"> 49%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 0</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> PH Theater</td>
+			     <td style="padding: 8px 50px; align="center"> 141 / 320</td>
+			     <td  align="center"> 55%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 0</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> PH Luisenforum</td>
+			     <td style="padding: 8px 50px; align="center"> 350 / 800</td>
+			     <td  align="center"> 56%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 0</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> PH Coulinstrasse</td>
+			     <td style="padding: 8px 50px; align="center"> 128 / 303</td>
+			     <td  align="center"> 57%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 4</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> PH Galeria Kaufhof</td>
+			     <td style="padding: 8px 50px; align="center"> 60 / 168</td>
+			     <td  align="center"> 64%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 0</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> TG Lili</td>
+			     <td style="padding: 8px 50px; align="center"> 54 / 150</td>
+			     <td  align="center"> 64%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 0</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> TG RMCC</td>
+			     <td style="padding: 8px 50px; align="center"> 161 / 700</td>
+			     <td  align="center"> 77%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 8</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> TG Kurhaus/Casino</td>
+			     <td style="padding: 8px 50px; align="center"> 72 / 416</td>
+			     <td  align="center"> 82%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 0</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> PH Karstadt</td>
+			     <td style="padding: 8px 50px; align="center"> 59 / 355</td>
+			     <td  align="center"> 83%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 0</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> TG Markt</td>
+			     <td style="padding: 8px 50px; align="center"> 63 / 549</td>
+			     <td  align="center"> 88%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 0</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> PH Mauritius Galerie</td>
+			     <td style="padding: 8px 50px; align="center"> 24 / 301</td>
+			     <td  align="center"> 92%</td>
+			     <td  style="padding: 2px 15px; color:green">OK 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 10</td>
+			   </tr>	
+         	 
+		   	<tr>
+			     <td><img src="/bilder/parkhaus.gif" width="22" border="0" height="22"> PH City 2</td>
+			     <td style="padding: 8px 50px; align="center"> 0 / -</td>
+			     <td  align="center"> 0%</td>
+			     <td  style="padding: 2px 15px; color:red">Übertragungsstörung 
+			     </td>
+			     <td  style="padding: 2px 2px; align="left" color="red"> 10</td>
+			   </tr>	
+         			 
+	    </table>
+   
+    
+	</body>
+</html>
+       

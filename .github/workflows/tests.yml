@@ -1,0 +1,43 @@
+name: tests
+
+on:
+  push:
+
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - 3.7
+          - 3.8
+          - 3.9
+    services:
+      postgres:
+        image: postgres
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_DB: park_api
+          POSTGRES_PASSWORD: postgres_test_password
+          POSTGRES_PORT: 5432
+          POSTGRES_USER: park_api
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: |
+          pip install -e .
+      - name: Prepare
+        run: |
+          cp config_ci.ini config.ini
+          python bin/parkapi-setupdb
+      - name: Test
+        run: |
+          python tests/validate-geojson.py park_api/cities/*.geojson
+          python -m unittest discover tests

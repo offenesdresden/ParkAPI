@@ -27,7 +27,8 @@ def parse_html(html):
         parking_name = 'P'+str(parking_lot['uid'])+' '+parking_lot['name']
         # get the data
         lot = geodata.lot(parking_name)
-
+        
+        parking_total = int(parking_lot['parkingupdate']['total'])
         parking_state = 'open'
         parking_free = 0
         try :
@@ -41,7 +42,7 @@ def parse_html(html):
         data["lots"].append({
             "name": parking_name,
             "free": parking_free,
-            "total": lot.total,
+            "total": parking_total,
             "address": lot.address,
             "coords": lot.coords,
             "state": parking_state,

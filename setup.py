@@ -15,7 +15,11 @@ except ImportError: # for pip <= 9.0.3
 here = path.abspath(path.dirname(__file__))
 
 requirements = parse_requirements(path.join(here, "requirements.txt"), session=False)
-install_requires = [str(ir.req) for ir in requirements]
+try:
+    install_requires = [str(ir.requirement) for ir in requirements]
+except AttributeError:
+    # deprecated
+    install_requires = [str(ir.req) for ir in requirements]
 
 # Get the long description from the relevant file
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
@@ -43,9 +47,9 @@ setup(
         'License :: OSI Approved :: MIT License',
 
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
 
     keywords='webapp parkinglots scraping',

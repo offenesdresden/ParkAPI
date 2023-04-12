@@ -1,61 +1,63 @@
-from park_api.util import convert_date
+from datetime import datetime
+
+from bs4 import BeautifulSoup
+
 from park_api.geodata import GeoData
-import json
+from park_api.util import utc_now
 
 # This loads the geodata for this city if <city>.geojson exists in the same directory as this file.
 # No need to remove this if there's no geodata (yet), everything will still work.
 geodata = GeoData(__file__)
 
+
 # This function is called by the scraper and given the data of the page specified as source in geojson above.
 # It's supposed to return a dictionary containing everything the current spec expects. Tests will fail if it doesn't ;)
-def parse_html(source_json):
 
-    parsed_json = json.loads(source_json)
-    features = parsed_json['features']
+def parse_html(xml):
+    soup = BeautifulSoup(xml, "html.parser")
 
     # last_updated is the date when the data on the page was last updated, it should be listed on most pages
-    last_updated = ""
+
+    try:
+        last_updated = soup.select("zeitstempel")[0].text
+    except KeyError:
+        last_updated = utc_now()
 
     data = {
+        # convert_date is a utility function you can use to turn this date into the correct string format
+        "last_updated": datetime.strptime(last_updated[0:16], "%d.%m.%Y %H:%M").isoformat(),
         # URL for the page where the scraper can gather the data
         "lots": []
     }
 
-    for feature in features:
-        lot_name = feature['properties']['park_name']
-        lot_free = int(feature['properties']['obs_free'])
-        lot_total = int(feature['properties']['obs_max'])
-        lot_coords = {"lat": feature['geometry']['coordinates'][1],
-                      "lng": feature['geometry']['coordinates'][0]
-                     }
-        lot_address = feature['properties']['park_id']
-
-        obs_ts = feature['properties']['obs_ts'].split('.')[0]
-        if last_updated < obs_ts:
-            last_updated = obs_ts
+    for ph in soup.find_all("parkhaus"):
+        lot_name = ph.find("name").text
+        lot_actual = int(ph.find("aktuell").text)
+        lot_total = int(ph.find("gesamt").text)
+        lot_free = lot_total - lot_actual
 
         # please be careful about the state only being allowed to contain either open, closed or nodata
         # should the page list other states, please map these into the three listed possibilities
-        state = "nodata"
-
-        if feature['properties']['obs_state'] == "1":
+        # translate german state to english
+        stateGerman = ph.find("status").text
+        if stateGerman == ("Offen"):
             state = "open"
-        elif feature['properties']['obs_state'] == "0":
+        elif stateGerman == ("Geschlossen"):
             state = "closed"
+        else:
+            state = "nodata"
 
         lot = geodata.lot(lot_name)
         data["lots"].append({
-            "name": lot_name,
+            "name": lot.name,
             "free": lot_free,
             "total": lot_total,
-            "address": lot_address,
-            "coords": lot_coords,
+            "address": lot.address,
+            "coords": lot.coords,
             "state": state,
             "lot_type": lot.type,
             "id": lot.id,
             "forecast": False,
         })
-
-    data['last_updated'] = convert_date(last_updated, "%Y-%m-%d %H:%M:%S")
 
     return data

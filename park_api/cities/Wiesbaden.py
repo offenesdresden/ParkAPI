@@ -1,56 +1,45 @@
 from bs4 import BeautifulSoup
 from park_api.util import convert_date
 from park_api.geodata import GeoData
+from time import strptime, gmtime, mktime, strftime
 
 geodata = GeoData(__file__)
 
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
 
-    stand=soup.select('span')
-    # this gives you:
-    # in stand[0]: <span style="font-weight: normal; letter-spacing: 0px;">
-    #              Stand: 10.04.2019 15:09        </span>
-    # splitting it gives you: u'10.04.2019', u'15:09'
-    # putting it together: u'10.04.2019  15:09'
-    last_updated_date=stand[0].text.strip().split()[1]
-    last_updated_time=stand[0].text.strip().split()[2]
-    last_updated = last_updated_date + "  " + last_updated_time
-
+    # suche Datum/Uhrzeit
+    html_entry = soup.select("h3")
+    date_time = strptime(html_entry[0].text.strip(), "Stand : %d.%m.%Y %H:%M:%S")
+    last_updated = gmtime(mktime(date_time))
     data = {
-        "last_updated": convert_date(last_updated, "%d.%m.%Y %H:%M"),
+        "last_updated": strftime("%Y-%m-%dT%H:%M:%S", last_updated),
         "lots": []
     }
 
-    # everything is in table-objects
-    table=soup.select('table')
-    # table[0] is a big table-object around everything
-    # table[1] contains some headers
-    # table[2] contains column-headers and one row for each parking-lot
-    #          so we look in this for name and values
-    td = table[2].find_all('td')
-    i = 0
-    while i < len(td)-4 :
-        # for each row
-        #    td[0] contains an image
-        #    td[1] contains the name of the parking-lot
-        #    td[2] contains the text 'geschlossen' or the values in the form xxx / xxx
-        parking_name = td[i+1].text.strip()
-        # work-around for the sz-problem: Coulinstraße
-        if ( 'Coulinstr' in parking_name ) : parking_name = 'Coulinstraße'
-        # get the data
+    # suche die Zahlen zu den Parkhaeusern:
+    html_table = soup.select("table")
+    table_rows = html_table[0].find_all( "tr")
+    for parking_lot in table_rows[1:]:
+        lot_data = parking_lot.select("td")
+        parking_name = lot_data[0].text.strip()
+        # get the data from JSON-file:
         lot = geodata.lot(parking_name)
-        try:
-            parking_state = 'open'
-            parking_free  = 0
-            parking_total = 0
-            if ( 'geschlossen' in td[i+2].text ) :
-                parking_state = 'closed'
+
+        try :
+            if ( lot_data[3].text.strip() == "OK" ):
+                parking_state = "open"
+                parking_data = lot_data[1].text.split()
+                parking_free = int(parking_data[0])
+                parking_total = int(parking_data[2])
             else :
-                parking_free = int(td[i+2].text.split()[0])
-                parking_total = int(td[i+2].text.split()[2])
-        except:
-            parking_state = 'nodata'
+                parking_state = "nodata"
+                parking_free = 0
+                parking_total = lot.total
+        except :
+            parking_state = "nodata"
+            parking_free = 0
+            parking_total = lot.total
 
         data["lots"].append({
             "name":     parking_name,
@@ -63,6 +52,5 @@ def parse_html(html):
             "id":       lot.id,
             "forecast": False,
         })
-        i += 5    # next parking-lot
 
     return data
