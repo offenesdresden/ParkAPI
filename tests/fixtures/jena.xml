@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0">
+    <payloadPublication xsi:type="GenericPublication" lang="de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <publicationTime>2023-12-31T16:10:47.378+01:00</publicationTime>
+        <publicationCreator>
+            <country>de</country>
+            <nationalIdentifier>Kommunal Service Jena</nationalIdentifier>
+        </publicationCreator>
+        <genericPublicationExtension>
+            <parkingFacilityTableStatusPublication>
+                <headerInformation>
+                    <confidentiality>noRestriction</confidentiality>
+                    <informationStatus>real</informationStatus>
+                </headerInformation>
+                <parkingFacilityStatus>
+                    <parkingFacilityExitRate>0</parkingFacilityExitRate>
+                    <parkingFacilityFillRate>0</parkingFacilityFillRate>
+                    <parkingFacilityOccupancy>0.0</parkingFacilityOccupancy>
+                    <parkingFacilityOccupancyTrend>stable</parkingFacilityOccupancyTrend>
+                    <parkingFacilityReference id="City Carree" version="SYSTEM"/>
+                    <parkingFacilityStatusTime>2023-12-30T23:10:39.826+01:00</parkingFacilityStatusTime>
+                    <totalNumberOfOccupiedParkingSpaces>0</totalNumberOfOccupiedParkingSpaces>
+                    <totalNumberOfVacantParkingSpaces>0</totalNumberOfVacantParkingSpaces>
+                    <totalParkingCapacityShortTermOverride>0</totalParkingCapacityShortTermOverride>
+                </parkingFacilityStatus>
+                <parkingFacilityStatus>
+                    <parkingFacilityExitRate>0</parkingFacilityExitRate>
+                    <parkingFacilityFillRate>0</parkingFacilityFillRate>
+                    <parkingFacilityOccupancy>12.0</parkingFacilityOccupancy>
+                    <parkingFacilityOccupancyTrend>stable</parkingFacilityOccupancyTrend>
+                    <parkingFacilityReference id="Seidelparkplatz" version="SYSTEM"/>
+                    <parkingFacilityStatusTime>2023-12-31T16:05:45.504+01:00</parkingFacilityStatusTime>
+                    <totalNumberOfOccupiedParkingSpaces>20</totalNumberOfOccupiedParkingSpaces>
+                    <totalNumberOfVacantParkingSpaces>141</totalNumberOfVacantParkingSpaces>
+                    <totalParkingCapacityShortTermOverride>161</totalParkingCapacityShortTermOverride>
+                </parkingFacilityStatus>
+                <parkingFacilityStatus>
+                    <parkingFacilityExitRate>0</parkingFacilityExitRate>
+                    <parkingFacilityFillRate>0</parkingFacilityFillRate>
+                    <parkingFacilityOccupancy>8.0</parkingFacilityOccupancy>
+                    <parkingFacilityOccupancyTrend>stable</parkingFacilityOccupancyTrend>
+                    <parkingFacilityReference id="Krautgasse" version="SYSTEM"/>
+                    <parkingFacilityStatusTime>2023-12-31T14:11:34.771+01:00</parkingFacilityStatusTime>
+                    <totalNumberOfOccupiedParkingSpaces>15</totalNumberOfOccupiedParkingSpaces>
+                    <totalNumberOfVacantParkingSpaces>178</totalNumberOfVacantParkingSpaces>
+                    <totalParkingCapacityShortTermOverride>193</totalParkingCapacityShortTermOverride>
+                </parkingFacilityStatus>
+                <parkingFacilityStatus>
+                    <parkingFacilityExitRate>0</parkingFacilityExitRate>
+                    <parkingFacilityFillRate>0</parkingFacilityFillRate>
+                    <parkingFacilityOccupancy>0.0</parkingFacilityOccupancy>
+                    <parkingFacilityOccupancyTrend>stable</parkingFacilityOccupancyTrend>
+                    <parkingFacilityReference id="Goethe Galerie" version="SYSTEM"/>
+                    <parkingFacilityStatusTime>2023-12-30T23:00:29.090+01:00</parkingFacilityStatusTime>
+                    <totalNumberOfOccupiedParkingSpaces>0</totalNumberOfOccupiedParkingSpaces>
+                    <totalNumberOfVacantParkingSpaces>0</totalNumberOfVacantParkingSpaces>
+                    <totalParkingCapacityShortTermOverride>0</totalParkingCapacityShortTermOverride>
+                </parkingFacilityStatus>
+                <parkingFacilityStatus>
+                    <parkingFacilityExitRate>0</parkingFacilityExitRate>
+                    <parkingFacilityFillRate>0</parkingFacilityFillRate>
+                    <parkingFacilityOccupancy>5.0</parkingFacilityOccupancy>
+                    <parkingFacilityOccupancyTrend>stable</parkingFacilityOccupancyTrend>
+                    <parkingFacilityReference id="Neue Mitte" version="SYSTEM"/>
+                    <parkingFacilityStatusTime>2023-12-31T16:07:44.769+01:00</parkingFacilityStatusTime>
+                    <totalNumberOfOccupiedParkingSpaces>10</totalNumberOfOccupiedParkingSpaces>
+                    <totalNumberOfVacantParkingSpaces>180</totalNumberOfVacantParkingSpaces>
+                    <totalParkingCapacityShortTermOverride>190</totalParkingCapacityShortTermOverride>
+                </parkingFacilityStatus>
+                <parkingFacilityStatus>
+                    <parkingFacilityExitRate>0</parkingFacilityExitRate>
+                    <parkingFacilityFillRate>0</parkingFacilityFillRate>
+                    <parkingFacilityOccupancy>19.0</parkingFacilityOccupancy>
+                    <parkingFacilityOccupancyTrend>stable</parkingFacilityOccupancyTrend>
+                    <parkingFacilityReference id="Windberg" version="SYSTEM"/>
+                    <parkingFacilityStatusTime>2023-12-31T15:32:41.436+01:00</parkingFacilityStatusTime>
+                    <totalNumberOfOccupiedParkingSpaces>14</totalNumberOfOccupiedParkingSpaces>
+                    <totalNumberOfVacantParkingSpaces>61</totalNumberOfVacantParkingSpaces>
+                    <totalParkingCapacityShortTermOverride>75</totalParkingCapacityShortTermOverride>
+                </parkingFacilityStatus>
+                <parkingFacilityStatus>
+                    <parkingFacilityExitRate>0</parkingFacilityExitRate>
+                    <parkingFacilityFillRate>0</parkingFacilityFillRate>
+                    <parkingFacilityOccupancy>0.0</parkingFacilityOccupancy>
+                    <parkingFacilityOccupancyTrend>stable</parkingFacilityOccupancyTrend>
+                    <parkingFacilityReference id="Eichplatz" version="SYSTEM"/>
+                    <parkingFacilityStatusTime>2023-11-16T07:26:33.218+01:00</parkingFacilityStatusTime>
+                    <totalNumberOfOccupiedParkingSpaces>0</totalNumberOfOccupiedParkingSpaces>
+                    <totalNumberOfVacantParkingSpaces>0</totalNumberOfVacantParkingSpaces>
+                    <totalParkingCapacityShortTermOverride>0</totalParkingCapacityShortTermOverride>
+                </parkingFacilityStatus>
+                <parkingFacilityStatus>
+                    <parkingFacilityExitRate>0</parkingFacilityExitRate>
+                    <parkingFacilityFillRate>0</parkingFacilityFillRate>
+                    <parkingFacilityOccupancy>100.0</parkingFacilityOccupancy>
+                    <parkingFacilityOccupancyTrend>stable</parkingFacilityOccupancyTrend>
+                    <parkingFacilityReference id="Haeckelplatz" version="SYSTEM"/>
+                    <parkingFacilityStatus>full</parkingFacilityStatus>
+                    <parkingFacilityStatusTime>2023-12-28T13:11:30.623+01:00</parkingFacilityStatusTime>
+                    <totalNumberOfOccupiedParkingSpaces>32</totalNumberOfOccupiedParkingSpaces>
+                    <totalNumberOfVacantParkingSpaces>0</totalNumberOfVacantParkingSpaces>
+                    <totalParkingCapacityShortTermOverride>32</totalParkingCapacityShortTermOverride>
+                </parkingFacilityStatus>
+                <parkingFacilityStatus>
+                    <parkingFacilityExitRate>0</parkingFacilityExitRate>
+                    <parkingFacilityFillRate>0</parkingFacilityFillRate>
+                    <parkingFacilityOccupancy>29.0</parkingFacilityOccupancy>
+                    <parkingFacilityOccupancyTrend>stable</parkingFacilityOccupancyTrend>
+                    <parkingFacilityReference id="Holzmarkt" version="SYSTEM"/>
+                    <parkingFacilityStatusTime>2023-12-31T16:08:44.571+01:00</parkingFacilityStatusTime>
+                    <totalNumberOfOccupiedParkingSpaces>44</totalNumberOfOccupiedParkingSpaces>
+                    <totalNumberOfVacantParkingSpaces>106</totalNumberOfVacantParkingSpaces>
+                    <totalParkingCapacityShortTermOverride>150</totalParkingCapacityShortTermOverride>
+                </parkingFacilityStatus>
+                <parkingFacilityStatus>
+                    <parkingFacilityExitRate>0</parkingFacilityExitRate>
+                    <parkingFacilityFillRate>0</parkingFacilityFillRate>
+                    <parkingFacilityOccupancy>43.0</parkingFacilityOccupancy>
+                    <parkingFacilityOccupancyTrend>decreasing</parkingFacilityOccupancyTrend>
+                    <parkingFacilityReference id="Steinkreuz" version="SYSTEM"/>
+                    <parkingFacilityStatusTime>2023-12-31T16:08:44.586+01:00</parkingFacilityStatusTime>
+                    <totalNumberOfOccupiedParkingSpaces>26</totalNumberOfOccupiedParkingSpaces>
+                    <totalNumberOfVacantParkingSpaces>34</totalNumberOfVacantParkingSpaces>
+                    <totalParkingCapacityShortTermOverride>60</totalParkingCapacityShortTermOverride>
+                </parkingFacilityStatus>
+            </parkingFacilityTableStatusPublication>
+        </genericPublicationExtension>
+    </payloadPublication>
+</d2LogicalModel>

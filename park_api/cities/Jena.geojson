@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.9282,
+          11.5880
+        ]
+      },
+      "properties": {
+        "name": "Jena",
+        "type": "city",
+        "url": "https://mobilitaet.jena.de/",
+        "source": "https://opendata.jena.de/data/parkplatzbelegung.xml",
+        "active_support": false,
+        "attribution": {
+          "contributor":"Kommunal Service Jena",
+          "url":"https://opendata.jena.de/dataset/parken",
+          "license":"dl-de/by-2-0"
+        }
+      }
+    }
+  ]
+}
