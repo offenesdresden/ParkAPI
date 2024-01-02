@@ -8,3 +8,4 @@ yoyo-migrations
 requests-mock
 utm
 ddt
+lxml
