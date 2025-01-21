@@ -13,15 +13,16 @@
           "name": "Basel",
           "type": "city",
           "url": "http://www.parkleitsystem-basel.ch/status.php",
-          "source": "http://www.parkleitsystem-basel.ch/rss_feed.php",
+          "source": "https://data.bs.ch/api/explore/v2.1/catalog/datasets/100088/records?select=published%2Clast_downloaded%2Cgeo_point_2d%2Cname%2Ctotal%2Cfree%2Cstatus%2Cid%2Caddress%2Clot_type%2Clink&limit=100&lang=de&timezone=Europe%2FZurich",
 	  "active_support": true,
           "attribution":{
             "contributor":"Immobilien Basel-Stadt",
-            "url":"http://www.parkleitsystem-basel.ch/impressum.php",
+            "url":"http://www.parkleitsystem-basel.ch/impressum.html",
             "license":"Creative-Commons-Null-Lizenz (CC-0)"
           }
       }
   }, {
+    "__COMMENT__": "WE DO NOT USE ANY OF THE FOLLOWING INFORMATION IN OUR SCRIPT (Basel.py)! I'll leave it here in case it is used somewhere else, but this data does not get updated, and the information should be scraped from https://data.bs.ch/explore/dataset/100088/",
     "type": "Feature",
     "geometry": {
       "type": "Point",
