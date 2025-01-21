@@ -29,7 +29,8 @@ def parse_html(xml_data):
             "total": entry['total'],
             "coords": list(entry['geo_point_2d'].values()),
             "forecast": False,
-            "lot_type": entry['lot_type']
+            "lot_type": entry['lot_type'],
+            "url": entry['link']
         })
 
     return data
