@@ -27,7 +27,10 @@ def parse_html(xml_data):
             "state": translate_status(entry['status']),
             "free": entry['free'],
             "total": entry['total'],
-            "coords": list(entry['geo_point_2d'].values()),
+            "coords": {
+                "lat": entry['geo_point_2d']['lat'],
+                "lng": entry['geo_point_2d']['lon']
+            },
             "forecast": False,
             "lot_type": entry['lot_type'],
             "url": entry['link']
