@@ -7,7 +7,7 @@ feedparser==6.0.2
 Flask==1.1.2
 idna==2.10
 itsdangerous==1.1.0
-Jinja2==2.11.3
+Jinja2==3.1.5
 MarkupSafe==1.1.1
 psycopg2==2.8.6
 pytz==2021.1
