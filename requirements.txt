@@ -16,7 +16,7 @@ requests-mock==1.8.0
 sgmllib3k==1.0.0
 six==1.15.0
 soupsieve==2.2
-sqlparse==0.4.1
+sqlparse==0.5.0
 tabulate==0.8.9
 urllib3==1.26.4
 utm==0.7.0
