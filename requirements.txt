@@ -20,5 +20,5 @@ sqlparse==0.4.1
 tabulate==0.8.9
 urllib3==1.26.4
 utm==0.7.0
-Werkzeug==1.0.1
+Werkzeug==3.0.6
 yoyo-migrations==7.3.1
