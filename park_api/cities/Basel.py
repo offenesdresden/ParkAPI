@@ -25,8 +25,8 @@ def parse_html(xml_data):
             "address": entry['address'],
             "id": entry['id'],
             "state": translate_status(entry['status']),
-            "free": entry['free'],
-            "total": entry['total'],
+            "free": entry['free'] or 0,
+            "total": entry['total'] or 0,
             "coords": {
                 "lat": entry['geo_point_2d']['lat'],
                 "lng": entry['geo_point_2d']['lon']
