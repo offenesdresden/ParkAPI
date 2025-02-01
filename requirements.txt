@@ -18,7 +18,7 @@ six==1.15.0
 soupsieve==2.2
 sqlparse==0.4.1
 tabulate==0.8.9
-urllib3==1.26.4
+urllib3==1.26.19
 utm==0.7.0
 Werkzeug==1.0.1
 yoyo-migrations==7.3.1
