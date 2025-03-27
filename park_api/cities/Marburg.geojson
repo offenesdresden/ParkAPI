@@ -1,0 +1,148 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "geometry": {
+          "type": "Point",
+          "coordinates": [
+              8.2168987,
+              53.1391840
+          ]
+      },
+      "properties": {
+          "name": "Marburg",
+          "type": "city",
+          "url": "https://pls.marburg.de/",
+          "source": "https://www.marburg-tourismus.de/portal/seiten/parken-900000695-1000000.html",
+	  "active_support":false
+      }
+  }, {
+      "type": "Feature",
+      "properties": {
+        "name": "Ahrens",
+        "total": 225,
+        "address": "Wilhelmstraße 7",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.35665,
+          46.05613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Erlenring-Center",
+        "total": 50,
+        "address": "Erlenring 19",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.47756,
+          46.65494
+        ]
+      }
+    },    ,
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Furthstraße",
+        "total": 204,
+        "address": "Furthstraße 6",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.07525,
+          46.25178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hauptbahnhof",
+        "total": 288,
+        "address": "Krummbogen 3",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.08410,
+          46.46899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lahncenter",
+        "total": 168,
+        "address": "Pilgrimstein 29",
+        "type": "Tiefgarage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.59200,
+          46.36928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marktdreieck",
+        "total": 280,
+        "address": "Erlenring 26",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.41966,
+          46.65171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marktdreieck - Parkdeck",
+        "total": 20,
+        "address": "Musterstraße 2",
+        "type": "Parkplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.41966,
+          46.65171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oberstadt",
+        "total": 235,
+        "address": "Pilgrimmstein 4",
+        "type": "Parkhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.63934,
+          46.29220
+        ]
+      }
+    },
+    ]
+}
